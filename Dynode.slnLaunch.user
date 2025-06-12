@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "API.Dynode\\api.dynode.esproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PLAYER.Dynode\\player.dynode.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

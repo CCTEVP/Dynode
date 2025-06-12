@@ -1,0 +1,4 @@
+This goes right before "paths" in openapi.json:
+  "security": [{ "bearerAuth": [] }],
+
+
