@@ -21,10 +21,10 @@ console.log("swaggerRouter:", typeof swaggerRouter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/", indexRouter);
-app.use("/data", dataRouter);
-app.use("/files", filesRouter);
 //app.use("/data", authenticateToken as RequestHandler, dataRouter);
 //app.use("/files", authenticateToken as RequestHandler, filesRouter);
+app.use("/data", dataRouter); // Removed authentication for dataRouter
+app.use("/files", filesRouter); // Removed authentication for filesRouter
 app.use("/docs", swaggerRouter);
 app.use("/login", loginRouter);
 
