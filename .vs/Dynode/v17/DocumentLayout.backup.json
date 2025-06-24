@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\Development\\Web\\NODE\\Dynode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Development\\Web\\NODE\\Dynode\\api.dynode\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:api.dynode\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Development\\Web\\NODE\\Dynode\\render.dynode\\src\\app.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:render.dynode\\src\\app.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "app.js",
-              "DocumentMoniker": "E:\\Development\\Web\\NODE\\Dynode\\api.dynode\\app.js",
-              "RelativeDocumentMoniker": "api.dynode\\app.js",
-              "ToolTip": "E:\\Development\\Web\\NODE\\Dynode\\api.dynode\\app.js",
-              "RelativeToolTip": "api.dynode\\app.js",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-10T12:52:26.489Z"
+              "Title": "app.ts",
+              "DocumentMoniker": "E:\\Development\\Web\\NODE\\Dynode\\render.dynode\\src\\app.ts",
+              "RelativeDocumentMoniker": "render.dynode\\src\\app.ts",
+              "ToolTip": "E:\\Development\\Web\\NODE\\Dynode\\render.dynode\\src\\app.ts",
+              "RelativeToolTip": "render.dynode\\src\\app.ts",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-06-24T09:07:42.339Z",
+              "IsPinned": true
             }
           ]
         }

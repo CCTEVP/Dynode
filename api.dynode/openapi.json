@@ -121,34 +121,29 @@
     },
     "/data/creatives": {
       "get": {
-        "summary": "Get creatives data",
+        "summary": "Get all creatives",
         "tags": ["Creatives"],
         "responses": {
           "200": { "description": "Creatives data retrieved" },
           "401": { "description": "Unauthorized" }
         }
-      },
-      "post": {
-        "summary": "Post creatives data",
+      }
+    },
+    "/data/creatives/{id}": {
+      "get": {
+        "summary": "Get identified creative data",
         "tags": ["Creatives"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "The creatives's MongoDB _id"
+          }
+        ],
         "responses": {
-          "200": { "description": "Creatives data created" },
-          "401": { "description": "Unauthorized" }
-        }
-      },
-      "put": {
-        "summary": "Post creatives data",
-        "tags": ["Creatives"],
-        "responses": {
-          "200": { "description": "Creatives data changed" },
-          "401": { "description": "Unauthorized" }
-        }
-      },
-      "delete": {
-        "summary": "Post creatives data",
-        "tags": ["Creatives"],
-        "responses": {
-          "200": { "description": "Creatives data deleted" },
+          "200": { "description": "Creatives data retrieved" },
           "401": { "description": "Unauthorized" }
         }
       }
@@ -156,33 +151,69 @@
     "/data/creatives/assemblies": {
       "get": {
         "summary": "Get assembled creatives data",
-        "tags": ["Assembled Creatives"],
+        "tags": ["Creatives: Assembled"],
         "responses": {
           "200": { "description": "Creatives data retrieved" },
           "401": { "description": "Unauthorized" }
         }
       },
       "post": {
-        "summary": "Post creatives data",
-        "tags": ["Assembled Creatives"],
+        "summary": "Post assembled creatives data",
+        "tags": ["Creatives: Assembled"],
         "responses": {
           "200": { "description": "Creatives data created" },
           "401": { "description": "Unauthorized" }
         }
       },
       "put": {
-        "summary": "Post creatives data",
-        "tags": ["Assembled Creatives"],
+        "summary": "Put assembled creatives data",
+        "tags": ["Creatives: Assembled"],
         "responses": {
           "200": { "description": "Creatives data changed" },
           "401": { "description": "Unauthorized" }
         }
       },
       "delete": {
-        "summary": "Post creatives data",
-        "tags": ["Assembled Creatives"],
+        "summary": "Delete assembled creatives data",
+        "tags": ["Creatives: Assembled"],
         "responses": {
           "200": { "description": "Creatives data deleted" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/data/creatives/assemblies/{id}/package": {
+      "get": {
+        "summary": "Get assembled creative ZIP package (URL)",
+        "tags": ["Creatives: Assembled"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "The creatives's MongoDB _id"
+          }
+        ],
+        "responses": {
+          "200": { "description": "Creatives ZIP Package retrieved." },
+          "401": { "description": "Unauthorized" }
+        }
+      },
+      "post": {
+        "summary": "Build assembled creative ZIP package",
+        "tags": ["Creatives: Assembled"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "The creatives's MongoDB _id"
+          }
+        ],
+        "responses": {
+          "200": { "description": "Creatives ZIP Package built." },
           "401": { "description": "Unauthorized" }
         }
       }
@@ -190,31 +221,31 @@
     "/data/creatives/dynamics": {
       "get": {
         "summary": "Get dynamic creatives data",
-        "tags": ["Dynamic Creatives"],
+        "tags": ["Creatives: Dynamic"],
         "responses": {
           "200": { "description": "Creatives data retrieved" },
           "401": { "description": "Unauthorized" }
         }
       },
       "post": {
-        "summary": "Post creatives data",
-        "tags": ["Dynamic Creatives"],
+        "summary": "Post dynamic creatives data",
+        "tags": ["Creatives: Dynamic"],
         "responses": {
           "200": { "description": "Creatives data created" },
           "401": { "description": "Unauthorized" }
         }
       },
       "put": {
-        "summary": "Post creatives data",
-        "tags": ["Dynamic Creatives"],
+        "summary": "Put dynamic creatives data",
+        "tags": ["Creatives: Dynamic"],
         "responses": {
           "200": { "description": "Creatives data changed" },
           "401": { "description": "Unauthorized" }
         }
       },
       "delete": {
-        "summary": "Post creatives data",
-        "tags": ["Dynamic Creatives"],
+        "summary": "Delete dynamic creatives data",
+        "tags": ["Creatives: Dynamic"],
         "responses": {
           "200": { "description": "Creatives data deleted" },
           "401": { "description": "Unauthorized" }
@@ -224,31 +255,31 @@
     "/data/creatives/interactives": {
       "get": {
         "summary": "Get interactive creatives data",
-        "tags": ["Interactive Creatives"],
+        "tags": ["Creatives: Interactive"],
         "responses": {
           "200": { "description": "Creatives data retrieved" },
           "401": { "description": "Unauthorized" }
         }
       },
       "post": {
-        "summary": "Post creatives data",
-        "tags": ["Interactive Creatives"],
+        "summary": "Post interactive creatives data",
+        "tags": ["Creatives: Interactive"],
         "responses": {
           "200": { "description": "Creatives data created" },
           "401": { "description": "Unauthorized" }
         }
       },
       "put": {
-        "summary": "Post creatives data",
-        "tags": ["Interactive Creatives"],
+        "summary": "Put interactive creatives data",
+        "tags": ["Creatives: Interactive"],
         "responses": {
           "200": { "description": "Creatives data changed" },
           "401": { "description": "Unauthorized" }
         }
       },
       "delete": {
-        "summary": "Post creatives data",
-        "tags": ["Interactive Creatives"],
+        "summary": "Delete interactive creatives data",
+        "tags": ["Creatives: Interactive"],
         "responses": {
           "200": { "description": "Creatives data deleted" },
           "401": { "description": "Unauthorized" }

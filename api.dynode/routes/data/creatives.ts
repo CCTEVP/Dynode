@@ -1,90 +1,40 @@
 import express, { Request, Response, NextFunction } from "express";
 import logger from "../../services/logger";
-import CreativeDynamic from "../../models/CreativeDynamic"; // <-- Import the model
-import CreativeAssembly from "../../models/CreativeAssembly"; // <-- Import the model
-import CreativeInteractive from "../../models/CreativeInteractive"; // <-- Import the model
+import assembliesRouter from "./creatives/assemblies";
+import dynamicsRouter from "./creatives/dynamics";
+import interactivesRouter from "./creatives/interactives";
 import CreativeUnified from "../../models/CreativeUnified"; // <-- Import the model
+
 const router = express.Router();
+// Mount sub-routers
+router.use("/assemblies", assembliesRouter);
+router.use("/dynamics", dynamicsRouter);
+router.use("/interactives", interactivesRouter);
 
-var mongoose = require("mongoose");
-
+// List all creatives
 router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
     const creatives = await CreativeUnified.find({});
     res.json(creatives);
   } catch (error) {
-    console.error("Error fetching creatives from MongoDB view:", error);
+    logger.error("Error fetching creatives from MongoDB view:", error);
     res.status(500).json({ message: "Failed to retrieve creatives." });
   }
 });
 
-router.put(
-  "/",
-  async function (req: Request, res: Response, next: NextFunction) {
-    res.json({
-      message:
-        "This is a placeholder for PUT requests to /data/creatives. Implement your logic here.",
+// Get creative by ID
+router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
+  const creativeId = req.params.id;
+  console.log("Fetching creative with ID:", creativeId);
+  try {
+    const creative = await CreativeUnified.findById(creativeId).exec();
+    res.json(creative);
+  } catch (error) {
+    logger.error("Error fetching creative from MongoDB view:", error);
+    res.status(500).json({
+      message: "Failed to retrieve creative with ID: " + creativeId,
     });
   }
-);
-
-router.post(
-  "/",
-  async function (req: Request, res: Response, next: NextFunction) {
-    res.json({
-      message:
-        "This is a placeholder for POST requests to /data/creatives. Implement your logic here.",
-    });
-  }
-);
-
-router.delete("/", async function (req, res, next) {
-  res.json({
-    message:
-      "This is a placeholder for DELETE requests to /data/creatives. Implement your logic here.",
-  });
 });
-
-//// Assemblies
-router.get(
-  "/assemblies",
-  async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const creatives = await CreativeAssembly.find({});
-      res.json(creatives);
-    } catch (error) {
-      console.error("Error fetching creatives from MongoDB view:", error);
-      res.status(500).json({ message: "Failed to retrieve creatives." });
-    }
-  }
-);
-
-//// Dynamics
-router.get(
-  "/dynamics",
-  async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const creatives = await CreativeDynamic.find({});
-      res.json(creatives);
-    } catch (error) {
-      console.error("Error fetching creatives from MongoDB view:", error);
-      res.status(500).json({ message: "Failed to retrieve creatives." });
-    }
-  }
-);
-
-//// Interactives
-router.get(
-  "/interactives",
-  async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const creatives = await CreativeInteractive.find({});
-      res.json(creatives);
-    } catch (error) {
-      console.error("Error fetching creatives from MongoDB view:", error);
-      res.status(500).json({ message: "Failed to retrieve creatives." });
-    }
-  }
-);
 
 export default router;

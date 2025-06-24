@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "PLAYER.Dynode\\player.dynode.esproj",
+        "Path": "render.dynode\\render.dynode.esproj",
         "Action": "Start"
       }
     ]
