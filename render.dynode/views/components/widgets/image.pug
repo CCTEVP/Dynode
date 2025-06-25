@@ -1,0 +1,5 @@
+mixin image(imageElement)
+    - var idValue = "image-widget-"+imageElement._id;
+    - var styleString = Object.entries(imageElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+    div(id=idValue, class=imageElement.classes, style=styleString)
+        img(src=imageElement.source.url, alt=imageElement.identifier, data-name=imageElement.identifier)

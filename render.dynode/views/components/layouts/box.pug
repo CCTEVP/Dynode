@@ -1,0 +1,13 @@
+include ../widgets/card
+include ../widgets/text
+
+mixin box(boxElement)
+  - var idValue = "box-layout-" + boxElement._id;
+  - var styleString = Object.entries(boxElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+  div(id=idValue, data-name=boxElement.identifier, style=styleString)
+    if boxElement.contents
+      each child in boxElement.contents
+        if child.CardWidget
+          +card(child.CardWidget)
+        if child.TextWidget
+          +text(child.TextWidget)

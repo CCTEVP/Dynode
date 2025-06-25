@@ -1,5 +1,14 @@
 extends layout
+include components/layouts/slide
+include components/debug
 
 block content
-  h1= title
-  p Welcome to #{title}
+  - var styleString = Object.entries(content.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+  div(id="app",role="main",style=styleString)
+    div(id="dynamic-creative-container",style=styleString) 
+      if content
+        if content.elements
+          each element in content.elements
+            if element.SlideLayout
+              +slide(element.SlideLayout)
+    +debug("Empty")
