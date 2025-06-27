@@ -1,10 +1,10 @@
 extends layout
-include components/layouts/slide
-include components/debug
+include components/layoutSlide/default
+include components/widgetDebug/default
 
 block content
   - var styleString = Object.entries(content.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
-  div(id="app",role="main",style=styleString)
+  main(id="app",role="main",style=styleString)
     div(id="dynamic-creative-container",style=styleString) 
       if content
         if content.elements

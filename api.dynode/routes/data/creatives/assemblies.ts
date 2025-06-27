@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import logger from "../../../services/logger";
-import CreativeAssembly from "../../../models/CreativeAssembly"; // Import the model
+import CreativeAssembly from "../../../models/views/CreativeAssemblyView"; // Import the model
 
 const router = express.Router();
 
@@ -26,6 +26,32 @@ router.get(
     }
   }
 );
+router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const creativeId = req.params.id;
+    const creativeData = req.body;
+    if (!creativeData.id) {
+      res.status(400).json({ message: "Creative ID is required." });
+      return;
+    }
+    if (!creativeData || Object.keys(creativeData).length === 0) {
+      res.status(400).json({ message: "No Creative data to update." });
+      return;
+    }
+
+    // Create or update the creative in the database
+    const creative = await CreativeAssembly.findOneAndUpdate(
+      { _id: creativeId },
+      { $set: { creativeData } },
+      { upsert: true, new: true }
+    );
+    res.json(creative);
+  } catch (error) {
+    console.error("Error saving assembly creative MongoDB collection:", error);
+    res.status(500).json({ message: "Failed to save assembly creative." });
+  }
+});
+
 router.post(
   "/:id/package",
   async (req: Request, res: Response, next: NextFunction) => {

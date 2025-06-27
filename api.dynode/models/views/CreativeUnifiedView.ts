@@ -1,0 +1,20 @@
+import mongoose from "mongoose";
+import creativeBaseViewSchema from "./CreativeBaseViewSchema";
+
+const creativeUnifiedViewSchema = new mongoose.Schema(
+  {
+    ...creativeBaseViewSchema.obj, // Spread base schema fields
+    origin: { type: String, required: false },
+    // Add more fields as needed
+  },
+  {
+    collection: "creatives_unified",
+  }
+);
+
+const CreativeUnifiedView = mongoose.model(
+  "CreativeUnifiedView",
+  creativeUnifiedViewSchema
+);
+
+export default CreativeUnifiedView;

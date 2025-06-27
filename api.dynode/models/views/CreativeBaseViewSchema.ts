@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-import changeSchema from "./Change";
-import cacheSchema from "./Cache";
+import creativeBaseCollectionSchema from "../shared/CreativeBaseCollectionSchema";
 
 const formatSchema = new mongoose.Schema(
   {
@@ -23,18 +22,11 @@ const elementsSchema = new mongoose.Schema(
   { _id: false }
 );
 
-const creativeBaseSchema = new mongoose.Schema(
+const creativeBaseViewSchema = new mongoose.Schema(
   {
-    _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
-    name: { type: String, required: true },
-    created: { type: Date, required: true },
-    updated: { type: Date, required: true },
-    styles: { type: Map, of: String, default: {} },
+    ...creativeBaseCollectionSchema.obj, // Spread base schema fields
     elements: { type: [elementsSchema], default: [] }, // <-- FIXED
     format: { type: [formatSchema], default: [] }, // <-- FIXED
-    parent: [{ type: String }],
-    changes: { type: [changeSchema], default: [] },
-    cache: { type: cacheSchema, default: { duration: "20" } }, // <-- FIXED
   },
   {
     discriminatorKey: "creativeType",
@@ -42,4 +34,4 @@ const creativeBaseSchema = new mongoose.Schema(
   }
 );
 
-export default creativeBaseSchema;
+export default creativeBaseViewSchema;

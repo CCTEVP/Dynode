@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import changeSchema from "./shared/Change";
+import changeSchema from "./shared/ChangeSchema";
 
 const userSchema = new mongoose.Schema(
   {

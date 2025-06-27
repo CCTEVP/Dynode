@@ -3,7 +3,7 @@ import logger from "../../services/logger";
 import assembliesRouter from "./creatives/assemblies";
 import dynamicsRouter from "./creatives/dynamics";
 import interactivesRouter from "./creatives/interactives";
-import CreativeUnified from "../../models/CreativeUnified"; // <-- Import the model
+import CreativeUnified from "../../models/views/CreativeUnifiedView"; // <-- Import the model
 
 const router = express.Router();
 // Mount sub-routers
