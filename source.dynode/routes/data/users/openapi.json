@@ -1,0 +1,113 @@
+{
+  "/data/users/create": {
+    "post": {
+      "summary": "Register a new user",
+      "tags": [ "Users" ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": { "type": "string" },
+                "password": {
+                  "type": "string",
+                  "format": "password"
+                },
+                "name": { "type": "string" }
+              },
+              "required": [ "username", "password", "name" ]
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": { "description": "User registered successfully" },
+        "400": { "description": "Username, password, and name required" },
+        "409": { "description": "Username already exists" },
+        "500": { "description": "Error registering user" }
+      }
+    }
+  },
+  "/data/users/reset/{id}": {
+    "patch": {
+      "summary": "Reset user password",
+      "tags": [ "Users" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The user's MongoDB _id"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "newPassword": {
+                  "type": "string",
+                  "format": "password"
+                }
+              },
+              "required": [ "username", "newPassword" ]
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": { "description": "Password reset successfully" },
+        "400": { "description": "Username and newPassword required" },
+        "404": { "description": "User not found" },
+        "500": { "description": "Error resetting password" }
+      }
+    }
+  },
+  "/data/users/edit/{id}": {
+    "put": {
+      "summary": "Edit user fields",
+      "tags": [ "Users" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The user's MongoDB _id"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": { "type": "string" },
+                "password": {
+                  "type": "string",
+                  "format": "password"
+                },
+                "name": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": { "description": "User updated successfully" },
+        "400": {
+          "description": "User ID and at least one field to update are required"
+        },
+        "404": { "description": "User not found" },
+        "500": { "description": "Error updating user" }
+      },
+      "security": [ { "bearerAuth": [] } ]
+    }
+  }
+}

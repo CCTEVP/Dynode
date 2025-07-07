@@ -1,0 +1,42 @@
+{
+  "/data/creatives": {
+    "get": {
+      "summary": "Get all creatives",
+      "tags": [ "Creatives" ],
+      "parameters": [
+        {
+          "name": "children",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "If true, include children in the response; if false, return only one level."
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data retrieved" },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  },
+  "/data/creatives/{id}": {
+    "get": {
+      "summary": "Get identified creative data",
+      "tags": [ "Creatives" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The creatives's MongoDB _id"
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data retrieved" },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  }
+}

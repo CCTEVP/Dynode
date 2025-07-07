@@ -1,0 +1,92 @@
+{
+  "/data/creatives/assemblies": {
+    "get": {
+      "summary": "Get assembled creatives data",
+      "tags": [ "Creatives: Assembled" ],
+      "parameters": [
+        {
+          "name": "children",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "If true, include children in the response; if false, return only one level."
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data retrieved" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "post": {
+      "summary": "Post assembled creatives data",
+      "tags": [ "Creatives: Assembled" ],
+      "responses": {
+        "200": { "description": "Creatives data created" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "put": {
+      "summary": "Put assembled creatives data",
+      "tags": [ "Creatives: Assembled" ],
+      "responses": {
+        "200": { "description": "Creatives data changed" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "delete": {
+      "summary": "Delete assembled creatives data",
+      "tags": [ "Creatives: Assembled" ],
+      "responses": {
+        "200": { "description": "Creatives data deleted" },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  },
+  "/data/creatives/assemblies/{id}": {
+    "get": {
+      "summary": "Get assembled creative data",
+      "tags": [ "Creatives: Assembled" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The creatives's MongoDB _id"
+        },
+        {
+          "name": "children",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "If true, include children in the response; if false, return only one level."
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives ZIP Package retrieved." },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "post": {
+      "summary": "Build assembled creative ZIP package",
+      "tags": [ "Creatives: Assembled" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The creatives's MongoDB _id"
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives ZIP Package built." },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  }
+}

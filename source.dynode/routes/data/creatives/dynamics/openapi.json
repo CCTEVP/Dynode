@@ -1,0 +1,114 @@
+{
+  "/data/creatives/dynamics": {
+    "get": {
+      "summary": "Get dynamic creatives data",
+      "tags": [ "Creatives: Dynamic" ],
+      "parameters": [
+        {
+          "name": "children",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "If true, include children in the response; if false, return only one level."
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data retrieved" },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  },
+  "/data/creatives/dynamics/{id}": {
+    "get": {
+      "summary": "Get dynamic creatives data",
+      "tags": [ "Creatives: Dynamic" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The creatives's MongoDB _id"
+        },
+        {
+          "name": "children",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "If true, include children in the response; if false, return only one level."
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data retrieved" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "post": {
+      "summary": "Post dynamic creatives data",
+      "tags": [ "Creatives: Dynamic" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The creatives's MongoDB _id"
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data created" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "put": {
+      "summary": "Put dynamic creatives data",
+      "tags": [ "Creatives: Dynamic" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The creatives's MongoDB _id"
+        }
+      ],
+      "requestBody": {
+        "required": false,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "description": "Fields to update in the creative document",
+              "additionalProperties": true
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": { "description": "Creatives data changed" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "delete": {
+      "summary": "Delete dynamic creatives data",
+      "tags": [ "Creatives: Dynamic" ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The creatives's MongoDB _id"
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data deleted" },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  }
+}

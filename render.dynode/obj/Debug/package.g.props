@@ -7,6 +7,7 @@
     <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">tsc &amp;&amp; cpx "views/**/*" dist/views</PackageJsonScriptsBuild>
     <PackageJsonScriptsStart Condition="$(PackageJsonScriptsStart) == ''">node dist/app.js</PackageJsonScriptsStart>
     <PackageJsonScriptsDev Condition="$(PackageJsonScriptsDev) == ''">ts-node-dev app.ts</PackageJsonScriptsDev>
+    <PackageJsonDependenciesAxios Condition="$(PackageJsonDependenciesAxios) == ''">^1.10.0</PackageJsonDependenciesAxios>
     <PackageJsonDependenciesBcrypt Condition="$(PackageJsonDependenciesBcrypt) == ''">^6.0.0</PackageJsonDependenciesBcrypt>
     <PackageJsonDependenciesCookieParser Condition="$(PackageJsonDependenciesCookieParser) == ''">~1.4.4</PackageJsonDependenciesCookieParser>
     <PackageJsonDependenciesDebug Condition="$(PackageJsonDependenciesDebug) == ''">~2.6.9</PackageJsonDependenciesDebug>
@@ -14,11 +15,8 @@
     <PackageJsonDependenciesExpress Condition="$(PackageJsonDependenciesExpress) == ''">^5.1.0</PackageJsonDependenciesExpress>
     <PackageJsonDependenciesHttpErrors Condition="$(PackageJsonDependenciesHttpErrors) == ''">~1.6.3</PackageJsonDependenciesHttpErrors>
     <PackageJsonDependenciesJsonwebtoken Condition="$(PackageJsonDependenciesJsonwebtoken) == ''">^9.0.2</PackageJsonDependenciesJsonwebtoken>
-    <PackageJsonDependenciesMongoose Condition="$(PackageJsonDependenciesMongoose) == ''">^8.0.0</PackageJsonDependenciesMongoose>
     <PackageJsonDependenciesMorgan Condition="$(PackageJsonDependenciesMorgan) == ''">~1.9.1</PackageJsonDependenciesMorgan>
     <PackageJsonDependenciesPug Condition="$(PackageJsonDependenciesPug) == ''">2.0.0-beta11</PackageJsonDependenciesPug>
-    <PackageJsonDependenciesSwaggerJsdoc Condition="$(PackageJsonDependenciesSwaggerJsdoc) == ''">^6.2.8</PackageJsonDependenciesSwaggerJsdoc>
-    <PackageJsonDependenciesSwaggerUiExpress Condition="$(PackageJsonDependenciesSwaggerUiExpress) == ''">^5.0.1</PackageJsonDependenciesSwaggerUiExpress>
     <PackageJsonDependenciesWinston Condition="$(PackageJsonDependenciesWinston) == ''">^3.17.0</PackageJsonDependenciesWinston>
     <PackageJsonDependenciesWinstonDailyRotateFile Condition="$(PackageJsonDependenciesWinstonDailyRotateFile) == ''">^5.0.0</PackageJsonDependenciesWinstonDailyRotateFile>
     <PackageJsonDevdependenciesTypesBcrypt Condition="$(PackageJsonDevdependenciesTypesBcrypt) == ''">^5.0.2</PackageJsonDevdependenciesTypesBcrypt>

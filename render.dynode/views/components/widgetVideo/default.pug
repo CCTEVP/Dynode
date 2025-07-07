@@ -3,4 +3,7 @@ mixin video(videoElement)
     - var styleString = Object.entries(videoElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
     div(id=idValue,style=styleString, alt=videoElement.identifier, data-name=videoElement.identifier)
         video(preload="auto", muted="muted")
-            source(src=videoElement.source.url, type=videoElement.source.mime)
+            each source in videoElement.source.paths
+                if source
+                    - var sourceURL = "https:\/\/localhost:3000"+source.url
+                    source(src=sourceURL, type=source.mime)

@@ -1,0 +1,84 @@
+{
+  "/files/assets/{filename}.{extension}": {
+    "get": {
+      "summary": "Get media files",
+      "tags": [ "Files" ],
+      "parameters": [
+        {
+          "name": "filename",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The asset's filename"
+        },
+        {
+          "name": "extension",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The asset's extension"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Media files retrieved",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  },
+  "/files/assets/": {
+    "post": {
+      "summary": "Upload media files",
+      "tags": [ "Files" ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "multipart/form-data": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "files": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "description": "The source files"
+                }
+              },
+              "required": [ "files" ]
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Media files uploaded",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": { "type": "string" },
+                  "asset": { "type": "object" }
+                }
+              }
+            }
+          }
+        },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "/data/creatives/interactives": {
+    "get": {
+      "summary": "Get interactive creatives data",
+      "tags": [ "Creatives: Interactive" ],
+      "parameters": [
+        {
+          "name": "children",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "boolean"
+          },
+          "description": "If true, include children in the response; if false, return only one level."
+        }
+      ],
+      "responses": {
+        "200": { "description": "Creatives data retrieved" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "post": {
+      "summary": "Post interactive creatives data",
+      "tags": [ "Creatives: Interactive" ],
+      "responses": {
+        "200": { "description": "Creatives data created" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "put": {
+      "summary": "Put interactive creatives data",
+      "tags": [ "Creatives: Interactive" ],
+      "responses": {
+        "200": { "description": "Creatives data changed" },
+        "401": { "description": "Unauthorized" }
+      }
+    },
+    "delete": {
+      "summary": "Delete interactive creatives data",
+      "tags": [ "Creatives: Interactive" ],
+      "responses": {
+        "200": { "description": "Creatives data deleted" },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  }
+}

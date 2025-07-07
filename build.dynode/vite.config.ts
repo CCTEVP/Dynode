@@ -1,10 +1,15 @@
-import { defineConfig } from 'vite';
-import plugin from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import fs from "fs";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [plugin()],
-    server: {
-        port: 51037,
-    }
-})
+  plugins: [react()],
+  server: {
+    https: {
+      pfx: fs.readFileSync("./cert/build.dynode.pfx"),
+      passphrase: "password", // Use your actual passphrase
+    },
+    port: 4000,
+  },
+});

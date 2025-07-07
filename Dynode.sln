@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36202.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "api.dynode", "api.dynode\api.dynode.esproj", "{B2B516F7-9DBE-6325-BAA7-D678BA5299A3}"
-EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "build.dynode", "build.dynode\build.dynode.esproj", "{0E48DB51-66E2-E31B-9D45-759FA5804190}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "render.dynode", "render.dynode\render.dynode.esproj", "{FF642144-EFC2-D29E-387E-44D7DD7C2405}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "source.dynode", "source.dynode\source.dynode.esproj", "{EA8C0AF7-276E-26DF-6438-2101602CEA90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,12 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B2B516F7-9DBE-6325-BAA7-D678BA5299A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2B516F7-9DBE-6325-BAA7-D678BA5299A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2B516F7-9DBE-6325-BAA7-D678BA5299A3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{B2B516F7-9DBE-6325-BAA7-D678BA5299A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2B516F7-9DBE-6325-BAA7-D678BA5299A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2B516F7-9DBE-6325-BAA7-D678BA5299A3}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{0E48DB51-66E2-E31B-9D45-759FA5804190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0E48DB51-66E2-E31B-9D45-759FA5804190}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E48DB51-66E2-E31B-9D45-759FA5804190}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -33,6 +27,12 @@ Global
 		{FF642144-EFC2-D29E-387E-44D7DD7C2405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF642144-EFC2-D29E-387E-44D7DD7C2405}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF642144-EFC2-D29E-387E-44D7DD7C2405}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EA8C0AF7-276E-26DF-6438-2101602CEA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8C0AF7-276E-26DF-6438-2101602CEA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8C0AF7-276E-26DF-6438-2101602CEA90}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EA8C0AF7-276E-26DF-6438-2101602CEA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8C0AF7-276E-26DF-6438-2101602CEA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8C0AF7-276E-26DF-6438-2101602CEA90}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 mixin image(imageElement)
     - var idValue = "image-widget-"+imageElement._id;
     - var styleString = Object.entries(imageElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+    - var sourceURL = "https:\/\/localhost:3000"+imageElement.source.paths[0].url
     div(id=idValue, class=imageElement.classes, style=styleString)
-        img(src=imageElement.source.url, alt=imageElement.identifier, data-name=imageElement.identifier)
+        img(src=sourceURL, alt=imageElement.identifier, data-name=imageElement.identifier)

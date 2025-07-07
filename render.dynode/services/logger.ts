@@ -1,33 +1,36 @@
 import fs from "fs";
 import path from "path";
-import { createLogger, format, transports } from "winston";
-import DailyRotateFile from "winston-daily-rotate-file";
 
-// Ensure logs directory exists
-const logsDir = path.join(__dirname, "../logs");
-fs.mkdirSync(logsDir, { recursive: true });
+const API_URL = "https://localhost:3000/files/logs";
+const ORIGIN = "render.dynode"; // <-- Add your constant origin here
 
-const logger = createLogger({
-  level: "info",
-  format: format.combine(
-    format.timestamp(),
-    format.printf(
-      ({ timestamp, level, message, ...meta }) =>
-        `${timestamp} [${level}]: ${message} ${
-          Object.keys(meta).length ? JSON.stringify(meta) : ""
-        }`
-    )
-  ),
-  transports: [
-    new transports.Console(),
-    new DailyRotateFile({
-      filename: "logs/%DATE%.log", // All logs in /logs
-      datePattern: "YYYY-MM-DD", // e.g., logs/2025-06-12.log
-      zippedArchive: false,
-      maxSize: "20m",
-      maxFiles: "14d",
-    }),
-  ],
-});
+type LogLevel = "info" | "error" | "warn" | "debug";
+
+async function logToServer(level: LogLevel, message: string, meta?: any) {
+  try {
+    await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        level,
+        message,
+        meta,
+        origin: ORIGIN, // Always include origin
+      }),
+      // credentials: "include", // Uncomment if you need cookies/auth
+    });
+  } catch (err) {
+    // Optionally, fallback to console if server logging fails
+    // eslint-disable-next-line no-console
+    console.error("Failed to send log to server:", err);
+  }
+}
+
+const logger = {
+  info: (message: string, meta?: any) => logToServer("info", message, meta),
+  error: (message: string, meta?: any) => logToServer("error", message, meta),
+  warn: (message: string, meta?: any) => logToServer("warn", message, meta),
+  debug: (message: string, meta?: any) => logToServer("debug", message, meta),
+};
 
 export default logger;

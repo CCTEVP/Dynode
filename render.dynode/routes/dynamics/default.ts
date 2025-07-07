@@ -77,40 +77,4 @@ router.get(
   }
 );
 
-/* router.post(
-  "/:id/bundle/",
-  async function (req: Request, res: Response, next: NextFunction) {
-    try {
-      logger.info(`Script loaded`);
-      const creativeId = req.body.id;
-      const type = req.body.type; // "components", "libraries", or "caching"
-      const components = req.body.components || [];
-      const animations = req.body.animations || [];
-      const assets = req.body.assets || [];
-      if (!creativeId || !type) {
-        logger.error("Creative ID and type are required");
-        res.status(400).json({
-          message: "Creative ID and type are required",
-          error: { status: 400, stack: "Creative ID and type are required" },
-        });
-        return;
-      }
-
-      // Example: Generate a string based on the parameters
-      const resultString = `
-        Creative ID: ${creativeId}
-        Type: ${type}
-        Components: ${components.join(", ")}
-        Animations: ${animations.join(", ")}
-        Assets: ${assets.join(", ")}
-      `;
-      res.setHeader("Content-Type", "application/javascript");
-      res.type("application/javascript"); // <-- Set JS content type
-      res.send(resultString.trim());
-    } catch (err) {
-      next(err);
-    }
-  }
-); */
-
 export default router;
