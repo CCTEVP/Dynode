@@ -13,12 +13,13 @@ const creativeBaseCollectionSchema = new mongoose.Schema(
     parent: { type: Array, default: [] },
     status: [{ type: String }],
     changes: { type: [changeSchema], default: [] },
-    cache: { type: cacheSchema, default: { duration: "20" } }, // <-- FIXED
+    cache: { type: cacheSchema, default: { duration: "20" } },
+    resources: { type: Object, required: false },
   },
   {
-      discriminatorKey: "creativeType",
-      timestamps: false,
-      versionKey: false,
+    discriminatorKey: "creativeType",
+    timestamps: false,
+    versionKey: false,
 
     // _id: false, // REMOVE this line for root documents
   }

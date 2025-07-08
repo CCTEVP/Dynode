@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import logger from "../../../../services/logger";
+import scrapper from "../../../../services/scrapper";
 import CreativeDynamicView from "../../../../models/views/CreativeDynamicView";
 import CreativeDynamicCollection from "../../../../models/collections/CreativeDynamicCollection";
 
@@ -45,7 +46,7 @@ router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
 
 router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
   try {
-      const editorUserId = req.user?.userId || "000000000000000000000000"; // The logged-in user making the change
+    const editorUserId = req.user?.userId || "000000000000000000000000"; // The logged-in user making the change
     const creativeId = req.params.id;
     const creativeData = req.body;
     logger.info(
@@ -62,7 +63,25 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
       return;
     }
 
-    // Create or update the creative in the database
+    // Scrape components, animations, assets
+    const { components, libraries, assets } = await scrapper.getComponents(
+      creativeData
+    );
+
+    // Prepare resources object
+    const now = new Date();
+    const resources = {
+      created: now,
+      updated: now,
+      components,
+      libraries,
+      assets,
+    };
+
+    // Inject resources into creativeData
+    creativeData.resources = resources;
+
+    // update the creative in the database
     const creative = await CreativeDynamicCollection.findOneAndUpdate(
       { _id: creativeId },
       { $set: creativeData },

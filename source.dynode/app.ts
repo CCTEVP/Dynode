@@ -13,24 +13,22 @@ import logger from "./services/logger";
 import cors from "cors";
 
 const app = express();
-const allowedOrigins = [
-    "https://localhost:4000",
-    "https://localhost:3000",
-];
+const allowedOrigins = ["https://localhost:4000", "https://localhost:3000"];
 
-app.use(cors({
+app.use(
+  cors({
     origin: (origin, callback) => {
-        // Allow requests with no origin (like mobile apps or curl)
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.includes(origin)) {
-            return callback(null, true);
-        } else {
-            return callback(new Error("Not allowed by CORS"));
-        }
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
     },
-    credentials: false // Set to true if you need cookies/auth
-}));
-
+    credentials: false, // Set to true if you need cookies/auth
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -95,9 +93,9 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
 });
 const PORT = process.env.PORT || 3000;
 
-if (process.env.NODE_ENV === "development") {
-  const pfx = fs.readFileSync("./cert/api.dynode.pfx");
-  const passphrase = "password"; // The password you used in PowerShell
+if (process.env.NODE_ENV !== "development") {
+  const pfx = fs.readFileSync("./cert/source.dynode.pfx");
+  const passphrase = "YourVeryStrongAndSecretPasswordHere"; // The password you used in PowerShell
   https.createServer({ pfx, passphrase }, app).listen(PORT, () => {
     console.log(`🚀 HTTPS server listening at https://localhost:${PORT}/docs`);
   });

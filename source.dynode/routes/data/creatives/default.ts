@@ -3,7 +3,7 @@ import logger from "../../../services/logger";
 import assembliesRouter from "./assemblies/default";
 import dynamicsRouter from "./dynamics/default";
 import interactivesRouter from "./interactives/default";
-import CreativeUnified from "../../../models/views/CreativeUnifiedView"; // <-- Import the model
+import CreativeUnified from "../../../models/views/CreativeUnifiedView";
 
 const router = express.Router();
 // Mount sub-routers
@@ -32,7 +32,8 @@ router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
   } catch (error) {
     logger.error("Error fetching creative from MongoDB view:", error);
     res.status(500).json({
-      message: "Failed to retrieve creative with ID: " + creativeId,
+      message:
+        "Creative route failed to retrieve creative with ID: " + creativeId,
     });
   }
 });

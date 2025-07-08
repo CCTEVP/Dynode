@@ -4,14 +4,12 @@ import creativeBaseSchema from "../shared/CreativeBaseCollectionSchema";
 const creativeAssemblyCollectionSchema = new mongoose.Schema(
   {
     ...creativeBaseSchema.obj, // Spread base schema fields
-    resources: { type: Object, required: false },
     // Add more fields as needed
   },
   {
-      collection: "creatives_assemblies",
-      timestamps: false,
-      versionKey: false,
-
+    collection: "creatives_assemblies",
+    timestamps: false,
+    versionKey: false,
   }
 );
 

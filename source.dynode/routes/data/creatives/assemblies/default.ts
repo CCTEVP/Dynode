@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import logger from "../../../../services/logger";
+import scrapper from "../../../../services/scrapper";
 import CreativeAssemblyView from "../../../../models/views/CreativeAssemblyView";
 import CreativeAssemblyCollection from "../../../../models/collections/CreativeAssemblyCollection";
 
@@ -57,9 +58,26 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
       res.status(400).json({ message: "No Creative data to update." });
       return;
     }
+    // Scrape components, animations, assets
+    const { components, libraries, assets } = await scrapper.getComponents(
+      creativeData
+    );
 
-    // Create or update the creative in the database
-      const creative = await CreativeAssemblyView.findOneAndUpdate(
+    // Prepare resources object
+    const now = new Date();
+    const resources = {
+      created: now,
+      updated: now,
+      components,
+      libraries,
+      assets,
+    };
+
+    // Inject resources into creativeData
+    creativeData.resources = resources;
+
+    // update the creative in the database
+    const creative = await CreativeAssemblyView.findOneAndUpdate(
       { _id: creativeId },
       { $set: { creativeData } },
       { upsert: true, new: true }
@@ -76,7 +94,7 @@ router.post(
   async (req: Request, res: Response, next: NextFunction) => {
     const creativeId = req.params.id;
     try {
-        const creatives = await CreativeAssemblyView.find({});
+      const creatives = await CreativeAssemblyView.find({});
       res.json(creatives);
     } catch (error) {
       logger.error("Error packing creative:", error);
@@ -84,6 +102,5 @@ router.post(
     }
   }
 );
-
 
 export default router;

@@ -1,9 +1,9 @@
 import express, { Request, Response, NextFunction } from "express";
 import logger from "../../services/logger";
-import scrapper from "../../services/scrapper";
 import bundler from "../../services/bundler";
 import caching from "../../services/caching";
 import axios from "axios";
+import { builtinModules } from "module";
 const router = express.Router();
 
 router.get(
@@ -21,7 +21,7 @@ router.get(
         return;
       }
       const apiRes = await axios.get(
-        "https://localhost:3000/data/creatives/" + creativeId,
+        "http://localhost:3000/data/creatives/" + creativeId,
         {
           httpsAgent: new (require("https").Agent)({
             rejectUnauthorized: false,
@@ -30,51 +30,70 @@ router.get(
       );
       const content = apiRes.data;
 
-      /////// Move scrapping logic to build.dynode, so it's only executed after every content update
-
-      // Scrape components, animations, assets
-      const { components, animations, assets } = await scrapper.getComponents(
-        content
-      );
-
-      // Prepare resources object
-      const now = new Date();
-      const resources = {
-        created: now,
-        updated: now,
-        components,
-        animations,
-        assets,
-      };
-
-      // Determine the correct POST URL based on the origin field
-      const origin = content.origin || "creatives";
-      const putUrl = `https://localhost:3000/data/creatives/${origin}/${creativeId}`;
-      logger.info(`PUT URL: ${putUrl}`);
-      // PUT to the API to update the creative with the new resources field
-      await axios.put(
-        putUrl,
-        { resources: resources }, // send this as an object so it's added as a field with all the contents
-        {
-          httpsAgent: new (require("https").Agent)({
-            rejectUnauthorized: false,
-          }),
-        }
-      );
-
-      const cache = await caching.cacheComponents(creativeId);
-
-      /////// The content only needs to know which files are required in the HEAD and BODY
+      // Register assets to cache
 
       res.render("dynamic", {
         content,
-        elements: { components, animations, assets },
-        manager: cache,
       });
     } catch (err) {
       next(err);
     }
   }
 );
+router.get(
+  "/:id/resources/:resource.:debug.:extension",
+  async (req: Request, res: Response, next: NextFunction) => {
+    const creativeId = req.params.id;
+    const resource = req.params.resource;
+    const debug = req.params.debug === "min";
+    const extension = req.params.extension;
+    // Map extensions to content types
+    const CONTENT_TYPES: Record<string, string> = {
+      js: "application/javascript",
+      css: "text/css",
+      json: "application/json",
+      html: "text/html",
+      txt: "text/plain",
+    };
+    const contentType =
+      CONTENT_TYPES[extension.toLowerCase()] || "application/octet-stream";
 
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/data/creatives/" + creativeId
+      );
+      const creative = response.data;
+      //console.log("Fetched creative data:", JSON.stringify(creative, null, 2));
+      const resources = creative?.resources || {};
+      let currentResource = {
+        name: resource,
+        items: [],
+        mode: debug,
+        extension: extension,
+      };
+      switch (resource) {
+        case "components":
+          currentResource.items = resources.components || [];
+          break;
+        case "libraries":
+          currentResource.items = resources.libraries || [];
+          break;
+        case "assets":
+          currentResource.items = resources.assets || [];
+          break;
+      }
+      const bundledResource = await bundler.bundleComponents(currentResource);
+      logger.info("Bundled resources:", bundledResource);
+      res.setHeader("Content-Type", contentType);
+      res.send(bundledResource.payload);
+    } catch (error) {
+      logger.error("Error fetching creative from MongoDB view:", error);
+      res.status(500).json({
+        message:
+          "Assets route failed again to retrieve creative with ID: " +
+          creativeId,
+      });
+    }
+  }
+);
 export default router;

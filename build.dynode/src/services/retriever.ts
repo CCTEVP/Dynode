@@ -1,8 +1,7 @@
 export async function fetchCreativeById(creativeId: string) {
   const response = await fetch(
-    `https://localhost:3000/data/creatives/${encodeURIComponent(creativeId)}`,
-    {
-    }
+    `http://localhost:3000/data/creatives/${encodeURIComponent(creativeId)}`,
+    {}
   );
   if (!response.ok) {
     throw new Error(`Failed to fetch creative: ${response.statusText}`);
@@ -10,8 +9,7 @@ export async function fetchCreativeById(creativeId: string) {
   return response.json();
 }
 export async function fetchCreatives() {
-  const response = await fetch("https://localhost:3000/data/creatives", {
-  });
+  const response = await fetch("https://localhost:3000/data/creatives", {});
   if (!response.ok) {
     throw new Error(`Failed to fetch creatives: ${response.statusText}`);
   }

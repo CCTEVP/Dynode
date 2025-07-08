@@ -3,6 +3,7 @@ import fs from "fs";
 import express from "express";
 import { Request, Response, NextFunction } from "express";
 import indexRouter from "./routes/index";
+//import assetsRouter from "./routes/assets/default";
 import dynamicsRouter from "./routes/dynamics/default";
 
 import logger from "./services/logger";
@@ -14,6 +15,7 @@ console.log("indexRouter:", typeof indexRouter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/", indexRouter);
+//app.use("/assets", assetsRouter);
 app.use("/dynamics", dynamicsRouter);
 
 // Load environment variables from .env file
@@ -58,9 +60,9 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
 });
 const PORT = process.env.PORT || 5000;
 
-if (process.env.NODE_ENV === "development") {
-  const pfx = fs.readFileSync("./cert/api.dynode.pfx");
-  const passphrase = "password"; // The password you used in PowerShell
+if (process.env.NODE_ENV !== "development") {
+  const pfx = fs.readFileSync("./cert/render.dynode.pfx");
+  const passphrase = "YourVeryStrongAndSecretPasswordHere"; // The password you used in PowerShell
   https.createServer({ pfx, passphrase }, app).listen(PORT, () => {
     console.log(`🚀 HTTPS server listening at https://localhost:${PORT}`);
   });

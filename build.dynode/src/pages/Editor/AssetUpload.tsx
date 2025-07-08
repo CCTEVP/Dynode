@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const API_URL = "https://localhost:3000/files/assets";
+const API_URL = "http://localhost:3000/files/assets";
 
 function AssetUpload() {
   const [file, setFile] = useState<File | null>(null);

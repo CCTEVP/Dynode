@@ -5,11 +5,11 @@ import fs from "fs";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    https: {
-      pfx: fs.readFileSync("./cert/build.dynode.pfx"),
-      passphrase: "password", // Use your actual passphrase
-    },
-    port: 4000,
-  },
+  // server: {
+  //   https: {
+  //     pfx: fs.readFileSync("./cert/build.dynode.pfx"),
+  //     passphrase: "password", // Use your actual passphrase
+  //   },
+  //   port: 4000,
+  // },
 });

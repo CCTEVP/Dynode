@@ -1,7 +1,4 @@
-import fs from "fs";
-import path from "path";
-
-const API_URL = "https://localhost:3000/files/logs";
+const API_URL = "http://localhost:3000/files/logs";
 const ORIGIN = "render.dynode"; // <-- Add your constant origin here
 
 type LogLevel = "info" | "error" | "warn" | "debug";

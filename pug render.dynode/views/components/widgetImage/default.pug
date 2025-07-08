@@ -1,6 +1,0 @@
-mixin image(imageElement)
-    - var idValue = "image-widget-" + imageElement._id;
-    - var styleString = Object.entries(imageElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
-    - var sourceURL = imageElement.paths && imageElement.paths.length > 0 ? "https://localhost:3000" + imageElement.paths[0].url : "";
-    div(id=idValue, class=imageElement.classes, style=styleString)
-        img(src=sourceURL, alt=imageElement.identifier, data-name=imageElement.identifier)

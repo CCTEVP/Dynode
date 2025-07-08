@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://localhost:3000",
+      "url": "http://localhost:3000",
       "description": "Local server"
     }
   ],
@@ -745,6 +745,7 @@
         "tags": [
           "Files"
         ],
+        "description": "Submits new log records to the system.",
         "requestBody": {
           "required": true,
           "content": {
@@ -754,46 +755,64 @@
                 "properties": {
                   "level": {
                     "type": "string",
-                    "enum": [
-                      "info",
-                      "error",
-                      "warn",
-                      "debug"
-                    ]
+                    "description": "The log level (e.g., \"info\", \"warn\", \"error\").",
+                    "example": "info"
                   },
                   "message": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "The log message.",
+                    "example": "Sample message."
                   },
                   "meta": {
-                    "type": "object"
+                    "type": "object",
+                    "description": "Additional metadata for the log entry.",
+                    "example": {}
                   }
-                },
-                "required": [
-                  "level",
-                  "message"
-                ]
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Logs",
+            "description": "Log record successfully posted.",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "success"
+                    },
                     "message": {
-                      "type": "string"
+                      "type": "string",
+                      "example": "Log record received."
                     }
                   }
                 }
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "Invalid request body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "error"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Invalid input data."
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

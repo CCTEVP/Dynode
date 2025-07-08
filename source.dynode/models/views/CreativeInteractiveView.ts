@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import creativeBaseViewSchema from "./CreativeBaseViewSchema";
+import creativeBaseViewSchema from "../shared/CreativeBaseViewSchema";
 const creativeInteractiveViewSchema = new mongoose.Schema(
   {
     ...creativeBaseViewSchema.obj, // Spread base schema fields

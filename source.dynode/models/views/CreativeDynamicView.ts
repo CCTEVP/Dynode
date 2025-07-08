@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import creativeBaseViewSchema from "./CreativeBaseViewSchema";
+import creativeBaseViewSchema from "../shared/CreativeBaseViewSchema";
 
 const creativeDynamicViewSchema = new mongoose.Schema(
   {

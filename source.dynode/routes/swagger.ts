@@ -14,8 +14,8 @@ const options = {
         "A simple Express API for retrieving data from MongoDB, documented with Swagger.",
     },
     servers: [
-      { url: "https://localhost:3000", description: "Development server" },
       { url: "http://localhost:3000", description: "Dev HTTP" },
+      { url: "https://localhost:3000", description: "Secured server" },
     ],
     components: {
       securitySchemes: {

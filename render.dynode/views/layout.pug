@@ -6,7 +6,27 @@ html
     if content
       title= content.name
       link(rel='stylesheet', href='/stylesheets/style.css')
+      if content.resources
+        - resourcesURL = '/dynamics/' + content._id + '/resources'
+        if content.resources.components
+          - componentsURL = resourcesURL + '/components.min.css'
+          link(href=componentsURL, rel='stylesheet', type='text/css')
+        if content.resources.libraries
+          - librariesURL = resourcesURL + '/libraries.min.css'
+          link(href=librariesURL, rel='stylesheet', type='text/css')
+        if content.resources.assets
+          - assetsURL = resourcesURL + '/assets.min.css'
+          link(href=assetsURL, rel='stylesheet', type='text/css')
   body
     block content
-    if elements
-    if manager
+    if content
+      if content.resources
+        if content.resources.components
+          - componentsURL = resourcesURL + '/components.min.js'
+          script(src=componentsURL, defer)
+        if content.resources.libraries
+          - librariesURL = resourcesURL + '/libraries.min.js'
+          script(src=librariesURL, defer)
+        if content.resources.assets
+          - assetsURL = resourcesURL + '/assets.min.js'
+          script(src=assetsURL, defer)

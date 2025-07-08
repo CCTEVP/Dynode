@@ -1,2 +1,78 @@
 {
+  "/files/logs": {
+    "post": {
+      "summary": "Post log records",
+      "tags": ["Files"],
+      "description": "Submits new log records to the system.",
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "level": {
+                  "type": "string",
+                  "description": "The log level (e.g., \"info\", \"warn\", \"error\").",
+                  "example": "info"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "The log message.",
+                  "example": "Sample message."
+                },
+                "meta": {
+                  "type": "object",
+                  "description": "Additional metadata for the log entry.",
+                  "example": {}
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Log record successfully posted.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "success"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Log record received."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Invalid request body.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "error"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Invalid input data."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

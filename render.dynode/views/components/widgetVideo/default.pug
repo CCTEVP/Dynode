@@ -5,5 +5,5 @@ mixin video(videoElement)
         video(preload="auto", muted="muted")
             each source in videoElement.source.paths
                 if source
-                    - var sourceURL = "https:\/\/localhost:3000"+source.url
+                    - var sourceURL = "http:\/\/localhost:3000"+source.url
                     source(src=sourceURL, type=source.mime)

@@ -3,6 +3,7 @@ const router = express.Router();
 
 import assetsRouter from "./assets/default";
 import logsRouter from "./logs/default";
+
 router.use("/assets", assetsRouter);
 router.use("/logs", logsRouter);
 
