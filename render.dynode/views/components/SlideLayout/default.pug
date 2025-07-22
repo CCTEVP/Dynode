@@ -1,0 +1,22 @@
+include ../ImageWidget/default
+include ../CountdownWidget/default
+include ../CardWidget/default
+include ../TextWidget/default
+include ../VideoWidget/default
+
+mixin slide-layout(slideElement)
+  - var idValue = "slide-layout-" + slideElement._id;
+  - var styleString = Object.entries(slideElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+  div(id=idValue, data-name=slideElement.identifier, style=styleString)
+    if slideElement.contents
+      each child in slideElement.contents
+        if child.ImageWidget
+          +image-widget(child.ImageWidget)
+        if child.CountdownWidget
+          +countdown-widget(child.CountdownWidget)
+        if child.VideoWidget
+          +video-widget(child.VideoWidget)
+        if child.CardWidget
+          +card-widget(child.CardWidget)
+        if child.TextWidget
+          +text-widget(child.TextWidget)

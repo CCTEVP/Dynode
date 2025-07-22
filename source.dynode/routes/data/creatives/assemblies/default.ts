@@ -60,6 +60,7 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     }
     // Scrape components, animations, assets
     const { components, libraries, assets } = await scrapper.getComponents(
+      creativeId,
       creativeData
     );
 

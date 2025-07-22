@@ -1,12 +1,9 @@
 import express, { Request, Response } from "express";
 import path from "path";
 import fs from "fs";
-import multer from "multer";
-import crypto from "crypto";
 import logger from "../../../services/logger";
 import Asset from "../../../models/collections/AssetsCollection";
 import { upload, getAssetInfo } from "../../../services/register";
-import mongoose from "mongoose";
 
 const router = express.Router();
 
@@ -26,7 +23,8 @@ router.post("/", upload.array("files"), async (req: Request, res: Response) => {
   const kind = assetInfos[0]?.kind || "other";
   const paths = assetInfos.map((info) => ({
     mime: info.mime,
-    url: info.url,
+    filename: info.filename,
+    extension: info.extension,
   }));
 
   const asset = new Asset({
@@ -47,7 +45,9 @@ router.post("/", upload.array("files"), async (req: Request, res: Response) => {
   try {
     await asset.save();
     logger.info(
-      `Files uploaded and asset created: ${paths.map((p) => p.url).join(", ")}`
+      `Files uploaded and asset created: ${paths
+        .map((p) => p.filename + p.extension)
+        .join(", ")}`
     );
     res.json({
       message: "Files uploaded and asset created successfully.",
@@ -74,7 +74,7 @@ router.get("/:filename.:extension", (req: Request, res: Response) => {
   } else if (kind === "image") {
     folder = "image";
   } else if (kind === "font") {
-    folder = "fonts";
+    folder = "font/" + filename;
   } else {
     logger.warn(`Unsupported extension requested: ${extension}`);
     res.status(400).json({ error: "Unsupported file extension." });
@@ -91,7 +91,7 @@ router.get("/:filename.:extension", (req: Request, res: Response) => {
   fs.access(filePath, fs.constants.R_OK, (err) => {
     if (err) {
       logger.error(`File not found: ${filePath}`);
-      res.status(404).json({ error: "File not found." });
+      res.status(404).json({ error: "File not found in " + filePath });
       return;
     }
     // Set the correct Content-Type header

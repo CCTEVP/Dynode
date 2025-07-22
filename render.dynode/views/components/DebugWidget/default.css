@@ -1,0 +1,4 @@
+﻿div[id^="debug-widget-"] {
+  display: flex;
+  flex-direction: row;
+}

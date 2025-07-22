@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "bauermedia_sansregular";
+  src: url("../fonts/bauermediasans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/bauermediasans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,10 @@
+include ../BoxLayout/default
+
+mixin countdown-widget(countdownElement)
+  - var idValue = "countdown-widget-" + countdownElement._id;
+  - var styleString = Object.entries(countdownElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+  div(id=idValue, style=styleString)
+    if countdownElement.contents
+      each child in countdownElement.contents
+        if child.BoxLayout
+          +box-layout(child.BoxLayout)

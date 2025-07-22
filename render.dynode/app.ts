@@ -1,6 +1,7 @@
 import https from "https";
 import fs from "fs";
 import express from "express";
+import path from "path";
 import { Request, Response, NextFunction } from "express";
 import indexRouter from "./routes/index";
 //import assetsRouter from "./routes/assets/default";
@@ -14,6 +15,7 @@ console.log("indexRouter:", typeof indexRouter);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 //app.use("/assets", assetsRouter);
 app.use("/dynamics", dynamicsRouter);
@@ -21,7 +23,6 @@ app.use("/dynamics", dynamicsRouter);
 // Load environment variables from .env file
 // This line should be at the very top of your app.js
 var createError = require("http-errors");
-var path = require("path");
 var cookieParser = require("cookie-parser");
 var loggerMiddleware = require("morgan");
 

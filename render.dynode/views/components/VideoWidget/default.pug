@@ -1,0 +1,9 @@
+mixin video-widget(videoElement)
+    - var idValue = "video-widget-"+videoElement._id;
+    - var styleString = Object.entries(videoElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+    div(id=idValue,style=styleString, alt=videoElement.identifier, data-name=videoElement.identifier)
+        video(preload="auto", muted="muted")
+            each source in videoElement.source.paths
+                if source
+                    - var sourceURL = "http:\/\/localhost:5000/dynamics/"+content._id+"/"+source.filename+".opt."+source.extension
+                    source(src=sourceURL, type=source.mime)

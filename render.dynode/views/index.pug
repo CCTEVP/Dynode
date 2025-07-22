@@ -1,7 +1,7 @@
 extends layout
-include components/widgetDebug/default
+include components/DebugWidget/default
 
 block content
   h1= title
   p Welcome to #{title}
-  +debug("Empty")
+  +debug-widget("Empty")

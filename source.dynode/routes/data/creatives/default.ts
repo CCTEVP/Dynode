@@ -3,7 +3,7 @@ import logger from "../../../services/logger";
 import assembliesRouter from "./assemblies/default";
 import dynamicsRouter from "./dynamics/default";
 import interactivesRouter from "./interactives/default";
-import CreativeUnified from "../../../models/views/CreativeUnifiedView";
+import CreativeUnifiedView from "../../../models/views/CreativeUnifiedView";
 
 const router = express.Router();
 // Mount sub-routers
@@ -14,7 +14,7 @@ router.use("/interactives", interactivesRouter);
 // List all creatives
 router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const creatives = await CreativeUnified.find({});
+    const creatives = await CreativeUnifiedView.find({});
     res.json(creatives);
   } catch (error) {
     logger.error("Error fetching creatives from MongoDB view:", error);
@@ -27,7 +27,7 @@ router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
   const creativeId = req.params.id;
   console.log("Fetching creative with ID:", creativeId);
   try {
-    const creative = await CreativeUnified.findById(creativeId).exec();
+    const creative = await CreativeUnifiedView.findById(creativeId).exec();
     res.json(creative);
   } catch (error) {
     logger.error("Error fetching creative from MongoDB view:", error);

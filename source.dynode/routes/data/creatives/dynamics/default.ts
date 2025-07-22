@@ -62,9 +62,12 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
       res.status(400).json({ message: "No Creative data to update." });
       return;
     }
+    console.log("creativeData");
+    console.log(creativeData);
 
     // Scrape components, animations, assets
     const { components, libraries, assets } = await scrapper.getComponents(
+      creativeId,
       creativeData
     );
 

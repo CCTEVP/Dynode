@@ -1,0 +1,6 @@
+mixin text-widget(textElement)
+    - var idValue = "text-widget-"+textElement._id;
+    - var styleString = Object.entries(textElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+    div(id=idValue, style=styleString, data-name=textElement.identifier)
+        = textElement.value
+

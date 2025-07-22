@@ -1,0 +1,14 @@
+extends layout
+include ../../components/SlideLayout/default
+include ../../components/DebugWidget/default
+
+block content
+  - var styleString = Object.entries(content.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+  main(id="app",role="main",style=styleString)
+    div(id="dynamic-creative-container",style=styleString) 
+      if content
+        if content.elements
+          each element in content.elements
+            if element.SlideLayout
+              +slide-layout(element.SlideLayout)
+    //+debug("Empty")

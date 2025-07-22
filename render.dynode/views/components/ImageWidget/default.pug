@@ -1,0 +1,6 @@
+mixin image-widget(imageElement)
+    - var idValue = "image-widget-"+imageElement._id;
+    - var styleString = Object.entries(imageElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+    - var sourceURL = "http:\/\/localhost:5000/dynamics/"+content._id+"/"+imageElement.source.paths[0].filename+".opt."+imageElement.source.paths[0].extension;
+    div(id=idValue, class=imageElement.classes, style=styleString)
+        img(src=sourceURL, alt=imageElement.identifier, data-name=imageElement.identifier)
