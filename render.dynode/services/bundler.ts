@@ -22,11 +22,6 @@ const bundler = {
     const items = resources.items;
     const mode = resources.mode; // boolean
     const extension = resources.extension; // string
-    console.log(
-      `Bundling resources for creativeId: ${creativeId}, resourceName: ${resourceName}, mode: ${mode}, extension: ${extension}`
-    );
-    console.log("Items type:", typeof items, "Is array:", Array.isArray(items));
-    console.log("Items content:", JSON.stringify(items, null, 2));
     let response = "";
 
     switch (resourceName) {
@@ -102,12 +97,8 @@ const bundler = {
         if (extension.toLowerCase() === "css") {
           // Handle asset structure for CSS - assets come as grouped objects or legacy arrays
           const fontFaceRules: string[] = [];
-
-          console.log(`Processing CSS assets:`, JSON.stringify(items, null, 2));
-
           if (Array.isArray(items)) {
             // Legacy format: items is a flat array - group fonts by family name
-            console.log("Processing legacy array format");
             const fontGroups: Record<string, string[]> = {};
 
             items.forEach((url: string) => {
@@ -143,24 +134,16 @@ const bundler = {
             });
           } else if (typeof items === "object" && items !== null) {
             // New grouped format: items is an object with grouped assets containing name and paths
-            console.log("Processing new grouped format");
             const assetGroups = items as Record<
               string,
               { name: string; paths: string[] }
             >;
 
             Object.entries(assetGroups).forEach(([groupKey, assetData]) => {
-              console.log(
-                `Processing group: ${groupKey} with ${assetData.paths.length} URLs`
-              );
               // Only process font groups
               if (groupKey.startsWith("font-")) {
                 // Use the asset name directly from the asset data
                 const fontFamily = assetData.name || "Unknown Font";
-
-                console.log(
-                  `Using font family name: "${fontFamily}" from asset.name field`
-                );
 
                 // Create source URLs for all formats of this font using the paths array
                 const sources = assetData.paths
@@ -180,9 +163,7 @@ const bundler = {
             });
           }
 
-          console.log(`Generated ${fontFaceRules.length} font-face rules`);
           response = fontFaceRules.join("\n\n");
-          console.log(`Final CSS response:`, response);
         } else if (extension.toLowerCase() === "js") {
           // Handle asset structure - flatten all asset URLs from the grouped format
           let assetUrls: string[] = [];

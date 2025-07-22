@@ -40,9 +40,6 @@ router.get(
     const debug = req.params.debug === "min";
     const extension = req.params.extension;
 
-    console.log("Raw params:", req.params);
-    console.log("Original URL:", req.originalUrl);
-
     //check if extension is in CONTENT_TYPES or MIME_TYPES
     const isMedia = extension.toLowerCase() in MIME_TYPES;
     const isFile = extension.toLowerCase() in CONTENT_TYPES;
@@ -50,14 +47,6 @@ router.get(
       CONTENT_TYPES[extension.toLowerCase()] ||
       MIME_TYPES[extension.toLowerCase()] ||
       "application/octet-stream";
-    console.log(
-      `Fetching "this" resource: ${resource}, creativeId: ${creativeId}, debug: ${debug}, extension: ${extension}, isMedia: ${isMedia}, isFile: ${isFile}, contentType: ${contentType}`
-    );
-    console.log(
-      "Matched /:id/:resource.:debug.:extension route!",
-      req.originalUrl,
-      req.params
-    );
     try {
       // Check if the resource is media or file
       if (isMedia) {
@@ -72,10 +61,6 @@ router.get(
           "http://localhost:3000/data/creatives/" + creativeId
         );
         const creative = response.data;
-        console.log(
-          "Fetched creative data resources:",
-          JSON.stringify(creative?.resources, null, 2)
-        );
         const resources = creative?.resources || {};
         let currentResource = {
           creativeId: creativeId,
@@ -98,10 +83,6 @@ router.get(
             currentResource.items = resources.assets || [];
             break;
         }
-        console.log(
-          `About to bundle resource "${resource}" with items:`,
-          JSON.stringify(currentResource.items, null, 2)
-        );
         const bundledResource = await bundler.bundleComponents(currentResource);
         logger.info("Bundled resources:", bundledResource);
         res.setHeader("Content-Type", contentType);
