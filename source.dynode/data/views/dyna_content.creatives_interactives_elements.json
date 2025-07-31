@@ -1,0 +1,72 @@
+{
+  "viewOn": "creatives_interactives",
+  "pipeline": [
+    {
+      "$lookup": {
+        "from": "formats",
+        "localField": "format",
+        "foreignField": "_id",
+        "as": "formatArray"
+      }
+    },
+    {
+      "$addFields": {
+        "format": {
+          "$cond": {
+            "if": {
+              "$gt": [
+                {
+                  "$size": "$formatArray"
+                },
+                0
+              ]
+            },
+            "then": {
+              "$arrayElemAt": ["$formatArray", 0]
+            },
+            "else": 0
+          }
+        }
+      }
+    },
+    {
+      "$project": {
+        "formatArray": 0
+      }
+    },
+    {
+      "$lookup": {
+        "from": "elements_binding",
+        "localField": "_id",
+        "foreignField": "parent",
+        "as": "elements",
+        "pipeline": [
+          {
+            "$sort": {
+              "order": 1
+            }
+          },
+          {
+            "$project": {
+              "element": {
+                "$arrayToObject": [
+                  [
+                    {
+                      "k": "$type",
+                      "v": "$$ROOT"
+                    }
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "$replaceRoot": {
+              "newRoot": "$element"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import logger from "../services/logger";
 const router = express.Router();
 
 router.get("/", function (req: Request, res: Response, next: NextFunction) {
-  logger.info(`Index loaded`);
+  logger.info(`Index loaded RENDER`);
   res.render("index", { title: "Express" });
 });
 

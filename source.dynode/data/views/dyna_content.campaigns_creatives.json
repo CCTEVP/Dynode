@@ -1,0 +1,13 @@
+{
+  "viewOn": "campaigns",
+  "pipeline": [
+    {
+      "$lookup": {
+        "from": "creatives_united",
+        "localField": "_id",
+        "foreignField": "parent",
+        "as": "creatives"
+      }
+    }
+  ]
+}

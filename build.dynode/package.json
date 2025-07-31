@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:docker": "docker build -t build-dynode:latest .",
     "lint": "eslint .",
     "preview": "vite preview"
   },

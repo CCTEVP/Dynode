@@ -1,0 +1,59 @@
+services:
+  source:
+    image: source-dynode:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongo:27017/dyna_content
+    networks:
+      - dynode-network
+    depends_on:
+      - mongo
+
+  render:
+    image: render-dynode:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - SOURCE_API_URL=http://source:3000
+      - RENDER_BASE_URL=http://localhost:5000 # For browser requests
+      - BUILDER_BASE_URL=http://localhost:4000 # For browser requests
+    networks:
+      - dynode-network
+    depends_on:
+      - source
+
+  build:
+    image: build-dynode:latest
+    ports:
+      - "4000:4000" # Map host port 4000 to container port 4000 (nginx)
+    networks:
+      - dynode-network
+    environment:
+      - NODE_ENV=development
+      - VITE_SOURCE_API_URL=http://source:3000
+      - VITE_RENDER_BASE_URL=http://localhost:5000 # For browser requests
+      - VITE_BUILDER_BASE_URL=http://localhost:4000 # For browser requests
+    depends_on:
+      - source
+      - render
+
+  mongo:
+    image: mongodb/mongodb-community-server:latest
+    ports:
+      - "32768:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - dynode-network
+    environment:
+      - MONGO_INITDB_DATABASE=dyna_content
+
+networks:
+  dynode-network:
+    driver: bridge
+
+volumes:
+  mongo-data:

@@ -32,6 +32,14 @@ const MIME_TYPES: Record<string, string> = {
   woff2: "font/woff2",
   eot: "application/vnd.ms-fontobject",
 };
+const ASSETS_URL = process.env.SOURCE_API_URL
+  ? `${process.env.SOURCE_API_URL}/files/assets`
+  : "http://source:3000/files/assets";
+
+const CREATIVES_URL = process.env.SOURCE_API_URL
+  ? `${process.env.SOURCE_API_URL}/data/creatives`
+  : "http://source:3000/data/creatives";
+
 router.get(
   "/:id/:resource.:debug.:extension",
   async (req: Request, res: Response, next: NextFunction) => {
@@ -51,15 +59,13 @@ router.get(
       // Check if the resource is media or file
       if (isMedia) {
         const response = await axios.get(
-          "http://localhost:3000/files/assets/" + resource + "." + extension,
+          ASSETS_URL + "/" + resource + "." + extension,
           { responseType: "arraybuffer" } // <-- Important for binary data!
         );
         res.type(contentType || "application/octet-stream");
         res.send(Buffer.from(response.data));
       } else if (isFile) {
-        const response = await axios.get(
-          "http://localhost:3000/data/creatives/" + creativeId
-        );
+        const response = await axios.get(CREATIVES_URL + "/" + creativeId);
         const creative = response.data;
         const resources = creative?.resources || {};
         let currentResource = {
@@ -92,8 +98,7 @@ router.get(
       logger.error("Error fetching creative from MongoDB view:", error);
       res.status(500).json({
         message:
-          "Assets route failed again to retrieve creative with ID: " +
-          creativeId,
+          "Assets route failed to retrieve creative with ID: " + creativeId,
       });
     }
   }
@@ -112,20 +117,20 @@ router.get(
         });
         return;
       }
-      const apiRes = await axios.get(
-        "http://localhost:3000/data/creatives/" + creativeId,
-        {
-          httpsAgent: new (require("https").Agent)({
-            rejectUnauthorized: false,
-          }),
-        }
-      );
+      const apiRes = await axios.get(CREATIVES_URL + "/" + creativeId, {
+        httpsAgent: new (require("https").Agent)({
+          rejectUnauthorized: false,
+        }),
+      });
       const content = apiRes.data;
+      const baseURL =
+        process.env.RENDER_BASE_URL || `${req.protocol}://${req.get("host")}`;
 
       // Register assets to cache
 
       res.render("pages/dynamics/content", {
         content,
+        baseURL,
       });
     } catch (err) {
       next(err);

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run build:components && tsc && cpx \"views/**/*\" dist/views",
+    "build:docker": "docker build -t render-dynode:latest .",
     "build:components": "tsc --project tsconfig.inplace.json",
     "start": "node dist/app.js",
     "dev": "ts-node-dev app.ts"

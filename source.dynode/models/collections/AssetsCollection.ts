@@ -9,7 +9,7 @@ const assetsCollectionSchema = new mongoose.Schema(
     updated: { type: Date, required: true },
     status: { type: String, default: "" },
     changes: { type: [changeSchema], default: [] },
-    paths: [{ mime: String, url: String, _id: false }],
+    paths: [{ mime: String, filename: String, extension: String, _id: false }],
   },
   {
     collection: "assets",

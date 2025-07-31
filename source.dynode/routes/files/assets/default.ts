@@ -13,6 +13,7 @@ router.post("/", upload.array("files"), async (req: Request, res: Response) => {
   // req.files is an array of files
   const files = req.files as Express.Multer.File[];
   if (!files || files.length === 0) {
+    console.error("No files uploaded");
     logger.error("No files uploaded");
     res.status(400).json({ error: "No files uploaded." });
     return;
@@ -20,6 +21,7 @@ router.post("/", upload.array("files"), async (req: Request, res: Response) => {
 
   const now = new Date();
   const assetInfos = getAssetInfo(files); // always an array
+  console.log("Asset infos:", JSON.stringify(assetInfos, null, 2)); // Add this line
   const kind = assetInfos[0]?.kind || "other";
   const paths = assetInfos.map((info) => ({
     mime: info.mime,

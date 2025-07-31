@@ -48,7 +48,7 @@ const storage = multer.diskStorage({
     } else {
       return cb(new Error("Unsupported file extension."), "");
     }
-    const dest = path.join(__dirname, "../../files", folder);
+    const dest = path.join(__dirname, "../../dist/files", folder);
     fs.mkdirSync(dest, { recursive: true });
     (req as any).fileDestination = dest;
     cb(null, dest);
@@ -85,6 +85,11 @@ export function getAssetInfo(
 ): { mime: string; kind: string; filename: string; extension: string }[] {
   const processFile = (file: Express.Multer.File) => {
     const ext = path.extname(file.filename).slice(1).toLowerCase();
+    const filenameWithoutExt = path.basename(
+      file.filename,
+      path.extname(file.filename)
+    );
+
     let kind = "";
     if (VIDEO_EXTS.includes(ext)) kind = "video";
     else if (IMAGE_EXTS.includes(ext)) kind = "image";
@@ -92,7 +97,7 @@ export function getAssetInfo(
     else kind = "other";
 
     const mime = MIME_TYPES[ext] || file.mimetype || "application/octet-stream";
-    return { mime, kind, filename: file.filename, extension: ext };
+    return { mime, kind, filename: filenameWithoutExt, extension: ext };
   };
 
   if (Array.isArray(fileOrFiles)) {

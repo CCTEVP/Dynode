@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "67e53f627acf34a2c37476fa"
+  },
+  "name": "Portrait - Full HD",
+  "width": "1080px",
+  "height": "1920px",
+  "created": {
+    "$date": "2025-04-03T00:00:00.000Z"
+  },
+  "updated": {
+    "$date": "2025-04-03T00:00:00.000Z"
+  },
+  "status": "",
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67e53fe57acf34a2c37476ff"
+  },
+  "name": "Landscape - Full HD",
+  "height": "1080px",
+  "width": "1920px",
+  "created": {
+    "$date": "2025-04-03T00:00:00.000Z"
+  },
+  "updated": {
+    "$date": "2025-04-03T00:00:00.000Z"
+  },
+  "status": "",
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+}]

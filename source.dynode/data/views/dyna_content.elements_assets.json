@@ -1,0 +1,97 @@
+{
+  "viewOn": "elements",
+  "pipeline": [
+    {
+      "$lookup": {
+        "from": "assets",
+        "localField": "source._id",
+        "foreignField": "_id",
+        "as": "assetArray"
+      }
+    },
+    {
+      "$addFields": {
+        "source": {
+          "$cond": {
+            "if": {
+              "$gt": [
+                {
+                  "$size": "$assetArray"
+                },
+                0
+              ]
+            },
+            "then": {
+              "$arrayElemAt": ["$assetArray", 0]
+            },
+            "else": 0
+          }
+        }
+      }
+    },
+    {
+      "$project": {
+        "assetArray": 0
+      }
+    },
+    {
+      "$addFields": {
+        "source": {
+          "$cond": {
+            "if": {
+              "$eq": ["$source", 0]
+            },
+            "then": "$$REMOVE",
+            "else": "$source"
+          }
+        }
+      }
+    },
+    {
+      "$lookup": {
+        "from": "assets",
+        "localField": "font._id",
+        "foreignField": "_id",
+        "as": "fontArray"
+      }
+    },
+    {
+      "$addFields": {
+        "font": {
+          "$cond": {
+            "if": {
+              "$gt": [
+                {
+                  "$size": "$fontArray"
+                },
+                0
+              ]
+            },
+            "then": {
+              "$arrayElemAt": ["$fontArray", 0]
+            },
+            "else": 0
+          }
+        }
+      }
+    },
+    {
+      "$project": {
+        "fontArray": 0
+      }
+    },
+    {
+      "$addFields": {
+        "font": {
+          "$cond": {
+            "if": {
+              "$eq": ["$font", 0]
+            },
+            "then": "$$REMOVE",
+            "else": "$font"
+          }
+        }
+      }
+    }
+  ]
+}

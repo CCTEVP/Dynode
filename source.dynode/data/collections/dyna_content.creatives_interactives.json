@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "684be9534344443df7e0f4a8"
+  },
+  "created": {
+    "$date": "2025-03-27T11:18:00.000Z"
+  },
+  "name": "Interactive Creative",
+  "styles": {
+    "width": "1080px",
+    "height": "1920px",
+    "position": "relative"
+  },
+  "updated": {
+    "$date": "2025-03-27T11:19:00.000Z"
+  },
+  "format": {
+    "$oid": "67e53f627acf34a2c37476fa"
+  },
+  "parent": [
+    {
+      "$oid": "67e53ecc7acf34a2c37476f6"
+    }
+  ],
+  "status": "",
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ],
+  "cache": {
+    "duration": "15"
+  }
+}]

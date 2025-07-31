@@ -1,0 +1,305 @@
+{
+  "viewOn": "elements_assets",
+  "pipeline": [
+    {
+      "$lookup": {
+        "from": "elements_assets",
+        "let": {
+          "parentId": "$_id"
+        },
+        "pipeline": [
+          {
+            "$sort": {
+              "order": 1
+            }
+          },
+          {
+            "$match": {
+              "$expr": {
+                "$in": ["$$parentId", "$parent"]
+              }
+            }
+          },
+          {
+            "$lookup": {
+              "from": "elements_assets",
+              "let": {
+                "parentId": "$_id"
+              },
+              "pipeline": [
+                {
+                  "$sort": {
+                    "order": 1
+                  }
+                },
+                {
+                  "$match": {
+                    "$expr": {
+                      "$in": ["$$parentId", "$parent"]
+                    }
+                  }
+                },
+                {
+                  "$lookup": {
+                    "from": "elements_assets",
+                    "let": {
+                      "parentId": "$_id"
+                    },
+                    "pipeline": [
+                      {
+                        "$sort": {
+                          "order": 1
+                        }
+                      },
+                      {
+                        "$match": {
+                          "$expr": {
+                            "$in": ["$$parentId", "$parent"]
+                          }
+                        }
+                      },
+                      {
+                        "$lookup": {
+                          "from": "elements_assets",
+                          "let": {
+                            "parentId": "$_id"
+                          },
+                          "pipeline": [
+                            {
+                              "$sort": {
+                                "order": 1
+                              }
+                            },
+                            {
+                              "$match": {
+                                "$expr": {
+                                  "$in": ["$$parentId", "$parent"]
+                                }
+                              }
+                            },
+                            {
+                              "$lookup": {
+                                "from": "elements_assets",
+                                "let": {
+                                  "parentId": "$_id"
+                                },
+                                "pipeline": [
+                                  {
+                                    "$sort": {
+                                      "order": 1
+                                    }
+                                  },
+                                  {
+                                    "$match": {
+                                      "$expr": {
+                                        "$in": ["$$parentId", "$parent"]
+                                      }
+                                    }
+                                  }
+                                ],
+                                "as": "contents"
+                              }
+                            },
+                            {
+                              "$addFields": {
+                                "contents": {
+                                  "$cond": [
+                                    {
+                                      "$gt": [
+                                        {
+                                          "$size": "$contents"
+                                        },
+                                        0
+                                      ]
+                                    },
+                                    {
+                                      "$map": {
+                                        "input": "$contents",
+                                        "as": "child",
+                                        "in": {
+                                          "$arrayToObject": [
+                                            [
+                                              {
+                                                "k": "$$child.type",
+                                                "v": "$$child"
+                                              }
+                                            ]
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "$$REMOVE"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "$project": {
+                                "parent": 0
+                              }
+                            }
+                          ],
+                          "as": "contents"
+                        }
+                      },
+                      {
+                        "$addFields": {
+                          "contents": {
+                            "$cond": [
+                              {
+                                "$gt": [
+                                  {
+                                    "$size": "$contents"
+                                  },
+                                  0
+                                ]
+                              },
+                              {
+                                "$map": {
+                                  "input": "$contents",
+                                  "as": "child",
+                                  "in": {
+                                    "$arrayToObject": [
+                                      [
+                                        {
+                                          "k": "$$child.type",
+                                          "v": "$$child"
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              },
+                              "$$REMOVE"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "$project": {
+                          "parent": 0
+                        }
+                      }
+                    ],
+                    "as": "contents"
+                  }
+                },
+                {
+                  "$addFields": {
+                    "contents": {
+                      "$cond": [
+                        {
+                          "$gt": [
+                            {
+                              "$size": "$contents"
+                            },
+                            0
+                          ]
+                        },
+                        {
+                          "$map": {
+                            "input": "$contents",
+                            "as": "child",
+                            "in": {
+                              "$arrayToObject": [
+                                [
+                                  {
+                                    "k": "$$child.type",
+                                    "v": "$$child"
+                                  }
+                                ]
+                              ]
+                            }
+                          }
+                        },
+                        "$$REMOVE"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "$project": {
+                    "parent": 0
+                  }
+                }
+              ],
+              "as": "contents"
+            }
+          },
+          {
+            "$addFields": {
+              "contents": {
+                "$cond": [
+                  {
+                    "$gt": [
+                      {
+                        "$size": "$contents"
+                      },
+                      0
+                    ]
+                  },
+                  {
+                    "$map": {
+                      "input": "$contents",
+                      "as": "child",
+                      "in": {
+                        "$arrayToObject": [
+                          [
+                            {
+                              "k": "$$child.type",
+                              "v": "$$child"
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  },
+                  "$$REMOVE"
+                ]
+              }
+            }
+          },
+          {
+            "$project": {
+              "parent": 0
+            }
+          }
+        ],
+        "as": "contents"
+      }
+    },
+    {
+      "$addFields": {
+        "contents": {
+          "$cond": [
+            {
+              "$gt": [
+                {
+                  "$size": "$contents"
+                },
+                0
+              ]
+            },
+            {
+              "$map": {
+                "input": "$contents",
+                "as": "child",
+                "in": {
+                  "$arrayToObject": [
+                    [
+                      {
+                        "k": "$$child.type",
+                        "v": "$$child"
+                      }
+                    ]
+                  ]
+                }
+              }
+            },
+            "$$REMOVE"
+          ]
+        }
+      }
+    }
+  ]
+}

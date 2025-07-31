@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+const API_URL = import.meta.env.VITE_SOURCE_API_URL
+  ? `${import.meta.env.VITE_SOURCE_API_URL}/files/assets`
+  : "http://localhost:3000/files/assets";
 
-const API_URL = "http://localhost:3000/files/assets";
+//const API_URL = "/api/files/assets"; // Uses nginx proxy
 
 function AssetUpload() {
   const [file, setFile] = useState<File | null>(null);
@@ -25,7 +28,7 @@ function AssetUpload() {
     setResult(null);
 
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("files", file);
 
     try {
       const response = await fetch(API_URL, {

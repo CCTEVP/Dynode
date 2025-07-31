@@ -1,11 +1,14 @@
 {
-  "name": "api.dynode",
+  "name": "source.dynode",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "node scripts/mergeOpenapi.js && tsc && cpx \"views/**/*\" dist/views",
+    "build:docker": "docker build -t source-dynode:latest .",
     "start": "node dist/app.js",
-    "dev": "ts-node-dev app.ts"
+    "dev": "ts-node-dev app.ts",
+    "db:seed": "node scripts/databaseSeed.js",
+    "db:reset": "node scripts/databaseReset.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

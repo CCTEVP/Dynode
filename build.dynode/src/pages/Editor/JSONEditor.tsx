@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchCreativeWithAllElementsFlat } from "../../services/retriever";
 import logger from "../../services/logger";
 
 function JsonEditor() {
   const { id: creativeId } = useParams<{ id: string }>();
-  const [root, setRoot] = useState<any>(null);
+  // Remove unused 'root' state if you're not using it, or use it in the component
   const [elements, setElements] = useState<any[]>([]);
   const [errors, setErrors] = useState<{ [key: string]: string | null }>({});
   const [jsonTexts, setJsonTexts] = useState<{ [key: string]: string }>({});
@@ -19,7 +19,8 @@ function JsonEditor() {
       .then(({ root, elements }) => {
         logger.info("Fetched creative:", root);
         logger.info("Fetched elements:", elements);
-        setRoot(root);
+        // If you need root later, add it back to state
+        // setRoot(root);
         setElements(elements);
         // Initialize each textarea with the element's JSON
         const initialTexts: { [key: string]: string } = {};

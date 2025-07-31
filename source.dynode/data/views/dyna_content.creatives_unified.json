@@ -1,0 +1,34 @@
+{
+  "viewOn": "creatives_assemblies",
+  "pipeline": [
+    {
+      "$addFields": {
+        "origin": "creatives_assemblies"
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "creatives_dynamics",
+        "pipeline": [
+          {
+            "$addFields": {
+              "origin": "dynamics"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "creatives_interactives",
+        "pipeline": [
+          {
+            "$addFields": {
+              "origin": "interactives"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

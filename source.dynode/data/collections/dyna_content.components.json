@@ -1,0 +1,519 @@
+[{
+  "_id": {
+    "$oid": "67e533027acf34a2c37476b1"
+  },
+  "styles": {
+    "position": "absolute",
+    "top": "0",
+    "left": "0",
+    "bottom": "0",
+    "right": "0",
+    "width": "100%",
+    "height": "100%",
+    "display": "flex",
+    "align-items": "center",
+    "justify-content": "center",
+    "flex-direction": "column",
+    "-webkit-transition": "all 1s ease -in -out !important",
+    "-moz-transition": "all 1s ease -in -out !important",
+    "-o-transition": "all 1s ease -in -out !important",
+    "transition": "all 1s ease -in -out !important",
+    "overflow": "hidden",
+    "visibility": "visible",
+    "line-height": "1.5",
+    "font-weight": "400",
+    "color-scheme": "light dark",
+    "color": "#ffffffde",
+    "font-synthesis": "none",
+    "text-rendering": "optimizeLegibility",
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale"
+  },
+  "classes": "",
+  "identifier": "container-template",
+  "attributes": [],
+  "status": "",
+  "contents": [],
+  "type": "SlideLayout",
+  "order": 0,
+  "parent": [],
+  "created": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "updated": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67e533647acf34a2c37476b4"
+  },
+  "identifier": "container-template",
+  "source": "",
+  "classes": "",
+  "attributes": [],
+  "status": "",
+  "styles": {
+    "position": "absolute",
+    "height": "100%",
+    "width": "100%"
+  },
+  "type": "ImageWidget",
+  "asset": {},
+  "order": 0,
+  "parent": [],
+  "created": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "updated": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67e533c47acf34a2c37476b7"
+  },
+  "identifier": "container-template",
+  "source": "",
+  "attributes": [
+    "fullscreen"
+  ],
+  "status": "",
+  "styles": {
+    "display": "flex",
+    "align-items": "center",
+    "justify-content": "center",
+    "flex-direction": "column"
+  },
+  "type": "VideoWidget",
+  "asset": {},
+  "order": 0,
+  "parent": [],
+  "created": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "updated": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67e534eb7acf34a2c37476bd"
+  },
+  "identifier": "container-template",
+  "attributes": [],
+  "styles": {
+    "display": "flex",
+    "flex-direction": "column",
+    "align-items": "center",
+    "justify-content": "center"
+  },
+  "contents": [],
+  "type": "BoxLayout",
+  "order": 0,
+  "parent": [],
+  "status": "",
+  "created": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "updated": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67e535117acf34a2c37476bf"
+  },
+  "value": " ",
+  "classes": "",
+  "styles": {
+    "position": "relative",
+    "width": "100%"
+  },
+  "type": "TextWidget",
+  "identifier": "container-template",
+  "order": 0,
+  "parent": [],
+  "status": "",
+  "created": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "updated": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "changed": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67e535677acf34a2c37476c3"
+  },
+  "classes": "",
+  "value": "",
+  "type": "CardWidget",
+  "source": "",
+  "styles": {
+    "width": "100%",
+    "position": "relative"
+  },
+  "identifier": "container-template",
+  "order": 0,
+  "parent": [],
+  "status": "",
+  "created": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "updated": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67ebbc728e4999871bf4ecc8"
+  },
+  "identifier": "container-template",
+  "classes": "",
+  "styles": {
+    "display": "flex",
+    "flex-direction": "row",
+    "margin-top": "-500px"
+  },
+  "attributes": [],
+  "targetDateTime": {
+    "default": "2025-12-31T23:59:59",
+    "source": "queryParameter",
+    "name": "targetDateTime"
+  },
+  "contents": [
+    {
+      "BoxLayout": {
+        "identifier": "days",
+        "attributes": [],
+        "styles": {
+          "display": "flex",
+          "flex-direction": "column",
+          "width": "180px",
+          "margin": "30px",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "contents": [
+          {
+            "TextWidget": {
+              "value": "Days",
+              "classes": "label",
+              "styles": {
+                "color": "black",
+                "font-size": "40px",
+                "text-align": "center",
+                "position": "relative",
+                "width": "100%"
+              },
+              "order": 1,
+              "type": "TextWidget",
+              "_id": {
+                "$oid": "67f78dc0a3b6005368030b13"
+              }
+            }
+          },
+          {
+            "CardWidget": {
+              "classes": "number",
+              "value": "00",
+              "type": "CardWidget",
+              "source": "days",
+              "styles": {
+                "color": "black",
+                "height": "200px",
+                "width": "200px",
+                "margin-top": "10px",
+                "font-size": "120px",
+                "text-align": "center",
+                "background-color": "#ffffff1a",
+                "border": "0.5px solid rgba(255, 255, 255, 0.3)",
+                "border-radius": "5%",
+                "position": "relative"
+              },
+              "order": 2,
+              "_id": {
+                "$oid": "67f78dcda3b6005368030b14"
+              }
+            }
+          }
+        ],
+        "order": 1,
+        "type": "BoxLayout",
+        "_id": {
+          "$oid": "67f78dada3b6005368030b12"
+        }
+      }
+    },
+    {
+      "BoxLayout": {
+        "identifier": "hours",
+        "attributes": [],
+        "styles": {
+          "display": "flex",
+          "flex-direction": "column",
+          "width": "180px",
+          "margin": "30px",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "contents": [
+          {
+            "TextWidget": {
+              "value": "Hours",
+              "classes": "label",
+              "styles": {
+                "color": "black",
+                "font-size": "40px",
+                "text-align": "center",
+                "position": "relative",
+                "width": "100%"
+              },
+              "order": 1,
+              "type": "TextWidget",
+              "_id": {
+                "$oid": "67f78ea6a3b6005368030b1d"
+              }
+            }
+          },
+          {
+            "CardWidget": {
+              "classes": "number",
+              "value": "00",
+              "type": "CardWidget",
+              "source": "hours",
+              "styles": {
+                "color": "black",
+                "height": "200px",
+                "width": "200px",
+                "margin-top": "10px",
+                "font-size": "120px",
+                "text-align": "center",
+                "background-color": "#ffffff1a",
+                "border": "0.5px solid rgba(255, 255, 255, 0.3)",
+                "border-radius": "5%",
+                "position": "relative"
+              },
+              "order": 2,
+              "_id": {
+                "$oid": "67f78e9ca3b6005368030b1c"
+              }
+            }
+          }
+        ],
+        "order": 2,
+        "type": "BoxLayout",
+        "_id": {
+          "$oid": "67f78e88a3b6005368030b1b"
+        }
+      }
+    },
+    {
+      "BoxLayout": {
+        "identifier": "minutes",
+        "attributes": [],
+        "styles": {
+          "display": "flex",
+          "flex-direction": "column",
+          "width": "180px",
+          "margin": "30px",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "contents": [
+          {
+            "TextWidget": {
+              "value": "Minutes",
+              "classes": "label",
+              "styles": {
+                "color": "black",
+                "font-size": "40px",
+                "text-align": "center",
+                "position": "relative",
+                "width": "100%"
+              },
+              "order": 1,
+              "type": "TextWidget",
+              "_id": {
+                "$oid": "67f78e50a3b6005368030b19"
+              }
+            }
+          },
+          {
+            "CardWidget": {
+              "classes": "number",
+              "value": "00",
+              "type": "CardWidget",
+              "source": "minutes",
+              "styles": {
+                "color": "black",
+                "height": "200px",
+                "width": "200px",
+                "margin-top": "10px",
+                "font-size": "120px",
+                "text-align": "center",
+                "background-color": "#ffffff1a",
+                "border": "0.5px solid rgba(255, 255, 255, 0.3)",
+                "border-radius": "5%",
+                "position": "relative"
+              },
+              "order": 2,
+              "_id": {
+                "$oid": "67f78e45a3b6005368030b18"
+              }
+            }
+          }
+        ],
+        "order": 3,
+        "type": "BoxLayout",
+        "_id": {
+          "$oid": "67f78e5fa3b6005368030b1a"
+        }
+      }
+    },
+    {
+      "BoxLayout": {
+        "identifier": "seconds",
+        "attributes": [],
+        "styles": {
+          "display": "flex",
+          "flex-direction": "column",
+          "width": "180px",
+          "margin": "30px",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "contents": [
+          {
+            "TextWidget": {
+              "value": "Seconds",
+              "classes": "label",
+              "styles": {
+                "color": "black",
+                "font-size": "40px",
+                "text-align": "center",
+                "position": "relative",
+                "width": "100%"
+              },
+              "order": 1,
+              "type": "TextWidget",
+              "_id": {
+                "$oid": "67f78e1ea3b6005368030b16"
+              }
+            }
+          },
+          {
+            "CardWidget": {
+              "classes": "number",
+              "value": "00",
+              "type": "CardWidget",
+              "source": "seconds",
+              "styles": {
+                "color": "black",
+                "height": "200px",
+                "width": "200px",
+                "margin-top": "10px",
+                "font-size": "120px",
+                "text-align": "center",
+                "background-color": "#ffffff1a",
+                "border": "0.5px solid rgba(255, 255, 255, 0.3)",
+                "border-radius": "5%",
+                "position": "relative"
+              },
+              "order": 2,
+              "_id": {
+                "$oid": "67f78e12a3b6005368030b15"
+              }
+            }
+          }
+        ],
+        "order": 4,
+        "type": "BoxLayout",
+        "_id": {
+          "$oid": "67f78e32a3b6005368030b17"
+        }
+      }
+    }
+  ],
+  "type": "CountdownWidget",
+  "order": 0,
+  "parent": [],
+  "status": "",
+  "created": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "updated": {
+    "$date": "2025-05-22T10:59:59.000Z"
+  },
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ]
+}]
