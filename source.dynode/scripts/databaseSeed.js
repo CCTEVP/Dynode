@@ -2,7 +2,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
-const mongoURI = process.env.MONGO_URI;
+const mongoURI = process.env.MONGO_URI_PROD;
 
 // Function to convert MongoDB extended JSON to proper format
 function convertExtendedJSON(obj) {

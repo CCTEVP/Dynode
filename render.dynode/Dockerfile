@@ -35,6 +35,9 @@ COPY --from=builder /app/public/ ./dist/public/
 # Copy runtime files (views are needed at runtime for Pug templates)
 COPY --from=builder /app/views/ ./views/
 
+# Copy certificate files
+COPY --from=builder /app/cert/ ./cert/
+
 # Create logs directory
 RUN mkdir -p logs
 

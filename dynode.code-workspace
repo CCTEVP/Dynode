@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "build.dynode"
+	},
+	{
+		"path": "render.dynode"
+	},
+	{
+		"path": "source.dynode"
+	}
+]
+}

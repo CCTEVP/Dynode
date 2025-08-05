@@ -4,8 +4,6 @@ import express from "express";
 import path from "path";
 import { Request, Response, NextFunction } from "express";
 import indexRouter from "./routes/index";
-//import assetsRouter from "./routes/assets/default";
-import dynamicsRouter from "./routes/dynamics/default";
 
 import logger from "./services/logger";
 
@@ -17,8 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
-//app.use("/assets", assetsRouter);
-app.use("/dynamics", dynamicsRouter);
 
 // Load environment variables from .env file
 // This line should be at the very top of your app.js
@@ -59,7 +55,7 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
   res.status(err.status || 500);
   res.render("error");
 });
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT_ENV || 5000;
 
 if (process.env.NODE_ENV !== "development") {
   const pfx = fs.readFileSync("./cert/render.dynode.pfx");

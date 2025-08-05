@@ -3,7 +3,7 @@ import axios from "axios";
 // Use the Docker service name instead of localhost
 const API_URL = process.env.SOURCE_API_URL
   ? `${process.env.SOURCE_API_URL}/files/logs`
-  : "http://source:3000/files/logs";
+  : "http://localhost:3000/files/logs";
 
 const ORIGIN = "render.dynode";
 

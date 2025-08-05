@@ -1,3 +1,5 @@
+require("dotenv").config();
+const SOURCE_API_URL = process.env.SOURCE_API_URL || "http://localhost:3000";
 const scrapper = {
   /**
    * Retrieves component names, animation names, and asset sources from the JSON content.
@@ -19,7 +21,7 @@ const scrapper = {
     const assets = new Map<string, { name: string; paths: Set<string> }>();
     const assetExtensions =
       /\.(ttf|woff2?|jpe?g|png|gif|svg|mp4|webm|ogg|mp3|wav)$/i;
-    const assetPath = "http://localhost:5000/dynamics/" + creativeId + "/";
+    const assetPath = "/dynamics/" + creativeId + "/";
 
     // Helper function to determine asset type based on extension
     function getAssetType(filename: string): string {
@@ -134,7 +136,7 @@ const scrapper = {
     try {
       // Fetch and parse JSON
       const response = await fetch(
-        `http://localhost:3000/data/creatives/${creativeId}?children=true`
+        `${SOURCE_API_URL}/data/creatives/${creativeId}?children=true`
       );
       const content = await response.text();
       json = typeof content === "string" ? JSON.parse(content) : content;

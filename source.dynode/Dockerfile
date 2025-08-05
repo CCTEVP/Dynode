@@ -12,6 +12,16 @@ RUN npm ci
 # Copy everything (use .dockerignore to exclude unwanted files)
 COPY . .
 
+# Accept build arguments
+ARG SOURCE_API_URL=http://localhost:3333
+ARG RENDER_BASE_URL=http://localhost:5555
+ARG BUILDER_BASE_URL=http://localhost:4444
+
+# Set environment variables for build
+ENV SOURCE_API_URL=${SOURCE_API_URL}
+ENV RENDER_BASE_URL=${RENDER_BASE_URL}
+ENV BUILDER_BASE_URL=${BUILDER_BASE_URL}
+
 # Build the application
 RUN npm run build
 

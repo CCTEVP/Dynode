@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
-const mongoURI = process.env.MONGO_URI;
+const mongoURI = process.env.MONGO_URI_PROD;
 
 async function resetDatabase() {
   const client = new MongoClient(mongoURI);

@@ -11,12 +11,13 @@ import swaggerRouter from "./routes/swagger";
 import loginRouter from "./routes/login";
 import logger from "./services/logger";
 import cors from "cors";
+require("dotenv").config();
 
 const app = express();
 const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:4000",
-  "http://localhost:5000",
+  process.env.SOURCE_API_URL, //"http://localhost:3000",
+  process.env.RENDER_BASE_URL, //"http://localhost:4000",
+  process.env.BUILDER_BASE_URL, //"http://localhost:5000",
 ];
 
 app.use(
@@ -52,18 +53,6 @@ var cookieParser = require("cookie-parser");
 var loggerMiddleware = require("morgan");
 var mongoose = require("mongoose"); // Import mongoose for MongoDB connection
 
-require("dotenv").config();
-// --- MongoDB Connection Setup ---
-// Use the MongoDB URI from environment variables
-// It falls back to a default local URI if MONGO_URI is not set (e.g., in a test environment)
-const mongoURI = process.env.MONGO_URI;
-console.log(mongoURI); // This will show 'undefined' if process.env.MONGO_URI is undefined, or the fallback.
-mongoose
-  .connect(mongoURI)
-  .then(() => console.log("🤖 MongoDB connected successfully!"))
-  .catch((err: Error) => console.error("☠️ MongoDB connection error:", err));
-// --- End MongoDB Connection Setup ---
-
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -95,16 +84,37 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
   res.status(err.status || 500);
   res.render("error");
 });
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT_ENV || 3000;
+const isProduction = process.env.NODE_ENV === "production";
+const environment = process.env.NODE_ENV || "development";
 
-if (process.env.NODE_ENV !== "development") {
+// --- MongoDB Connection Setup ---
+const mongoURI =
+  process.env.MONGO_URI || "mongodb://localhost:27017/dyna_content";
+
+console.log(`Connecting to ${environment} database...`);
+mongoose
+  .connect(mongoURI)
+  .then(() => console.log("🤖 MongoDB connected successfully!"))
+  .catch((err: Error) => {
+    console.error("☠️ MongoDB connection error:", err);
+    process.exit(1);
+  });
+
+if (isProduction) {
   const pfx = fs.readFileSync("./cert/source.dynode.pfx");
-  const passphrase = "YourVeryStrongAndSecretPasswordHere"; // The password you used in PowerShell
+  const passphrase = "YourVeryStrongAndSecretPasswordHere";
   https.createServer({ pfx, passphrase }, app).listen(PORT, () => {
     console.log(`🚀 HTTPS server listening at https://localhost:${PORT}/docs`);
+    console.log(`🌍 Environment: ${environment}`);
+    console.log(`🔒 SSL/TLS: Enabled`);
+    console.log(`🗄️ Database: Connected`);
   });
 } else {
   app.listen(PORT, () => {
     console.log(`🚀 Server listening at http://localhost:${PORT}/docs`);
+    console.log(`🌍 Environment: ${environment}`);
+    console.log(`🔒 SSL/TLS: Disabled`);
+    console.log(`🗄️ Database: Connected`);
   });
 }

@@ -8,8 +8,12 @@
     "typeRoots": ["./node_modules/@types", "./types"],
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "outDir": "views/scripts/components" // Output in place
+    "outDir": "views/scripts" // Output in place
   },
-  "include": ["views/components/**/*.ts", "types/**/*.d.ts"],
+  "include": [
+    "views/pages/**/*.ts",
+    "views/components/**/*.ts",
+    "types/**/*.d.ts"
+  ],
   "exclude": ["node_modules", "dist"]
 }

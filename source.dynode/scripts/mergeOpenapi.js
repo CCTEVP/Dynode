@@ -1,10 +1,16 @@
 // scripts/merge-openapi.js
+require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 
 // Load base OpenAPI file from /files
 const basePath = path.join(__dirname, "../files/openapi.json");
-const base = JSON.parse(fs.readFileSync(basePath, "utf8"));
+const baseContent = fs.readFileSync(basePath, "utf8");
+const updatedBaseContent = baseContent.replace(
+  /\{\{SOURCE_API_URL\}\}/g,
+  process.env.SOURCE_API_URL
+);
+const base = JSON.parse(updatedBaseContent);
 
 // Collect all openapi.json files under /routes
 function collectOpenapiFiles(dir, files = []) {

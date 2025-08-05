@@ -21,7 +21,6 @@ router.post("/", upload.array("files"), async (req: Request, res: Response) => {
 
   const now = new Date();
   const assetInfos = getAssetInfo(files); // always an array
-  console.log("Asset infos:", JSON.stringify(assetInfos, null, 2)); // Add this line
   const kind = assetInfos[0]?.kind || "other";
   const paths = assetInfos.map((info) => ({
     mime: info.mime,

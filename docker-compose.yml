@@ -1,0 +1,74 @@
+services:
+  source:
+    build:
+      context: ./source.dynode
+      args:
+        - SOURCE_API_URL=https://localhost:3333
+        - RENDER_BASE_URL=https://localhost:5555
+        - BUILDER_BASE_URL=https://localhost:4444
+    ports:
+      - "3333:3333"
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET=your_super_secret_key
+      - MONGO_URI=mongodb://mongo:27017/dyna_content
+      - SOURCE_API_URL=https://localhost:3333
+      - RENDER_BASE_URL=https://localhost:5555 
+      - BUILDER_BASE_URL=https://localhost:4444 
+      - PORT_ENV=3333
+    networks:
+      - dynode-network
+    depends_on:
+      - mongo
+
+  build:
+    image: build-dynode:latest
+    ports:
+      - "4444:4444" 
+    networks:
+      - dynode-network
+    environment:
+      - JWT_SECRET=your_super_secret_key
+      - NODE_ENV=production
+      - PORT_ENV=4444
+      - VITE_SOURCE_API_URL=https://localhost:3333
+      - VITE_RENDER_BASE_URL=https://localhost:5555 # For browser requests
+      - VITE_BUILDER_BASE_URL=https://localhost:4444 # For browser requests
+    depends_on:
+      - source
+      - render
+
+  render:
+    image: render-dynode:latest
+    ports:
+      - "5555:5555"
+    environment:
+      - JWT_SECRET=your_super_secret_key
+      - NODE_ENV=production
+      - PORT_ENV=5555
+      - SOURCE_API_URL=https://source:3333
+      - RENDER_BASE_URL=https://localhost:5555 # For browser requests
+      - BUILDER_BASE_URL=https://localhost:4444 # For browser requests
+      - NODE_TLS_REJECT_UNAUTHORIZED=0  # Disable SSL verification for internal communication
+    networks:
+      - dynode-network
+    depends_on:
+      - source
+
+  mongo:
+    image: mongodb/mongodb-community-server:latest
+    ports:
+      - "32768:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - dynode-network
+    environment:
+      - MONGO_INITDB_DATABASE=dyna_content
+
+networks:
+  dynode-network:
+    driver: bridge
+
+volumes:
+  mongo-data:

@@ -1,12 +1,13 @@
-// Should receive type of resource, a list of items, mode and extension
 import fs from "fs";
 import path from "path";
 import { minify as minifyJS } from "terser";
 import CleanCSS from "clean-css";
+import logger from "../services/logger";
 
 const bundler = {
   async bundleComponents(resources: {
     creativeId: string;
+    routePath?: string;
     name: string;
     items:
       | string[]
@@ -18,10 +19,11 @@ const bundler = {
     payload: string;
   }> {
     const creativeId = resources.creativeId;
+    const routePath = resources.routePath || "dynamics";
     const resourceName = resources.name;
     const items = resources.items;
-    const mode = resources.mode; // boolean
-    const extension = resources.extension; // string
+    const mode = resources.mode;
+    const extension = resources.extension;
     let response = "";
 
     switch (resourceName) {
@@ -88,9 +90,36 @@ const bundler = {
         response = libraryFilesContents.join("\n");
         break;
       case "manager":
-        response = await this.retrieveFileContent(resourceName, [
+        const filePath = path.join(
+          __dirname,
+          "..",
+          "views",
+          "scripts",
+          "pages",
+          routePath,
+          "default.js"
+        );
+        logger.info(`Bundling manager script from: ${filePath}`);
+
+        // First get the template content
+        const templateContent = await this.retrieveFileContent(resourceName, [
           { look: "{{creativeId}}", replace: creativeId },
         ]);
+
+        // Then get the default.js content
+        let defaultJsContent = "";
+        if (fs.existsSync(filePath)) {
+          defaultJsContent = fs.readFileSync(filePath, "utf-8");
+          logger.info(
+            `Successfully read default.js file, size: ${defaultJsContent.length} characters`
+          );
+        } else {
+          console.warn(`File not found: ${filePath}`);
+        }
+
+        // Combine template + default.js content
+        response = templateContent + "\n" + defaultJsContent;
+        logger.info(`Combined response size: ${response.length} characters`);
         break;
       case "assets":
         // Include conditional for CSS

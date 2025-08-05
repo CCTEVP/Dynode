@@ -1,5 +1,19 @@
 {
-  "dependencies": {
-    "express": "^5.1.0"
+  "name": "source.dynode",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev:source": "cd source.dynode && npm run dev && cd..",
+    "dev:render": "cd render.dynode && npm run dev && cd..",
+    "dev:builder": "cd build.dynode && npm run dev && cd..",
+    "build:all": "npm run build:source && npm run build:render && npm run build:builder",
+    "build:source": "cd source.dynode && npm run build && cd..",
+    "build:render": "cd render.dynode && npm run build && cd..",
+    "build:builder": "cd build.dynode && npm run build && cd..",
+    "build:docker:all": "npm run build:docker:source && npm run build:docker:render && npm run build:docker:builder && npm run docker:compose",
+    "build:docker:source": "cd source.dynode && npm run build:docker && cd..",
+    "build:docker:render": "cd render.dynode && npm run build:docker && cd..",
+    "build:docker:builder": "cd build.dynode && npm run build:docker && cd..",
+    "docker:compose": "docker-compose up -d"
   }
 }

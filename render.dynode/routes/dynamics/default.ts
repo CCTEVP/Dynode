@@ -34,11 +34,11 @@ const MIME_TYPES: Record<string, string> = {
 };
 const ASSETS_URL = process.env.SOURCE_API_URL
   ? `${process.env.SOURCE_API_URL}/files/assets`
-  : "http://source:3000/files/assets";
+  : "http://localhost:3000/files/assets";
 
 const CREATIVES_URL = process.env.SOURCE_API_URL
   ? `${process.env.SOURCE_API_URL}/data/creatives`
-  : "http://source:3000/data/creatives";
+  : "http://localhost:3000/data/creatives";
 
 router.get(
   "/:id/:resource.:debug.:extension",
@@ -65,6 +65,10 @@ router.get(
         res.type(contentType || "application/octet-stream");
         res.send(Buffer.from(response.data));
       } else if (isFile) {
+        console.log(
+          "ASSETS from CREATIVES_URL:",
+          CREATIVES_URL + "/" + creativeId
+        );
         const response = await axios.get(CREATIVES_URL + "/" + creativeId);
         const creative = response.data;
         const resources = creative?.resources || {};
@@ -90,7 +94,7 @@ router.get(
             break;
         }
         const bundledResource = await bundler.bundleComponents(currentResource);
-        logger.info("Bundled resources:", bundledResource);
+        //logger.info("Bundled resources:", bundledResource);
         res.setHeader("Content-Type", contentType);
         res.send(bundledResource.payload);
       }
@@ -117,6 +121,8 @@ router.get(
         });
         return;
       }
+      console.log("CREATIVES_URL:", CREATIVES_URL + "/" + creativeId);
+
       const apiRes = await axios.get(CREATIVES_URL + "/" + creativeId, {
         httpsAgent: new (require("https").Agent)({
           rejectUnauthorized: false,
@@ -125,8 +131,6 @@ router.get(
       const content = apiRes.data;
       const baseURL =
         process.env.RENDER_BASE_URL || `${req.protocol}://${req.get("host")}`;
-
-      // Register assets to cache
 
       res.render("pages/dynamics/content", {
         content,
