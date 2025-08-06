@@ -6,8 +6,14 @@ logs
 .gitignore
 README.md
 .env
+.env.local
+.env.production
+*.env
 .nyc_output
 coverage
 .docker
 Dockerfile
 .dockerignore
+nginx.dev.conf
+# Don't exclude cert folder
+# cert/

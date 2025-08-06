@@ -47,7 +47,9 @@ router.get(
     const resource = req.params.resource;
     const debug = req.params.debug === "min";
     const extension = req.params.extension;
-
+    console.log(
+      `Fetching resource: ${resource}, debug: ${debug}, extension: ${extension} for creative ID: ${creativeId}`
+    );
     //check if extension is in CONTENT_TYPES or MIME_TYPES
     const isMedia = extension.toLowerCase() in MIME_TYPES;
     const isFile = extension.toLowerCase() in CONTENT_TYPES;
@@ -65,10 +67,6 @@ router.get(
         res.type(contentType || "application/octet-stream");
         res.send(Buffer.from(response.data));
       } else if (isFile) {
-        console.log(
-          "ASSETS from CREATIVES_URL:",
-          CREATIVES_URL + "/" + creativeId
-        );
         const response = await axios.get(CREATIVES_URL + "/" + creativeId);
         const creative = response.data;
         const resources = creative?.resources || {};
@@ -121,8 +119,6 @@ router.get(
         });
         return;
       }
-      console.log("CREATIVES_URL:", CREATIVES_URL + "/" + creativeId);
-
       const apiRes = await axios.get(CREATIVES_URL + "/" + creativeId, {
         httpsAgent: new (require("https").Agent)({
           rejectUnauthorized: false,

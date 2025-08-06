@@ -47,7 +47,7 @@ window.widgetInitializer = {
 
   // Initialize all registered widgets in sequence
   initializeAll: function () {
-    console.log("Rendering widgets:");
+    console.log("Initializing widgets:");
 
     // Define the initialization order
     const initOrder = [
@@ -64,7 +64,6 @@ window.widgetInitializer = {
     // Initialize in order
     initOrder.forEach((widgetName) => {
       if (this.renderFunctions[widgetName]) {
-        console.log(`Rendering ${widgetName}`);
         try {
           this.renderFunctions[widgetName]();
         } catch (error) {
@@ -76,7 +75,7 @@ window.widgetInitializer = {
     // Initialize any remaining widgets not in the predefined order
     Object.keys(this.renderFunctions).forEach((widgetName) => {
       if (!initOrder.includes(widgetName)) {
-        console.log(`Rendering ${widgetName}`);
+        console.log(`Initializing ${widgetName}`);
         try {
           this.renderFunctions[widgetName]();
         } catch (error) {

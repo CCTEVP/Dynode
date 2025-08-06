@@ -27,6 +27,15 @@ declare global {
       register: (widgetName: string, renderFunction: () => void) => void;
       initializeAll: () => void;
     };
+
+    widgetAnimations?: {
+      [widgetType: string]: {
+        [animationType: string]: (
+          widget: HTMLElement,
+          dataValue: string
+        ) => void;
+      };
+    };
   }
 }
 export {};

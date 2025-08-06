@@ -3,7 +3,8 @@ import path from "path";
 import { minify as minifyJS } from "terser";
 import CleanCSS from "clean-css";
 import logger from "../services/logger";
-
+require("dotenv");
+const serviceWorkers = process.env.SERVICE_WORKERS || "disabled";
 const bundler = {
   async bundleComponents(resources: {
     creativeId: string;
@@ -58,6 +59,10 @@ const bundler = {
           }
         });
         response = compontentFilesContents.join("\n");
+        if (extension.toLowerCase() === "js") {
+          response +=
+            "if (window.widgetInitializer){window.widgetInitializer.initializeAll();}\n";
+        }
         break;
       case "libraries":
         // Ensure items is an array for libraries (should always be array for libraries)
@@ -102,17 +107,17 @@ const bundler = {
         logger.info(`Bundling manager script from: ${filePath}`);
 
         // First get the template content
-        const templateContent = await this.retrieveFileContent(resourceName, [
-          { look: "{{creativeId}}", replace: creativeId },
-        ]);
+        const templateContent =
+          serviceWorkers === "enabled"
+            ? await this.retrieveFileContent(resourceName, [
+                { look: "{{creativeId}}", replace: creativeId },
+              ])
+            : "";
 
         // Then get the default.js content
         let defaultJsContent = "";
         if (fs.existsSync(filePath)) {
           defaultJsContent = fs.readFileSync(filePath, "utf-8");
-          logger.info(
-            `Successfully read default.js file, size: ${defaultJsContent.length} characters`
-          );
         } else {
           console.warn(`File not found: ${filePath}`);
         }

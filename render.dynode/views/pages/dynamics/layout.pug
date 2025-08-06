@@ -21,11 +21,11 @@ html
     block content
     if content
       if content.resources
+        - managerURL = resourcesURL + '/manager.min.js'
+        script(src=managerURL)
         if content.resources.components
           - componentsURL = resourcesURL + '/components.min.js'
           script(src=componentsURL, defer)
         if content.resources.libraries
           - librariesURL = resourcesURL + '/libraries.min.js'
           script(src=librariesURL, defer)
-        - managerURL = resourcesURL + '/manager.min.js'
-        script(src=managerURL, defer)

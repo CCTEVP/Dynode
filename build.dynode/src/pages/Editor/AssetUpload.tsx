@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-const API_URL = import.meta.env.VITE_SOURCE_API_URL
-  ? `${import.meta.env.VITE_SOURCE_API_URL}/files/assets`
-  : "http://localhost:3000/files/assets";
 
-//const API_URL = "/api/files/assets"; // Uses nginx proxy
+// Use nginx proxy in production, direct URL in development
+const API_URL =
+  import.meta.env.MODE === "production"
+    ? "/api/files/assets" // Uses nginx proxy
+    : import.meta.env.VITE_SOURCE_API_URL
+    ? `${import.meta.env.VITE_SOURCE_API_URL}/files/assets`
+    : "http://localhost:3000/files/assets";
 
 function AssetUpload() {
   const [file, setFile] = useState<File | null>(null);

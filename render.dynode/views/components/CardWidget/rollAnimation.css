@@ -1,3 +1,57 @@
+/* Base styles for card widgets */
 div[id^="card-widget-"] {
-  /*display: inherit;*/
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation container */
+.card-roll-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Current number (moves up) */
+.card-roll-current {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* New number (comes from below) */
+.card-roll-new {
+  position: absolute;
+  top: 0; /* Start at same level as current */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%); /* Initially positioned below */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation state */
+.card-roll-animation .card-roll-current {
+  transform: translateY(-100%); /* Move current number up and out */
+}
+
+.card-roll-animation .card-roll-new {
+  transform: translateY(0); /* Move new number to center position */
+}
+
+/* Optional: Add some easing for smoother animation */
+.card-roll-container * {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
 }

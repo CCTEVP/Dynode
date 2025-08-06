@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import multer from "multer";
 import crypto from "crypto";
+require("dotenv");
+const destinationFolder = process.env.SOURCE_DEST_FOLDER || "../files";
 
 const VIDEO_EXTS = ["mov", "mp4", "avi", "webm", "mkv"];
 const IMAGE_EXTS = ["jpg", "jpeg", "png", "svg", "gif", "bmp", "webp"];
@@ -48,7 +50,7 @@ const storage = multer.diskStorage({
     } else {
       return cb(new Error("Unsupported file extension."), "");
     }
-    const dest = path.join(__dirname, "../../dist/files", folder);
+    const dest = path.join(__dirname, destinationFolder, folder);
     fs.mkdirSync(dest, { recursive: true });
     (req as any).fileDestination = dest;
     cb(null, dest);

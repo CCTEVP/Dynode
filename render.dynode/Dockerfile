@@ -50,11 +50,11 @@ RUN chown -R dynode:nodejs /app
 USER dynode
 
 # Expose port
-EXPOSE 5000
+EXPOSE 5555
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:5000/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+  CMD node -e "require('http').get('https://localhost:5555/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
 
 # Start application
 CMD ["node", "dist/app.js"]
