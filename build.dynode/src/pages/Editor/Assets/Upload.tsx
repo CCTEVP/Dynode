@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Use nginx proxy in production, direct URL in development
-const API_URL =
+const ASSETS_API_URL =
   import.meta.env.MODE === "production"
     ? "/api/files/assets" // Uses nginx proxy
     : import.meta.env.VITE_SOURCE_API_URL
@@ -34,7 +34,7 @@ function AssetUpload() {
     formData.append("files", file);
 
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(ASSETS_API_URL, {
         method: "POST",
         body: formData,
       });

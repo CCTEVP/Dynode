@@ -1,4 +1,4 @@
-import { Link as MuiLink } from "@mui/material";
+import { Typography } from "antd";
 
 interface LinkProps {
   label: string;
@@ -9,14 +9,14 @@ interface LinkProps {
 
 function Link({ label, target, className, openInNewTab = false }: LinkProps) {
   return (
-    <MuiLink
+    <Typography.Link
       href={target}
       className={className}
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
     >
       {label}
-    </MuiLink>
+    </Typography.Link>
   );
 }
 

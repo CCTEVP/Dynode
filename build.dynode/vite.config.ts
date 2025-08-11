@@ -16,6 +16,31 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Vendor chunks
+          "react-vendor": ["react", "react-dom"],
+          router: ["react-router-dom"],
+          antd: ["antd"],
+          icons: ["@ant-design/icons"],
+
+          // Your app chunks
+          components: [
+            "./src/components/DataCard/index.ts",
+            "./src/components/ComponentFilter/index.ts",
+            "./src/components/Link/index.ts",
+          ],
+          pages: [
+            "./src/pages/Home/Default.tsx",
+            "./src/pages/Help/Components/Default.tsx",
+          ],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600, // Adjust warning threshold
+  },
 });
 //server: {
 // https: {

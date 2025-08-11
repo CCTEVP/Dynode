@@ -2,11 +2,9 @@ import { Link } from "../../components/Link";
 function Home() {
   return (
     <div>
-      <h2>Home Page</h2>
+      <h2>Help Page</h2>
       <p>Welcome to your Builder App!</p>
-      <Link label="Editor" target="/editor" />
-      <br />
-      <Link label="Help" target="/help" />
+      <Link label="Help/Components" target="/help/components" />
     </div>
   );
 }

@@ -2,9 +2,11 @@ import fs from "fs";
 import path from "path";
 import { createLogger, format, transports } from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
+require("dotenv");
+const logsDestFolder = process.env.SOURCE_LOGS_FOLDER || "../logs";
 
 // Ensure logs directory exists
-const logsDir = path.join(__dirname, "../logs");
+const logsDir = path.join(__dirname, logsDestFolder);
 fs.mkdirSync(logsDir, { recursive: true });
 
 const ORIGIN = "source.dynode"; // or "build.dynode" as needed

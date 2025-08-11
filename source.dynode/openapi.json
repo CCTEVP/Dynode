@@ -72,6 +72,60 @@
         "security": []
       }
     },
+    "/data/components": {
+      "get": {
+        "summary": "Get all components",
+        "tags": [
+          "Components"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The type of components to retrieve (e.g., 'layout', 'widget', etc.)."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Components data retrieved"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/data/components/{id}": {
+      "get": {
+        "summary": "Get identified component data",
+        "tags": [
+          "Components"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The component's MongoDB _id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Component data retrieved"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/data/creatives/assemblies": {
       "get": {
         "summary": "Get assembled creatives data",

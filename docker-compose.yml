@@ -1,5 +1,4 @@
-version: '3.8'
-
+name: dynode
 secrets:
   pfx_password:
     external: true
@@ -20,10 +19,14 @@ services:
       - JWT_SECRET=your_super_secret_key
       - MONGO_URI=mongodb://mongo:27017/dyna_content
       - SOURCE_API_URL=https://localhost:3333
-      - SOURCE_DEST_FOLDER=../../dist/files
+      - SOURCE_ASSETS_FOLDER=../../dist/files
+      - SOURCE_LOGS_FOLDER=../../dist/logs
       - RENDER_BASE_URL=https://localhost:5555 
       - BUILDER_BASE_URL=https://localhost:4444 
       - PORT_ENV=3333
+    volumes:
+      - asset-files:/app/dist/files
+      - log-files:/app/dist/logs
     networks:
       - dynode-network
     depends_on:
@@ -84,3 +87,11 @@ networks:
 
 volumes:
   mongo-data:
+    external: true
+    name: dynode_data
+  asset-files:
+    external: true  
+    name: dynode_assets
+  log-files:
+    external: true
+    name: dynode_logs
