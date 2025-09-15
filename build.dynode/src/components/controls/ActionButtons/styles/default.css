@@ -1,0 +1,8 @@
+/* Default styles for ActionButtons (copied from current inline styles)
+   Add component-specific CSS rules here to override or replace inline styles */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

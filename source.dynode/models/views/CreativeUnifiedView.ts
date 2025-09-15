@@ -10,7 +10,7 @@ const creativeUnifiedViewSchema = new mongoose.Schema(
     // Add more fields as needed
   },
   {
-    collection: "creatives_unified_elements",
+    collection: "creatives_unified",
   }
 );
 

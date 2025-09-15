@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run build:components && tsc && cpx \"views/**/*\" dist/views",
     "build:components": "tsc --project tsconfig.inplace.json",
-    "build:docker": "docker build -t render-dynode:latest .",
+    "docker:build": "docker build -t render-dynode:latest .",
     "start": "node dist/app.js",
     "dev": "npm run build && ts-node-dev app.ts"
   },

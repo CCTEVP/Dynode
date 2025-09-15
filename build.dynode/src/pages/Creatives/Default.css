@@ -1,0 +1,167 @@
+/* Force smaller label tags in the Creatives table */
+:global(.mini-label-tag),
+.mini-label-tag,
+.ant-tag.mini-label-tag,
+.ant-table-cell .ant-tag.mini-label-tag {
+  font-size: 9px !important;
+  padding: 2px !important;
+  border-radius: 1.5px !important;
+  text-transform: uppercase;
+  background: #f5f5f5 !important;
+  color: #888 !important;
+  border: 1px solid #e0e0e0 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+/* Local overrides for Creatives table to make it flush with the page */
+:root {
+  --actions-width: 120px;
+  --table-radius: 8px; /* assumed radius to match app chrome; adjust if different */
+  --name-width: 260px; /* default width for the left 'Name' column; adjust if necessary */
+}
+
+.no-row-border td,
+.no-row-border th {
+  border: none !important;
+  background: transparent !important;
+}
+.ant-table-thead > tr > th {
+  background: transparent !important;
+}
+.ant-table-tbody > tr > td {
+  border: none !important;
+  background: #fff !important; /* match Actions column */
+}
+.ant-table {
+  background: #fff !important; /* make table body area white to blend with Actions */
+  border-radius: var(--table-radius) !important;
+  overflow: hidden !important; /* ensure rounded corners clip children */
+}
+
+/* Target the AntD fixed-right wrapper and add a left-side cover that hides
+   the scrolling table content beneath the Actions column. This keeps the
+   Actions column's buttons visible and clickable and does NOT interfere
+   with the scroll container or the horizontal scrollbar. */
+.ant-table td.ant-table-cell-fix-right,
+.ant-table th.ant-table-cell-fix-right {
+  background: #fff !important; /* keep the column opaque */
+  position: sticky !important; /* restore AntD sticky behavior */
+  z-index: 2 !important; /* above the cover pseudo-element */
+}
+
+/* Left / Name column: match Actions behavior but on the left side */
+.ant-table td.ant-table-cell-fix-left,
+.ant-table th.ant-table-cell-fix-left {
+  background: #fff !important; /* keep the column opaque */
+  position: sticky !important; /* ensure it remains sticky on the left */
+  left: 0 !important; /* anchor to the left edge */
+  z-index: 40 !important; /* sit above other content */
+}
+
+.ant-table-fixed-left {
+  position: relative;
+  left: 0 !important;
+  z-index: 30;
+  border-top-left-radius: var(--table-radius) !important;
+  border-bottom-left-radius: var(--table-radius) !important;
+  overflow: visible !important; /* allow the pseudo-cover to extend right */
+}
+
+.ant-table-fixed-left::after {
+  /* right-side cover equal to the name column width; place immediately to the right */
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: var(--name-width);
+  height: 100%;
+  background: #fff;
+  pointer-events: none; /* don't block clicks */
+  z-index: 1; /* below the fixed column content but above the scrolling table */
+}
+
+/* Ensure interactive elements in the left column stay clickable */
+.ant-table-fixed-left .ant-table-cell * {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 2;
+}
+
+.ant-table-fixed-right {
+  position: relative; /* make the pseudo-element relative to this wrapper */
+  z-index: 10; /* ensure the whole fixed wrapper sits above the scrolling table */
+}
+
+/* Ensure fixed wrappers have matching rounded corners on the right side */
+.ant-table-fixed-right {
+  border-top-right-radius: var(--table-radius) !important;
+  border-bottom-right-radius: var(--table-radius) !important;
+  overflow: visible !important; /* allow the pseudo-cover to extend left */
+}
+
+/* Header corners (AntD sometimes renders header separately) */
+.ant-table-thead > tr > th:first-child {
+  border-top-left-radius: var(--table-radius) !important;
+}
+.ant-table-thead > tr > th:last-child {
+  border-top-right-radius: var(--table-radius) !important;
+}
+
+/* Bottom row corners */
+.ant-table-tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: var(--table-radius) !important;
+}
+.ant-table-tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: var(--table-radius) !important;
+}
+
+.ant-table-fixed-right::before {
+  /* left-side cover equal to the actions column width */
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--actions-width));
+  top: 0;
+  width: var(--actions-width);
+  height: 100%;
+  background: #fff;
+  pointer-events: none; /* don't block clicks */
+  z-index: 1; /* below the fixed column content but above the scrolling table */
+}
+
+/* Ensure interactive elements inside the fixed column stay clickable and on top */
+.ant-table-fixed-right .ant-table-cell * {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Small visual separation shadow */
+.ant-table-fixed-right {
+  box-shadow: -8px 0 12px -8px rgba(0, 0, 0, 0.06);
+}
+
+/* Make table data values visually consistent (same font-size), but do not
+   change the Labels column (Tag) or the Actions buttons. We target typical
+   inline renderers (Typography/Text spans, code spans) while excluding
+   .ant-tag and .ant-btn. */
+.ant-table tbody td.ant-table-cell > .ant-typography,
+.ant-table tbody td.ant-table-cell > span:not(.ant-tag):not(.ant-btn),
+.ant-table tbody td.ant-table-cell > code {
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+}
+
+/* Keep Tags (Labels column) and Buttons at their natural sizing so they
+   visually stand out as labels/actions. */
+.ant-table tbody td.ant-table-cell .ant-tag,
+.ant-table tbody td.ant-table-cell .ant-btn {
+  font-size: inherit !important;
+}
+
+/* Also normalize header font-size to match table body values for alignment */
+.ant-table thead th.ant-table-cell {
+  font-size: 14px !important;
+}

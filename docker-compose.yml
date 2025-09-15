@@ -5,6 +5,7 @@ secrets:
 
 services:
   source:
+    image: source-dynode:latest
     build:
       context: ./source.dynode
       args:
@@ -33,6 +34,7 @@ services:
       - mongo
 
   build:
+    image: build-dynode:latest
     build:
       context: ./build.dynode
       args:

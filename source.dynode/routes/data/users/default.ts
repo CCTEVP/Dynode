@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import logger from "../../../services/logger";
 import bcrypt from "bcrypt";
-import User from "../../../models/User";
+import User from "../../../models/collections/UsersCollection";
 
 const router = express.Router();
 

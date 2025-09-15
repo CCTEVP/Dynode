@@ -1,0 +1,290 @@
+.creative-canvas-outer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* center the inner creative so it appears centered when scaled */
+  align-items: center;
+  overflow: auto;
+  background: #efefef;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.creative-canvas-scroll {
+  display: inline-block; /* size based on inner natural size + padding */
+  box-sizing: content-box;
+}
+
+.creative-canvas-scroll > .creative-canvas-inner {
+  display: inline-block; /* keep measuring natural size */
+}
+
+/* hide native scrollbars but keep scrolling functional */
+.creative-canvas-outer::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.creative-canvas-outer {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* panning cursor hints */
+.creative-canvas-outer.pan-ready {
+  cursor: grab;
+}
+.creative-canvas-outer.panning {
+  cursor: grabbing;
+}
+
+.creative-canvas-inner {
+  transition: transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+  /* use inline-block so the inner's natural size is measured for fit-to-view calculations */
+  display: inline-block;
+}
+
+.creative-canvas-outer:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+/* The HUD is an overlay container with three slots; it should not dim or block the canvas.
+   The container itself is pointer-events:none so clicks fall through except where panels exist. */
+.creative-canvas-hud {
+  position: absolute;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  pointer-events: none; /* allow clicks to pass through HUD background */
+}
+
+.creative-canvas-hud button {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.creative-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+/* HUD panels layout */
+.creative-canvas-hud {
+  position: absolute;
+  inset: 0; /* full overlay */
+  pointer-events: none; /* panels inside will enable pointer-events */
+  z-index: 3000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+}
+.creative-canvas-hud > .hud-left,
+.creative-canvas-hud > .hud-right {
+  pointer-events: auto;
+  min-width: 260px;
+  max-width: 360px;
+}
+.creative-canvas-hud > .hud-center {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+.creative-canvas-hud .hud-center-icons {
+  background: rgba(34, 34, 34, 0.92);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.36);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.creative-canvas-hud > .hud-left .panel,
+.creative-canvas-hud > .hud-right .panel {
+  background: rgba(28, 28, 28, 0.92);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Selected element visual */
+[data-selected="true"] {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.95),
+    0 6px 18px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2000;
+}
+
+/* Dragging visual */
+.dragging {
+  opacity: 0.95 !important;
+  transform: scale(1.02) !important;
+  transition: transform 120ms ease;
+  z-index: 9999 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Figma-like selection frame */
+.selection-frame {
+  border: 1px solid #3b82f6; /* blue outline */
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.06);
+  border-radius: 0; /* rectangle, no rounded corners */
+  pointer-events: none;
+  z-index: 4000;
+}
+
+.selection-frame .handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+.selection-frame .handle-nw {
+  top: -10px;
+  left: -10px;
+}
+.selection-frame .handle-ne {
+  top: -10px;
+  right: -10px;
+}
+.selection-frame .handle-sw {
+  bottom: -10px;
+  left: -10px;
+}
+.selection-frame .handle-se {
+  bottom: -10px;
+  right: -10px;
+}
+
+/* Selector overlay used by Selector.tsx */
+.selector-frame {
+  border: 0; /* visual border handled by pseudo elements to allow constant 1px regardless of zoom */
+  position: absolute; /* positioned inside the creative container */
+  pointer-events: none;
+  z-index: 90000;
+}
+
+/* visible 1px border using pseudo-elements so it remains 1px on screen */
+.selector-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #3b82f6;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+/* 4x4 handles at corners and sides */
+.selector-frame .sel-handle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border: 1px solid #3b82f6;
+  box-sizing: content-box;
+  pointer-events: none;
+}
+.selector-frame .sel-handle.nw {
+  top: -3px;
+  left: -3px;
+}
+.selector-frame .sel-handle.ne {
+  top: -3px;
+  right: -3px;
+}
+.selector-frame .sel-handle.sw {
+  bottom: -3px;
+  left: -3px;
+}
+.selector-frame .sel-handle.se {
+  bottom: -3px;
+  right: -3px;
+}
+.selector-frame .sel-handle.n {
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.selector-frame .sel-handle.s {
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.selector-frame .sel-handle.w {
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.selector-frame .sel-handle.e {
+  right: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* wrapper-based selector - wraps the selected element */
+#selector {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.06);
+  z-index: 5000;
+}
+
+#selector > * {
+  pointer-events: auto; /* keep inner interactions working */
+}
+
+/* Hover overlay styled similarly to selector, but orange. It's an overlay so it doesn't affect layout
+   and remains 1px on screen regardless of canvas zoom. */
+.hover-frame {
+  border: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 89999;
+}
+.hover-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid orange;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+.hover-frame .sel-handle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border: 1px solid orange;
+  box-sizing: content-box;
+  pointer-events: none;
+}
+
+/* Ensure the selector wrapper and its descendants never show the hover overlay outlines */
+#selector,
+#selector * {
+  outline: none !important;
+}

@@ -1,0 +1,44 @@
+.tag {
+  display: inline-block;
+  font-size: 8.5px;
+  padding: 0 3px;
+  height: 13px;
+  line-height: 11px;
+  border-radius: 1.5px;
+  background: #fafbfc;
+  color: #888;
+  border: 1px solid #ededed;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  box-shadow: none;
+  vertical-align: middle;
+  user-select: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.tag.green {
+  background: #e6fffb;
+  color: #389e8a;
+  border-color: #b5f5ec;
+}
+.tag.orange {
+  background: #fff7e6;
+  color: #d46b08;
+  border-color: #ffe7ba;
+}
+.tag.red {
+  background: #fff1f0;
+  color: #cf1322;
+  border-color: #ffa39e;
+}
+.tag.blue {
+  background: #e6f7ff;
+  color: #096dd9;
+  border-color: #91d5ff;
+}
+.tag.default {
+  background: #f5f5f5;
+  color: #888;
+  border-color: #e0e0e0;
+}

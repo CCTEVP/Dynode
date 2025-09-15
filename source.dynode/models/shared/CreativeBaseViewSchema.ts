@@ -28,6 +28,7 @@ const creativeBaseViewSchema = new mongoose.Schema(
     ...creativeBaseCollectionSchema.obj, // Spread base schema fields
     elements: { type: [elementsSchema], default: [] }, // <-- FIXED
     format: { type: [formatSchema], default: [] }, // <-- FIXED
+    folder: { type: mongoose.Schema.Types.ObjectId, required: false }, // or { type: Types.ObjectId, required: false }
   },
   {
     discriminatorKey: "creativeType",

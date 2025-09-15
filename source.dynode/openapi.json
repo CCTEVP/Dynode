@@ -490,6 +490,26 @@
               "type": "boolean"
             },
             "description": "If true, include children in the response; if false, return only one level."
+          },
+          {
+            "name": "folder",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter creatives by folder ID",
+            "example": "68a6d1718c127df5e97b6a8f"
+          },
+          {
+            "name": "origin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter creatives by origin",
+            "example": "dynamics"
           }
         ],
         "responses": {

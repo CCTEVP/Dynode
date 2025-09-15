@@ -2,7 +2,7 @@
   "/data/creatives": {
     "get": {
       "summary": "Get all creatives",
-      "tags": [ "Creatives" ],
+      "tags": ["Creatives"],
       "parameters": [
         {
           "name": "children",
@@ -12,6 +12,26 @@
             "type": "boolean"
           },
           "description": "If true, include children in the response; if false, return only one level."
+        },
+        {
+          "name": "folder",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "description": "Filter creatives by folder ID",
+          "example": "68a6d1718c127df5e97b6a8f"
+        },
+        {
+          "name": "origin",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "description": "Filter creatives by origin",
+          "example": "dynamics"
         }
       ],
       "responses": {
@@ -23,7 +43,7 @@
   "/data/creatives/{id}": {
     "get": {
       "summary": "Get identified creative data",
-      "tags": [ "Creatives" ],
+      "tags": ["Creatives"],
       "parameters": [
         {
           "name": "id",

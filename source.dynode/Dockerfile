@@ -13,9 +13,9 @@ RUN npm ci
 COPY . .
 
 # Accept build arguments
-ARG SOURCE_API_URL=http://localhost:3333
-ARG RENDER_BASE_URL=http://localhost:5555
-ARG BUILDER_BASE_URL=http://localhost:4444
+ARG SOURCE_API_URL=https://localhost:3333
+ARG RENDER_BASE_URL=https://localhost:5555
+ARG BUILDER_BASE_URL=https://localhost:4444
 
 # Set environment variables for build
 ENV SOURCE_API_URL=${SOURCE_API_URL}

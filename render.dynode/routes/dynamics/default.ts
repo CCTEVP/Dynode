@@ -47,9 +47,7 @@ router.get(
     const resource = req.params.resource;
     const debug = req.params.debug === "min";
     const extension = req.params.extension;
-    console.log(
-      `Fetching resource: ${resource}, debug: ${debug}, extension: ${extension} for creative ID: ${creativeId}`
-    );
+    //console.log(`Fetching resource: ${resource}, debug: ${debug}, extension: ${extension} for creative ID: ${creativeId}`);
     //check if extension is in CONTENT_TYPES or MIME_TYPES
     const isMedia = extension.toLowerCase() in MIME_TYPES;
     const isFile = extension.toLowerCase() in CONTENT_TYPES;

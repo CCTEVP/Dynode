@@ -1,0 +1,4 @@
+/* Default styles for ProtectedRoute (if needed) */
+.protected-root {
+  box-sizing: border-box;
+}

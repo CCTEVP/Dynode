@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run build && vite",
     "build": "tsc -b && vite build",
-    "build:docker": "docker build --build-arg PFX_PASSWORD=YourVeryStrongAndSecretPasswordHere --build-arg VITE_SOURCE_API_URL=https://localhost:3333 --build-arg VITE_RENDER_BASE_URL=https://localhost:5555 --build-arg VITE_BUILDER_BASE_URL=https://localhost:4444 -t build-dynode:latest .",
+    "docker:build": "docker build --build-arg PFX_PASSWORD=YourVeryStrongAndSecretPasswordHere --build-arg VITE_SOURCE_API_URL=https://localhost:3333 --build-arg VITE_RENDER_BASE_URL=https://localhost:5555 --build-arg VITE_BUILDER_BASE_URL=https://localhost:4444 -t build-dynode:latest .",
     "lint": "eslint .",
     "preview": "vite preview"
   },

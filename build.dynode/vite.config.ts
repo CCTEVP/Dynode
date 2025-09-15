@@ -28,9 +28,9 @@ export default defineConfig({
 
           // Your app chunks
           components: [
-            "./src/components/DataCard/index.ts",
-            "./src/components/ComponentFilter/index.ts",
-            "./src/components/Link/index.ts",
+            "./src/components/controls/DataCard/index.ts",
+            "./src/components/controls/ComponentFilter/index.ts",
+            "./src/components/controls/Link/index.ts",
           ],
           pages: [
             "./src/pages/Home/Default.tsx",

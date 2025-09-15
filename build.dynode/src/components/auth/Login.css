@@ -1,0 +1,223 @@
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: auto;
+}
+
+/* Login Card */
+.login-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Login Header */
+.login-header {
+  margin-bottom: 32px;
+}
+
+/* Yin Yang Icon */
+.yin-yang-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.yin-yang {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #000 50%, #fff 50%);
+  border: 2px solid #000;
+  position: relative;
+}
+
+.yin-yang::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.yin-yang::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: #000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.dot-light {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.dot-dark {
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Login Title and Subtitle */
+.login-title {
+  margin-bottom: 8px !important;
+  color: #262626;
+  font-weight: 600;
+}
+
+.login-subtitle {
+  color: #595959;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-subtitle-2 {
+  color: #595959;
+  display: block;
+}
+
+/* Login Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Login Input */
+.login-input {
+  height: 48px;
+}
+
+.login-input .ant-input {
+  background-color: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  font-size: 16px;
+}
+
+.login-input .ant-input:focus,
+.login-input .ant-input-focused {
+  background-color: #fff;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Login Button */
+.login-button {
+  height: 48px;
+  background-color: #595959;
+  border-color: #595959;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login-button:hover {
+  background-color: #434343;
+  border-color: #434343;
+}
+
+.login-button:focus {
+  background-color: #434343;
+  border-color: #434343;
+  box-shadow: 0 0 0 2px rgba(89, 89, 89, 0.2);
+}
+
+.login-button[disabled] {
+  background-color: #f5f5f5;
+  border-color: #d9d9d9;
+  color: #bfbfbf;
+}
+
+/* Code Inputs */
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.code-input {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  transition: all 0.3s;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: #1890ff;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.code-input:disabled {
+  background-color: #f5f5f5;
+  color: #bfbfbf;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 10vh;
+  }
+
+  .login-card {
+    padding: 24px;
+    margin: 0;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .code-input {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .code-inputs {
+    gap: 6px;
+  }
+}

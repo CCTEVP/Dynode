@@ -1,4 +1,4 @@
-import { Link } from "../../components/Link";
+import { Link } from "../../components/controls/Link";
 function Home() {
   return (
     <div>

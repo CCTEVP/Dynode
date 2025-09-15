@@ -4,18 +4,18 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 
 // Lazy load heavy components
 const DataCard = lazy(() =>
-  import("../../../components/DataCard").then((module) => ({
+  import("../../../components/controls/DataCard").then((module) => ({
     default: module.DataCard,
   }))
 );
 const ComponentFilter = lazy(() =>
-  import("../../../components/ComponentFilter").then((module) => ({
+  import("../../../components/controls/ComponentFilter").then((module) => ({
     default: module.ComponentFilter,
   }))
 );
 
 // Import types normally (they don't add to bundle size)
-import type { DataCardItem } from "../../../components/DataCard";
+import type { DataCardItem } from "../../../components/controls/DataCard";
 
 const { Title, Paragraph } = Typography;
 

@@ -9,6 +9,7 @@ import dataRouter from "./routes/data/default";
 import filesRouter from "./routes/files/default";
 import swaggerRouter from "./routes/swagger";
 import loginRouter from "./routes/login";
+import authRouter from "./routes/auth";
 import logger from "./services/logger";
 import cors from "cors";
 require("dotenv").config();
@@ -44,6 +45,7 @@ app.use("/data", dataRouter); // Removed authentication for dataRouter
 app.use("/files", filesRouter); // Removed authentication for filesRouter
 app.use("/docs", swaggerRouter);
 app.use("/login", loginRouter);
+app.use("/auth", authRouter);
 
 // Load environment variables from .env file
 // This line should be at the very top of your app.js
