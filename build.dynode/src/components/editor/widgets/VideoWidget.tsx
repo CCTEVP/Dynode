@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import type { VideoWidget as VideoWidgetType } from "./types";
 import { BaseWidget } from "./BaseWidget";
-import type { Creative } from "../../../types/creative";
 
 interface VideoWidgetProps {
   widget: VideoWidgetType;
-  creative?: Creative;
   additionalProps?: React.HTMLAttributes<HTMLDivElement>;
+  creative?: any;
   // No children prop - VideoWidget cannot be a parent
 }
 
@@ -38,11 +37,26 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
   }
 
   if (sourceUrl === "#") {
-    const creativeId = widget.parent?.[0]?.$oid || "";
+    const creativeId =
+      (creative && (creative as any)?._id && (creative as any)._id.$oid) ||
+      widget.parent?.[0]?.$oid ||
+      "";
+    console.debug("[VideoWidget] resolving asset", { creativeId, primaryPath });
     sourceUrl = primaryPath
       ? `http://localhost:5000/dynamics/${creativeId}/${primaryPath.filename}.opt.${primaryPath.extension}`
       : "#";
+    console.debug("[VideoWidget] resolved fallback sourceUrl", sourceUrl);
   }
+
+  console.debug("[VideoWidget] final sourceUrl", sourceUrl);
+
+  const srcRef = useRef<HTMLSourceElement | null>(null);
+  useEffect(() => {
+    if (srcRef.current) {
+      srcRef.current.src = sourceUrl;
+      srcRef.current.setAttribute("data-debug-src", sourceUrl);
+    }
+  }, [sourceUrl]);
 
   return (
     <BaseWidget widget={widget} additionalProps={additionalProps}>
@@ -55,7 +69,12 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
         data-mime-type={primaryPath?.mime}
         data-filename={primaryPath?.filename}
       >
-        <source src={sourceUrl} type={primaryPath?.mime || "video/mp4"} />
+        <source
+          ref={srcRef}
+          src={sourceUrl}
+          type={primaryPath?.mime || "video/mp4"}
+          data-debug-src={sourceUrl}
+        />
         Your browser does not support the video tag.
       </video>
     </BaseWidget>
