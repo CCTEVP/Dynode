@@ -549,6 +549,79 @@
         }
       }
     },
+    "/data/elements": {
+      "get": {
+        "summary": "Get all elements",
+        "tags": [
+          "Elements"
+        ],
+        "parameters": [
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "assets",
+                "binding"
+              ],
+              "default": ""
+            },
+            "description": "Select model/view for elements: empty (default) -> elementsCollection; 'assets' -> elementsAssetsView; 'binding' -> elementsBindingView"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Elements data retrieved"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/data/elements/{id}": {
+      "get": {
+        "summary": "Get identified element data",
+        "tags": [
+          "Elements"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The element's MongoDB _id"
+          },
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "assets",
+                "binding"
+              ],
+              "default": ""
+            },
+            "description": "Select model/view for elements: empty (default) -> elementsCollection; 'assets' -> elementsAssetsView; 'binding' -> elementsBindingView"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Element data retrieved"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/data/users/create": {
       "post": {
         "summary": "Register a new user",

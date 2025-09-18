@@ -118,6 +118,96 @@
   margin-top: 6px;
   padding: 0; /* ensure no extra left padding inside the scroller */
 }
+/* Left panel specific layout sections */
+.panel.left-elements .top-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.panel.left-elements .scene-selector {
+  padding: 6px 2px;
+}
+.panel.left-elements .scene-btn {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border: none;
+}
+.panel.left-elements .scene-btn.active {
+  background: rgba(98, 78, 255, 0.22);
+}
+
+/* stacked scene rows */
+.panel.left-elements .scene-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.panel.left-elements .scene-row {
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+}
+.panel.left-elements .scene-row .scene-label {
+  color: #fff;
+  font-size: 13px;
+}
+.panel.left-elements .scene-row.active {
+  background: rgba(98, 78, 255, 0.12);
+}
+
+/* element row icon and actions */
+.panel.left-elements .layer-row {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+.panel.left-elements .layer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.panel.left-elements .collapse-toggle {
+  width: 10px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.04);
+}
+.panel.left-elements .collapse-placeholder {
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+}
+.panel.left-elements .layer-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.panel.left-elements .layer-actions .action-btn {
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.panel.left-elements .layer-actions .action-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* visual separator between left panel sections */
+.panel.left-elements .left-separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.04);
+  margin: 8px 0;
+  border-radius: 1px;
+}
 .layer-node {
   position: relative;
   margin: 0; /* ensure no extra gap between nodes */
@@ -127,7 +217,7 @@
 
 /* constant indentation between levels (px) */
 :root {
-  --layer-indent: 10px; /* 10px per level */
+  --layer-indent: 15px; /* 15px per level */
 }
 
 .collapse-toggle {
@@ -284,6 +374,23 @@
 /* selected row background (selection shown via row background, not checkbox) */
 .layer-row.selected {
   background: rgba(98, 78, 255, 0.15);
+}
+
+/* stronger selector for left panel rows to override incidental rules */
+.panel.left-elements .layer-row.selected {
+  background: rgba(98, 78, 255, 0.15) !important;
+  transition: background 120ms ease-in-out;
+}
+
+/* Ensure any left-panel row marked via data-selected attribute is visibly highlighted */
+.panel.left-elements [data-selected="true"],
+.panel.left-elements .layer-row[data-selected="true"] {
+  background: rgba(98, 78, 255, 0.15) !important;
+}
+
+/* full-row clickable cursor */
+.panel.left-elements .layer-row {
+  cursor: pointer;
 }
 
 /* hide any leftover checkbox inputs (markup removed) */

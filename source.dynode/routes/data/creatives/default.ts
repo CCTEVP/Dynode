@@ -23,52 +23,7 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
     // children defaults to false when not provided
     const children = req.query.children === "true";
 
-    // Accept ?folder=value or repeated ?folder=a&folder=b
-    if (typeof rawFolder === "string") {
-      const f = rawFolder.trim();
-      if (f) {
-        if (!Types.ObjectId.isValid(f)) {
-          res.status(400).json({ message: "Invalid folder id" });
-          return;
-        }
-        filter.folder = new Types.ObjectId(f);
-      }
-    } else if (Array.isArray(rawFolder) && rawFolder.length) {
-      const values = rawFolder
-        .map(String)
-        .map((s) => s.trim())
-        .filter(Boolean);
-      const validObjectIds = values
-        .filter(Types.ObjectId.isValid)
-        .map((v) => new Types.ObjectId(v));
-      if (!validObjectIds.length) {
-        res.status(400).json({ message: "No valid folder ids provided" });
-        return;
-      }
-      filter.folder = { $in: validObjectIds };
-    }
-
-    // Accept optional ?origin=value or repeated ?origin=a&origin=b
-    // Behavior:
-    // - no origin param provided -> apply origin = 'dynamics'
-    // - origin=all (case-insensitive) -> do not filter by origin
-    // - origin=a -> filter.origin = 'a'
-    // - origin=a&origin=b -> filter.origin = { $in: ['a','b'] }
-    if (typeof rawOrigin === "undefined") {
-      filter.origin = "dynamics";
-    } else if (typeof rawOrigin === "string") {
-      const o = rawOrigin.trim();
-      if (o && o.toLowerCase() !== "all") filter.origin = o;
-    } else if (Array.isArray(rawOrigin) && rawOrigin.length) {
-      const values = rawOrigin
-        .map(String)
-        .map((s) => s.trim())
-        .filter(Boolean);
-      const lower = values.map((s) => s.toLowerCase());
-      if (values.length && !lower.includes("all")) {
-        filter.origin = { $in: values };
-      }
-    }
+    // NOTE: folder/origin query filtering removed - return all creatives matching other filters
 
     // Choose model based on children flag:
     // - children === true -> CreativeUnifiedViewElements (with children)

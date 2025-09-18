@@ -1,9 +1,11 @@
 import express, { Request, Response, NextFunction } from "express";
 import creativesRouter from "./creatives/default";
 import componentsRouter from "./components/default";
+import elementsRouter from "./elements/default";
 import logger from "../../services/logger";
 
 const router = express.Router();
+router.use("/elements", elementsRouter);
 router.use("/creatives", creativesRouter);
 router.use("/components", componentsRouter);
 

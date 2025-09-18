@@ -33,12 +33,14 @@ const renderContents = (
   creative: Creative,
   handlers?: {
     onMove?: (w: string, d: string) => void;
-    onSelect?: (id: string) => void;
+    onSelect?: (id: string, indexPath?: number[]) => void;
     selectedId?: string | null;
-  }
+  },
+  parentIndexPath: number[] = []
 ) => {
   if (!Array.isArray(contents)) return null;
   return contents.map((child, index) => {
+    const myIndexPath = [...parentIndexPath, index];
     const node = getNode(child);
     if (!node) return null;
 
@@ -61,6 +63,9 @@ const renderContents = (
       domId = `${normalizedType}-${idVal}`;
     }
 
+    // build index-path attribute for selector
+    const indexPathAttr = { "data-index-path": myIndexPath.join("-") } as any;
+
     // Layouts
     if (typeKey === "SlideLayout") {
       const key = payload?._id?.$oid ?? payload?.identifier ?? `slide-${index}`;
@@ -76,10 +81,11 @@ const renderContents = (
                 if (id && handlers?.onMove)
                   handlers.onMove(id, payload._id.$oid);
               },
+              ...indexPathAttr,
             } as any
           }
         >
-          {renderContents(payload.contents, creative, handlers)}
+          {renderContents(payload.contents, creative, handlers, myIndexPath)}
         </SlideLayout>
       );
     }
@@ -98,10 +104,11 @@ const renderContents = (
                 if (id && handlers?.onMove)
                   handlers.onMove(id, payload._id.$oid);
               },
+              ...indexPathAttr,
             } as any
           }
         >
-          {renderContents(payload.contents, creative, handlers)}
+          {renderContents(payload.contents, creative, handlers, myIndexPath)}
         </BoxLayout>
       );
     }
@@ -111,7 +118,7 @@ const renderContents = (
       const key = payload?._id?.$oid ?? payload?.identifier ?? `grid-${index}`;
       return (
         <BoxLayout key={key} layout={payload}>
-          {renderContents(payload.contents, creative)}
+          {renderContents(payload.contents, creative, handlers, myIndexPath)}
         </BoxLayout>
       );
     }
@@ -151,14 +158,15 @@ const renderContents = (
               },
               onClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
-                if (domId) handlers?.onSelect?.(domId);
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
               },
               onDoubleClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
                 // find first descendant element with an id inside this widget and select it
                 const el = e.currentTarget as HTMLElement;
                 const child = el.querySelector("[id]");
-                if (child && child.id) handlers?.onSelect?.(child.id);
+                if (child && child.id)
+                  handlers?.onSelect?.(child.id, myIndexPath.concat(0));
               },
               "data-selected":
                 handlers?.selectedId === domId ? "true" : undefined,
@@ -166,6 +174,7 @@ const renderContents = (
                 const target = e.currentTarget as HTMLElement;
                 target.classList.remove("dragging");
               },
+              ...indexPathAttr,
             } as any
           }
         />
@@ -206,16 +215,18 @@ const renderContents = (
               },
               onClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
-                if (domId) handlers?.onSelect?.(domId);
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
               },
               onDoubleClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
                 const el = e.currentTarget as HTMLElement;
                 const child = el.querySelector("[id]");
-                if (child && child.id) handlers?.onSelect?.(child.id);
+                if (child && child.id)
+                  handlers?.onSelect?.(child.id, myIndexPath.concat(0));
               },
               "data-selected":
                 handlers?.selectedId === domId ? "true" : undefined,
+              ...indexPathAttr,
             } as any
           }
         />
@@ -257,7 +268,7 @@ const renderContents = (
               },
               onClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
-                if (domId) handlers?.onSelect?.(domId);
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
               },
               onDoubleClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
@@ -287,7 +298,7 @@ const renderContents = (
                 e.dataTransfer.setData("text/plain", payload._id.$oid),
               onClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
-                if (domId) handlers?.onSelect?.(domId);
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
               },
               onDoubleClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
@@ -327,7 +338,7 @@ const renderContents = (
               // ensure clicks anywhere inside the countdown select the parent widget
               onClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
-                handlers?.onSelect?.(parentId);
+                handlers?.onSelect?.(parentId, myIndexPath);
               },
               // prevent children from being clickable/selectable separately
               onMouseDown: (e: React.MouseEvent) => {
@@ -338,7 +349,12 @@ const renderContents = (
             } as any
           }
         >
-          {renderContents(payload.contents, creative, childHandlers)}
+          {renderContents(
+            payload.contents,
+            creative,
+            childHandlers,
+            myIndexPath
+          )}
         </CountdownWidget>
       );
     }

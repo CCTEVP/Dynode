@@ -4,7 +4,17 @@ import "./creative-canvas.css";
 interface CreativeCanvasProps {
   children: React.ReactNode;
   leftPanel?: React.ReactNode;
-  rightPanel?: React.ReactNode;
+  centerPanel?: React.ReactNode;
+  /**
+   * rightPanel can be either a React node or a function that receives current
+   * scale and zoom handlers: (scale, { zoomIn, zoomOut, reset }) => ReactNode
+   */
+  rightPanel?:
+    | React.ReactNode
+    | ((
+        scale: number,
+        handlers: { zoomIn: () => void; zoomOut: () => void; reset: () => void }
+      ) => React.ReactNode);
   /** fraction of container to leave as margin on each side (0.0 - 0.4). Default 0.08 = 8% */
   defaultMargin?: number;
 }
@@ -15,6 +25,7 @@ const MAX_SCALE = 3.0;
 export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
   children,
   leftPanel,
+  centerPanel,
   rightPanel,
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -37,7 +48,8 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     scrollTop: 0,
   });
   const { defaultMargin = 0.08 } = {} as CreativeCanvasProps;
-  const [padPx, setPadPx] = useState<number>(160);
+  // pad holds horizontal (x) and vertical (y) padding in pixels
+  const [pad, setPad] = useState<{ x: number; y: number }>({ x: 160, y: 80 });
 
   const clamp = useCallback(
     (v: number) => Math.min(MAX_SCALE, Math.max(MIN_SCALE, v)),
@@ -245,14 +257,22 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     ro1.observe(container);
     ro2.observe(inner);
 
-    // Also recompute padding so scrolling space scales with container
+    // Also recompute padding so scrolling space scales with container.
+    // Use separate horizontal and vertical padding to avoid large vertical gaps
+    // that can prevent panning to the top when scale is 1.
     const computePad = () => {
       try {
         const cW = container.clientWidth || 800;
-        // 15% of width, min 80px, max 600px
-        const p = Math.round(Math.max(80, Math.min(600, cW * 0.15)));
-        setPadPx(p);
-      } catch (err) {}
+        const cH = container.clientHeight || 600;
+        // horizontal padding: 12-15% of width (min 80, max 600)
+        const padX = Math.round(Math.max(80, Math.min(600, cW * 0.15)));
+        // vertical padding: smaller fraction of height so top/bottom are reachable
+        // use 6% of height (min 24, max 300)
+        const padY = Math.round(Math.max(24, Math.min(300, cH * 0.06)));
+        setPad({ x: padX, y: padY });
+      } catch (err) {
+        // noop
+      }
     };
     computePad();
     const ro3 = new ResizeObserver(() => computePad());
@@ -266,6 +286,51 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
       window.removeEventListener("resize", computeDefaultScale);
     };
   }, [computeDefaultScale]);
+
+  // Keep the creative vertically centered only when the scaled inner fits the
+  // available vertical space; otherwise align to top so panning can reach the
+  // top edge. This preserves previous centered load behavior for smaller
+  // creatives but allows panning for larger ones.
+  // Compute explicit top/bottom padding so the scaled inner can be truly
+  // centered vertically when it fits. When the inner is taller than the
+  // available area, we keep the smaller dispPad for panning.
+  const [computedPad, setComputedPad] = useState<{
+    top: number;
+    bottom: number;
+  }>({ top: pad.y, bottom: pad.y });
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const inner = innerRef.current;
+    if (!container || !inner) return;
+
+    const iH = inner.offsetHeight || inner.scrollHeight || 0;
+    const scaledH = iH * scale;
+    const dispPadY = Math.round(
+      Math.max(8, Math.min(300, pad.y / Math.max(1, scale)))
+    );
+    const containerH = container.clientHeight;
+
+    if (scaledH < Math.max(0, containerH - dispPadY * 2)) {
+      // center the inner by distributing the remaining vertical space equally
+      const extra = Math.round(Math.max(dispPadY, (containerH - scaledH) / 2));
+      setComputedPad({ top: extra, bottom: extra });
+    } else {
+      // content taller than available area; keep base displayed pad so panning works
+      setComputedPad({ top: dispPadY, bottom: dispPadY });
+    }
+  }, [scale, pad]);
+
+  // compute displayed padding values for the scroll container based on scale
+  const dispPad = (() => {
+    const x = Math.round(
+      Math.max(8, Math.min(600, pad.x / Math.max(1, scale)))
+    );
+    const y = Math.round(
+      Math.max(8, Math.min(300, pad.y / Math.max(1, scale)))
+    );
+    return { x, y };
+  })();
 
   return (
     <div
@@ -281,14 +346,18 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
         <div
           className="creative-canvas-scroll"
           ref={scrollRef}
-          style={{ padding: padPx }}
+          style={{
+            padding: `${computedPad.top}px ${dispPad.x}px ${computedPad.bottom}px`,
+          }}
         >
           <div
             className="creative-canvas-inner"
             ref={innerRef}
             style={{
               transform: `scale(${scale})`,
-              transformOrigin: "center center",
+              // anchor scaling to the top-center so horizontal centering is preserved
+              // while keeping the top edge anchored for vertical panning
+              transformOrigin: "top center",
             }}
           >
             {children}
@@ -298,21 +367,16 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
 
       <div className="creative-canvas-hud" role="status" aria-live="polite">
         <div className="hud-left">{leftPanel}</div>
-        <div className="hud-center">
-          <div className="hud-center-icons">
-            <button onClick={handleZoomOut} aria-label="Zoom out">
-              -
-            </button>
-            <div>{Math.round(scale * 100)}%</div>
-            <button onClick={handleReset} aria-label="Reset zoom">
-              0
-            </button>
-            <button onClick={handleZoomIn} aria-label="Zoom in">
-              +
-            </button>
-          </div>
+        <div className="hud-center">{centerPanel}</div>
+        <div className="hud-right">
+          {typeof rightPanel === "function"
+            ? rightPanel(scale, {
+                zoomIn: handleZoomIn,
+                zoomOut: handleZoomOut,
+                reset: handleReset,
+              })
+            : rightPanel}
         </div>
-        <div className="hud-right">{rightPanel}</div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const { Content } = Layout;
 
 const FullLayout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout style={{ minHeight: "100vh", minWidth: "100vw" }}>
       <Content style={{ padding: 0, margin: 0 }}>{children}</Content>
     </Layout>
   );

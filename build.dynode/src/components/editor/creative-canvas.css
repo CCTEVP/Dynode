@@ -2,12 +2,43 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center; /* center the inner creative so it appears centered when scaled */
-  align-items: center;
+  justify-content: center; /* center the inner creative horizontally when scaled */
+  align-items: flex-start; /* align to top so scrolling/panning can reach the top */
   overflow: auto;
   background: #efefef;
   flex: 1 1 auto;
   min-height: 0;
+}
+
+/* Disable text selection inside the creative canvas to prevent accidental
+   selection of rendered elements while editing. Allow selection only inside
+   real editable controls (inputs, textareas, selects and contenteditable).
+ */
+.creative-canvas-inner,
+.creative-canvas-inner * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.creative-canvas-inner input,
+.creative-canvas-inner textarea,
+.creative-canvas-inner select,
+.creative-canvas-inner [contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.creative-canvas-inner input *,
+.creative-canvas-inner textarea *,
+.creative-canvas-inner [contenteditable="true"] * {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 .creative-canvas-scroll {
@@ -57,7 +88,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 12px;
+  padding: 17px;
   pointer-events: none; /* allow clicks to pass through HUD background */
 }
 
@@ -87,7 +118,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 12px;
+  padding: 17px;
 }
 .creative-canvas-hud > .hud-left,
 .creative-canvas-hud > .hud-right {
@@ -111,6 +142,29 @@
   display: inline-flex;
   gap: 8px;
   align-items: center;
+}
+
+/* center wrapper: toolbar on top, dropdowns vertical beneath */
+.hud-center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hud-center-dropdowns {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+.hud-center-dropdowns .tool-group summary {
+  cursor: pointer;
+  list-style: none;
+  color: #fff;
+  font-weight: 600;
+}
+.hud-center-dropdowns .tool-group > div {
+  margin-top: 6px;
 }
 .creative-canvas-hud > .hud-left .panel,
 .creative-canvas-hud > .hud-right .panel {
@@ -177,7 +231,8 @@
   border: 0; /* visual border handled by pseudo elements to allow constant 1px regardless of zoom */
   position: absolute; /* positioned inside the creative container */
   pointer-events: none;
-  z-index: 90000;
+  /* lower z-index than the HUD so floating panels remain on top */
+  z-index: 2000;
 }
 
 /* visible 1px border using pseudo-elements so it remains 1px on screen */

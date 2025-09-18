@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1043.94 1043.94">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        mask: url(#mask);
+      }
+
+      .cls-4 {
+        filter: url(#luminosity-invert-noclip);
+      }
+
+      .cls-2, .cls-5 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        fill: red;
+      }
+    </style>
+    <filter id="luminosity-invert-noclip" x="0" y="0" width="1043.94" height="1043.94" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feColorMatrix result="cm" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="cm" in2="bg"/>
+    </filter>
+    <mask id="mask" x="0" y="0" width="1043.94" height="1043.94" maskUnits="userSpaceOnUse">
+      <g class="cls-4">
+        <g>
+          <circle class="cls-1" cx="522.17" cy="199.72" r="127.75"/>
+          <circle class="cls-1" cx="808.35" cy="677.28" r="127.75"/>
+          <circle class="cls-1" cx="235.59" cy="677.28" r="127.75"/>
+          <circle class="cls-1" cx="521.97" cy="521.97" r="127.75"/>
+        </g>
+      </g>
+    </mask>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-3">
+      <g>
+        <path class="cls-5" d="M521.97.5C233.97.5.5,233.97.5,521.97s233.47,521.47,521.47,521.47,521.47-233.47,521.47-521.47S809.97.5,521.97.5ZM521.97,895.3c-206.19,0-373.33-167.15-373.33-373.33s167.15-373.33,373.33-373.33,373.33,167.15,373.33,373.33-167.15,373.33-373.33,373.33Z"/>
+        <circle class="cls-6" cx="521.97" cy="521.97" r="306.67"/>
+        <circle class="cls-2" cx="521.97" cy="521.97" r="180"/>
+        <circle class="cls-6" cx="521.97" cy="521.97" r="245.56"/>
+      </g>
+    </g>
+  </g>
+</svg>

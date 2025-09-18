@@ -1,4 +1,4 @@
-import type { ObjectId, MongoDate } from "../components/creative/layouts/types";
+import type { ObjectId, MongoDate } from "../components/editor/layouts/types";
 
 export interface Creative {
   _id: ObjectId;
