@@ -6,6 +6,7 @@ interface TextWidgetProps {
   widget: TextWidgetType;
   // No children prop - TextWidget cannot be a parent
   additionalProps?: React.HTMLAttributes<HTMLDivElement>;
+  creative?: any;
 }
 
 export const TextWidget: React.FC<TextWidgetProps> = ({

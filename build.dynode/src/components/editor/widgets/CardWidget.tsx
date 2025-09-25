@@ -6,6 +6,7 @@ interface CardWidgetProps {
   widget: CardWidgetType;
   children?: React.ReactNode;
   additionalProps?: React.HTMLAttributes<HTMLDivElement>;
+  creative?: any;
 }
 
 export const CardWidget: React.FC<CardWidgetProps> = ({

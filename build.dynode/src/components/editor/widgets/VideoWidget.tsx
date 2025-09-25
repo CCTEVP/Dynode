@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import type { VideoWidget as VideoWidgetType } from "./types";
 import { BaseWidget } from "./BaseWidget";
-import type { Creative } from "../../../types/creative";
 
 const RENDER_BASE =
   (import.meta.env && (import.meta.env.VITE_RENDER_BASE_URL as string)) ||
@@ -10,8 +9,8 @@ const RENDER_BASE =
 
 interface VideoWidgetProps {
   widget: VideoWidgetType;
-  creative?: Creative;
   additionalProps?: React.HTMLAttributes<HTMLDivElement>;
+  creative?: any;
   // No children prop - VideoWidget cannot be a parent
 }
 
@@ -43,6 +42,7 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
   }
 
   if (sourceUrl === "#") {
+<<<<<<< HEAD
     // Prefer the creative._id when available, fall back to parent reference
     const creativeId =
       (creative && ((creative as any)?._id?.$oid || (creative as any)._id)) ||
@@ -58,7 +58,28 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
     } else {
       sourceUrl = "#";
     }
+=======
+    const creativeId =
+      (creative && (creative as any)?._id && (creative as any)._id.$oid) ||
+      widget.parent?.[0]?.$oid ||
+      "";
+    console.debug("[VideoWidget] resolving asset", { creativeId, primaryPath });
+    sourceUrl = primaryPath
+      ? `http://localhost:5000/dynamics/${creativeId}/${primaryPath.filename}.opt.${primaryPath.extension}`
+      : "#";
+    console.debug("[VideoWidget] resolved fallback sourceUrl", sourceUrl);
+>>>>>>> 3df647b1ea3251c86e7e3082b3bc28543f32cab9
   }
+
+  console.debug("[VideoWidget] final sourceUrl", sourceUrl);
+
+  const srcRef = useRef<HTMLSourceElement | null>(null);
+  useEffect(() => {
+    if (srcRef.current) {
+      srcRef.current.src = sourceUrl;
+      srcRef.current.setAttribute("data-debug-src", sourceUrl);
+    }
+  }, [sourceUrl]);
 
   return (
     <BaseWidget widget={widget} additionalProps={additionalProps}>
@@ -73,7 +94,12 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
         data-mime-type={primaryPath?.mime}
         data-filename={primaryPath?.filename}
       >
-        <source src={sourceUrl} type={primaryPath?.mime || "video/mp4"} />
+        <source
+          ref={srcRef}
+          src={sourceUrl}
+          type={primaryPath?.mime || "video/mp4"}
+          data-debug-src={sourceUrl}
+        />
         Your browser does not support the video tag.
       </video>
     </BaseWidget>

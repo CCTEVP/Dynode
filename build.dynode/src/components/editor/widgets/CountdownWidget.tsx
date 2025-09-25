@@ -6,6 +6,7 @@ interface CountdownWidgetProps {
   widget: CountdownWidgetType;
   children?: React.ReactNode;
   additionalProps?: React.HTMLAttributes<HTMLDivElement>;
+  creative?: any;
 }
 
 function computeParts(targetIso?: string) {

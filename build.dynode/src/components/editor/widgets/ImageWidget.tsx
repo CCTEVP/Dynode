@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import type { ImageWidget as ImageWidgetType } from "./types";
 import { BaseWidget } from "./BaseWidget";
 import type { Creative } from "../../../types/creative";
 
 interface ImageWidgetProps {
   widget: ImageWidgetType;
-  creative?: Creative;
+  creative?: Creative | any;
   additionalProps?: React.HTMLAttributes<HTMLDivElement>;
   // No children prop - ImageWidget cannot be a parent
 }
@@ -41,20 +41,43 @@ export const ImageWidget: React.FC<ImageWidgetProps> = ({
     }
   }
 
-  // Fallback to constructing URL from parent id and filename
+  // Fallback to constructing URL from creative id (preferred) or widget.parent when available
   if (imageUrl === "#") {
-    const creativeId = widget.parent?.[0]?.$oid || "";
+    const creativeId =
+      (creative && (creative as any)?._id && (creative as any)._id.$oid) ||
+      widget.parent?.[0]?.$oid ||
+      "";
+    console.log("[ImageWidget] resolving asset", {
+      creativeId,
+      primaryPath,
+      widgetIdentifier: widget.identifier,
+    });
     imageUrl = primaryPath
       ? `http://localhost:5000/dynamics/${creativeId}/${primaryPath.filename}.opt.${primaryPath.extension}`
       : "#";
+    console.log("[ImageWidget] resolved fallback imageUrl", imageUrl);
   }
+
+  console.log("[ImageWidget] final imageUrl", imageUrl);
+
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    if (imgRef.current) {
+      // force the DOM src attribute to match computed imageUrl at runtime
+      imgRef.current.src = imageUrl;
+      imgRef.current.setAttribute("data-debug-src", imageUrl);
+    }
+  }, [imageUrl]);
 
   return (
     <BaseWidget widget={widget} additionalProps={additionalProps}>
       <img
+        ref={imgRef}
         src={imageUrl}
         alt={widget.identifier}
         data-name={widget.identifier}
+        data-debug-src={imageUrl}
       />
     </BaseWidget>
   );
