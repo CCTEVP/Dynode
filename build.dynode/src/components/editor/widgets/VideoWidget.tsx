@@ -42,23 +42,6 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
   }
 
   if (sourceUrl === "#") {
-<<<<<<< HEAD
-    // Prefer the creative._id when available, fall back to parent reference
-    const creativeId =
-      (creative && ((creative as any)?._id?.$oid || (creative as any)._id)) ||
-      widget.parent?.[0]?.$oid ||
-      "";
-    const base = RENDER_BASE.replace(/\/$/, "");
-    if (primaryPath) {
-      const maybePrefix = creativeId
-        ? `${base}/dynamics/${creativeId}/`
-        : `${base}/dynamics/`;
-      // avoid double-slashes when creativeId is empty
-      sourceUrl = `${maybePrefix}${primaryPath.filename}.opt.${primaryPath.extension}`;
-    } else {
-      sourceUrl = "#";
-    }
-=======
     const creativeId =
       (creative && (creative as any)?._id && (creative as any)._id.$oid) ||
       widget.parent?.[0]?.$oid ||
@@ -68,7 +51,6 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
       ? `http://localhost:5000/dynamics/${creativeId}/${primaryPath.filename}.opt.${primaryPath.extension}`
       : "#";
     console.debug("[VideoWidget] resolved fallback sourceUrl", sourceUrl);
->>>>>>> 3df647b1ea3251c86e7e3082b3bc28543f32cab9
   }
 
   console.debug("[VideoWidget] final sourceUrl", sourceUrl);
