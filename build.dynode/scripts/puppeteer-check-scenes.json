@@ -1,0 +1,38 @@
+{
+  "url": "http://localhost:4000/creatives/edit/67e5255aa5019234ba89509c",
+  "time": 1758540252330,
+  "results": [
+    {
+      "clickedIndex": 0,
+      "scenes": [
+        {
+          "index": "0",
+          "visible": true
+        },
+        {
+          "index": "1",
+          "visible": false
+        }
+      ],
+      "visibleList": [
+        "0"
+      ]
+    },
+    {
+      "clickedIndex": 1,
+      "scenes": [
+        {
+          "index": "0",
+          "visible": false
+        },
+        {
+          "index": "1",
+          "visible": true
+        }
+      ],
+      "visibleList": [
+        "1"
+      ]
+    }
+  ]
+}

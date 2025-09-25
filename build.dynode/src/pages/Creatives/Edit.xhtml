@@ -1,7 +1,7 @@
 <Editor>
   <EditorCanvas>
-    <Scene element="0"> Children </Scene>
-    <Scene element="1"> Children </Scene>
+    <Scene element="0"> {creative.elements.children[0]} </Scene>
+    <Scene element="1"> {creative.elements.children[1]} </Scene>
   </EditorCanvas>
   <EditorSelector>
     <Boundary type="selection" event="click"></Boundary>
@@ -12,14 +12,16 @@
       <Panel>
         <Row>
           <button navigate="/creatives"></button>
-          <title>Creative Name</title>
+          <title>{Creative Name}</title>
           <button toggleVisibility="#OptionsPanel"></button>
         </Row>
         <Row>
-          <SceneSelector> Children </SceneSelector>
+          <SceneSelector> {creative.elements.children} </SceneSelector>
         </Row>
         <Row>
-          <ElementSelector> Children </ElementSelector>
+          <ElementSelector>
+            {creative.elements.children[n].contents}
+          </ElementSelector>
         </Row>
       </Panel>
       <Panel id="OptionsPanel">

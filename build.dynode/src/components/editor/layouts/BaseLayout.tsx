@@ -33,6 +33,21 @@ export const BaseLayout: React.FC<BaseLayoutProps> = ({
     layout.styles as any
   ) as React.CSSProperties;
 
+  // If this is a SlideLayout and the data contains a negative z-index
+  // clamp it to 0 so slides aren't pushed behind the main canvas/background.
+  if (
+    normalizedType.endsWith("-layout") &&
+    normalizedType.indexOf("slide-layout") !== -1
+  ) {
+    const z = (safeStyle as any)?.zIndex;
+    if (z !== undefined && z !== null) {
+      const num = Number(z);
+      if (!Number.isNaN(num) && num < 0) {
+        (safeStyle as any).zIndex = 0;
+      }
+    }
+  }
+
   return (
     <div
       id={layoutId}

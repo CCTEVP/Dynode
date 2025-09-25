@@ -1,13 +1,16 @@
 {
   "folders": [
-	{
-		"path": "build.dynode"
-	},
-	{
-		"path": "render.dynode"
-	},
-	{
-		"path": "source.dynode"
-	}
-]
+    {
+      "path": "build.dynode"
+    },
+    {
+      "path": "render.dynode"
+    },
+    {
+      "path": "source.dynode"
+    }
+  ],
+  "settings": {
+    "powershell.cwd": "build.dynode"
+  }
 }

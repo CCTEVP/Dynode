@@ -1,0 +1,24 @@
+{
+  "url": "http://localhost:4000/creatives/edit/67e5255aa5019234ba89509c",
+  "time": 1758536509119,
+  "foundLength": 14,
+  "target": {
+    "id": "item-countdown-widget-67e52da67acf34a2c3747671",
+    "text": "countdown01 (CountdownWidget)"
+  },
+  "info": {
+    "found": true,
+    "id": "item-countdown-widget-67e52da67acf34a2c3747671",
+    "dataItemId": "67e52da67acf34a2c3747671",
+    "selectedClass": true,
+    "dataSelected": true,
+    "text": "countdown01 (CountdownWidget)"
+  },
+  "canvasSelected": [
+    {
+      "id": "item-countdown-widget-67e52da67acf34a2c3747671",
+      "tag": "DIV",
+      "path": null
+    }
+  ]
+}

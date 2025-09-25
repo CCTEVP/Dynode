@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelection } from "../../contexts/SelectionContext";
+import { useSelection } from "../../../contexts/SelectionContext";
 import {
   AppstoreOutlined,
   BorderOutlined,
@@ -22,6 +22,7 @@ interface ElementListProps {
   onSelect?: (path: string[], el: any, indexPath?: number[]) => void;
   selectedPath?: string[] | null;
   selectedElement?: any | null;
+  sceneIndex?: number; // optional: index of the current scene when elements are scene contents
 }
 
 const getComponentIcon = (c: string) => {
@@ -72,83 +73,121 @@ const ElementRow: React.FC<{
   const [locked, setLocked] = useState(false);
   const [expanded, setExpanded] = useState<boolean>(true);
 
-  const rowId = `item-${
-    (data && (data._id?.$oid || data.identifier)) ||
-    widgetType ||
-    indexPath.join("-")
-  }`;
+  const computeNormalizedType = (t?: any) => {
+    if (!t) return "item";
+    try {
+      return String(t)
+        .replace(/([A-Z])/g, "-$1")
+        .toLowerCase()
+        .replace(/^-/, "");
+    } catch {
+      return String(t).toLowerCase().replace(/\s+/g, "-");
+    }
+  };
+  const idVal =
+    data && (data._id?.$oid || data._id || data.identifier)
+      ? String(data._id?.$oid || data._id || data.identifier)
+      : indexPath.join("-");
+  const normalizedType = computeNormalizedType(data?.type || widgetType);
+  const rowId = `item-${normalizedType}-${idVal}`;
 
-  // determine if this row should be marked selected (exact or ancestor match)
   const isSelected = (() => {
     if (!selectedPath || !selectedPath.length) return false;
     const sel = selectedPath.join("/");
     const p = path.join("/");
-    if (sel === p) return true;
-    if (selectedPath.length >= path.length) {
-      const head = selectedPath.slice(0, path.length).join("/");
-      if (head === p) return true;
-    }
-    return false;
+    return sel === p;
   })();
 
-  // debug: log selection matching for troubleshooting
   try {
     console.debug("ElementRow:", { rowId, path, selectedPath, isSelected });
   } catch {
     // ignore
   }
 
-  // If not matched by path, try matching by selectedElement id/identifier as a fallback
-  const getWrapperId = (node: any) => {
-    if (!node) return undefined;
-    // node might be wrapper like { BoxLayout: { _id: { $oid: '...' }, identifier: 'days' } }
-    if (typeof node === "object") {
-      const keys = Object.keys(node || {});
-      if (keys.length === 1) {
-        const payload = node[keys[0]];
-        if (!payload) return undefined;
-        if (payload._id && (payload._id.$oid || payload._id))
-          return String(payload._id.$oid || payload._id);
-        if (payload.identifier) return String(payload.identifier);
+  let finalIsSelected = false;
+  try {
+    const ctx = useSelection();
+    const selUid = ctx?.state?.selected?.uid;
+    const rowIdVal =
+      (data && (data._id?.$oid || data._id || data.identifier)) ||
+      widgetType ||
+      indexPath.join("-");
+    const selectedByUid = selUid ? String(selUid) === String(rowIdVal) : false;
+
+    const getWrapperId = (node: any) => {
+      if (!node) return undefined;
+      if (typeof node === "object") {
+        const keys = Object.keys(node || {});
+        if (keys.length === 1) {
+          const payload = node[keys[0]];
+          if (!payload) return undefined;
+          if (payload._id && (payload._id.$oid || payload._id))
+            return String(payload._id.$oid || payload._id);
+          if (payload.identifier) return String(payload.identifier);
+        }
+        if (node._id && (node._id.$oid || node._id))
+          return String(node._id.$oid || node._id);
+        if (node.identifier) return String(node.identifier);
       }
-      // if node looks like a payload itself
-      if (node._id && (node._id.$oid || node._id))
-        return String(node._id.$oid || node._id);
-      if (node.identifier) return String(node.identifier);
-    }
-    return undefined;
-  };
+      return undefined;
+    };
 
-  const selId = getWrapperId((selectedElement as any) || null);
-  const rowIdVal =
-    (data && (data._id?.$oid || data.identifier)) ||
-    widgetType ||
-    indexPath.join("-");
-  const selectedById = selId ? String(selId) === String(rowIdVal) : false;
+    const selIdFallback = getWrapperId((selectedElement as any) || null);
+    const selectedByIdFallback = selIdFallback
+      ? String(selIdFallback) === String(rowIdVal)
+      : false;
 
-  const finalIsSelected = isSelected || selectedById;
+    finalIsSelected = isSelected || selectedByUid || selectedByIdFallback;
+  } catch (e) {
+    const getWrapperId = (node: any) => {
+      if (!node) return undefined;
+      if (typeof node === "object") {
+        const keys = Object.keys(node || {});
+        if (keys.length === 1) {
+          const payload = node[keys[0]];
+          if (!payload) return undefined;
+          if (payload._id && (payload._id.$oid || payload._id))
+            return String(payload._id.$oid || payload._id);
+          if (payload.identifier) return String(payload.identifier);
+        }
+        if (node._id && (node._id.$oid || node._id))
+          return String(node._id.$oid || node._id);
+        if (node.identifier) return String(node.identifier);
+      }
+      return undefined;
+    };
+    const selId = getWrapperId((selectedElement as any) || null);
+    const rowIdVal =
+      (data && (data._id?.$oid || data.identifier)) ||
+      widgetType ||
+      indexPath.join("-");
+    const selectedById = selId ? String(selId) === String(rowIdVal) : false;
+    finalIsSelected = isSelected || selectedById;
+  }
 
   return (
     <div
       className={`layer-node ${hasChildren ? "has-children" : "no-children"}`}
+      style={{ ["--depth" as any]: depth }}
     >
       <div
         id={rowId}
+        data-item-id={
+          data && (data._id?.$oid || data._id || data.identifier)
+            ? String(data._id?.$oid || data._id || data.identifier)
+            : undefined
+        }
         className={`layer-row ${finalIsSelected ? "selected" : ""}`}
         data-depth={depth}
         data-icon={widgetType}
         data-selected={finalIsSelected ? "true" : undefined}
         style={{
-          paddingLeft: depth * 25,
           display: "flex",
           alignItems: "center",
           cursor: "pointer",
-          background: finalIsSelected ? "rgba(98, 78, 255, 0.15)" : undefined,
-          transition: "background 120ms ease-in-out",
         }}
         onClick={() => onSelect && onSelect(path, el, indexPath)}
       >
-        {/* collapse placeholder / button (fixed 10px width) */}
         <div
           style={{
             width: 10,
@@ -177,7 +216,6 @@ const ElementRow: React.FC<{
           )}
         </div>
 
-        {/* icon (15px width) */}
         <div
           style={{ width: 15, marginLeft: 6, marginRight: 8 }}
           className="layer-icon"
@@ -185,7 +223,6 @@ const ElementRow: React.FC<{
           {getComponentIcon(widgetType)}
         </div>
 
-        {/* label */}
         <div
           className="layer-label"
           title={label}
@@ -199,7 +236,6 @@ const ElementRow: React.FC<{
           {label}
         </div>
 
-        {/* actions: eye, lock */}
         <div
           className="layer-actions"
           style={{
@@ -260,8 +296,8 @@ const ElementList: React.FC<ElementListProps> = ({
   onSelect,
   selectedPath,
   selectedElement,
+  sceneIndex,
 }) => {
-  // prefer context selection when available
   let ctxSelectedPath: string[] | null | undefined = undefined;
   let ctxSelectedElement: any | null | undefined = undefined;
   try {
@@ -278,6 +314,9 @@ const ElementList: React.FC<ElementListProps> = ({
             Number(n)
           );
           let sceneIdx = idxs.length ? idxs[0] : 0;
+          if (typeof sceneIndex === "number") {
+            sceneIdx = sceneIndex;
+          }
           if (sceneIdx < 0 || sceneIdx >= elements.length) sceneIdx = 0;
           const scene = elements[sceneIdx];
           const rootWidget = Object.keys(scene)[0];
@@ -289,7 +328,14 @@ const ElementList: React.FC<ElementListProps> = ({
 
           let currentContents = rootData ? rootData.contents || [] : [];
           const parentPath: string[] = [rootSegment];
-          const offset = idxs[0] === sceneIdx ? 1 : 0;
+          const offset =
+            typeof sceneIndex === "number"
+              ? idxs[0] === sceneIndex
+                ? 1
+                : 0
+              : idxs[0] === sceneIdx
+              ? 1
+              : 0;
           let valid = true;
           for (let i = offset; i < idxs.length; i++) {
             const id = idxs[i];
@@ -316,7 +362,6 @@ const ElementList: React.FC<ElementListProps> = ({
           ctxSelectedPath = undefined;
         }
       } else if (ctx.state.selected.uid) {
-        // uid-based selection cannot produce a path here — we'll rely on selectedElement matching
         ctxSelectedPath = undefined;
       }
     }

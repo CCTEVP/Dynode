@@ -1,25 +1,25 @@
 import React from "react";
-import type { Creative } from "../../types/creative";
-import normalizeStyleObject from "./utils/styleUtils";
+import type { Creative } from "../../../types/creative";
+import normalizeStyleObject from "../../editor/utils/styleUtils";
 
-import { SlideLayout, BoxLayout } from "./layouts";
+import { SlideLayout, BoxLayout } from "../../editor/layouts";
 import {
   CardWidget,
   TextWidget,
   ImageWidget,
   VideoWidget,
   CountdownWidget,
-} from "./widgets";
+} from "../../editor/widgets";
+import CreativeScene from "../CreativeScene/Default";
 
 interface CreativeRendererProps {
   creative: Creative;
   onMove?: (widgetId: string, destLayoutId: string) => void;
   onSelect?: (id: string) => void;
   selectedId?: string | null;
+  selectedSceneIndex?: number;
 }
 
-// Recursively render a node (layout or widget). The creative JSON uses wrapper objects
-// like { "SlideLayout": { ... } } so we need to find the single key and use its value.
 const getNode = (element: any) => {
   if (!element) return null;
   const keys = Object.keys(element);
@@ -46,7 +46,6 @@ const renderContents = (
 
     const { typeKey, payload } = node;
 
-    // compute DOM id used by BaseWidget/BaseLayout (normalized-type-<idVal>)
     let domId: string | undefined = undefined;
     if (payload) {
       const normalizedType = String(payload.type)
@@ -63,10 +62,8 @@ const renderContents = (
       domId = `${normalizedType}-${idVal}`;
     }
 
-    // build index-path attribute for selector
     const indexPathAttr = { "data-index-path": myIndexPath.join("-") } as any;
 
-    // Layouts
     if (typeKey === "SlideLayout") {
       const key = payload?._id?.$oid ?? payload?.identifier ?? `slide-${index}`;
       return (
@@ -114,7 +111,6 @@ const renderContents = (
     }
 
     if (typeKey === "GridLayout") {
-      // Reuse BoxLayout for now if GridLayout component not implemented
       const key = payload?._id?.$oid ?? payload?.identifier ?? `grid-${index}`;
       return (
         <BoxLayout key={key} layout={payload}>
@@ -123,7 +119,6 @@ const renderContents = (
       );
     }
 
-    // Widgets
     if (typeKey === "CardWidget") {
       const key = payload?._id?.$oid ?? payload?.identifier ?? `card-${index}`;
       return (
@@ -136,11 +131,9 @@ const renderContents = (
               onDragStart: (e: React.DragEvent) => {
                 const id = payload._id.$oid;
                 e.dataTransfer.setData("text/plain", id);
-                // add dragging class
                 const target = e.currentTarget as HTMLElement;
                 target.classList.add("dragging");
                 try {
-                  // create drag image from element snapshot
                   const clone = target.cloneNode(true) as HTMLElement;
                   clone.style.position = "absolute";
                   clone.style.top = "-9999px";
@@ -162,7 +155,6 @@ const renderContents = (
               },
               onDoubleClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
-                // find first descendant element with an id inside this widget and select it
                 const el = e.currentTarget as HTMLElement;
                 const child = el.querySelector("[id]");
                 if (child && child.id)
@@ -319,7 +311,6 @@ const renderContents = (
         payload?._id?.$oid ?? payload?.identifier ?? `countdown-${index}`;
       const parentId =
         domId ?? payload?._id?.$oid ?? payload?.identifier ?? key;
-      // Override onSelect for children so clicking inside the countdown selects the parent widget
       const childHandlers = handlers
         ? {
             ...handlers,
@@ -335,17 +326,16 @@ const renderContents = (
           widget={payload}
           additionalProps={
             {
-              // ensure clicks anywhere inside the countdown select the parent widget
               onClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
                 handlers?.onSelect?.(parentId, myIndexPath);
               },
-              // prevent children from being clickable/selectable separately
               onMouseDown: (e: React.MouseEvent) => {
                 e.stopPropagation();
               },
               "data-selected":
                 handlers?.selectedId === domId ? "true" : undefined,
+              ...indexPathAttr,
             } as any
           }
         >
@@ -359,7 +349,6 @@ const renderContents = (
       );
     }
 
-    // Unknown node — render nothing
     return null;
   });
 };
@@ -369,25 +358,41 @@ export const CreativeRenderer: React.FC<CreativeRendererProps> = ({
   onMove,
   onSelect,
   selectedId,
+  selectedSceneIndex = 0,
 }) => {
   if (!creative) return null;
 
-  const mainStyle = (normalizeStyleObject(
-    creative.styles as any
-  ) as React.CSSProperties) || {
-    width: "1080px",
-    height: "1920px",
-    position: "relative",
-  };
+  const mainStyle =
+    (normalizeStyleObject(creative.styles as any) as React.CSSProperties) ||
+    ({
+      width: "1080px",
+      height: "1920px",
+      position: "relative",
+    } as React.CSSProperties);
+
+  const scenes = Array.isArray((creative as any).elements)
+    ? (creative.elements as any[]).map((el, i) => {
+        const content = renderContents([el], creative, {
+          onMove,
+          onSelect,
+          selectedId,
+        });
+        return (
+          <CreativeScene
+            key={i}
+            index={i}
+            active={i === (selectedSceneIndex ?? 0)}
+          >
+            {content}
+          </CreativeScene>
+        );
+      })
+    : null;
 
   return (
     <main id="app" role="main" style={mainStyle}>
       <div id="dynamic-creative-container" style={mainStyle}>
-        {renderContents(creative.elements, creative, {
-          onMove,
-          onSelect,
-          selectedId,
-        })}
+        {scenes}
       </div>
     </main>
   );

@@ -1,4 +1,34 @@
 /* Edit Page Styles */
+.editor-container {
+  /* Positioning & stacking */
+  position: absolute;
+  inset: 0;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+  overflow: auto;
+  padding: 0;
+  min-height: 0;
+  position: relative;
+
+  /* Visual */
+  background-color: #f5f5f5;
+}
+
+.editor-container.preview-mode {
+  padding: 0;
+  background-color: white;
+}
+
+.editor-container.edit-mode {
+  background-color: #f5f5f5;
+  padding: 0;
+}
 .edit-container {
   display: flex;
   flex-direction: column;
@@ -40,6 +70,87 @@
   overflow: auto;
   padding: 0; /* no parent padding so canvas fills available area */
   min-height: 0; /* ensure flex children can shrink properly */
+  position: relative; /* positioning context for overlay panels */
+}
+
+/* Selector overlay sits above the canvas but below panels */
+.editor-selector {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* contains a visual-only frame; children may enable events */
+  z-index: 2500;
+}
+
+.selection-frame {
+  transition: all 120ms ease;
+}
+
+/* Overlay panel container: position absolutely over the canvas so panel groups
+   don't participate in document flow and can't increase page height. Panels
+   inside will enable pointer-events as needed. */
+.editor-panels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* root overlay ignores pointer events, panels enable them */
+  z-index: 4000;
+}
+
+.panel-group {
+  position: absolute; /* position each group separately */
+  pointer-events: auto;
+  display: block;
+}
+
+.panel {
+  position: relative; /* panels' internal layout is relative to group */
+  pointer-events: auto; /* enable interactions inside panels */
+}
+
+.panel-group.pos-top-left {
+  top: 16px;
+  left: 16px;
+}
+.panel-group.pos-top-center {
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.panel-group.pos-top-right {
+  top: 16px;
+  right: 16px;
+}
+
+/* width constraints for the panels inside each positioned group */
+.panel-group.pos-top-left .panel {
+  min-width: 280px;
+  max-width: 350px;
+}
+.panel-group.pos-top-center .panel {
+  max-width: 720px;
+  width: auto;
+}
+.panel-group.pos-top-right .panel {
+  min-width: 280px;
+  max-width: 350px;
+  left: auto;
+}
+
+.editor {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform: translateZ(
+    0
+  ); /* create stacking context for predictable z-index */
+  -webkit-transform: translateZ(0);
+}
+
+.editor-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  height: auto;
+  min-height: 0;
 }
 
 .edit-content.preview-mode {
@@ -108,85 +219,87 @@
 }
 
 /* Layer panel styles */
-.panel.left-elements {
+.panel {
   background: #2b2b2b;
-  padding: 6px 8px 6px 8px; /* tighten left gutter to align rows to the left */
+  padding: 6px 8px 6px 8px;
   border-radius: 8px;
   color: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
 }
-.panel.left-elements .element-list {
+
+.panel .element-list {
   margin-top: 6px;
   padding: 0; /* ensure no extra left padding inside the scroller */
 }
 /* Left panel specific layout sections */
-.panel.left-elements .top-row {
+.panel .top-row {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.panel.left-elements .scene-selector {
+.panel .scene-selector {
   padding: 6px 2px;
 }
-.panel.left-elements .scene-btn {
+.panel .scene-btn {
   background: rgba(255, 255, 255, 0.04);
   color: #fff;
   border: none;
 }
-.panel.left-elements .scene-btn.active {
+.panel .scene-btn.active {
   background: rgba(98, 78, 255, 0.22);
 }
 
 /* stacked scene rows */
-.panel.left-elements .scene-selector {
+.panel .scene-selector {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.panel.left-elements .scene-row {
+.panel .scene-row {
   padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
   background: transparent;
 }
-.panel.left-elements .scene-row .scene-label {
+.panel .scene-row .scene-label {
   color: #fff;
   font-size: 13px;
 }
-.panel.left-elements .scene-row.active {
+.panel .scene-row.active {
   background: rgba(98, 78, 255, 0.12);
 }
 
 /* element row icon and actions */
-.panel.left-elements .layer-row {
+.panel .layer-row {
   height: 32px;
   display: flex;
   align-items: center;
 }
-.panel.left-elements .layer-icon {
+.panel .layer-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 15px;
   color: rgba(255, 255, 255, 0.9);
 }
-.panel.left-elements .collapse-toggle {
+.panel .collapse-toggle {
   width: 10px;
   height: 20px;
   padding: 0;
   border: none;
   background: rgba(255, 255, 255, 0.04);
 }
-.panel.left-elements .collapse-placeholder {
+.panel .collapse-placeholder {
   display: inline-block;
   width: 10px;
   height: 16px;
 }
-.panel.left-elements .layer-actions {
+.panel .layer-actions {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.panel.left-elements .layer-actions .action-btn {
+.panel .layer-actions .action-btn {
   border: none;
   background: transparent;
   color: #fff;
@@ -197,12 +310,12 @@
   cursor: pointer;
   border-radius: 4px;
 }
-.panel.left-elements .layer-actions .action-btn:hover {
+.panel .layer-actions .action-btn:hover {
   background: rgba(255, 255, 255, 0.04);
 }
 
 /* visual separator between left panel sections */
-.panel.left-elements .left-separator {
+.panel .left-separator {
   height: 1px;
   background: rgba(255, 255, 255, 0.04);
   margin: 8px 0;
@@ -386,6 +499,34 @@
 .panel.left-elements [data-selected="true"],
 .panel.left-elements .layer-row[data-selected="true"] {
   background: rgba(98, 78, 255, 0.15) !important;
+}
+
+/* Remove connector pseudo-elements (vertical/horizontal arms) when a row is selected
+   so the small connector segments don't appear as thin lines at the top/bottom of the
+   selected background. */
+.layer-row.selected::before,
+.layer-row.selected::after,
+.panel.left-elements .layer-row.selected::before,
+.panel.left-elements .layer-row.selected::after,
+.panel.left-elements [data-selected="true"]::before,
+.panel.left-elements [data-selected="true"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Prevent selection from changing layout or shifting siblings: keep dimensions identical
+   and avoid adding margins or box-shadow that would push other rows. */
+.layer-row.selected,
+.panel.left-elements .layer-row.selected,
+.panel.left-elements [data-selected="true"] {
+  height: 32px !important;
+  margin: 0 !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-left: 0 !important; /* depth margin is handled by parent .layer-node */
+  box-shadow: none !important;
+  transform: none !important;
+  z-index: 1; /* keep selected row visually above connectors but don't change flow */
 }
 
 /* full-row clickable cursor */

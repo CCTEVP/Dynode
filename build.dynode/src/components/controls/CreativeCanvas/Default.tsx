@@ -1,39 +1,20 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import "./creative-canvas.css";
+import "./Default.css";
 
 interface CreativeCanvasProps {
   children: React.ReactNode;
-  leftPanel?: React.ReactNode;
-  centerPanel?: React.ReactNode;
-  /**
-   * rightPanel can be either a React node or a function that receives current
-   * scale and zoom handlers: (scale, { zoomIn, zoomOut, reset }) => ReactNode
-   */
-  rightPanel?:
-    | React.ReactNode
-    | ((
-        scale: number,
-        handlers: { zoomIn: () => void; zoomOut: () => void; reset: () => void }
-      ) => React.ReactNode);
-  /** fraction of container to leave as margin on each side (0.0 - 0.4). Default 0.08 = 8% */
   defaultMargin?: number;
 }
 
 const MIN_SCALE = 0.25;
 const MAX_SCALE = 3.0;
 
-export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
-  children,
-  leftPanel,
-  centerPanel,
-  rightPanel,
-}) => {
+export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({ children }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const innerRef = useRef<HTMLDivElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [scale, setScale] = useState<number>(1);
   const isUserControlled = useRef<boolean>(false);
-  // Panning state refs
   const isPanningRef = useRef<boolean>(false);
   const isSpacePressedRef = useRef<boolean>(false);
   const panStartRef = useRef<{
@@ -41,14 +22,8 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     y: number;
     scrollLeft: number;
     scrollTop: number;
-  }>({
-    x: 0,
-    y: 0,
-    scrollLeft: 0,
-    scrollTop: 0,
-  });
+  }>({ x: 0, y: 0, scrollLeft: 0, scrollTop: 0 });
   const { defaultMargin = 0.08 } = {} as CreativeCanvasProps;
-  // pad holds horizontal (x) and vertical (y) padding in pixels
   const [pad, setPad] = useState<{ x: number; y: number }>({ x: 160, y: 80 });
 
   const clamp = useCallback(
@@ -86,7 +61,6 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     if (!el) return;
 
     const onWheel = (ev: WheelEvent) => {
-      // Only handle zoom when ctrlKey is pressed
       if (!ev.ctrlKey) return;
       ev.preventDefault();
 
@@ -100,7 +74,6 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     return () => el.removeEventListener("wheel", onWheel);
   }, [clamp]);
 
-  // Panning: support middle-mouse drag, or hold Space + drag (left mouse)
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -142,7 +115,6 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     };
 
     const startPanning = (ev: MouseEvent) => {
-      // begin panning
       isPanningRef.current = true;
       panStartRef.current = {
         x: ev.clientX,
@@ -151,7 +123,6 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
         scrollTop: container.scrollTop,
       };
       container.classList.add("panning");
-      // set grabbing cursor on the whole document while panning
       try {
         document.body.style.cursor = "grabbing";
       } catch {}
@@ -160,12 +131,10 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     };
 
     const onMouseDown = (ev: MouseEvent) => {
-      // Middle button (1) or space-primed left button (0)
       if (ev.button === 1) {
-        ev.preventDefault(); // prevent default autoscroll
+        ev.preventDefault();
         startPanning(ev);
       } else if (ev.button === 0 && isSpacePressedRef.current) {
-        // left button + space held
         ev.preventDefault();
         startPanning(ev);
       }
@@ -175,14 +144,12 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
       if (ev.code === "Space" && !ev.repeat && !isInputFocused()) {
         isSpacePressedRef.current = true;
         container.classList.add("pan-ready");
-        // prevent page from scrolling when space is pressed and focus is not in an input
         ev.preventDefault();
       }
     };
 
     const onKeyUp = (ev: KeyboardEvent) => {
       if (ev.code === "Space") {
-        // if we're currently panning, stop when space is released
         if (isPanningRef.current) stopPanning();
         isSpacePressedRef.current = false;
         container.classList.remove("pan-ready");
@@ -201,25 +168,10 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     };
   }, []);
 
-  const zoomIn = () => setScale((s) => clamp(+(s + 0.1).toFixed(2)));
-  const zoomOut = () => setScale((s) => clamp(+(s - 0.1).toFixed(2)));
-  const reset = () => setScale(1);
+  // internal zoom helpers removed with HUD
 
-  // mark user when using buttons
-  const handleZoomIn = () => {
-    isUserControlled.current = true;
-    zoomIn();
-  };
-  const handleZoomOut = () => {
-    isUserControlled.current = true;
-    zoomOut();
-  };
-  const handleReset = () => {
-    isUserControlled.current = true;
-    reset();
-  };
+  // zoom handlers are internal; external HUD removed
 
-  // Compute a default fit scale that makes the inner content fully visible with margin
   const computeDefaultScale = useCallback(() => {
     const container = containerRef.current;
     const inner = innerRef.current;
@@ -227,24 +179,20 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
 
     const cW = container.clientWidth;
     const cH = container.clientHeight;
-    // leave margin percent of width/height on each side
     const availW = Math.max(20, cW * (1 - defaultMargin * 2));
     const availH = Math.max(20, cH * (1 - defaultMargin * 2));
 
-    // inner offsetWidth/Height are unscaled sizes
     const iW = inner.offsetWidth || inner.scrollWidth || 1;
     const iH = inner.offsetHeight || inner.scrollHeight || 1;
 
     const scaleX = availW / iW;
     const scaleY = availH / iH;
     const target = clamp(Math.min(scaleX, scaleY));
-    // Only apply if user hasn't interacted yet
     if (!isUserControlled.current) {
       setScale(target);
     }
   }, [clamp, defaultMargin]);
 
-  // Observe resizes on container and inner to recompute default scale
   useEffect(() => {
     const container = containerRef.current;
     const inner = innerRef.current;
@@ -257,22 +205,14 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     ro1.observe(container);
     ro2.observe(inner);
 
-    // Also recompute padding so scrolling space scales with container.
-    // Use separate horizontal and vertical padding to avoid large vertical gaps
-    // that can prevent panning to the top when scale is 1.
     const computePad = () => {
       try {
         const cW = container.clientWidth || 800;
         const cH = container.clientHeight || 600;
-        // horizontal padding: 12-15% of width (min 80, max 600)
         const padX = Math.round(Math.max(80, Math.min(600, cW * 0.15)));
-        // vertical padding: smaller fraction of height so top/bottom are reachable
-        // use 6% of height (min 24, max 300)
         const padY = Math.round(Math.max(24, Math.min(300, cH * 0.06)));
         setPad({ x: padX, y: padY });
-      } catch (err) {
-        // noop
-      }
+      } catch (err) {}
     };
     computePad();
     const ro3 = new ResizeObserver(() => computePad());
@@ -287,13 +227,6 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     };
   }, [computeDefaultScale]);
 
-  // Keep the creative vertically centered only when the scaled inner fits the
-  // available vertical space; otherwise align to top so panning can reach the
-  // top edge. This preserves previous centered load behavior for smaller
-  // creatives but allows panning for larger ones.
-  // Compute explicit top/bottom padding so the scaled inner can be truly
-  // centered vertically when it fits. When the inner is taller than the
-  // available area, we keep the smaller dispPad for panning.
   const [computedPad, setComputedPad] = useState<{
     top: number;
     bottom: number;
@@ -312,16 +245,13 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
     const containerH = container.clientHeight;
 
     if (scaledH < Math.max(0, containerH - dispPadY * 2)) {
-      // center the inner by distributing the remaining vertical space equally
       const extra = Math.round(Math.max(dispPadY, (containerH - scaledH) / 2));
       setComputedPad({ top: extra, bottom: extra });
     } else {
-      // content taller than available area; keep base displayed pad so panning works
       setComputedPad({ top: dispPadY, bottom: dispPadY });
     }
   }, [scale, pad]);
 
-  // compute displayed padding values for the scroll container based on scale
   const dispPad = (() => {
     const x = Math.round(
       Math.max(8, Math.min(600, pad.x / Math.max(1, scale)))
@@ -355,8 +285,6 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
             ref={innerRef}
             style={{
               transform: `scale(${scale})`,
-              // anchor scaling to the top-center so horizontal centering is preserved
-              // while keeping the top edge anchored for vertical panning
               transformOrigin: "top center",
             }}
           >
@@ -365,19 +293,7 @@ export const CreativeCanvas: React.FC<CreativeCanvasProps> = ({
         </div>
       </div>
 
-      <div className="creative-canvas-hud" role="status" aria-live="polite">
-        <div className="hud-left">{leftPanel}</div>
-        <div className="hud-center">{centerPanel}</div>
-        <div className="hud-right">
-          {typeof rightPanel === "function"
-            ? rightPanel(scale, {
-                zoomIn: handleZoomIn,
-                zoomOut: handleZoomOut,
-                reset: handleReset,
-              })
-            : rightPanel}
-        </div>
-      </div>
+      {/* HUD removed: left/center/right HUD panels are no longer rendered here */}
     </div>
   );
 };

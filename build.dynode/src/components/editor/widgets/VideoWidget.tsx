@@ -3,6 +3,11 @@ import type { VideoWidget as VideoWidgetType } from "./types";
 import { BaseWidget } from "./BaseWidget";
 import type { Creative } from "../../../types/creative";
 
+const RENDER_BASE =
+  (import.meta.env && (import.meta.env.VITE_RENDER_BASE_URL as string)) ||
+  process.env.VITE_RENDER_BASE_URL ||
+  "http://localhost:5000";
+
 interface VideoWidgetProps {
   widget: VideoWidgetType;
   creative?: Creative;
@@ -38,20 +43,33 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({
   }
 
   if (sourceUrl === "#") {
-    const creativeId = widget.parent?.[0]?.$oid || "";
-    sourceUrl = primaryPath
-      ? `http://localhost:5000/dynamics/${creativeId}/${primaryPath.filename}.opt.${primaryPath.extension}`
-      : "#";
+    // Prefer the creative._id when available, fall back to parent reference
+    const creativeId =
+      (creative && ((creative as any)?._id?.$oid || (creative as any)._id)) ||
+      widget.parent?.[0]?.$oid ||
+      "";
+    const base = RENDER_BASE.replace(/\/$/, "");
+    if (primaryPath) {
+      const maybePrefix = creativeId
+        ? `${base}/dynamics/${creativeId}/`
+        : `${base}/dynamics/`;
+      // avoid double-slashes when creativeId is empty
+      sourceUrl = `${maybePrefix}${primaryPath.filename}.opt.${primaryPath.extension}`;
+    } else {
+      sourceUrl = "#";
+    }
   }
 
   return (
     <BaseWidget widget={widget} additionalProps={additionalProps}>
       <video
         controls={!widget.attributes.includes("fullscreen")}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%", zIndex: 1 }}
         data-source-id={widget.source._id.$oid}
         data-source-kind={widget.source.kind}
         data-source-name={widget.source.name}
+        data-source-url={sourceUrl}
+        data-render-base={RENDER_BASE}
         data-mime-type={primaryPath?.mime}
         data-filename={primaryPath?.filename}
       >

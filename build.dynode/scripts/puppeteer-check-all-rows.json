@@ -1,0 +1,314 @@
+{
+  "url": "http://localhost:4000/creatives/edit/67e5255aa5019234ba89509c",
+  "time": 1758539605815,
+  "results": [
+    {
+      "row": {
+        "text": "background (ImageWidget)",
+        "id": "item-image-widget-67e52d677acf34a2c3747670"
+      },
+      "info": {
+        "idx": 0,
+        "found": true,
+        "id": "item-image-widget-67e52d677acf34a2c3747670",
+        "dataItemId": "67e52d677acf34a2c3747670",
+        "text": "background (ImageWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-image-widget-67e52d677acf34a2c3747670",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "countdown01 (CountdownWidget)",
+        "id": "item-countdown-widget-67e52da67acf34a2c3747671"
+      },
+      "info": {
+        "idx": 1,
+        "found": true,
+        "id": "item-countdown-widget-67e52da67acf34a2c3747671",
+        "dataItemId": "67e52da67acf34a2c3747671",
+        "text": "countdown01 (CountdownWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-countdown-widget-67e52da67acf34a2c3747671",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "days (BoxLayout)",
+        "id": "item-box-layout-67e5302f7acf34a2c3747693"
+      },
+      "info": {
+        "idx": 2,
+        "found": true,
+        "id": "item-box-layout-67e5302f7acf34a2c3747693",
+        "dataItemId": "67e5302f7acf34a2c3747693",
+        "text": "days (BoxLayout)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-box-layout-67e5302f7acf34a2c3747693",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "value (CardWidget)",
+        "id": "item-card-widget-67e53d487acf34a2c37476e3"
+      },
+      "info": {
+        "idx": 3,
+        "found": true,
+        "id": "item-card-widget-67e53d487acf34a2c37476e3",
+        "dataItemId": "67e53d487acf34a2c37476e3",
+        "text": "value (CardWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-card-widget-67e53d487acf34a2c37476e3",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "label (TextWidget)",
+        "id": "item-text-widget-67e53c8d7acf34a2c37476df"
+      },
+      "info": {
+        "idx": 4,
+        "found": true,
+        "id": "item-text-widget-67e53c8d7acf34a2c37476df",
+        "dataItemId": "67e53c8d7acf34a2c37476df",
+        "text": "label (TextWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-text-widget-67e53c8d7acf34a2c37476df",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "hours (BoxLayout)",
+        "id": "item-box-layout-67e5306c7acf34a2c3747694"
+      },
+      "info": {
+        "idx": 5,
+        "found": true,
+        "id": "item-box-layout-67e5306c7acf34a2c3747694",
+        "dataItemId": "67e5306c7acf34a2c3747694",
+        "text": "hours (BoxLayout)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-box-layout-67e5306c7acf34a2c3747694",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "value (CardWidget)",
+        "id": "item-card-widget-67e53d667acf34a2c37476e4"
+      },
+      "info": {
+        "idx": 6,
+        "found": true,
+        "id": "item-card-widget-67e53d667acf34a2c37476e4",
+        "dataItemId": "67e53d667acf34a2c37476e4",
+        "text": "value (CardWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-card-widget-67e53d667acf34a2c37476e4",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "label (TextWidget)",
+        "id": "item-text-widget-67e53cec7acf34a2c37476e0"
+      },
+      "info": {
+        "idx": 7,
+        "found": true,
+        "id": "item-text-widget-67e53cec7acf34a2c37476e0",
+        "dataItemId": "67e53cec7acf34a2c37476e0",
+        "text": "label (TextWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-text-widget-67e53cec7acf34a2c37476e0",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "minutes (BoxLayout)",
+        "id": "item-box-layout-67e530727acf34a2c3747695"
+      },
+      "info": {
+        "idx": 8,
+        "found": true,
+        "id": "item-box-layout-67e530727acf34a2c3747695",
+        "dataItemId": "67e530727acf34a2c3747695",
+        "text": "minutes (BoxLayout)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-box-layout-67e530727acf34a2c3747695",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "value (CardWidget)",
+        "id": "item-card-widget-67e53d737acf34a2c37476e5"
+      },
+      "info": {
+        "idx": 9,
+        "found": true,
+        "id": "item-card-widget-67e53d737acf34a2c37476e5",
+        "dataItemId": "67e53d737acf34a2c37476e5",
+        "text": "value (CardWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-card-widget-67e53d737acf34a2c37476e5",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "label (TextWidget)",
+        "id": "item-text-widget-67e53cf47acf34a2c37476e1"
+      },
+      "info": {
+        "idx": 10,
+        "found": true,
+        "id": "item-text-widget-67e53cf47acf34a2c37476e1",
+        "dataItemId": "67e53cf47acf34a2c37476e1",
+        "text": "label (TextWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-text-widget-67e53cf47acf34a2c37476e1",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "seconds (BoxLayout)",
+        "id": "item-box-layout-67e530797acf34a2c3747696"
+      },
+      "info": {
+        "idx": 11,
+        "found": true,
+        "id": "item-box-layout-67e530797acf34a2c3747696",
+        "dataItemId": "67e530797acf34a2c3747696",
+        "text": "seconds (BoxLayout)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-box-layout-67e530797acf34a2c3747696",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "value (CardWidget)",
+        "id": "item-card-widget-67e53d7d7acf34a2c37476e6"
+      },
+      "info": {
+        "idx": 12,
+        "found": true,
+        "id": "item-card-widget-67e53d7d7acf34a2c37476e6",
+        "dataItemId": "67e53d7d7acf34a2c37476e6",
+        "text": "value (CardWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-card-widget-67e53d7d7acf34a2c37476e6",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    },
+    {
+      "row": {
+        "text": "label (TextWidget)",
+        "id": "item-text-widget-67e53cfb7acf34a2c37476e2"
+      },
+      "info": {
+        "idx": 13,
+        "found": true,
+        "id": "item-text-widget-67e53cfb7acf34a2c37476e2",
+        "dataItemId": "67e53cfb7acf34a2c37476e2",
+        "text": "label (TextWidget)",
+        "selectedClass": true,
+        "dataSelected": true
+      },
+      "canvasSelected": [
+        {
+          "id": "item-text-widget-67e53cfb7acf34a2c37476e2",
+          "tag": "DIV",
+          "path": null
+        }
+      ]
+    }
+  ]
+}
