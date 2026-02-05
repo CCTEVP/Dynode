@@ -1,0 +1,6 @@
+flowchart LR
+ subgraph s1["SOURCE Server"]
+        SRC["/files/logs/"]
+  end
+    UI["build.dynode"] --> LOG["logger.ts"]
+    LOG --> SRC

@@ -45,6 +45,8 @@ router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
 });
 
 router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
+  // Versioning schema could be added here in the future to retrieve one of a list of versions (Changes)
+
   try {
     const editorUserId = req.user?.userId || "000000000000000000000000"; // The logged-in user making the change
     const creativeId = req.params.id;
@@ -65,10 +67,20 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     console.log("creativeData");
     console.log(creativeData);
 
-    // Scrape components, animations, assets
+    // Get existing creative data first
+    const existingCreative = await CreativeDynamicView.findById(creativeId);
+    if (!existingCreative) {
+      res.status(404).json({ message: "Creative not found." });
+      return;
+    }
+
+    // Merge the incoming data with existing creative data for scrapping
+    const mergedData = { ...existingCreative.toObject(), ...creativeData };
+
+    // Scrape components, animations, assets from the merged data
     const { components, libraries, assets } = await scrapper.getComponents(
       creativeId,
-      creativeData
+      mergedData
     );
 
     // Prepare resources object

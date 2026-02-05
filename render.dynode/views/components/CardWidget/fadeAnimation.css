@@ -1,0 +1,4 @@
+/* Fade animation for CardWidget */
+.card-fade {
+  transition: opacity var(--fade-speed, 0.5s) var(--fade-transition, ease);
+}

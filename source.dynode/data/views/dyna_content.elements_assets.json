@@ -4,93 +4,57 @@
     {
       "$lookup": {
         "from": "assets",
-        "localField": "source._id",
-        "foreignField": "_id",
-        "as": "assetArray"
+        "let": { "sourceId": "$source._id" },
+        "pipeline": [
+          { "$unwind": "$bundle" },
+          { "$match": { "$expr": { "$eq": ["$bundle._id", "$$sourceId"] } } },
+          { "$replaceRoot": { "newRoot": "$bundle" } }
+        ],
+        "as": "sourceAsset"
       }
     },
     {
       "$addFields": {
         "source": {
           "$cond": {
-            "if": {
-              "$gt": [
-                {
-                  "$size": "$assetArray"
-                },
-                0
-              ]
-            },
-            "then": {
-              "$arrayElemAt": ["$assetArray", 0]
-            },
-            "else": 0
+            "if": { "$gt": [{ "$size": "$sourceAsset" }, 0] },
+            "then": { "$arrayElemAt": ["$sourceAsset", 0] },
+            "else": "$$REMOVE"
           }
         }
       }
     },
     {
       "$project": {
-        "assetArray": 0
-      }
-    },
-    {
-      "$addFields": {
-        "source": {
-          "$cond": {
-            "if": {
-              "$eq": ["$source", 0]
-            },
-            "then": "$$REMOVE",
-            "else": "$source"
-          }
-        }
+        "sourceAsset": 0
       }
     },
     {
       "$lookup": {
         "from": "assets",
-        "localField": "font._id",
-        "foreignField": "_id",
-        "as": "fontArray"
+        "let": { "fontId": "$font._id" },
+        "pipeline": [
+          { "$unwind": "$bundle" },
+          { "$match": { "$expr": { "$eq": ["$bundle._id", "$$fontId"] } } },
+          { "$replaceRoot": { "newRoot": "$bundle" } }
+        ],
+        "as": "fontAsset"
       }
     },
     {
       "$addFields": {
         "font": {
           "$cond": {
-            "if": {
-              "$gt": [
-                {
-                  "$size": "$fontArray"
-                },
-                0
-              ]
-            },
-            "then": {
-              "$arrayElemAt": ["$fontArray", 0]
-            },
-            "else": 0
+            "if": { "$gt": [{ "$size": "$fontAsset" }, 0] },
+            "then": { "$arrayElemAt": ["$fontAsset", 0] },
+            "else": "$$REMOVE"
           }
         }
       }
     },
     {
       "$project": {
-        "fontArray": 0
-      }
-    },
-    {
-      "$addFields": {
-        "font": {
-          "$cond": {
-            "if": {
-              "$eq": ["$font", 0]
-            },
-            "then": "$$REMOVE",
-            "else": "$font"
-          }
-        }
+        "fontAsset": 0
       }
     }
   ]

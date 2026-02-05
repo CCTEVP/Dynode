@@ -5,6 +5,8 @@ import caching from "../../services/caching";
 import axios from "axios";
 import { builtinModules } from "module";
 import { isErrored } from "stream";
+import config from "../../config";
+import behaviours from "../../services/behaviours";
 const router = express.Router();
 const CONTENT_TYPES: Record<string, string> = {
   js: "application/javascript",
@@ -32,13 +34,19 @@ const MIME_TYPES: Record<string, string> = {
   woff2: "font/woff2",
   eot: "application/vnd.ms-fontobject",
 };
-const ASSETS_URL = process.env.SOURCE_API_URL
-  ? `${process.env.SOURCE_API_URL}/files/assets`
-  : "http://localhost:3000/files/assets";
-
-const CREATIVES_URL = process.env.SOURCE_API_URL
-  ? `${process.env.SOURCE_API_URL}/data/creatives`
-  : "http://localhost:3000/data/creatives";
+// Use internal service base for docker, external origin for browser-facing references.
+const sourceBase =
+  config.env === "docker"
+    ? config.internalServices.source
+    : config.externalOrigins.source;
+const ASSETS_URL = sourceBase + "/files/assets";
+const CREATIVES_URL = sourceBase + "/data/creatives";
+if (config.env === "docker") {
+  console.log(
+    "[render.dynode] dynamics route using internal source base:",
+    sourceBase
+  );
+}
 
 router.get(
   "/:id/:resource.:debug.:extension",
@@ -58,10 +66,10 @@ router.get(
     try {
       // Check if the resource is media or file
       if (isMedia) {
-        const response = await axios.get(
-          ASSETS_URL + "/" + resource + "." + extension,
-          { responseType: "arraybuffer" } // <-- Important for binary data!
-        );
+        const targetUrl = ASSETS_URL + "/" + resource + "." + extension;
+        const response = await axios.get(targetUrl, {
+          responseType: "arraybuffer",
+        });
         res.type(contentType || "application/octet-stream");
         res.send(Buffer.from(response.data));
       } else if (isFile) {
@@ -117,20 +125,28 @@ router.get(
         });
         return;
       }
-      const apiRes = await axios.get(CREATIVES_URL + "/" + creativeId, {
+      const targetUrl = CREATIVES_URL + "/" + creativeId;
+      const apiRes = await axios.get(targetUrl, {
         httpsAgent: new (require("https").Agent)({
           rejectUnauthorized: false,
         }),
       });
-      const content = apiRes.data;
+      const content = behaviours.applyBehavioursToCreative(apiRes.data);
       const baseURL =
-        process.env.RENDER_BASE_URL || `${req.protocol}://${req.get("host")}`;
+        config.externalOrigins.render || `${req.protocol}://${req.get("host")}`;
 
       res.render("pages/dynamics/content", {
         content,
         baseURL,
       });
     } catch (err) {
+      console.error(
+        "[render.dynode] Creative fetch failed (docker?",
+        config.env === "docker",
+        ") target=",
+        CREATIVES_URL,
+        err instanceof Error ? err.message : err
+      );
       next(err);
     }
   }

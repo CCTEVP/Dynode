@@ -1,0 +1,62 @@
+/* ReactFlow v12 automatically adds .selected class to selected nodes */
+.react-flow__node.selected,
+.react-flow__node.selected .react-flow__node-default {
+  border: 4px solid #0050b3 !important; /* Darker blue border */
+  filter: brightness(1.2) !important;
+  z-index: 1000 !important;
+}
+
+[data-theme="dark"] .react-flow__node.selected,
+[data-theme="dark"] .react-flow__node.selected .react-flow__node-default {
+  border: 4px solid #177ddc !important; /* Lighter blue for dark mode */
+  filter: brightness(1.3) !important;
+}
+
+/* Ensure the selection box doesn't interfere */
+.react-flow__node.selected .react-flow__handle {
+  border-color: #0050b3 !important; /* Darker blue handle border */
+}
+
+[data-theme="dark"] .react-flow__node.selected .react-flow__handle {
+  border-color: #177ddc !important;
+}
+
+/* Highlight edges connected to selected nodes */
+.react-flow__edge.selected {
+  stroke: #1890ff !important;
+  stroke-width: 2px !important;
+}
+
+[data-theme="dark"] .react-flow__edge.selected {
+  stroke: #177ddc !important;
+}
+  stroke: #1890ff !important;
+  stroke-width: 3 !important;
+}
+
+.react-flow__edge.animated {
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+/* Make edge paths more visible */
+.react-flow__edge-path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Enhance arrow markers */
+.react-flow__arrowhead {
+  fill: currentColor;
+}
+
+/* Add hover effect to edges - thicker on hover */
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke-width: 4 !important;
+}

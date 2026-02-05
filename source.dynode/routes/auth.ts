@@ -3,6 +3,7 @@ import crypto from "crypto";
 import jwt from "jsonwebtoken";
 import User from "../models/collections/UsersCollection";
 import logger from "../services/logger";
+import config from "../config";
 
 const router = express.Router();
 
@@ -202,7 +203,7 @@ router.post("/verify-code", async (req: Request, res: Response) => {
         name: user.name,
         domains: user.domains || [],
       },
-      process.env.JWT_SECRET as string,
+      (config.jwtSecret as string) || "",
       { expiresIn: "24h" }
     );
 
@@ -239,7 +240,10 @@ router.get("/me", async (req: Request, res: Response) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as any;
+    const decoded = jwt.verify(
+      token,
+      (config.jwtSecret as string) || ""
+    ) as any;
     // Populate domains so the /me response returns domain ids (or documents if available)
     const user = await User.findById(decoded.userId)
       .select("-password")

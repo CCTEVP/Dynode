@@ -1,0 +1,22 @@
+flowchart LR
+  subgraph APP[App bootstrap]
+    A[app.ts]
+    ENV[.env]
+    DB[(MongoDB)]
+    CERT[cert/source.dynode.pfx]
+    A --> ENV
+    A --> DB
+    A --> CERT
+  end
+
+  subgraph MW[Middleware]
+    CORS[cors]
+    COOKIE[cookie-parser]
+    MORGAN[morgan]
+    AUTH[authenticateToken]
+  end
+
+  A --> CORS
+  A --> COOKIE
+  A --> MORGAN
+  A -.-> AUTH

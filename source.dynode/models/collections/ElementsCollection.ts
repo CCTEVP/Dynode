@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import changeSchema from "../shared/ChangeSchema";
 import contentsSchema from "../shared/ContentsSchema";
+import behaviourSchema from "../shared/BehavioursSchema";
 
 const elementsCollectionSchema = new mongoose.Schema(
   {
@@ -22,6 +23,10 @@ const elementsCollectionSchema = new mongoose.Schema(
     created: { type: Date, required: true },
     updated: { type: Date, required: true },
     changes: { type: [changeSchema], default: [] },
+    behaviours: {
+      type: [behaviourSchema],
+      default: [],
+    },
   },
   {
     collection: "elements",

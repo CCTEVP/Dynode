@@ -1,0 +1,235 @@
+/* Creatives page styling - matching Sources structure */
+.creatives-page {
+  padding: 24px;
+}
+
+.creatives-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.creatives-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.creatives-header p {
+  margin: 4px 0 0 0;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="dark"] .creatives-header p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Fixed right column styling for Actions */
+.creatives-page .ant-table td.ant-table-cell-fix-right,
+.creatives-page .ant-table th.ant-table-cell-fix-right {
+  position: sticky !important;
+  z-index: 2 !important;
+}
+
+.creatives-page .ant-table td.ant-table-cell-fix-right::before,
+.creatives-page .ant-table th.ant-table-cell-fix-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+[data-theme="dark"]
+  .creatives-page
+  .ant-table
+  td.ant-table-cell-fix-right::before,
+[data-theme="dark"]
+  .creatives-page
+  .ant-table
+  th.ant-table-cell-fix-right::before {
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Force smaller label tags in the Creatives table */
+:global(.mini-label-tag),
+.mini-label-tag,
+.ant-tag.mini-label-tag,
+.ant-table-cell .ant-tag.mini-label-tag {
+  font-size: 9px !important;
+  padding: 2px !important;
+  border-radius: 1.5px !important;
+  text-transform: uppercase;
+  background: var(--color-fill-tertiary, rgba(0, 0, 0, 0.04)) !important;
+  color: var(--color-text-secondary, rgba(0, 0, 0, 0.65)) !important;
+  border: 1px solid var(--color-border, #d9d9d9) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+/* Ensure fixed wrappers have matching rounded corners on the right side */
+.ant-table-fixed-right {
+  border-top-right-radius: var(--table-radius) !important;
+  border-bottom-right-radius: var(--table-radius) !important;
+  overflow: visible !important; /* allow the pseudo-cover to extend left */
+}
+
+/* Header corners (AntD sometimes renders header separately) */
+.ant-table-thead > tr > th:first-child {
+  border-top-left-radius: var(--table-radius) !important;
+}
+.ant-table-thead > tr > th:last-child {
+  border-top-right-radius: var(--table-radius) !important;
+}
+
+/* Bottom row corners */
+.ant-table-tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: var(--table-radius) !important;
+}
+.ant-table-tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: var(--table-radius) !important;
+}
+
+.ant-table-fixed-right::before {
+  /* Remove this pseudo-element as it's causing the white overflow issue */
+  /* The fixed cells now have opaque backgrounds so this cover is unnecessary */
+  display: none;
+}
+
+/* Remove - no longer needed since we removed the pseudo-element */
+/* .ant-table-fixed-right .ant-table-cell {
+  background: inherit !important;
+} */
+
+/* Ensure interactive elements inside the fixed column stay clickable and on top */
+.ant-table-fixed-right .ant-table-cell * {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Small visual separation shadow */
+.ant-table-fixed-right {
+  box-shadow: -8px 0 12px -8px rgba(0, 0, 0, 0.06);
+}
+
+/* Make table data values visually consistent (same font-size), but do not
+   change the Labels column (Tag) or the Actions buttons. We target typical
+   inline renderers (Typography/Text spans, code spans) while excluding
+   .ant-tag and .ant-btn. */
+.ant-table tbody td.ant-table-cell > .ant-typography,
+.ant-table tbody td.ant-table-cell > span:not(.ant-tag):not(.ant-btn),
+.ant-table tbody td.ant-table-cell > code {
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+}
+
+/* Keep Tags (Labels column) and Buttons at their natural sizing so they
+   visually stand out as labels/actions. */
+.ant-table tbody td.ant-table-cell .ant-tag,
+.ant-table tbody td.ant-table-cell .ant-btn {
+  font-size: inherit !important;
+}
+
+/* Fix white overflow issue below buttons in Actions column */
+.ant-table tbody td.ant-table-cell .ant-space,
+.ant-table tbody td.ant-table-cell .ant-space-item {
+  background: transparent !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  vertical-align: middle !important;
+}
+
+/* Remove any pseudo-elements from ant-space that might cause white bars */
+.ant-table tbody td.ant-table-cell .ant-space::before,
+.ant-table tbody td.ant-table-cell .ant-space::after,
+.ant-table tbody td.ant-table-cell .ant-space-item::before,
+.ant-table tbody td.ant-table-cell .ant-space-item::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure all table row backgrounds match theme */
+.ant-table-tbody > tr {
+  background: transparent !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: var(--colorBgTextHover, rgba(0, 0, 0, 0.04)) !important;
+}
+
+/* Ensure button backgrounds are properly themed - reset defaults */
+.ant-table tbody td.ant-table-cell .ant-btn {
+  background: transparent !important;
+  border-color: var(--colorBorder, #d9d9d9);
+  /* Fix Ant Design button bottom padding/margin issue */
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  /* REMOVE BOX SHADOW - THIS WAS CAUSING THE WHITE ELEMENT */
+  box-shadow: none !important;
+}
+
+/* Fix white bar appearing below buttons - remove all pseudo-elements */
+.ant-table tbody td.ant-table-cell .ant-btn::after,
+.ant-table tbody td.ant-table-cell .ant-btn::before {
+  display: none !important;
+  content: none !important;
+}
+
+.ant-table tbody td.ant-table-cell .ant-btn .ant-btn-icon {
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.ant-table tbody td.ant-table-cell .ant-btn:hover {
+  background: var(--colorBgTextHover, rgba(0, 0, 0, 0.04)) !important;
+  border-color: var(--colorPrimaryHover, #40a9ff);
+  box-shadow: none !important;
+}
+
+/* Primary button - use theme primary color */
+.ant-table tbody td.ant-table-cell .ant-btn-primary {
+  background: var(--colorPrimary, #1890ff) !important;
+  border-color: var(--colorPrimary, #1890ff) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.ant-table tbody td.ant-table-cell .ant-btn-primary:hover {
+  background: var(--colorPrimaryHover, #40a9ff) !important;
+  border-color: var(--colorPrimaryHover, #40a9ff) !important;
+  box-shadow: none !important;
+}
+
+/* DANGER BUTTON - USE ERROR COLOR FROM THEME */
+.ant-table tbody td.ant-table-cell .ant-btn-dangerous.ant-btn-primary,
+.ant-table tbody td.ant-table-cell .ant-btn-primary.ant-btn-dangerous {
+  background: var(--colorError, #b00020) !important;
+  border-color: var(--colorError, #b00020) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.ant-table tbody td.ant-table-cell .ant-btn-dangerous.ant-btn-primary:hover,
+.ant-table tbody td.ant-table-cell .ant-btn-primary.ant-btn-dangerous:hover {
+  background: var(--colorErrorHover, #8b0016) !important;
+  border-color: var(--colorErrorHover, #8b0016) !important;
+  box-shadow: none !important;
+}
+
+/* Also normalize header font-size to match table body values for alignment */
+.ant-table thead th.ant-table-cell {
+  font-size: 14px !important;
+}

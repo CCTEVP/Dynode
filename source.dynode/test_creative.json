@@ -1,0 +1,51 @@
+{
+  "_id": "6764f1fb84d9c8beb0a96b3e",
+  "type": "creative",
+  "name": "TestCreative",
+  "version": 1,
+  "elements": [
+    {
+      "type": "SlideLayout",
+      "_id": "67630c15ee2d4d0b9e77b1aa",
+      "children": [
+        {
+          "type": "CountdownWidget",
+          "_id": "67630c15ee2d4d0b9e77b1ab",
+          "children": [
+            {
+              "type": "BoxLayout",
+              "_id": "67630c15ee2d4d0b9e77b1ac",
+              "children": [
+                {
+                  "type": "CardWidget",
+                  "_id": "67630c15ee2d4d0b9e77b1ad",
+                  "animation": "Roll",
+                  "children": [
+                    {
+                      "type": "TextWidget",
+                      "_id": "67630c15ee2d4d0b9e77b1ae",
+                      "font": {
+                        "name": "Roboto-Black",
+                        "_id": "64c82e7e5c12b30012ab3c45",
+                        "paths": [
+                          {
+                            "filename": "670b74de8c5b0bd7ccc424ce",
+                            "extension": "ttf"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "resources": {
+    "components": [],
+    "libraries": []
+  }
+}

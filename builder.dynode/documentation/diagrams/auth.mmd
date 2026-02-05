@@ -1,0 +1,13 @@
+sequenceDiagram
+  participant UI as build.dynode UI
+  participant AUTH as AuthService
+  participant SRC as source.dynode
+
+  UI->>AUTH: checkEmail(email)
+  AUTH->>SRC: "POST /auth/check-email"
+  SRC-->>AUTH: { success, requiresVerification }
+  UI->>AUTH: verifyCode(email, code)
+  AUTH->>SRC: "POST /auth/verify-code"
+  SRC-->>AUTH: { success, token, domains }
+  AUTH-->>UI: persist token + domains
+  UI-->>UI: ProtectedRoute allows navigation

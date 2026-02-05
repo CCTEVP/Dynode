@@ -1,0 +1,21 @@
+flowchart LR
+  subgraph BUNDLER [bundleComponents]
+    IN["resources, name, items, mode, extension, creativeId"]
+    IN --> SWITCH
+    SWITCH --> COMP
+    SWITCH --> LIB
+    SWITCH --> MGR
+    SWITCH --> FONTS
+    SWITCH --> SW
+    COMP[read component files]
+    LIB[read library files]
+    MGR[read manager script and template]
+    FONTS[font face rules]
+    SW[service worker cache list]
+    COMP --> JOIN
+    LIB --> JOIN
+    MGR --> JOIN
+    FONTS --> JOIN
+    SW --> JOIN
+    JOIN --> OUT[(payload)]
+  end

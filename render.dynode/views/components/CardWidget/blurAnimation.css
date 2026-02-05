@@ -1,0 +1,4 @@
+/* Blur animation for CardWidget */
+.card-blur {
+  transition: filter var(--blur-speed, 0.4s) var(--blur-transition, ease);
+}

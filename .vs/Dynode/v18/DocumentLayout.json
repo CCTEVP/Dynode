@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Development\\Web\\NODE\\dn-dynamic-campaign-tools\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E48DB51-66E2-E31B-9D45-759FA5804190}|build.dynode\\build.dynode.esproj|e:\\development\\web\\node\\dn-dynamic-campaign-tools\\build.dynode\\src\\components\\editor\\widgets\\videowidget.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{0E48DB51-66E2-E31B-9D45-759FA5804190}|build.dynode\\build.dynode.esproj|solutionrelative:build.dynode\\src\\components\\editor\\widgets\\videowidget.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E48DB51-66E2-E31B-9D45-759FA5804190}|build.dynode\\build.dynode.esproj|e:\\development\\web\\node\\dn-dynamic-campaign-tools\\build.dynode\\src\\components\\editor\\widgets\\imagewidget.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{0E48DB51-66E2-E31B-9D45-759FA5804190}|build.dynode\\build.dynode.esproj|solutionrelative:build.dynode\\src\\components\\editor\\widgets\\imagewidget.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VideoWidget.tsx",
+              "DocumentMoniker": "E:\\Development\\Web\\NODE\\dn-dynamic-campaign-tools\\build.dynode\\src\\components\\editor\\widgets\\VideoWidget.tsx",
+              "RelativeDocumentMoniker": "build.dynode\\src\\components\\editor\\widgets\\VideoWidget.tsx",
+              "ToolTip": "E:\\Development\\Web\\NODE\\dn-dynamic-campaign-tools\\build.dynode\\src\\components\\editor\\widgets\\VideoWidget.tsx",
+              "RelativeToolTip": "build.dynode\\src\\components\\editor\\widgets\\VideoWidget.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-12T12:00:29.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ImageWidget.tsx",
+              "DocumentMoniker": "E:\\Development\\Web\\NODE\\dn-dynamic-campaign-tools\\build.dynode\\src\\components\\editor\\widgets\\ImageWidget.tsx",
+              "RelativeDocumentMoniker": "build.dynode\\src\\components\\editor\\widgets\\ImageWidget.tsx",
+              "ToolTip": "E:\\Development\\Web\\NODE\\dn-dynamic-campaign-tools\\build.dynode\\src\\components\\editor\\widgets\\ImageWidget.tsx",
+              "RelativeToolTip": "build.dynode\\src\\components\\editor\\widgets\\ImageWidget.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-12T12:00:27.796Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

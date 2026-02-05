@@ -1,0 +1,30 @@
+flowchart TD
+      subgraph REQ[Request]
+            C[Client]
+            API["/dynamics/{id}"]
+            MANAGER[MANAGER]
+            COMPONENTS[COMPONENTS]
+            LIBRARIES[LIBRARIES]
+            ASSETS[ASSETS]
+            COMPOSER[Composer]
+      end
+      subgraph SRV[Server]
+            BUNDLER[Bundler]
+      end
+      subgraph SRC[SOURCE Server]
+            DATA["/data/creatives/{id}"]
+      end
+      C --> API
+      COMPONENTS --> BUNDLER
+      LIBRARIES --> BUNDLER
+      MANAGER --> BUNDLER
+      ASSETS --> BUNDLER
+            API --> DATA
+      BUNDLER --> RESP["Response"]
+      COMPOSER --> COMPONENTS
+      COMPOSER --> LIBRARIES
+      COMPOSER --> MANAGER
+      COMPOSER --> ASSETS
+            DATA --> COMPOSER
+
+

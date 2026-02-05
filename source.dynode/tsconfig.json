@@ -10,5 +10,5 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["routes/**/*.ts", "app.ts", "server.ts"]
+  "include": ["routes/**/*.ts", "app.ts", "server.ts", "config.ts"]
 }

@@ -1,4 +1,5 @@
 include ../ImageWidget/default
+include ../ClockWidget/default
 include ../CountdownWidget/default
 include ../CardWidget/default
 include ../TextWidget/default
@@ -12,6 +13,8 @@ mixin slide-layout(slideElement)
       each child in slideElement.contents
         if child.ImageWidget
           +image-widget(child.ImageWidget)
+        if child.ClockWidget
+          +clock-widget(child.ClockWidget)
         if child.CountdownWidget
           +countdown-widget(child.CountdownWidget)
         if child.VideoWidget

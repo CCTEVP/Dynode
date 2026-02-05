@@ -1,0 +1,21 @@
+flowchart TD
+  D["/data/"]
+  C["/creatives/"]
+  D --> C
+
+  C --> A[assemblies]
+  C --> Y[dynamics]
+  C --> I[interactives]
+  C --> U[unified]
+
+  A --> CA[[CreativeAssemblyCollection]]
+  A --> CAV[[CreativeAssemblyView]]
+
+  Y --> CD[[CreativeDynamicCollection]]
+  Y --> CDV[[CreativeDynamicView]]
+
+  I --> CI[[CreativeInteractiveCollection]]
+  I --> CIV[[CreativeInteractiveView]]
+
+  U --> VU[[CreativeUnifiedView]]
+  U --> VUE[[CreativeUnifiedViewElements]]

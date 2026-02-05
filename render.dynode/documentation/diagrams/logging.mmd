@@ -1,0 +1,11 @@
+flowchart LR
+  subgraph s1[SOURCE Server]
+    SOURCE["/files/logs/"]
+  end
+  RENDER[render.dynode] --> SOURCE
+  SOURCE --> LOG["logs folder"]
+
+
+
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Content</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Fullscreen dark background just for demo; replace/remove to overlay on real player content -->
+    <div class="demo-bg" aria-hidden="true">
+      <img src="./img/background.jpg" alt="Demo background" />
+    </div>
+
+    <!-- Now Playing container -->
+    <div
+      id="nowPlayingContainer"
+      class="now-playing-container"
+      style="display: none"
+    >
+      <div class="now-playing-label">Now Playing:</div>
+      <div id="nowPlayingContent" class="now-playing-content"></div>
+      <div
+        id="nowPlayingContentDetails"
+        class="now-playing-content-details"
+      ></div>
+      <div id="nowPlayingAdvertiser" class="now-playing-advertiser"></div>
+    </div>
+
+    <!-- Overlay with 10 squares (1..10) -->
+    <div
+      id="squareOverlay"
+      class="square-overlay"
+      aria-label="Advertiser activity squares"
+    >
+      <div class="squares" id="squares" role="list" aria-live="polite">
+        <div
+          class="square"
+          data-id="1"
+          role="listitem"
+          aria-label="Advertiser 1"
+        ></div>
+        <div
+          class="square"
+          data-id="2"
+          role="listitem"
+          aria-label="Advertiser 2"
+        ></div>
+        <div
+          class="square"
+          data-id="3"
+          role="listitem"
+          aria-label="Advertiser 3"
+        ></div>
+        <div
+          class="square"
+          data-id="4"
+          role="listitem"
+          aria-label="Advertiser 4"
+        ></div>
+        <div
+          class="square"
+          data-id="5"
+          role="listitem"
+          aria-label="Advertiser 5"
+        ></div>
+        <div
+          class="square"
+          data-id="6"
+          role="listitem"
+          aria-label="Advertiser 6"
+        ></div>
+        <div
+          class="square"
+          data-id="7"
+          role="listitem"
+          aria-label="Advertiser 7"
+        ></div>
+        <div
+          class="square"
+          data-id="8"
+          role="listitem"
+          aria-label="Advertiser 8"
+        ></div>
+        <div
+          class="square"
+          data-id="9"
+          role="listitem"
+          aria-label="Advertiser 9"
+        ></div>
+        <div
+          class="square"
+          data-id="10"
+          role="listitem"
+          aria-label="Advertiser 10"
+        ></div>
+      </div>
+    </div>
+
+    <!-- WebSocket status dot (hidden after successful connection) -->
+    <div id="wsDot" aria-label="WebSocket connection indicator"></div>
+
+    <!-- Blue dot for CustomPOP status -->
+    <div id="customPopDot" aria-label="CustomPOP status indicator"></div>
+
+    <!-- Progress bar -->
+    <div id="progressBar" class="progress-bar">
+      <div id="progressBarFill" class="progress-bar-fill"></div>
+    </div>
+
+    <!-- Logger textarea -->
+    <div id="loggerContainer" class="logger-container" style="display: none">
+      <textarea id="logger" class="logger" readonly></textarea>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

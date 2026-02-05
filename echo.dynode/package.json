@@ -1,0 +1,39 @@
+{
+  "name": "dn-dynamic-campaigns-ws-server",
+  "version": "0.1.0",
+  "description": "Simple Node.js WebSocket broadcast server",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build step required for pure Node.js' && exit 0",
+    "start": "node src/server.js",
+    "dev": "copy .env.dev .env && npm run build && nodemon src/server.js",
+    "lint": "eslint .",
+    "compose": "cd.. && docker-compose up echo --build -d",
+    "build:dev": "copy .env.dev .env && npm run dev",
+    "build:stag": "copy .env.stag .env && docker build -t echo-dynode:latest .",
+    "build:prod": "copy .env.prod .env && docker build -t echo-dynode:latest .",
+    "consolidate": "node ../scripts/consolidateProject.cjs .",
+    "document": "node ../scripts/documentProject.cjs ."
+  },
+  "keywords": [
+    "websocket",
+    "broadcast",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express-rate-limit": "^7.1.5",
+    "ioredis": "^5.3.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.11.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.4"
+  }
+}

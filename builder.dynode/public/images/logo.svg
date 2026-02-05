@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+	<defs>
+		<style>
+			.cls-1, .cls-2 {
+				fill: #fff;
+			}
+
+			.cls-3 {
+				mask: url(#mask);
+			}
+
+			.cls-2, .cls-4 {
+				stroke: #000;
+				stroke-miterlimit: 10;
+			}
+
+			.cls-5 {
+				fill: red;
+			}
+
+			.cls-6 {
+				filter: url(#luminosity-noclip);
+			}
+		</style>
+		<filter id="luminosity-noclip" x="0" y="0" width="256" height="256" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+			<feFlood flood-color="#fff" result="bg"/>
+			<feBlend in="SourceGraphic" in2="bg"/>
+		</filter>
+		<mask id="mask" x="0" y="0" width="256" height="256" maskUnits="userSpaceOnUse">
+			<g class="cls-6">
+				<g>
+					<circle class="cls-1" cx="128.04" cy="55.82" r="28.61"/>
+					<circle class="cls-1" cx="192.14" cy="162.79" r="28.61"/>
+					<circle class="cls-1" cx="63.86" cy="162.79" r="28.61"/>
+					<circle class="cls-1" cx="128" cy="128" r="28.61"/>
+				</g>
+			</g>
+		</mask>
+	</defs>
+	<g id="Layer_1-2" data-name="Layer 1">
+		<g class="cls-3">
+			<g>
+				<circle class="cls-1" cx="128" cy="128" r="128"/>
+				<path class="cls-4" d="M128,11.2C63.49,11.2,11.2,63.49,11.2,128s52.29,116.8,116.8,116.8,116.8-52.29,116.8-116.8S192.51,11.2,128,11.2ZM128,211.62c-46.18,0-83.62-37.44-83.62-83.62s37.44-83.62,83.62-83.62,83.62,37.44,83.62,83.62-37.44,83.62-83.62,83.62Z"/>
+				<circle class="cls-5" cx="128" cy="128" r="61.2"/>
+				<circle class="cls-2" cx="128" cy="128" r="40.32"/>
+				<circle class="cls-5" cx="128" cy="128" r="55"/>
+				<circle class="cls-1" cx="128.04" cy="55.82" r="28.61"/>
+				<circle class="cls-1" cx="192.14" cy="162.79" r="28.61"/>
+				<circle class="cls-1" cx="63.86" cy="162.79" r="28.61"/>
+				<circle class="cls-1" cx="128" cy="128" r="28.61"/>
+			</g>
+		</g>
+	</g>
+</svg>

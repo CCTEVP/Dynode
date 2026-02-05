@@ -1,0 +1,444 @@
+import React from "react";
+import type { Creative } from "../../../types/creative";
+import normalizeStyleObject from "../../editor/utils/styleUtils";
+
+import { SlideLayout, BoxLayout } from "../../editor/layouts";
+import {
+  CardWidget,
+  TextWidget,
+  ImageWidget,
+  VideoWidget,
+  CountdownWidget,
+  ClockWidget,
+} from "../../editor/widgets";
+import CreativeScene from "../CreativeScene/Default";
+
+interface CreativeRendererProps {
+  creative: Creative;
+  onMove?: (widgetId: string, destLayoutId: string) => void;
+  onSelect?: (id: string) => void;
+  selectedId?: string | null;
+  selectedSceneIndex?: number;
+}
+
+const getNode = (element: any) => {
+  if (!element) return null;
+  const keys = Object.keys(element);
+  if (keys.length === 0) return null;
+  const key = keys[0];
+  return { typeKey: key, payload: element[key] };
+};
+
+const renderContents = (
+  contents: any[],
+  creative: Creative,
+  handlers?: {
+    onMove?: (w: string, d: string) => void;
+    onSelect?: (id: string, indexPath?: number[]) => void;
+    selectedId?: string | null;
+  },
+  parentIndexPath: number[] = [],
+) => {
+  if (!Array.isArray(contents)) return null;
+  return contents.map((child, index) => {
+    const myIndexPath = [...parentIndexPath, index];
+    const node = getNode(child);
+    if (!node) return null;
+
+    const { typeKey, payload } = node;
+
+    let domId: string | undefined = undefined;
+    if (payload) {
+      const normalizedType = String(payload.type)
+        .replace(/([A-Z])/g, "-$1")
+        .toLowerCase()
+        .replace(/^-/g, "");
+      const rawId = (payload as any)?._id;
+      const idVal =
+        rawId && typeof rawId === "object" && rawId.$oid
+          ? rawId.$oid
+          : typeof rawId === "string"
+            ? rawId
+            : payload.identifier || "unknown";
+      domId = `${normalizedType}-${idVal}`;
+    }
+
+    const indexPathAttr = { "data-index-path": myIndexPath.join("-") } as any;
+
+    if (typeKey === "SlideLayout") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `slide-${index}`;
+      return (
+        <SlideLayout
+          key={key}
+          layout={payload}
+          additionalProps={
+            {
+              onDragOver: (e: React.DragEvent) => e.preventDefault(),
+              onDrop: (e: React.DragEvent) => {
+                const id = e.dataTransfer.getData("text/plain");
+                if (id && handlers?.onMove)
+                  handlers.onMove(id, payload._id.$oid);
+              },
+              ...indexPathAttr,
+            } as any
+          }
+        >
+          {renderContents(payload.contents, creative, handlers, myIndexPath)}
+        </SlideLayout>
+      );
+    }
+
+    if (typeKey === "BoxLayout") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `box-${index}`;
+      return (
+        <BoxLayout
+          key={key}
+          layout={payload}
+          additionalProps={
+            {
+              onDragOver: (e: React.DragEvent) => e.preventDefault(),
+              onDrop: (e: React.DragEvent) => {
+                const id = e.dataTransfer.getData("text/plain");
+                if (id && handlers?.onMove)
+                  handlers.onMove(id, payload._id.$oid);
+              },
+              ...indexPathAttr,
+            } as any
+          }
+        >
+          {renderContents(payload.contents, creative, handlers, myIndexPath)}
+        </BoxLayout>
+      );
+    }
+
+    if (typeKey === "GridLayout") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `grid-${index}`;
+      return (
+        <BoxLayout key={key} layout={payload}>
+          {renderContents(payload.contents, creative, handlers, myIndexPath)}
+        </BoxLayout>
+      );
+    }
+
+    if (typeKey === "CardWidget") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `card-${index}`;
+      return (
+        <CardWidget
+          key={key}
+          widget={payload}
+          additionalProps={
+            {
+              draggable: true,
+              onDragStart: (e: React.DragEvent) => {
+                const id = payload._id.$oid;
+                e.dataTransfer.setData("text/plain", id);
+                const target = e.currentTarget as HTMLElement;
+                target.classList.add("dragging");
+                try {
+                  const clone = target.cloneNode(true) as HTMLElement;
+                  clone.style.position = "absolute";
+                  clone.style.top = "-9999px";
+                  clone.style.left = "-9999px";
+                  document.body.appendChild(clone);
+                  e.dataTransfer.setDragImage(
+                    clone,
+                    clone.offsetWidth / 2,
+                    clone.offsetHeight / 2,
+                  );
+                  setTimeout(() => document.body.removeChild(clone), 0);
+                } catch (err) {
+                  /* ignore */
+                }
+              },
+              onClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
+              },
+              onDoubleClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                const el = e.currentTarget as HTMLElement;
+                const child = el.querySelector("[id]");
+                if (child && child.id)
+                  handlers?.onSelect?.(child.id, myIndexPath.concat(0));
+              },
+              "data-selected":
+                handlers?.selectedId === domId ? "true" : undefined,
+              onDragEnd: (e: React.DragEvent) => {
+                const target = e.currentTarget as HTMLElement;
+                target.classList.remove("dragging");
+              },
+              ...indexPathAttr,
+            } as any
+          }
+        />
+      );
+    }
+
+    if (typeKey === "TextWidget") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `text-${index}`;
+      return (
+        <TextWidget
+          key={key}
+          widget={payload}
+          additionalProps={
+            {
+              draggable: true,
+              onDragStart: (e: React.DragEvent) => {
+                const id = payload._id.$oid;
+                e.dataTransfer.setData("text/plain", id);
+                const target = e.currentTarget as HTMLElement;
+                target.classList.add("dragging");
+                try {
+                  const clone = target.cloneNode(true) as HTMLElement;
+                  clone.style.position = "absolute";
+                  clone.style.top = "-9999px";
+                  clone.style.left = "-9999px";
+                  document.body.appendChild(clone);
+                  e.dataTransfer.setDragImage(
+                    clone,
+                    clone.offsetWidth / 2,
+                    clone.offsetHeight / 2,
+                  );
+                  setTimeout(() => document.body.removeChild(clone), 0);
+                } catch (err) {}
+              },
+              onDragEnd: (e: React.DragEvent) => {
+                const target = e.currentTarget as HTMLElement;
+                target.classList.remove("dragging");
+              },
+              onClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
+              },
+              onDoubleClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                const el = e.currentTarget as HTMLElement;
+                const child = el.querySelector("[id]");
+                if (child && child.id)
+                  handlers?.onSelect?.(child.id, myIndexPath.concat(0));
+              },
+              "data-selected":
+                handlers?.selectedId === domId ? "true" : undefined,
+              ...indexPathAttr,
+            } as any
+          }
+        />
+      );
+    }
+
+    if (typeKey === "ImageWidget") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `img-${index}`;
+      return (
+        <ImageWidget
+          key={key}
+          widget={payload}
+          creative={creative}
+          additionalProps={
+            {
+              draggable: true,
+              onDragStart: (e: React.DragEvent) => {
+                const id = payload._id.$oid;
+                e.dataTransfer.setData("text/plain", id);
+                const target = e.currentTarget as HTMLElement;
+                target.classList.add("dragging");
+                try {
+                  const clone = target.cloneNode(true) as HTMLElement;
+                  clone.style.position = "absolute";
+                  clone.style.top = "-9999px";
+                  clone.style.left = "-9999px";
+                  document.body.appendChild(clone);
+                  e.dataTransfer.setDragImage(
+                    clone,
+                    clone.offsetWidth / 2,
+                    clone.offsetHeight / 2,
+                  );
+                  setTimeout(() => document.body.removeChild(clone), 0);
+                } catch (err) {}
+              },
+              onDragEnd: (e: React.DragEvent) => {
+                const target = e.currentTarget as HTMLElement;
+                target.classList.remove("dragging");
+              },
+              onClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
+              },
+              onDoubleClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                const el = e.currentTarget as HTMLElement;
+                const child = el.querySelector("[id]");
+                if (child && child.id) handlers?.onSelect?.(child.id);
+              },
+              "data-selected":
+                handlers?.selectedId === domId ? "true" : undefined,
+            } as any
+          }
+        />
+      );
+    }
+
+    if (typeKey === "VideoWidget") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `video-${index}`;
+      return (
+        <VideoWidget
+          key={key}
+          widget={payload}
+          creative={creative}
+          additionalProps={
+            {
+              draggable: true,
+              onDragStart: (e: React.DragEvent) =>
+                e.dataTransfer.setData("text/plain", payload._id.$oid),
+              onClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                if (domId) handlers?.onSelect?.(domId, myIndexPath);
+              },
+              onDoubleClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                const el = e.currentTarget as HTMLElement;
+                const child = el.querySelector("[id]");
+                if (child && child.id) handlers?.onSelect?.(child.id);
+              },
+              "data-selected":
+                handlers?.selectedId === domId ? "true" : undefined,
+            } as any
+          }
+        />
+      );
+    }
+
+    if (typeKey === "CountdownWidget") {
+      const key =
+        payload?._id?.$oid ?? payload?.identifier ?? `countdown-${index}`;
+      const parentId =
+        domId ?? payload?._id?.$oid ?? payload?.identifier ?? key;
+      const childHandlers = handlers
+        ? {
+            ...handlers,
+            onSelect: (_childId?: string) => {
+              handlers.onSelect?.(parentId);
+            },
+          }
+        : handlers;
+
+      return (
+        <CountdownWidget
+          key={key}
+          widget={payload}
+          additionalProps={
+            {
+              onClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                handlers?.onSelect?.(parentId, myIndexPath);
+              },
+              onMouseDown: (e: React.MouseEvent) => {
+                e.stopPropagation();
+              },
+              "data-selected":
+                handlers?.selectedId === domId ? "true" : undefined,
+              ...indexPathAttr,
+            } as any
+          }
+        >
+          {renderContents(
+            payload.contents,
+            creative,
+            childHandlers,
+            myIndexPath,
+          )}
+        </CountdownWidget>
+      );
+    }
+
+    if (typeKey === "ClockWidget") {
+      const key = payload?._id?.$oid ?? payload?.identifier ?? `clock-${index}`;
+      const parentId =
+        domId ?? payload?._id?.$oid ?? payload?.identifier ?? key;
+      const childHandlers = handlers
+        ? {
+            ...handlers,
+            onSelect: (_childId?: string) => {
+              handlers.onSelect?.(parentId);
+            },
+          }
+        : handlers;
+
+      return (
+        <ClockWidget
+          key={key}
+          widget={payload}
+          additionalProps={
+            {
+              onClick: (e: React.MouseEvent) => {
+                e.stopPropagation();
+                handlers?.onSelect?.(parentId, myIndexPath);
+              },
+              onMouseDown: (e: React.MouseEvent) => {
+                e.stopPropagation();
+              },
+              "data-selected":
+                handlers?.selectedId === domId ? "true" : undefined,
+              ...indexPathAttr,
+            } as any
+          }
+        >
+          {renderContents(
+            payload.contents,
+            creative,
+            childHandlers,
+            myIndexPath,
+          )}
+        </ClockWidget>
+      );
+    }
+
+    return null;
+  });
+};
+
+export const CreativeRenderer: React.FC<CreativeRendererProps> = ({
+  creative,
+  onMove,
+  onSelect,
+  selectedId,
+  selectedSceneIndex = 0,
+}) => {
+  if (!creative) return null;
+
+  const mainStyle =
+    (normalizeStyleObject(creative.styles as any) as React.CSSProperties) ||
+    ({
+      width: "1080px",
+      height: "1920px",
+      position: "relative",
+    } as React.CSSProperties);
+
+  const scenes = Array.isArray((creative as any).elements)
+    ? (creative.elements as any[]).map((el, i) => {
+        const content = renderContents([el], creative, {
+          onMove,
+          onSelect,
+          selectedId,
+        });
+        return (
+          <CreativeScene
+            key={i}
+            index={i}
+            active={i === (selectedSceneIndex ?? 0)}
+          >
+            {content}
+          </CreativeScene>
+        );
+      })
+    : null;
+
+  return (
+    <main id="app" role="main" style={mainStyle}>
+      <div id="dynamic-creative-container" style={mainStyle}>
+        {scenes}
+      </div>
+    </main>
+  );
+};
+
+export default CreativeRenderer;

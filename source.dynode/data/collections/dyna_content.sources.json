@@ -1,0 +1,424 @@
+[{
+  "_id": {
+    "$oid": "697b2e461e65610bc5520297"
+  },
+  "name": "Open Weather Map Source",
+  "endpoints": [
+    {
+      "_id": {
+        "$oid": "697b354c1e65610bc5520298"
+      },
+      "name": "Madrid - OpenWeatherMap",
+      "source": "https://api.openweathermap.org/data/2.5/weather?lat=40.4269047&lon=-3.5494922&appid=90e5c09e8c1314f759f42b52f472e2bb",
+      "lifetime": 120,
+      "timeout": 30,
+      "pattern": {
+        "type": "object",
+        "properties": {
+          "coord": {
+            "type": "object",
+            "properties": {
+              "lon": {
+                "type": "number"
+              },
+              "lat": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "lon",
+              "lat"
+            ]
+          },
+          "weather": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "main": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "main",
+                "description",
+                "icon"
+              ]
+            }
+          },
+          "base": {
+            "type": "string"
+          },
+          "main": {
+            "type": "object",
+            "properties": {
+              "temp": {
+                "type": "number"
+              },
+              "feels_like": {
+                "type": "number"
+              },
+              "temp_min": {
+                "type": "number"
+              },
+              "temp_max": {
+                "type": "number"
+              },
+              "pressure": {
+                "type": "number"
+              },
+              "humidity": {
+                "type": "number"
+              },
+              "sea_level": {
+                "type": "number"
+              },
+              "grnd_level": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "temp",
+              "feels_like",
+              "temp_min",
+              "temp_max",
+              "pressure",
+              "humidity",
+              "sea_level",
+              "grnd_level"
+            ]
+          },
+          "visibility": {
+            "type": "number"
+          },
+          "wind": {
+            "type": "object",
+            "properties": {
+              "speed": {
+                "type": "number"
+              },
+              "deg": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "speed",
+              "deg"
+            ]
+          },
+          "rain": {
+            "type": "object",
+            "properties": {
+              "1h": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "1h"
+            ]
+          },
+          "clouds": {
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "all"
+            ]
+          },
+          "dt": {
+            "type": "number"
+          },
+          "sys": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "number"
+              },
+              "id": {
+                "type": "number"
+              },
+              "country": {
+                "type": "string"
+              },
+              "sunrise": {
+                "type": "number"
+              },
+              "sunset": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "type",
+              "id",
+              "country",
+              "sunrise",
+              "sunset"
+            ]
+          },
+          "timezone": {
+            "type": "number"
+          },
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "cod": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "coord",
+          "weather",
+          "base",
+          "main",
+          "visibility",
+          "wind",
+          "rain",
+          "clouds",
+          "dt",
+          "sys",
+          "timezone",
+          "id",
+          "name",
+          "cod"
+        ]
+      },
+      "status": "invalid"
+    },
+    {
+      "_id": {
+        "$oid": "697b355a1e65610bc5520299"
+      },
+      "name": "UK - OpenWeatherMap",
+      "source": "https://api.openweathermap.org/data/2.5/weather?lat=51.5114084&lon=-0.1444622&appid=90e5c09e8c1314f759f42b52f472e2bb",
+      "lifetime": 120,
+      "timeout": 30,
+      "pattern": {
+        "type": "object",
+        "properties": {
+          "coord": {
+            "type": "object",
+            "properties": {
+              "lon": {
+                "type": "number"
+              },
+              "lat": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "lon",
+              "lat"
+            ]
+          },
+          "weather": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "main": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "main",
+                "description",
+                "icon"
+              ]
+            }
+          },
+          "base": {
+            "type": "string"
+          },
+          "main": {
+            "type": "object",
+            "properties": {
+              "temp": {
+                "type": "number"
+              },
+              "feels_like": {
+                "type": "number"
+              },
+              "temp_min": {
+                "type": "number"
+              },
+              "temp_max": {
+                "type": "number"
+              },
+              "pressure": {
+                "type": "number"
+              },
+              "humidity": {
+                "type": "number"
+              },
+              "sea_level": {
+                "type": "number"
+              },
+              "grnd_level": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "temp",
+              "feels_like",
+              "temp_min",
+              "temp_max",
+              "pressure",
+              "humidity",
+              "sea_level",
+              "grnd_level"
+            ]
+          },
+          "visibility": {
+            "type": "number"
+          },
+          "wind": {
+            "type": "object",
+            "properties": {
+              "speed": {
+                "type": "number"
+              },
+              "deg": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "speed",
+              "deg"
+            ]
+          },
+          "clouds": {
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "all"
+            ]
+          },
+          "dt": {
+            "type": "number"
+          },
+          "sys": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "number"
+              },
+              "id": {
+                "type": "number"
+              },
+              "country": {
+                "type": "string"
+              },
+              "sunrise": {
+                "type": "number"
+              },
+              "sunset": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "type",
+              "id",
+              "country",
+              "sunrise",
+              "sunset"
+            ]
+          },
+          "timezone": {
+            "type": "number"
+          },
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "cod": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "coord",
+          "weather",
+          "base",
+          "main",
+          "visibility",
+          "wind",
+          "clouds",
+          "dt",
+          "sys",
+          "timezone",
+          "id",
+          "name",
+          "cod"
+        ]
+      },
+      "status": "valid"
+    }
+  ],
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2026-01-29T12:03:23.785Z"
+      },
+      "user": {
+        "$oid": "000000000000000000000000"
+      },
+      "newValue": {
+        "status": "valid"
+      },
+      "oldValue": {
+        "status": ""
+      }
+    },
+    {
+      "timestamp": {
+        "$date": "2026-01-29T13:13:14.785Z"
+      },
+      "user": {
+        "$oid": "000000000000000000000000"
+      },
+      "newValue": {
+        "name": "Open Weather Map Source"
+      },
+      "oldValue": {
+        "name": "Weather Source"
+      }
+    }
+  ],
+  "created": {
+    "$date": "2026-01-29T12:09:40.497Z"
+  },
+  "updated": {
+    "$date": "2026-01-29T13:13:14.785Z"
+  }
+}]

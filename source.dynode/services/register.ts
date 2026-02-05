@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import multer from "multer";
 import crypto from "crypto";
-require("dotenv");
-const assetsDestFolder = process.env.SOURCE_ASSETS_FOLDER || "../files";
+import config from "../config";
+const assetsDestFolder = config.assetsFolder;
 
 const VIDEO_EXTS = ["mov", "mp4", "avi", "webm", "mkv"];
 const IMAGE_EXTS = ["jpg", "jpeg", "png", "svg", "gif", "bmp", "webp"];
@@ -79,17 +79,23 @@ const storage = multer.diskStorage({
 });
 
 // Use .array('files') for multiple, .single('file') for single
-export const upload = multer({ storage });
+// 50MB file size limit
+export const upload = multer({
+  storage,
+  limits: {
+    fileSize: 50 * 1024 * 1024, // 50MB in bytes
+  },
+});
 
 // Helper to get mime and kind from file
 export function getAssetInfo(
-  fileOrFiles: Express.Multer.File | Express.Multer.File[]
+  fileOrFiles: Express.Multer.File | Express.Multer.File[],
 ): { mime: string; kind: string; filename: string; extension: string }[] {
   const processFile = (file: Express.Multer.File) => {
     const ext = path.extname(file.filename).slice(1).toLowerCase();
     const filenameWithoutExt = path.basename(
       file.filename,
-      path.extname(file.filename)
+      path.extname(file.filename),
     );
 
     let kind = "";

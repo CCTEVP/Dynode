@@ -6,6 +6,7 @@ html
     if content
       title= content.name
       link(rel='stylesheet', href='/stylesheets/style.css')
+      link(rel='icon', type='image/svg+xml', href='/images/logo.svg')
       if content.resources
         - resourcesURL = '/dynamics/' + content._id 
         if content.resources.components
@@ -20,9 +21,15 @@ html
   body
     block content
     if content
+      // Inject autoplay setting for client-side script
+      script.
+        window.creativeAutoplay = #{content.behaviours && content.behaviours.autoplay === true ? 'true' : 'false'};
       if content.resources
         - managerURL = resourcesURL + '/manager.min.js'
         script(src=managerURL)
+        if content.resources.assets
+          - assetsURL = resourcesURL + '/assets.min.js'
+          script(src=assetsURL, defer)
         if content.resources.components
           - componentsURL = resourcesURL + '/components.min.js'
           script(src=componentsURL, defer)

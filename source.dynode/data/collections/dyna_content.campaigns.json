@@ -25,6 +25,16 @@
         "$oid": "682c6c124316fd10c3c2c8e1"
       }
     }
+  ],
+  "domains": [
+    {
+      "$oid": "68a6d4798c127df5e97b6ab2"
+    }
+  ],
+  "variables": [
+    {
+      "targetDateTime": "2025-12-31T00:00:00"
+    }
   ]
 },
 {
@@ -45,6 +55,11 @@
     "$date": "2025-04-03T00:00:00.000Z"
   },
   "status": "",
+  "variables": [
+    {
+      "targetDateTime": "2025-12-31T00:00:00"
+    }
+  ],
   "changes": [
     {
       "timestamp": {
@@ -53,6 +68,11 @@
       "user": {
         "$oid": "682c6c124316fd10c3c2c8e1"
       }
+    }
+  ],
+  "domains": [
+    {
+      "$oid": "68a6d4718c127df5e97b6ab1"
     }
   ]
 }]

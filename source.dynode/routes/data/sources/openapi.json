@@ -1,0 +1,465 @@
+{
+  "/data/sources": {
+    "get": {
+      "summary": "Get all sources",
+      "tags": ["Sources"],
+      "responses": {
+        "200": { "description": "Sources data retrieved" },
+        "401": { "description": "Unauthorized" },
+        "500": { "description": "Failed to retrieve sources" }
+      }
+    },
+    "post": {
+      "summary": "Create a new source",
+      "tags": ["Sources"],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the source"
+                },
+                "internal": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["name"],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the internal source"
+                      },
+                      "variables": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["name", "type", "value"],
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "description": "Variable name"
+                            },
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "string",
+                                "number",
+                                "boolean",
+                                "date",
+                                "date-time",
+                                "time",
+                                "array",
+                                "object"
+                              ],
+                              "description": "The data type of the variable"
+                            },
+                            "value": {
+                              "type": "string",
+                              "description": "The value of the variable (stored as string)"
+                            },
+                            "description": {
+                              "type": "string",
+                              "description": "Variable description (optional)"
+                            }
+                          }
+                        },
+                        "description": "Array of typed variables with values (no path field)"
+                      }
+                    }
+                  },
+                  "description": "Array of internal sources with variables"
+                },
+                "external": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "name",
+                      "source",
+                      "lifetime",
+                      "timeout",
+                      "pattern"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the endpoint"
+                      },
+                      "source": {
+                        "type": "string",
+                        "description": "The URL of the endpoint"
+                      },
+                      "lifetime": {
+                        "type": "integer",
+                        "description": "Cache TTL in seconds"
+                      },
+                      "timeout": {
+                        "type": "integer",
+                        "description": "Lock timeout in seconds"
+                      },
+                      "pattern": {
+                        "type": "object",
+                        "description": "JSON Schema pattern for response validation"
+                      },
+                      "status": {
+                        "type": "string",
+                        "description": "Validation status (optional)"
+                      },
+                      "variables": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["path", "name"],
+                          "properties": {
+                            "path": {
+                              "type": "string",
+                              "description": "JSONPath or dot notation path to data node"
+                            },
+                            "name": {
+                              "type": "string",
+                              "description": "Variable name for mapping"
+                            },
+                            "type": {
+                              "type": "string",
+                              "description": "Data type (optional)"
+                            },
+                            "description": {
+                              "type": "string",
+                              "description": "Variable description (optional)"
+                            }
+                          }
+                        },
+                        "description": "Variable mappings for data extraction (has path, no value)"
+                      }
+                    }
+                  },
+                  "description": "Array of external endpoint configurations"
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": { "description": "Source created successfully" },
+        "400": { "description": "Bad request - missing required fields" },
+        "401": { "description": "Unauthorized" },
+        "500": { "description": "Failed to create source" }
+      }
+    }
+  },
+  "/data/sources/{id}": {
+    "get": {
+      "summary": "Get source by ID",
+      "tags": ["Sources"],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The source's MongoDB _id"
+        }
+      ],
+      "responses": {
+        "200": { "description": "Source data retrieved" },
+        "401": { "description": "Unauthorized" },
+        "404": { "description": "Source not found" },
+        "500": { "description": "Failed to retrieve source" }
+      }
+    },
+    "put": {
+      "summary": "Update source by ID",
+      "tags": ["Sources"],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The source's MongoDB _id"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the source"
+                },
+                "internal": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["name"],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the internal source"
+                      },
+                      "variables": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["name", "type", "value"],
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "description": "Variable name"
+                            },
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "string",
+                                "number",
+                                "boolean",
+                                "date",
+                                "date-time",
+                                "time",
+                                "array",
+                                "object"
+                              ],
+                              "description": "The data type of the variable"
+                            },
+                            "value": {
+                              "type": "string",
+                              "description": "The value of the variable (stored as string)"
+                            },
+                            "description": {
+                              "type": "string",
+                              "description": "Variable description (optional)"
+                            }
+                          }
+                        },
+                        "description": "Array of typed variables with values (no path field)"
+                      }
+                    }
+                  },
+                  "description": "Array of internal sources with variables"
+                },
+                "external": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "name",
+                      "source",
+                      "lifetime",
+                      "timeout",
+                      "pattern"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the endpoint"
+                      },
+                      "source": {
+                        "type": "string",
+                        "description": "The URL of the endpoint"
+                      },
+                      "lifetime": {
+                        "type": "integer",
+                        "description": "Cache TTL in seconds"
+                      },
+                      "timeout": {
+                        "type": "integer",
+                        "description": "Lock timeout in seconds"
+                      },
+                      "pattern": {
+                        "type": "object",
+                        "description": "JSON Schema pattern for response validation"
+                      },
+                      "status": {
+                        "type": "string",
+                        "description": "Validation status (optional)"
+                      },
+                      "variables": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["path", "name"],
+                          "properties": {
+                            "path": {
+                              "type": "string",
+                              "description": "JSONPath or dot notation path to data node"
+                            },
+                            "name": {
+                              "type": "string",
+                              "description": "Variable name for mapping"
+                            },
+                            "type": {
+                              "type": "string",
+                              "description": "Data type (optional)"
+                            },
+                            "description": {
+                              "type": "string",
+                              "description": "Variable description (optional)"
+                            }
+                          }
+                        },
+                        "description": "Variable mappings for data extraction (has path, no value)"
+                      }
+                    }
+                  },
+                  "description": "Array of external endpoint configurations"
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": { "description": "Source updated successfully" },
+        "400": { "description": "Bad request - invalid data" },
+        "401": { "description": "Unauthorized" },
+        "404": { "description": "Source not found" },
+        "500": { "description": "Failed to update source" }
+      }
+    },
+    "delete": {
+      "summary": "Delete source by ID",
+      "tags": ["Sources"],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The source's MongoDB _id"
+        }
+      ],
+      "responses": {
+        "200": { "description": "Source deleted successfully" },
+        "401": { "description": "Unauthorized" },
+        "404": { "description": "Source not found" },
+        "500": { "description": "Failed to delete source" }
+      }
+    }
+  },
+  "/data/sources/{sourceId}/{endpointId}": {
+    "get": {
+      "summary": "Get internal variable or proxy request to external source with caching",
+      "tags": ["Sources"],
+      "parameters": [
+        {
+          "name": "sourceId",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The source's MongoDB _id"
+        },
+        {
+          "name": "endpointId",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string" },
+          "description": "The internal variable or external endpoint's MongoDB _id"
+        },
+        {
+          "name": "forceUpdate",
+          "in": "query",
+          "required": false,
+          "schema": { "type": "boolean", "default": false },
+          "description": "Force cache update by bypassing cache check and fetching fresh data (external endpoints only)"
+        },
+        {
+          "name": "readOnly",
+          "in": "query",
+          "required": false,
+          "schema": { "type": "boolean", "default": false },
+          "description": "Return only buffer metadata without triggering cache logic (external endpoints only)"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Internal variable data or full buffer document with cached data and metadata",
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "description": "Internal variable response",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Variable name"
+                      },
+                      "value": {
+                        "type": "string",
+                        "description": "Variable value"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "Variable type"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "Variable description"
+                      },
+                      "_id": {
+                        "type": "string",
+                        "description": "Variable ID"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "description": "External endpoint buffer document",
+                    "properties": {
+                      "_id": {
+                        "type": "string",
+                        "description": "Buffer document ID (same as endpoint ID)"
+                      },
+                      "data": {
+                        "type": "object",
+                        "description": "Cached response data from external API"
+                      },
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "When data was cached"
+                      },
+                      "httpStatus": {
+                        "type": "integer",
+                        "description": "HTTP status from external API"
+                      },
+                      "errorState": {
+                        "type": "string",
+                        "description": "Error information if applicable"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "When buffer was created"
+                      },
+                      "updated": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "When buffer was last updated"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "401": { "description": "Unauthorized" },
+        "404": { "description": "Source or endpoint not found" },
+        "429": { "description": "Request already in progress" },
+        "500": { "description": "Failed to fetch external data" },
+        "502": { "description": "Response validation failed" }
+      }
+    }
+  }
+}

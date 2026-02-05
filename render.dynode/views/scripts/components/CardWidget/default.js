@@ -30,14 +30,31 @@ function initializeCardWidgets() {
 function updateCardContent(cardWidget) {
     const dataValue = cardWidget.getAttribute("data-value");
     if (dataValue !== null) {
-        const animationType = cardWidget.getAttribute("data-animation");
+        // Skip update if value hasn't changed
+        const currentValue = cardWidget.textContent?.trim() || "";
+        if (currentValue === dataValue) {
+            return;
+        }
+        const animationType = cardWidget.getAttribute("data-animation-type");
+        const animationDirection = cardWidget.getAttribute("data-animation-direction");
+        const animationSpeed = cardWidget.getAttribute("data-animation-speed");
+        const animationTransition = cardWidget.getAttribute("data-animation-transition");
+        const animationScale = cardWidget.getAttribute("data-animation-scale");
+        const animationDistance = cardWidget.getAttribute("data-animation-distance");
         // Make case-insensitive comparison
         const animationFunction = animationType
             ? window.widgetAnimations?.CardWidget?.[animationType] ||
                 window.widgetAnimations?.CardWidget?.[animationType.toLowerCase()]
             : null;
         if (animationFunction) {
-            animationFunction(cardWidget, dataValue);
+            // Pass options to all animations (they can ignore if not needed)
+            animationFunction(cardWidget, dataValue, {
+                direction: animationDirection || undefined,
+                speed: animationSpeed || undefined,
+                transition: animationTransition || undefined,
+                scale: animationScale || undefined,
+                distance: animationDistance || undefined,
+            });
         }
         else {
             cardWidget.textContent = dataValue;

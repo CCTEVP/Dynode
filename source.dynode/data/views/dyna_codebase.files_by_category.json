@@ -1,0 +1,70 @@
+{
+  "viewOn": "builder",
+  "pipeline": [
+    {
+      "$addFields": {
+        "project": "builder"
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "echo",
+        "pipeline": [{ "$addFields": { "project": "echo" } }]
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "render",
+        "pipeline": [{ "$addFields": { "project": "render" } }]
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "source",
+        "pipeline": [{ "$addFields": { "project": "source" } }]
+      }
+    },
+    {
+      "$group": {
+        "_id": {
+          "project": "$project",
+          "category": "$category"
+        },
+        "files": {
+          "$push": {
+            "_id": "$_id",
+            "filename": "$filename",
+            "path": "$path",
+            "description": "$description",
+            "dependencyCount": { "$size": "$internalDependencies" }
+          }
+        },
+        "count": { "$sum": 1 }
+      }
+    },
+    {
+      "$sort": { "_id.project": 1, "_id.category": 1 }
+    },
+    {
+      "$group": {
+        "_id": "$_id.project",
+        "categories": {
+          "$push": {
+            "category": "$_id.category",
+            "count": "$count",
+            "files": "$files"
+          }
+        },
+        "totalFiles": { "$sum": "$count" }
+      }
+    },
+    {
+      "$project": {
+        "project": "$_id",
+        "totalFiles": 1,
+        "categories": 1,
+        "_id": 0
+      }
+    }
+  ]
+}

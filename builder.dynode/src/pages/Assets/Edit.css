@@ -1,0 +1,122 @@
+.asset-edit-page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.asset-edit-page > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.asset-edit-page * {
+  box-sizing: border-box;
+}
+
+.asset-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 24px;
+}
+
+.asset-edit-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(1200px - 48px);
+  width: calc(100vw - 48px);
+  padding: 16px 24px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: slideDown 0.3s ease-out;
+}
+
+[data-theme="dark"] .asset-edit-header.sticky {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.asset-name-sticky {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--colorPrimary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+}
+
+.asset-edit-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.asset-edit-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Theme toggle button - fixed corner */
+.theme-toggle-corner {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 2px solid rgba(128, 128, 128, 0.4);
+  background: transparent;
+  cursor: pointer;
+  z-index: 2000;
+  transition: all 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.theme-toggle-corner .theme-indicator {
+  font-size: 14px;
+  transition: all 0.3s ease;
+  filter: grayscale(100%) brightness(0.5);
+  color: var(--colorText);
+  opacity: 0.4;
+}
+
+.theme-toggle-corner:hover {
+  background: var(--colorBgContainer);
+  border-color: var(--colorBorder);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .theme-toggle-corner:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle-corner:hover .theme-indicator {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}

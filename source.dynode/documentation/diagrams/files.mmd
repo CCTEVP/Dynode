@@ -1,0 +1,12 @@
+flowchart TD
+  F["/files/"]
+  A[assets]
+  L[logs]
+  F --> A
+  F --> L
+
+  A --> REG[[services/register.ts]]
+  L --> LOG[[services/logger.ts]]
+
+  REG --> OUT[(files/)]
+  LOG --> LOGS[(logs/)]

@@ -1,0 +1,58 @@
+.sources-page {
+  padding: 24px;
+}
+
+.sources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.sources-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sources-header p {
+  margin: 4px 0 0 0;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="dark"] .sources-header p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.endpoint-row {
+  padding: 8px 0;
+}
+/* Fixed right column styling for Actions */
+.sources-page .ant-table td.ant-table-cell-fix-right,
+.sources-page .ant-table th.ant-table-cell-fix-right {
+  position: sticky !important;
+  z-index: 2 !important;
+}
+
+.sources-page .ant-table td.ant-table-cell-fix-right::before,
+.sources-page .ant-table th.ant-table-cell-fix-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+[data-theme="dark"]
+  .sources-page
+  .ant-table
+  td.ant-table-cell-fix-right::before,
+[data-theme="dark"]
+  .sources-page
+  .ant-table
+  th.ant-table-cell-fix-right::before {
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+}

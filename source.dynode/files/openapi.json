@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Dynode API",
+    "title": "Source API",
     "version": "1.0.0",
-    "description": "API documentation for Dynode endpoints"
+    "description": "API documentation for Source endpoints"
   },
   "servers": [
     {

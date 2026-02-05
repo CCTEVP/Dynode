@@ -1,0 +1,4 @@
+/* Pop (scale) animation for CardWidget */
+.card-pop {
+  transition: transform var(--pop-speed, 0.3s) var(--pop-transition, ease);
+}

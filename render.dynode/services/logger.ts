@@ -1,9 +1,12 @@
 import axios from "axios";
+import config from "../config";
 
-// Use the Docker service name instead of localhost
-const API_URL = process.env.SOURCE_API_URL
-  ? `${process.env.SOURCE_API_URL}/files/logs`
-  : "http://localhost:3000/files/logs";
+// Select correct base depending on environment using dual namespace
+const baseForLogging =
+  config.env === "docker"
+    ? config.internalServices.source
+    : config.externalOrigins.source;
+const API_URL = baseForLogging + "/files/log"; // POST endpoint
 
 const ORIGIN = "render.dynode";
 
@@ -26,8 +29,9 @@ async function logToServer(level: LogLevel, message: string, meta?: any) {
       origin: ORIGIN,
     });
   } catch (err) {
-    // Optionally, fallback to console if server logging fails
-    console.error("Failed to send log to server from '" + ORIGIN + "':", err);
+    // Suppressed verbose Axios error object to keep console clean.
+    // Uncomment for debugging remote log failures:
+    console.warn(`Remote log send failed: ${(err as any)?.message}`);
   }
 }
 

@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "68a6d1718c127df5e97b6a8f"
+  },
+  "owner": {
+    "domain": {
+      "$oid": "68a6d1e18c127df5e97b6a91"
+    },
+    "user": {
+      "$oid": "68a6d1ec8c127df5e97b6a92"
+    }
+  },
+  "items": {
+    "creatives": [
+      {
+        "$oid": "67e5255aa5019234ba89509c"
+      },
+      {
+        "$oid": "67ee616ad760d87e72bd4e85"
+      }
+    ]
+  },
+  "name": "Home",
+  "domains": [
+    {
+      "$oid": "68a6d22e8c127df5e97b6a98"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68a6d5038c127df5e97b6ac8"
+  },
+  "owner": {
+    "domain": {
+      "$oid": "68a6d1e18c127df5e97b6a91"
+    },
+    "user": {
+      "$oid": "68a6d1ec8c127df5e97b6a92"
+    }
+  },
+  "items": {
+    "creatives": [
+      {
+        "$oid": "686e46b707275a7485360455"
+      }
+    ]
+  },
+  "name": "Home (Sample)",
+  "domains": [
+    {
+      "$oid": "68a6d3d78c127df5e97b6aa9"
+    }
+  ]
+}]

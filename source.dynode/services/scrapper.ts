@@ -1,5 +1,5 @@
-require("dotenv").config();
-const SOURCE_API_URL = process.env.SOURCE_API_URL || "http://localhost:3000";
+import config from "../config";
+const SOURCE_API_URL = config.externalOrigins.source || ""; // updated for dual namespace config
 const scrapper = {
   /**
    * Retrieves component names, animation names, and asset sources from the JSON content.
@@ -10,7 +10,7 @@ const scrapper = {
    */
   async getComponents(
     creativeId: string,
-    creativeData: string
+    creativeData: any // Change from string to any to accept objects
   ): Promise<{
     components: string[];
     libraries: string[];
@@ -73,16 +73,36 @@ const scrapper = {
 
     function recurse(obj: any) {
       if (obj && typeof obj === "object") {
-        // Animation detection
+        // Component detection based on 'type' property value
         if (
           typeof obj.type === "string" &&
-          (obj.type.endsWith("Layout") || obj.type.endsWith("Widget")) &&
-          typeof obj.animation === "string"
+          (obj.type.endsWith("Layout") || obj.type.endsWith("Widget"))
         ) {
-          libraries.add(
-            obj.type + "/" + obj.animation.toLowerCase() + "Animation"
-          );
+          components.add(obj.type);
         }
+
+        // Animation detection (support string and object with type)
+        if (
+          typeof obj.type === "string" &&
+          (obj.type.endsWith("Layout") || obj.type.endsWith("Widget"))
+        ) {
+          let animationType: string | undefined = undefined;
+          if (typeof obj.animation === "string") {
+            animationType = obj.animation;
+          } else if (
+            obj.animation &&
+            typeof obj.animation === "object" &&
+            typeof obj.animation.type === "string"
+          ) {
+            animationType = obj.animation.type;
+          }
+          if (animationType) {
+            libraries.add(
+              obj.type + "/" + animationType.toLowerCase() + "Animation"
+            );
+          }
+        }
+
         // Asset detection for both 'source' and 'font'
         ["source", "font"].forEach((field) => {
           if (obj[field]) {
@@ -123,6 +143,8 @@ const scrapper = {
             }
           }
         });
+
+        // Recurse into all properties (including legacy key-based detection)
         for (const key in obj) {
           if (key.endsWith("Layout") || key.endsWith("Widget")) {
             components.add(key);
@@ -134,13 +156,23 @@ const scrapper = {
 
     let json: any;
     try {
-      // Fetch and parse JSON
-      const response = await fetch(
-        `${SOURCE_API_URL}/data/creatives/${creativeId}?children=true`
-      );
-      const content = await response.text();
-      json = typeof content === "string" ? JSON.parse(content) : content;
-      console.log(json);
+      // Use the passed creativeData if it exists and has elements, otherwise fetch
+      if (creativeData && (creativeData.elements || creativeData.contents)) {
+        console.log("Using provided creative data for scrapping");
+        json = creativeData;
+      } else {
+        console.log("Fetching creative data from API for scrapping");
+        // Fetch and parse JSON
+        const response = await fetch(
+          `${SOURCE_API_URL}/data/creatives/${creativeId}?children=true`
+        );
+        const content = await response.text();
+        json = typeof content === "string" ? JSON.parse(content) : content;
+      }
+
+      console.log("Starting to analyze creative data structure");
+      console.log("Creative has elements:", !!json.elements);
+      console.log("Number of elements:", json.elements?.length || 0);
 
       // Process and return results
       recurse(json);
@@ -158,12 +190,17 @@ const scrapper = {
       console.log(
         `Scrapped ${components.size} components, ${libraries.size} libraries, and ${assets.size} asset groups.`
       );
+      console.log("Components found:", Array.from(components));
+      console.log("Libraries found:", Array.from(libraries));
+      console.log("Assets found:", Object.keys(assetsResult));
+
       return {
         components: Array.from(components),
         libraries: Array.from(libraries),
         assets: assetsResult,
       };
-    } catch {
+    } catch (error) {
+      console.error("Error in scrapper:", error);
       return { components: [], libraries: [], assets: {} };
     }
   },

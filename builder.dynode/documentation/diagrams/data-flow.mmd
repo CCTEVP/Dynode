@@ -1,0 +1,8 @@
+flowchart TD
+  UI[/Creatives page/]
+  SRV[CreativeService]
+  SRC["/source.dynode/"]
+
+  UI -->|list| SRV -->|"GET /data/creatives"| SRC
+  UI -->|open edit| SRV -->|"GET /data/creatives/:id"| SRC
+  UI -->|save| SRV -->|"PUT /data/creatives/:id"| SRC

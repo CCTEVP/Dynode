@@ -1,0 +1,4 @@
+div[id^="clock-widget-"] {
+  display: flex;
+  flex-direction: row;
+}

@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run build:components && tsc && cpx \"views/**/*\" dist/views",
     "build:components": "tsc --project tsconfig.inplace.json",
-    "docker:build": "docker build -t render-dynode:latest .",
+    "build": "npm run build:components && tsc && cpx \"views/**/*\" dist/views",
+    "dev": "copy .env.dev .env && npm run build && ts-node-dev app.ts",
     "start": "node dist/app.js",
-    "dev": "npm run build && ts-node-dev app.ts"
+    "compose": "cd.. && docker-compose up render --build -d",
+    "build:dev": "copy .env.dev .env && npm run build",
+    "build:stag": "copy .env.stag .env && docker build -t render-dynode:latest .",
+    "build:prod": "copy .env.prod .env && docker build -t render-dynode:latest .",
+    "consolidate": "node ../scripts/consolidateProject.cjs .",
+    "document": "node ../scripts/documentProject.cjs ."
   },
   "dependencies": {
     "axios": "^1.10.0",
@@ -19,6 +24,7 @@
     "express": "^5.1.0",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^9.0.2",
+    "lru-cache": "^11.2.4",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11",
     "terser": "^5.43.1",
@@ -28,13 +34,17 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/clean-css": "^4.2.11",
+    "@types/cookie-parser": "^1.4.10",
     "@types/express": "^5.0.3",
     "@types/jsonwebtoken": "^9.0.9",
+    "@types/lru-cache": "^7.10.9",
+    "@types/morgan": "^1.9.10",
     "@types/node": "^24.0.0",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
     "cpx": "^1.5.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
-  }
+  },
+  "main": "app.ts"
 }

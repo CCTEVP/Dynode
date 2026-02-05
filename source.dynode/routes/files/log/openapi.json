@@ -1,0 +1,43 @@
+{
+  "/files/log": {
+    "post": {
+      "summary": "Post log records",
+      "tags": ["Files"],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "level": {
+                  "type": "string",
+                  "enum": ["info", "error", "warn", "debug"]
+                },
+                "message": { "type": "string" },
+                "meta": { "type": "object" }
+              },
+              "required": ["level", "message"]
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Logs",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "401": { "description": "Unauthorized" }
+      }
+    }
+  }
+}

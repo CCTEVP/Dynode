@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import User from "../models/collections/UsersCollection";
+import config from "../config";
 
 const router = express.Router();
 
@@ -17,7 +18,7 @@ router.post("/", async (req: Request, res: Response) => {
         // Password is correct, generate JWT
         const token = jwt.sign(
           { username: user.username, userId: user._id, name: user.name },
-          process.env.JWT_SECRET as string,
+          (config.jwtSecret as string) || "",
           { expiresIn: "1d" }
         );
         res.json({ token });

@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "68a6d22e8c127df5e97b6a98"
+  },
+  "name": "Dynamic Campaigns"
+},
+{
+  "_id": {
+    "$oid": "68a6d3d78c127df5e97b6aa9"
+  },
+  "name": "Business Unit (Sample)"
+}]

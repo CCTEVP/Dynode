@@ -7,6 +7,14 @@ mixin box-layout(boxElement)
   div(id=idValue, data-name=boxElement.identifier, style=styleString)
     if boxElement.contents
       each child in boxElement.contents
+        if child.ImageWidget
+          +image-widget(child.ImageWidget)
+        if child.ClockWidget
+          +clock-widget(child.ClockWidget)
+        if child.CountdownWidget
+          +countdown-widget(child.CountdownWidget)
+        if child.VideoWidget
+          +video-widget(child.VideoWidget)
         if child.CardWidget
           +card-widget(child.CardWidget)
         if child.TextWidget

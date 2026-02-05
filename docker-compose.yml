@@ -8,23 +8,8 @@ services:
     image: source-dynode:latest
     build:
       context: ./source.dynode
-      args:
-        - SOURCE_API_URL=https://localhost:3333
-        - SOURCE_DEST_FOLDER=../../dist/files
-        - RENDER_BASE_URL=https://localhost:5555
-        - BUILDER_BASE_URL=https://localhost:4444
     ports:
-      - "3333:3333"
-    environment:
-      - NODE_ENV=production
-      - JWT_SECRET=your_super_secret_key
-      - MONGO_URI=mongodb://mongo:27017/dyna_content
-      - SOURCE_API_URL=https://localhost:3333
-      - SOURCE_ASSETS_FOLDER=../../dist/files
-      - SOURCE_LOGS_FOLDER=../../dist/logs
-      - RENDER_BASE_URL=https://localhost:5555 
-      - BUILDER_BASE_URL=https://localhost:4444 
-      - PORT_ENV=3333
+      - "3000:80"
     volumes:
       - asset-files:/app/dist/files
       - log-files:/app/dist/logs
@@ -33,44 +18,48 @@ services:
     depends_on:
       - mongo
 
-  build:
-    image: build-dynode:latest
+  builder:
+    image: builder-dynode:latest
     build:
-      context: ./build.dynode
-      args:
-        - PFX_PASSWORD=YourVeryStrongAndSecretPasswordHere
-        - VITE_SOURCE_API_URL=https://localhost:3333
-        - VITE_RENDER_BASE_URL=https://localhost:5555
-        - VITE_BUILDER_BASE_URL=https://localhost:4444
+      context: ./builder.dynode
+      # Provide PFX_PASSWORD at build time if TLS assets are required; omitted here to avoid embedding secrets.
+      # args:
+      #   PFX_PASSWORD: ""
     ports:
-      - "4444:4444" 
+      - "4000:80"
     networks:
       - dynode-network
-    environment:
-      - JWT_SECRET=your_super_secret_key
-      - NODE_ENV=production
-      - PORT_ENV=4444
     depends_on:
       - source
       - render
 
   render:
     image: render-dynode:latest
+    build:
+      context: ./render.dynode
     ports:
-      - "5555:5555"
-    environment:
-      - JWT_SECRET=your_super_secret_key
-      - NODE_ENV=production
-      - PORT_ENV=5555
-      - SERVICE_WORKERS=enabled # Enable if needed
-      - SOURCE_API_URL=https://source:3333
-      - RENDER_BASE_URL=https://localhost:5555 # For browser requests
-      - BUILDER_BASE_URL=https://localhost:4444 # For browser requests
-      - NODE_TLS_REJECT_UNAUTHORIZED=0  # Disable SSL verification for internal communication
+      - "5000:80"
     networks:
       - dynode-network
     depends_on:
       - source
+
+  echo:
+    image: echo-dynode:latest
+    build:
+      context: ./echo.dynode
+    ports:
+      - "7000:8080"
+    networks:
+      - dynode-network
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - PUBLIC_BASE_URL=http://localhost:7000
+      - AUTH_SECRET=${AUTH_SECRET}
+      - HEARTBEAT_INTERVAL_MS=30000
+      - POST_CONTENT_MAX_BYTES=262144
+      - RADIO_POST_BROADCAST_DELAY_SECONDS=30
 
   mongo:
     image: mongodb/mongodb-community-server:latest
@@ -92,7 +81,7 @@ volumes:
     external: true
     name: dynode_data
   asset-files:
-    external: true  
+    external: true
     name: dynode_assets
   log-files:
     external: true

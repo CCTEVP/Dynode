@@ -3,8 +3,9 @@ import path from "path";
 import { minify as minifyJS } from "terser";
 import CleanCSS from "clean-css";
 import logger from "../services/logger";
-require("dotenv");
-const serviceWorkers = process.env.SERVICE_WORKERS || "disabled";
+import config from "../config";
+import caching from "./caching";
+const serviceWorkers = config.serviceWorkers;
 const bundler = {
   async bundleComponents(resources: {
     creativeId: string;
@@ -25,6 +26,18 @@ const bundler = {
     const items = resources.items;
     const mode = resources.mode;
     const extension = resources.extension;
+
+    // Generate cache key
+    const cacheKey = `${creativeId}:${resourceName}:${extension}:${mode}`;
+
+    // Check cache first
+    const cached = caching.get(cacheKey);
+    if (cached) {
+      logger.info(`Cache hit for ${cacheKey}`);
+      return { payload: cached.content };
+    }
+
+    logger.info(`Cache miss for ${cacheKey}, generating...`);
     let response = "";
 
     switch (resourceName) {
@@ -235,6 +248,13 @@ const bundler = {
     //Minify response if mode is true
     if (mode) {
       response = await this.minifyContent(response, extension);
+    }
+
+    // Store in cache
+    if (response) {
+      const contentType =
+        extension === "js" ? "application/javascript" : "text/css";
+      caching.set(cacheKey, response, contentType);
     }
 
     return {

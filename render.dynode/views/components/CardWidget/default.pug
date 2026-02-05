@@ -1,5 +1,17 @@
 mixin card-widget(cardElement)
     - var idValue = "card-widget-"+cardElement._id;
     - var styleString = Object.entries(cardElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
-    div(id=idValue, style=styleString, data-value=cardElement.value, data-animation=cardElement.animation, data-name=cardElement.identifier)
-        = cardElement.value
+    .card-flip-perspective
+        div(
+            id=idValue,
+            style=styleString,
+            data-value=cardElement.value,
+            data-animation-type=cardElement.animation.type,
+            data-animation-direction=cardElement.animation.direction,
+            data-animation-speed=cardElement.animation.speed,
+            data-animation-transition=cardElement.animation.transition,
+            data-animation-scale=cardElement.animation.scale,
+            data-animation-distance=cardElement.animation.distance,
+            data-name=cardElement.identifier
+        )
+            = cardElement.value

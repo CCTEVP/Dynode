@@ -5,13 +5,18 @@ function initializeCountdownWidgets() {
     const countdownWidgets = document.querySelectorAll('[id^="countdown-widget-"]');
     countdownWidgets.forEach((countdownWidget) => {
         const element = countdownWidget;
-        // Subscribe this widget to the creative ticker
-        const unsubscribe = window.creativeTicker?.subscribe(countdownWidget.id, () => {
-            updateCountdownWidget(element);
-        }, 1000 // Update every 1000ms (1 second)
-        );
-        // Store unsubscribe function for cleanup if needed
-        element.unsubscribeTicker = unsubscribe;
+        // Mark as a ticker widget
+        element.setAttribute("data-ticker-widget", "true");
+        // Store the subscription logic to be called when ticker starts
+        element.startCountdownUpdates = () => {
+            // Subscribe this widget to the creative ticker
+            const unsubscribe = window.creativeTicker?.subscribe(countdownWidget.id, () => {
+                updateCountdownWidget(element);
+            }, 1000 // Update every 1000ms (1 second)
+            );
+            // Store unsubscribe function for cleanup if needed
+            element.unsubscribeTicker = unsubscribe;
+        };
     });
 }
 function updateCountdownWidget(element) {
@@ -55,14 +60,12 @@ function updateCountdownChildren(element, remainingMilliseconds) {
         const dataName = child.getAttribute("data-name");
         if (dataName && values[dataName] !== undefined) {
             // Format value with leading zero for values less than 10
-            const formattedValue = formatWithLeadingZero(values[dataName]);
+            const formattedValue = values[dataName] < 10
+                ? `0${values[dataName]}`
+                : values[dataName].toString();
             child.setAttribute("data-value", formattedValue);
         }
     });
-}
-// Helper function to add leading zeros
-function formatWithLeadingZero(value) {
-    return value < 10 ? `0${value}` : value.toString();
 }
 function calculateAdaptiveValues(milliseconds, presentUnits) {
     const totalSeconds = Math.floor(milliseconds / 1000);

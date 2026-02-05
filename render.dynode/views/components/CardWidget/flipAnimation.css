@@ -1,0 +1,11 @@
+/* Flip animation for CardWidget */
+.card-flip-perspective {
+  perspective: 1600px;
+}
+.card-flip {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.card-flip-3d {
+  backface-visibility: hidden;
+}

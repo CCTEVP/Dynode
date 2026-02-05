@@ -32,7 +32,21 @@ declare global {
       [widgetType: string]: {
         [animationType: string]: (
           widget: HTMLElement,
-          dataValue: string
+          dataValue: string,
+          options?: {
+            // Roll
+            direction?: string;
+            speed?: string;
+            transition?: string;
+            // Flip
+            axis?: string;
+            // Pop
+            scale?: string;
+            // Blur
+            distance?: string;
+            // Fade, Flip, Pop, Blur (shared)
+            [key: string]: any;
+          }
         ) => void;
       };
     };

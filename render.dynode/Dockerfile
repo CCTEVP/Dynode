@@ -13,6 +13,8 @@ RUN npm ci
 COPY . .
 
 # Build the application
+ARG APP_ENV_DOCKER=docker
+RUN sed -i 's/const CURRENT_ENV = "[^"]*" as const;/const CURRENT_ENV = "'"${APP_ENV_DOCKER}"'" as const;/' config.ts
 RUN npm run build
 
 # Production stage
@@ -49,12 +51,12 @@ RUN addgroup -g 1001 -S nodejs && \
 RUN chown -R dynode:nodejs /app
 USER dynode
 
-# Expose port
-EXPOSE 5555
+# Expose internal port 80 (host maps 5000 -> 80)
+EXPOSE 80
 
-# Health check
+# Health check (HTTP – render config disables https in dev/docker)
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('https://localhost:5555/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+  CMD node -e "require('http').get('http://localhost:80/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
 
 # Start application
 CMD ["node", "dist/app.js"]

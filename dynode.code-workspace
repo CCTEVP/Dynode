@@ -1,13 +1,23 @@
 {
   "folders": [
-	{
-		"path": "build.dynode"
-	},
-	{
-		"path": "render.dynode"
-	},
-	{
-		"path": "source.dynode"
-	}
-]
+    {
+      "name": "builder.dynode",
+      "path": "builder.dynode",
+    },
+    {
+      "name": "echo.dynode",
+      "path": "echo.dynode",
+    },
+    {
+      "name": "render.dynode",
+      "path": "render.dynode",
+    },
+    {
+      "name": "source.dynode",
+      "path": "source.dynode",
+    },
+  ],
+  "settings": {
+    "powershell.cwd": "dn-dynamic-campaign-tools",
+  },
 }

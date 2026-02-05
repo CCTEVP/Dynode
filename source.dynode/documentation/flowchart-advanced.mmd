@@ -1,0 +1,127 @@
+flowchart TD
+  %% App bootstrap
+  subgraph APP[App bootstrap]
+    app[app.ts]
+    env[.env]
+    cert[cert/source.dynode.pfx]
+    db((MongoDB))
+    app -- load --> env
+    app -- connect --> db
+    app -- https_prod --> cert
+  end
+
+  %% Middleware
+  subgraph MWARE[Middleware]
+    mw_cors([cors])
+    mw_cookie([cookie-parser])
+    mw_morgan([morgan])
+    mw_auth([authenticateToken])
+  end
+
+  %% Services
+  subgraph SRV[Services]
+    srv_logger[[logger.ts]]
+    srv_register[[register.ts]]
+    srv_scrapper[[scrapper.ts]]
+  end
+
+  %% Routes
+  subgraph ROUTES[Routes]
+    r_index([index root])
+    r_docs([swagger docs])
+    r_login([login])
+    r_auth([auth])
+
+    subgraph r_data [data]
+      r_data_root([data root])
+      r_elements([elements])
+      r_components([components])
+      r_creatives([creatives])
+      r_users([users])
+    end
+
+    subgraph r_files [files]
+      r_files_root([files root])
+      r_assets([assets])
+      r_logs([logs])
+    end
+  end
+
+  %% Models
+  subgraph MODELS[Models]
+    subgraph collections[collections]
+      m_users[[UsersCollection]]
+      m_assets[[AssetsCollection]]
+      m_elements[[ElementsCollection]]
+      m_components[[ComponentsCollection]]
+      m_casm[[CreativeAssemblyCollection]]
+      m_cdyn[[CreativeDynamicCollection]]
+      m_cint[[CreativeInteractiveCollection]]
+    end
+    subgraph views[views]
+      v_unified[[CreativeUnifiedView]]
+      v_unified_el[[CreativeUnifiedViewElements]]
+      v_casm[[CreativeAssemblyView]]
+      v_cdyn[[CreativeDynamicView]]
+      v_cint[[CreativeInteractiveView]]
+      v_el_assets[[ElementsAssetsView]]
+      v_el_binding[[ElementsBindingView]]
+    end
+  end
+
+  %% App wiring
+  app --> mw_cors
+  app --> mw_cookie
+  app --> mw_morgan
+  %% Note: JWT is currently commented out for /data and /files
+  app --> r_index
+  app --> r_docs
+  app --> r_login
+  app --> r_auth
+  app --> r_data
+  app --> r_files
+
+  %% Routes -> Services
+  r_assets -- upload --> srv_register
+  r_logs -- log --> srv_logger
+  r_creatives -. PUT_resources .-> srv_scrapper
+
+  %% Routes -> Models
+  r_login --> m_users
+  r_auth --> m_users
+
+  r_elements --> m_elements
+  r_elements --> v_el_assets
+  r_elements --> v_el_binding
+
+  r_components --> m_components
+
+  r_creatives --> v_unified
+  r_creatives --> v_unified_el
+  r_creatives --> m_casm
+  r_creatives --> m_cdyn
+  r_creatives --> m_cint
+  r_creatives --> v_casm
+  r_creatives --> v_cdyn
+  r_creatives --> v_cint
+
+  %% Services outputs
+  srv_logger --> logs[(logs)]
+  srv_register --> files[(files)]
+
+  %% Styling
+  classDef app fill:#222,stroke:#999,stroke-width:1px,color:#fff
+  classDef mid fill:#2b3,stroke:#173,stroke-width:1px,color:#fff
+  classDef svc fill:#245,stroke:#59f,stroke-width:1px,color:#fff
+  classDef route fill:#444,stroke:#999,stroke-width:1px,color:#fff
+  classDef model fill:#5a3,stroke:#283,stroke-width:1px,color:#fff
+  classDef view fill:#735,stroke:#924,stroke-width:1px,color:#fff
+  classDef io fill:#666,stroke:#aaa,stroke-width:1px,color:#fff
+
+  class app,env,cert,db app
+  class mw_cors,mw_cookie,mw_morgan,mw_auth mid
+  class srv_logger,srv_register,srv_scrapper svc
+  class r_index,r_docs,r_login,r_auth,r_data_root,r_elements,r_components,r_creatives,r_users,r_files_root,r_assets,r_logs route
+  class m_users,m_assets,m_elements,m_components,m_casm,m_cdyn,m_cint model
+  class v_unified,v_unified_el,v_casm,v_cdyn,v_cint,v_el_assets,v_el_binding view
+  class logs,files io

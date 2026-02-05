@@ -1,0 +1,70 @@
+/* Light mode - selected item tags - increased specificity */
+.design-page
+  .ant-select-multiple
+  .ant-select-selector
+  .ant-select-selection-item {
+  background-color: #f0f0f0 !important;
+  border: 1px solid #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+/* Dark mode - selected item tags - increased specificity */
+[data-theme="dark"]
+  .design-page
+  .ant-select-multiple
+  .ant-select-selector
+  .ant-select-selection-item {
+  background-color: #262626 !important;
+  border-color: #434343 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Fallback with even higher specificity for Ant Design's CSS-in-JS */
+.design-page
+  .ant-select-multiple.ant-select
+  .ant-select-selector
+  .ant-select-selection-item {
+  background-color: #f0f0f0 !important;
+  border: 1px solid #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+[data-theme="dark"]
+  .design-page
+  .ant-select-multiple.ant-select
+  .ant-select-selector
+  .ant-select-selection-item {
+  background-color: #262626 !important;
+  border-color: #434343 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Override Ant Design's inline styles for dark mode */
+[data-theme="dark"] .design-page .ant-select-selection-item {
+  background: #262626 !important;
+  border: 1px solid #434343 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Light mode inline style override */
+.design-page .ant-select-selection-item {
+  background: #f0f0f0 !important;
+  border: 1px solid #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+/* Specific targeting for design-page-select */
+.design-page .design-page-select .ant-select-selection-item {
+  background: #f0f0f0 !important;
+  border: 1px solid #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+[data-theme="dark"]
+  .design-page
+  .design-page-select
+  .ant-select-selection-item {
+  background: #262626 !important;
+  border: 1px solid #434343 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}

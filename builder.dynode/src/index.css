@@ -1,0 +1,279 @@
+/* Import centralized color variables */
+@import "./theme/colors.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default browser focus outlines */
+*:focus,
+*:focus-visible {
+  outline: none !important;
+}
+
+/* Remove blue border from Ant Design inputs and buttons */
+.ant-input:focus,
+.ant-input:focus-within,
+.ant-input-focused,
+.ant-btn:focus,
+.ant-btn:active,
+.ant-select:focus,
+.ant-select-focused .ant-select-selector {
+  border-color: var(--colorBorder) !important;
+  box-shadow: none !important;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+/* Disable text selection globally to prevent accidental selection of UI text
+   and rendered objects while using the editor. Allow selection only inside
+   form controls and contenteditable areas. */
+html,
+body,
+#root {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Also allow selection inside these controls' children */
+input *,
+textarea *,
+select *,
+[contenteditable="true"] * {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Theme toggle button - fixed corner (used across views) */
+.theme-toggle-corner {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 15, 15, 0.95);
+  cursor: pointer;
+  z-index: 2000;
+  transition:
+    width 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.2s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.3;
+}
+
+.theme-toggle-corner[data-mode="light"] {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-track {
+  position: absolute;
+  inset: 4px;
+  border-radius: 999px;
+  background: var(--colorFillSecondary, rgba(0, 0, 0, 0.08));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.theme-toggle-knob {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--colorBgContainer, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle-icon {
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.theme-toggle-corner:hover {
+  background: rgba(15, 15, 15, 0.98);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  width: 68px;
+  opacity: 1;
+}
+
+.theme-toggle-corner[data-mode="light"]:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+[data-theme="dark"] .theme-toggle-corner:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.theme-toggle-corner:hover .theme-toggle-track {
+  opacity: 1;
+}
+
+.theme-toggle-corner:hover .theme-toggle-icon {
+  opacity: 1;
+}
+
+.theme-toggle-corner:hover[data-mode="dark"] .theme-toggle-knob {
+  transform: translateX(36px);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Remove box-shadow from ALL Ant Design buttons globally */
+.ant-btn,
+.ant-btn:hover,
+.ant-btn:focus,
+.ant-btn:active,
+.ant-btn-primary,
+.ant-btn-primary:hover,
+.ant-btn-primary:focus,
+.ant-btn-primary:active,
+.ant-btn-dangerous,
+.ant-btn-dangerous:hover,
+.ant-btn-dangerous:focus,
+.ant-btn-dangerous:active {
+  box-shadow: none !important;
+}
+
+/* Theme-aware scrollbar styling */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-variant);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border: 3px solid var(--color-surface-variant);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-gray-600);
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-gray-400) var(--color-surface-variant);
+}

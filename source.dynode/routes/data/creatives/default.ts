@@ -17,13 +17,18 @@ router.use("/interactives", interactivesRouter);
 router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
     const rawFolder = req.query.folder;
-    const rawOrigin = req.query.origin;
+    // Default origin to "dynamics" unless an explicit non-empty value is provided
+    const rawOrigin =
+      typeof req.query.origin === "string" && req.query.origin.trim() !== ""
+        ? req.query.origin
+        : "dynamics";
     const filter: any = {};
 
     // children defaults to false when not provided
     const children = req.query.children === "true";
 
-    // NOTE: folder/origin query filtering removed - return all creatives matching other filters
+    // Apply origin filter (defaulting to "dynamics"); folder filtering remains disabled for now
+    filter.origin = rawOrigin;
 
     // Choose model based on children flag:
     // - children === true -> CreativeUnifiedViewElements (with children)

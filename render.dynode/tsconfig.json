@@ -7,6 +7,7 @@
     "strict": true,
     "esModuleInterop": true,
     "types": ["node", "express"],
+    "moduleResolution": "node",
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "typeRoots": ["./types", "./node_modules/@types"]
@@ -16,6 +17,7 @@
     "views/**/*.ts",
     "types/**/*.d.ts",
     "app.ts",
-    "server.ts"
+    "server.ts",
+    "config.ts"
   ]
 }

@@ -1,0 +1,1148 @@
+// Load environment variables from .env file
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+dotenv.config({ path: join(__dirname, "..", ".env") });
+
+import { WebSocketServer } from "ws";
+import http from "http";
+import swaggerUi from "swagger-ui-express";
+import { generateSwaggerSpecs } from "./swagger.js";
+import { roomRegistry } from "./rooms/index.js";
+import {
+  extractToken,
+  verifyAuthToken,
+  validateHttpPostAuth,
+  AuthConfig,
+  generateAuthToken,
+} from "./auth/index.js";
+import {
+  handlePostContentRequest,
+  handlePostContentOptions,
+} from "./postcontent/index.js";
+import {
+  authenticateDocsUser,
+  requireDocsAuth,
+  destroySession,
+  getDocsCredentials,
+} from "./auth/docs-auth.js";
+import { handleHealthRequest, isHealthRequest } from "./health/index.js";
+import { readFileSync } from "fs";
+
+const PORT = process.env.PORT_ENV || process.env.PORT || 7777;
+// Heartbeat interval (ms). If 0 or negative, heartbeat disabled. 30s default keeps most proxies/NATs alive.
+// PowerShell example: $env:HEARTBEAT_INTERVAL_MS=30000; node src/server.js
+const HEARTBEAT_INTERVAL_MS = parseInt(
+  process.env.HEARTBEAT_INTERVAL_MS || "30000",
+  10
+);
+// Optional per-connection policies (disabled by default if 0)
+const IDLE_TIMEOUT_MS = parseInt(process.env.IDLE_TIMEOUT_MS || "0", 10);
+const MAX_CONN_AGE_MS = parseInt(process.env.MAX_CONN_AGE_MS || "0", 10);
+
+// Public base URL for clients (override in env). Fallback to the deployed Cloud Run URL.
+// Example (PowerShell): $env:PUBLIC_BASE_URL='https://radiowsserver-763503917257.europe-west1.run.app'
+const PUBLIC_BASE_URL = (
+  process.env.PUBLIC_BASE_URL ||
+  "https://radiowsserver-763503917257.europe-west1.run.app"
+).replace(/\/$/, "");
+
+const logoSvgPath = join(__dirname, "..", "public", "images", "logo.svg");
+let logoSvgBuffer;
+try {
+  logoSvgBuffer = readFileSync(logoSvgPath);
+} catch (error) {
+  console.warn(
+    "⚠️ Favicon logo.svg missing:",
+    error instanceof Error ? error.message : error
+  );
+}
+
+// Basic HTTP server (optional for health check / upgrade flexibility)
+const server = http.createServer(async (req, res) => {
+  const requestUrl = new URL(
+    req.url || "/",
+    `http://${req.headers.host || "localhost"}`
+  );
+  const pathname = requestUrl.pathname;
+
+  if (
+    (req.method === "GET" || req.method === "HEAD") &&
+    (pathname === "/images/logo.svg" || pathname === "/favicon.ico")
+  ) {
+    if (logoSvgBuffer) {
+      res.writeHead(200, {
+        "Content-Type": "image/svg+xml",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Content-Length": logoSvgBuffer.length,
+      });
+      if (req.method === "GET") {
+        res.end(logoSvgBuffer);
+      } else {
+        res.end();
+      }
+    } else {
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      res.end("favicon not available");
+    }
+    return;
+  }
+
+  // Simple router
+
+  // Redirect root to documentation
+  if (req.method === "GET" && req.url === "/") {
+    res.writeHead(302, { Location: "/docs" });
+    res.end();
+    return;
+  }
+
+  // Health check endpoint
+  if (isHealthRequest(req)) {
+    await handleHealthRequest(req, res, rooms, wss);
+    return;
+  }
+
+  // ============================================================================
+  // DOCUMENTATION AUTHENTICATION ROUTES
+  // ============================================================================
+
+  // GET /auth/docs-login-page - Login page for documentation access
+  if (req.method === "GET" && req.url === "/auth/docs-login-page") {
+    try {
+      const loginHtml = readFileSync(
+        join(__dirname, "auth", "login.html"),
+        "utf-8"
+      );
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(loginHtml);
+    } catch (error) {
+      console.error("Error loading login page:", error);
+      res.writeHead(500, { "Content-Type": "text/plain" });
+      res.end("Error loading login page");
+    }
+    return;
+  }
+
+  // POST /auth/docs-login - Handle login form submission
+  if (req.method === "POST" && req.url === "/auth/docs-login") {
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+
+    req.on("end", () => {
+      try {
+        const { email, password } = JSON.parse(body);
+        const result = authenticateDocsUser(email, password);
+
+        if (result.success) {
+          // Set session cookie
+          const cookieOptions = [
+            `docs_auth_token=${result.token}`,
+            "HttpOnly",
+            "SameSite=Strict",
+            "Path=/",
+            `Max-Age=${24 * 60 * 60}`, // 24 hours
+          ].join("; ");
+
+          res.writeHead(200, {
+            "Content-Type": "application/json",
+            "Set-Cookie": cookieOptions,
+          });
+          res.end(
+            JSON.stringify({
+              success: true,
+              message: result.message,
+              token: result.token,
+            })
+          );
+        } else {
+          res.writeHead(401, { "Content-Type": "application/json" });
+          res.end(
+            JSON.stringify({
+              success: false,
+              message: result.message,
+            })
+          );
+        }
+      } catch (error) {
+        console.error("Login error:", error);
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(
+          JSON.stringify({
+            success: false,
+            message: "Invalid request format",
+          })
+        );
+      }
+    });
+    return;
+  }
+
+  // POST /auth/docs-logout - Logout and destroy session
+  if (req.method === "POST" && req.url === "/auth/docs-logout") {
+    const cookies = req.headers.cookie ? parseCookies(req.headers.cookie) : {};
+    const token = cookies.docs_auth_token;
+
+    if (token) {
+      destroySession(token);
+    }
+
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Set-Cookie":
+        "docs_auth_token=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0",
+    });
+    res.end(
+      JSON.stringify({ success: true, message: "Logged out successfully" })
+    );
+    return;
+  }
+
+  // ============================================================================
+  // PROTECTED DOCUMENTATION ENDPOINTS
+  // ============================================================================
+
+  // API Documentation endpoint (PROTECTED)
+  if (req.method === "GET" && req.url === "/docs") {
+    return requireDocsAuth(req, res, () => {
+      try {
+        const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Echo API</title>
+  <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@4.15.5/swagger-ui.css" />
+  <style>
+    .swagger-ui .topbar { display: none }
+  </style>
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="https://unpkg.com/swagger-ui-dist@4.15.5/swagger-ui-bundle.js"></script>
+  <script src="https://unpkg.com/swagger-ui-dist@4.15.5/swagger-ui-standalone-preset.js"></script>
+  <script>
+    SwaggerUIBundle({
+      url: '/docs/swagger.json',
+      dom_id: '#swagger-ui',
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIStandalonePreset
+      ],
+      layout: "StandaloneLayout"
+    });
+  </script>
+</body>
+</html>`;
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(html);
+      } catch (error) {
+        console.error("Error generating docs:", error);
+        res.writeHead(500, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: "Failed to generate documentation" }));
+      }
+    });
+  }
+
+  // Swagger JSON specification endpoint (PROTECTED)
+  if (req.method === "GET" && req.url === "/docs/swagger.json") {
+    return requireDocsAuth(req, res, () => {
+      // Use the same PUBLIC_BASE_URL that the server is configured with
+      const swaggerSpecs = generateSwaggerSpecs(PUBLIC_BASE_URL);
+      res.writeHead(200, {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      });
+      res.end(JSON.stringify(swaggerSpecs, null, 2));
+    });
+  }
+
+  // Helper function to parse cookies
+  function parseCookies(cookieHeader) {
+    const cookies = {};
+    cookieHeader.split(";").forEach((cookie) => {
+      const [name, value] = cookie.trim().split("=");
+      if (name && value) {
+        cookies[name] = decodeURIComponent(value);
+      }
+    });
+    return cookies;
+  }
+
+  // Authentication Routes
+  // POST /auth/token - Generate authentication token (API only, use Postman)
+
+  // POST /auth/token - Generate authentication token
+  if (req.method === "POST" && req.url === "/auth/token") {
+    let body = "";
+    req.on("data", (chunk) => (body += chunk));
+    req.on("end", () => {
+      try {
+        const data = JSON.parse(body);
+
+        if (!data.clientId || !data.room) {
+          res.writeHead(400, {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          });
+          res.end(
+            JSON.stringify({
+              error: "clientId and room are required",
+              example: {
+                clientId: "user123",
+                room: "radio",
+              },
+            })
+          );
+          return;
+        }
+
+        const token = generateAuthToken({
+          clientId: data.clientId,
+          room: data.room,
+          metadata: data.metadata || {},
+        });
+
+        // Calculate expiration (1 hour from now)
+        const expiresAt = new Date(Date.now() + 60 * 60 * 1000);
+
+        res.writeHead(200, {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        });
+        res.end(
+          JSON.stringify({
+            token,
+            clientId: data.clientId,
+            room: data.room,
+            expiresAt: expiresAt.toISOString(),
+          })
+        );
+      } catch (err) {
+        res.writeHead(400, {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        });
+        res.end(JSON.stringify({ error: "Invalid request: " + err.message }));
+      }
+    });
+    return;
+  }
+
+  // OPTIONS for /auth/token (CORS preflight)
+  if (req.method === "OPTIONS" && req.url === "/auth/token") {
+    res.writeHead(204, {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    });
+    res.end();
+    return;
+  }
+
+  // ============================================================================
+  // BACKWARD COMPATIBILITY ENDPOINT
+  // ============================================================================
+  // POST /postcontent - Legacy endpoint that bridges to /rooms/radio/post
+  // with hardcoded advertiser token
+  // See src/postcontent/index.js for implementation
+  // Delete the entire /src/postcontent/ folder when no longer needed
+  if (req.method === "POST" && req.url === "/postcontent") {
+    console.log(
+      "✅ /postcontent endpoint matched - bridging to /rooms/radio/post with advertiser token"
+    );
+    handlePostContentRequest(req, res);
+    return;
+  }
+
+  // OPTIONS for /postcontent (CORS preflight)
+  if (req.method === "OPTIONS" && req.url === "/postcontent") {
+    console.log("✅ /postcontent OPTIONS matched");
+    handlePostContentOptions(req, res);
+    return;
+  }
+  // ============================================================================
+  // END BACKWARD COMPATIBILITY
+  // ============================================================================
+
+  // OPTIONS for room-based routing (CORS preflight)
+  // Handle preflight requests for /rooms/:roomName/:path endpoints
+  const roomOptionsMatch = req.url.match(/^\/rooms\/([^\/]+)(\/[^\/]+.*)$/);
+  if (req.method === "OPTIONS" && roomOptionsMatch) {
+    res.writeHead(204, {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    });
+    res.end();
+    return;
+  }
+
+  // Room-based routing ONLY: /rooms/:roomName/:path
+  // Examples: /rooms/radio/post, /rooms/chat/messages
+  // This matches paths starting with /rooms/ prefix
+  const roomRouteMatch = req.url.match(/^\/rooms\/([^\/]+)(\/[^\/]+.*)$/);
+  if (roomRouteMatch) {
+    const roomName = roomRouteMatch[1];
+    const roomPath = roomRouteMatch[2];
+
+    // Get room handler
+    const handler = roomRegistry.getHandler(roomName);
+
+    // Try to get routes from the handler
+    const routes = await handler.getRoutes();
+
+    if (routes && routes.length > 0) {
+      // Find matching route
+      const matchingRoute = routes.find(
+        (route) => route.method === req.method && route.path === roomPath
+      );
+
+      if (matchingRoute) {
+        // Check authentication if required
+        if (matchingRoute.requiresAuth) {
+          const authPayload = validateHttpPostAuth(req, roomName);
+          if (!authPayload) {
+            res.writeHead(401, {
+              "Content-Type": "application/json",
+              "WWW-Authenticate": "Bearer",
+            });
+            res.end(
+              JSON.stringify({
+                error:
+                  "Authentication required. Include Authorization: Bearer <token>",
+              })
+            );
+            return;
+          }
+
+          // Call the route handler with auth payload
+          await matchingRoute.handler(
+            req,
+            res,
+            authPayload,
+            handler,
+            broadcastToRoom,
+            broadcastToControlRoom,
+            enqueueRoomBroadcast
+          );
+        } else {
+          // Call the route handler without auth
+          await matchingRoute.handler(
+            req,
+            res,
+            null,
+            handler,
+            broadcastToRoom,
+            broadcastToControlRoom,
+            enqueueRoomBroadcast
+          );
+        }
+        return;
+      }
+    }
+  }
+
+  // Fallback 404
+  res.writeHead(404, { "Content-Type": "application/json" });
+  res.end(JSON.stringify({ error: "Not found" }));
+});
+
+// Optional origin allowlist (comma separated). If unset, all origins allowed.
+const ORIGIN_ALLOWLIST = (process.env.ORIGIN_ALLOWLIST || "")
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+// Max payload (bytes) to guard against very large messages (default 1MB if unspecified)
+const MAX_PAYLOAD_BYTES = parseInt(
+  process.env.MAX_PAYLOAD_BYTES || "1048576",
+  10
+);
+
+// Comma-separated list of message .type values that should NOT be broadcast to
+// other clients. They will be treated as internal control messages. Default
+// suppresses keepalive messages (case-insensitive). Example to add more:
+// PowerShell: $env:SUPPRESSED_TYPES='keepalive,typing'
+const SUPPRESSED_TYPES = (process.env.SUPPRESSED_TYPES || "keepalive,ack")
+  .split(",")
+  .map((s) => s.trim().toLowerCase())
+  .filter(Boolean);
+
+const wss = new WebSocketServer({ server, maxPayload: MAX_PAYLOAD_BYTES });
+
+// Room management: Maps room name to Set of WebSocket clients
+const rooms = new Map();
+const controlRooms = new Map();
+const roomBroadcastQueues = new Map();
+let broadcastSequence = 0;
+
+// Helper to get or create a room
+function getRoom(roomName) {
+  if (!rooms.has(roomName)) {
+    rooms.set(roomName, new Set());
+  }
+  return rooms.get(roomName);
+}
+
+function getControlRoom(roomName) {
+  if (!controlRooms.has(roomName)) {
+    controlRooms.set(roomName, new Set());
+  }
+  return controlRooms.get(roomName);
+}
+
+// Helper to add client to room with handler support
+async function joinRoom(socket, roomName, req, clientAddress, authPayload) {
+  const room = getRoom(roomName);
+  const handler = roomRegistry.getHandler(roomName);
+
+  // Call handler's onJoin method with auth payload
+  const joinResult = await handler.onJoin(
+    socket,
+    req,
+    clientAddress,
+    authPayload
+  );
+
+  // If handler returns false, reject the connection
+  if (joinResult === false) {
+    return false;
+  }
+
+  room.add(socket);
+  socket.currentRoom = roomName;
+  socket.roomHandler = handler;
+  const clientId = authPayload?.clientId || clientAddress;
+  console.log(
+    `Client joined room: ${roomName} (${room.size} clients) - ID: ${clientId}`
+  );
+  return true;
+}
+
+// Helper to remove client from room with handler support
+async function leaveRoom(socket, code, reason, clientAddress) {
+  if (socket.currentRoom) {
+    const room = rooms.get(socket.currentRoom);
+    if (room) {
+      room.delete(socket);
+
+      // Call handler's onLeave method
+      if (socket.roomHandler) {
+        await socket.roomHandler.onLeave(socket, clientAddress, code, reason);
+      }
+
+      console.log(
+        `Client left room: ${socket.currentRoom} (${room.size} clients)`
+      );
+      // Clean up empty rooms
+      if (room.size === 0) {
+        rooms.delete(socket.currentRoom);
+      }
+    }
+    socket.currentRoom = null;
+    socket.roomHandler = null;
+  }
+}
+
+async function joinControlRoom(socket, roomName, req, clientAddress, handler) {
+  const room = getControlRoom(roomName);
+  const joinResult = await handler.onControlJoin(socket, req, clientAddress);
+
+  if (joinResult === false) {
+    return false;
+  }
+
+  room.add(socket);
+  socket.currentRoom = roomName;
+  socket.controlHandler = handler;
+  socket.isControlChannel = true;
+  console.log(
+    `Remote control client joined: ${roomName} (${room.size} subscribers) - ${clientAddress}`
+  );
+  return true;
+}
+
+async function leaveControlRoom(socket, code, reason, clientAddress) {
+  if (socket.currentRoom) {
+    const room = controlRooms.get(socket.currentRoom);
+    if (room) {
+      room.delete(socket);
+
+      if (socket.controlHandler) {
+        await socket.controlHandler.onControlLeave(
+          socket,
+          clientAddress,
+          code,
+          reason
+        );
+      }
+
+      console.log(
+        `Remote control client left: ${socket.currentRoom} (${room.size} subscribers)`
+      );
+
+      if (room.size === 0) {
+        controlRooms.delete(socket.currentRoom);
+      }
+    }
+    socket.currentRoom = null;
+    socket.controlHandler = null;
+    socket.isControlChannel = false;
+  }
+}
+
+// Helper to broadcast to room
+function broadcastToRoom(roomName, message, excludeSocket = null) {
+  const room = rooms.get(roomName);
+  if (!room) return 0;
+
+  let delivered = 0;
+  room.forEach((client) => {
+    if (client !== excludeSocket && client.readyState === client.OPEN) {
+      sendJson(client, message);
+      delivered++;
+    }
+  });
+  return delivered;
+}
+
+function broadcastToControlRoom(roomName, message) {
+  const room = controlRooms.get(roomName);
+  if (!room) return 0;
+
+  let delivered = 0;
+  room.forEach((client) => {
+    if (client.readyState === client.OPEN) {
+      sendJson(client, message);
+      delivered++;
+    }
+  });
+  return delivered;
+}
+
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function enqueueRoomBroadcast(roomName, delayMs, taskFn) {
+  const effectiveDelay = Math.max(0, Number(delayMs) || 0);
+  const scheduledAt = Date.now() + effectiveDelay;
+
+  if (!roomBroadcastQueues.has(roomName)) {
+    roomBroadcastQueues.set(roomName, {
+      queue: [],
+      processing: false,
+    });
+  }
+
+  const state = roomBroadcastQueues.get(roomName);
+  let settle;
+  const completion = new Promise((resolve) => {
+    settle = resolve;
+  });
+
+  state.queue.push({
+    scheduledAt,
+    sequence: broadcastSequence++,
+    taskFn,
+    settle,
+  });
+
+  state.queue.sort((a, b) => {
+    if (a.scheduledAt === b.scheduledAt) {
+      return a.sequence - b.sequence;
+    }
+    return a.scheduledAt - b.scheduledAt;
+  });
+
+  if (!state.processing) {
+    void processRoomBroadcastQueue(roomName, state);
+  }
+
+  return completion;
+}
+
+async function processRoomBroadcastQueue(roomName, state) {
+  state.processing = true;
+
+  while (state.queue.length > 0) {
+    const { scheduledAt, taskFn, settle } = state.queue.shift();
+    try {
+      const waitMs = Math.max(0, scheduledAt - Date.now());
+      if (waitMs > 0) {
+        await delay(waitMs);
+      }
+      const result = await taskFn();
+      settle(result);
+    } catch (err) {
+      console.error(
+        "Failed to process broadcast task",
+        roomName,
+        err && err.stack ? err.stack : err
+      );
+      try {
+        settle(undefined);
+      } catch (_) {
+        /* ignore settle errors */
+      }
+    }
+  }
+
+  state.processing = false;
+  if (state.queue.length === 0) {
+    roomBroadcastQueues.delete(roomName);
+  }
+}
+
+// Extract client address (respect Cloud Run / proxy headers)
+function getClientAddress(req) {
+  const fwd = req.headers["x-forwarded-for"]; // may contain list
+  if (fwd) return fwd.split(",")[0].trim();
+  return req.socket.remoteAddress + ":" + req.socket.remotePort;
+}
+
+function isOriginAllowed(originHeader) {
+  if (!ORIGIN_ALLOWLIST.length) return true; // allow all if no list configured
+  if (!originHeader) return false; // if list provided, require an origin
+  try {
+    const url = new URL(originHeader);
+    const originHost = url.origin.toLowerCase();
+    return ORIGIN_ALLOWLIST.some(
+      (allowed) => allowed.toLowerCase() === originHost
+    );
+  } catch (_) {
+    return false;
+  }
+}
+
+// Utility to send JSON safely
+function sendJson(ws, obj) {
+  try {
+    ws.send(JSON.stringify(obj));
+  } catch (err) {
+    console.error("Failed to send JSON", err);
+  }
+}
+
+// Heartbeat loop (one global interval) only if enabled
+let heartbeatInterval = null;
+if (HEARTBEAT_INTERVAL_MS > 0) {
+  heartbeatInterval = setInterval(async () => {
+    wss.clients.forEach((ws) => {
+      if (ws.isAlive === false) return ws.terminate();
+      ws.isAlive = false;
+      try {
+        ws.ping();
+      } catch (_) {
+        /* ignore ping failures */
+      }
+    });
+
+    // Call heartbeat on room handlers
+    for (const [roomName, clients] of rooms.entries()) {
+      if (clients.size > 0) {
+        const handler = roomRegistry.getHandler(roomName);
+        try {
+          await handler.onHeartbeat();
+        } catch (err) {
+          console.error(`Heartbeat error for room ${roomName}:`, err);
+        }
+      }
+    }
+  }, HEARTBEAT_INTERVAL_MS);
+  wss.on("close", () => clearInterval(heartbeatInterval));
+}
+
+wss.on("connection", async (socket, req) => {
+  socket.isAlive = true; // initial state for heartbeat
+  let lastActivity = Date.now();
+  const clientAddress = getClientAddress(req);
+  socket.isControlChannel = false;
+
+  // Basic origin check AFTER upgrade (lightweight; for stricter security use custom upgrade handling)
+  const origin = req.headers.origin;
+  if (!isOriginAllowed(origin)) {
+    console.warn("Closing connection due to disallowed origin", origin);
+    try {
+      socket.close(4003, "Origin not allowed");
+    } catch (_) {}
+    return;
+  }
+
+  // Extract room from URL path or query parameter
+  // Examples:
+  //   - ws://server/rooms/radio?token=xxx (preferred with /rooms/ prefix)
+  //   - ws://server/radio?token=xxx (legacy, backward compatible)
+  //   - ws://server/?room=radio&token=xxx (query parameter)
+  const url = new URL(req.url, `http://${req.headers.host}`);
+
+  // Extract room name - NO DEFAULT ROOM (security requirement)
+  let roomName = null;
+
+  // Check path first
+  const pathname = url.pathname;
+  console.log(`🔍 WebSocket connection attempt - pathname: ${pathname}`);
+  const isControlChannel = /^\/rooms\/[^\/]+\/remotecontrol\/?$/.test(pathname);
+
+  // 1. Try /rooms/:roomName pattern (preferred)
+  const roomPrefixMatch = pathname.match(/^\/rooms\/([^\/]+)/);
+  if (roomPrefixMatch) {
+    roomName = roomPrefixMatch[1];
+    console.log(`✅ Matched /rooms/ prefix pattern - room: ${roomName}`);
+  }
+  // 2. Try legacy /:roomName pattern (backward compatible)
+  else {
+    const legacyPathRoom = pathname.replace(/^\/+/, "").split("/")[0];
+    if (legacyPathRoom && legacyPathRoom !== "rooms") {
+      roomName = legacyPathRoom;
+      console.log(`✅ Matched legacy pattern - room: ${roomName}`);
+    }
+  }
+
+  // 3. Fallback to query parameter (e.g., ?room=myRoom)
+  if (!roomName) {
+    const queryRoom = url.searchParams.get("room");
+    if (queryRoom) {
+      roomName = queryRoom;
+      console.log(`✅ Matched query parameter - room: ${roomName}`);
+    }
+  }
+
+  // SECURITY: Reject if no room specified
+  if (!roomName) {
+    console.warn("Connection rejected: No room specified", clientAddress);
+    try {
+      socket.close(AuthConfig.ERRORS.NO_ROOM_SPECIFIED, "Room name required");
+    } catch (_) {}
+    return;
+  }
+
+  // SECURITY: Extract and verify authentication token
+  const token = extractToken(req);
+  let authPayload = null;
+
+  if (token) {
+    authPayload = verifyAuthToken(token, roomName);
+    if (!authPayload) {
+      if (isControlChannel) {
+        console.warn(
+          "Control channel provided invalid token (ignored)",
+          clientAddress,
+          roomName
+        );
+      } else {
+        console.warn(
+          "Connection rejected: Invalid token",
+          clientAddress,
+          roomName
+        );
+        try {
+          socket.close(
+            AuthConfig.ERRORS.INVALID_TOKEN,
+            "Invalid or expired token"
+          );
+        } catch (_) {}
+        return;
+      }
+    }
+  }
+
+  // Get room handler and verify authentication
+  const roomHandler = roomRegistry.getHandler(roomName);
+  if (!isControlChannel) {
+    const authResult = await roomHandler.verifyAuth(
+      authPayload,
+      req,
+      clientAddress
+    );
+
+    if (authResult && authResult.reject) {
+      console.warn(
+        "Connection rejected by auth:",
+        authResult.reason,
+        clientAddress,
+        roomName
+      );
+      try {
+        socket.close(
+          authResult.code || AuthConfig.ERRORS.INVALID_TOKEN,
+          authResult.reason
+        );
+      } catch (_) {}
+      return;
+    }
+  }
+
+  // Store auth payload on socket
+  socket.authPayload = authPayload;
+
+  // Join the specified room (with handler support)
+  let joined = false;
+  if (isControlChannel) {
+    joined = await joinControlRoom(
+      socket,
+      roomName,
+      req,
+      clientAddress,
+      roomHandler
+    );
+  } else {
+    joined = await joinRoom(socket, roomName, req, clientAddress, authPayload);
+  }
+
+  if (!joined) {
+    console.warn("Client rejected by room handler", clientAddress, roomName);
+    try {
+      socket.close(4004, "Rejected by room");
+    } catch (_) {}
+    return;
+  }
+
+  console.log(
+    "Client connected",
+    clientAddress,
+    `room=${roomName}`,
+    isControlChannel ? "channel=remotecontrol" : "",
+    origin ? `origin=${origin}` : ""
+  );
+
+  // Proof-of-life updates
+  socket.on("pong", () => {
+    socket.isAlive = true;
+    lastActivity = Date.now();
+  });
+
+  if (isControlChannel) {
+    const controlRoomMatch = pathname.match(
+      /^\/rooms\/([^\/]+)\/remotecontrol\/?$/
+    );
+    if (controlRoomMatch) {
+      roomName = controlRoomMatch[1];
+      console.log(`✅ Control channel matched for room: ${roomName}`);
+    }
+    sendJson(socket, {
+      type: "control-welcome",
+      message: "Connected to remote control channel",
+      room: roomName,
+      time: Date.now(),
+    });
+  } else {
+    const customWelcome = await roomHandler.getWelcomeMessage(socket);
+
+    const welcomeMessage = customWelcome || {
+      type: "welcome",
+      message: "Connected to broadcast server",
+      room: roomName,
+      time: Date.now(),
+    };
+
+    sendJson(socket, welcomeMessage);
+  }
+
+  // Idle timeout watcher (per connection) if enabled
+  if (IDLE_TIMEOUT_MS > 0) {
+    const idleCheck = () => {
+      if (Date.now() - lastActivity > IDLE_TIMEOUT_MS)
+        return socket.close(4000, "Idle timeout");
+      if (socket.readyState === socket.OPEN)
+        setTimeout(idleCheck, Math.max(5000, IDLE_TIMEOUT_MS / 2));
+    };
+    setTimeout(idleCheck, Math.max(5000, IDLE_TIMEOUT_MS / 2));
+  }
+
+  // Max connection age enforcement if enabled
+  if (MAX_CONN_AGE_MS > 0) {
+    setTimeout(() => {
+      if (socket.readyState === socket.OPEN)
+        socket.close(4001, "Max connection age reached");
+    }, MAX_CONN_AGE_MS);
+  }
+
+  // Whenever you process a real message, update activity time
+  socket.on("message", async (data, isBinary) => {
+    if (socket.isControlChannel) {
+      if (!socket.controlWriteWarningSent) {
+        console.warn(
+          "Control channel message ignored (channel is read-only)",
+          clientAddress,
+          socket.currentRoom
+        );
+        sendJson(socket, {
+          type: "error",
+          error: "Control channel is receive-only",
+        });
+        socket.controlWriteWarningSent = true;
+      }
+      return;
+    }
+
+    lastActivity = Date.now();
+    // Accept text or binary but expect JSON when text
+    if (isBinary) {
+      console.warn("Binary message received; ignoring broadcast.");
+      return;
+    }
+
+    let payload;
+    try {
+      payload = JSON.parse(data.toString());
+    } catch (err) {
+      sendJson(socket, { type: "error", error: "Invalid JSON payload" });
+      return;
+    }
+
+    // Basic validation (ensure object)
+    if (typeof payload !== "object" || payload === null) {
+      sendJson(socket, {
+        type: "error",
+        error: "Payload must be a JSON object",
+      });
+      return;
+    }
+
+    // Validate with room handler
+    const handler =
+      socket.roomHandler || roomRegistry.getHandler(socket.currentRoom);
+    const validationError = await handler.validateMessage(payload, socket);
+
+    if (validationError) {
+      sendJson(socket, {
+        type: "error",
+        error: validationError.error || "Validation failed",
+      });
+      return;
+    }
+
+    let enriched = {
+      type: "broadcast",
+      from: clientAddress,
+      receivedAt: Date.now(),
+      data: payload,
+    };
+
+    // Suppress internal/control message types from being broadcast. This
+    // allows clients to send periodic {type:"keepalive"} (or other configured
+    // types) without spamming all connected peers. We still update lastActivity
+    // above so idle timeout logic is satisfied.
+    const payloadType =
+      payload && typeof payload.type === "string"
+        ? payload.type.toLowerCase()
+        : null;
+    if (payloadType && SUPPRESSED_TYPES.includes(payloadType)) {
+      // Optionally acknowledge only to the sender so they know the server saw it.
+      sendJson(socket, {
+        type: "ack",
+        ackType: payload.type,
+        receivedAt: Date.now(),
+      });
+      return; // Do NOT broadcast further
+    }
+
+    // Let handler process/modify the message
+    const handlerResult = await handler.onMessage(
+      payload,
+      socket,
+      clientAddress
+    );
+
+    if (handlerResult === false) {
+      // Handler suppressed the message
+      return;
+    }
+
+    // Use handler's modified payload if provided
+    if (handlerResult !== null && handlerResult !== undefined) {
+      enriched = {
+        type: "broadcast",
+        from: clientAddress,
+        receivedAt: Date.now(),
+        data: handlerResult,
+      };
+    }
+
+    const broadcastContext = {
+      type: "websocket",
+      original: payload,
+      processed: enriched.data,
+      socket,
+      authPayload: socket.authPayload,
+      roomName: socket.currentRoom,
+    };
+
+    const broadcastDelay = await handler.getBroadcastDelay(broadcastContext);
+
+    enqueueRoomBroadcast(socket.currentRoom, broadcastDelay, async () => {
+      // Broadcast to other clients in the same room only
+      broadcastToRoom(socket.currentRoom, enriched, socket);
+
+      const controlPayload = await handler.getControlPayload(broadcastContext);
+
+      if (controlPayload) {
+        broadcastToControlRoom(socket.currentRoom, controlPayload);
+      }
+    });
+  });
+
+  socket.on("close", async (code, reason) => {
+    const wasControl = socket.isControlChannel;
+    const reasonText = reason.toString();
+    if (wasControl) {
+      await leaveControlRoom(socket, code, reasonText, clientAddress);
+    } else {
+      await leaveRoom(socket, code, reasonText, clientAddress);
+    }
+    console.log(
+      "Client disconnected",
+      clientAddress,
+      wasControl ? "channel=remotecontrol" : "",
+      "code=",
+      code,
+      "reason=",
+      reasonText
+    );
+  });
+
+  socket.on("error", (err) => {
+    console.error("WebSocket error from", clientAddress, err);
+  });
+});
+
+// Initialize room handlers before starting server
+await roomRegistry.initialize();
+
+server.listen(PORT, () => {
+  console.log(`WebSocket broadcast server listening (internal port ${PORT}).`);
+  console.log(`Public base: ${PUBLIC_BASE_URL}`);
+  console.log(`Health endpoint: ${PUBLIC_BASE_URL}/health`);
+  console.log(`WebSocket URL: ${PUBLIC_BASE_URL.replace(/^http/, "ws")}`);
+  console.log(
+    `Room handlers ready: ${roomRegistry.getRegisteredRooms().join(", ")}`
+  );
+});
+
+// Graceful shutdown (Cloud Run sends SIGTERM before instance stops)
+function shutdown() {
+  console.log("Shutdown signal received. Draining connections...");
+  if (heartbeatInterval) clearInterval(heartbeatInterval);
+  // Stop accepting new HTTP / WS
+  try {
+    server.close();
+  } catch (_) {}
+  // Close existing clients with a policy code
+  wss.clients.forEach((client) => {
+    try {
+      client.close(4002, "Server shutting down");
+    } catch (_) {}
+  });
+  // Force exit after a grace period (Cloud Run gives ~10s by default)
+  setTimeout(() => process.exit(0), 8000).unref();
+}
+
+process.on("SIGTERM", shutdown);
+process.on("SIGINT", shutdown);

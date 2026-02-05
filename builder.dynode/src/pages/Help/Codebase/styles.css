@@ -1,0 +1,31 @@
+.react-flow__node {
+  cursor: pointer;
+}
+
+.react-flow__node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .react-flow__node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.react-flow__minimap {
+  background-color: #f0f0f0;
+}
+
+[data-theme="dark"] .react-flow__minimap {
+  background-color: #262626;
+}
+
+/* Allow text selection in codebase page for copying references */
+.ant-typography,
+.ant-card,
+.ant-collapse,
+.ant-tag,
+.ant-select-selection-item {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}

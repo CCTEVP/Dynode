@@ -1,0 +1,11 @@
+include ../BoxLayout/default
+
+mixin clock-widget(clockElement)
+  - var idValue = "clock-widget-" + clockElement._id;
+  - var styleString = Object.entries(clockElement.styles || {}).map(([k, v]) => `${k}: ${v}`).join('; ')
+  - var timeZone = clockElement.timeZone || clockElement.timezone || 0
+  div(id=idValue, style=styleString, data-timezone=timeZone)
+    if clockElement.contents
+      each child in clockElement.contents
+        if child.BoxLayout
+          +box-layout(child.BoxLayout)

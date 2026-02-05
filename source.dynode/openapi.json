@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Dynode API",
+    "title": "Source API",
     "version": "1.0.0",
-    "description": "API documentation for Dynode endpoints"
+    "description": "API documentation for Source endpoints"
   },
   "servers": [
     {
-      "url": "http://localhost:3000",
-      "description": "Local server"
+      "url": "http://localhost:3333",
+      "description": "Primary server"
     }
   ],
   "components": {
@@ -622,6 +622,1327 @@
         }
       }
     },
+    "/data/folders": {
+      "get": {
+        "summary": "Get all folders",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Retrieve all folders for the current user/domain, sorted alphabetically by name",
+        "responses": {
+          "200": {
+            "description": "List of folders retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Folder"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Failed to retrieve folders"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new folder",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Create a new folder with optional parent and color. Max depth is 3 levels (0=root, 1=child, 2=grandchild)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the folder",
+                    "minLength": 1,
+                    "maxLength": 50
+                  },
+                  "parent": {
+                    "type": "string",
+                    "description": "Parent folder ID (ObjectId). Omit for root-level folder",
+                    "pattern": "^[0-9a-fA-F]{24}$"
+                  },
+                  "color": {
+                    "type": "string",
+                    "description": "Optional color code for the folder",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Folder created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Folder"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - invalid data or max depth exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Maximum folder depth (3 levels) exceeded."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Parent folder not found"
+          },
+          "500": {
+            "description": "Failed to create folder"
+          }
+        }
+      }
+    },
+    "/data/folders/{id}": {
+      "get": {
+        "summary": "Get a folder by ID",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Retrieve a single folder by its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Folder retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Folder"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid folder ID"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Folder not found"
+          },
+          "500": {
+            "description": "Failed to retrieve folder"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a folder",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Update folder name, parent, or color. Moving folders validates depth limits and prevents circular references",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Updated folder name",
+                    "minLength": 1,
+                    "maxLength": 50
+                  },
+                  "parent": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "New parent folder ID (ObjectId) or null to move to root",
+                    "pattern": "^[0-9a-fA-F]{24}$"
+                  },
+                  "color": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "Updated color code or null to remove color",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Folder updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Folder"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - invalid data, circular reference, or max depth exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Cannot move folder to one of its descendants."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Folder or parent folder not found"
+          },
+          "500": {
+            "description": "Failed to update folder"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a folder",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Delete a folder. Items in the folder remain, they just lose their folder reference. Cannot delete folders with subfolders",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Folder deleted successfully"
+          },
+          "400": {
+            "description": "Cannot delete folder with subfolders",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Cannot delete folder with subfolders. Please delete or move child folders first."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Folder not found"
+          },
+          "500": {
+            "description": "Failed to delete folder"
+          }
+        }
+      }
+    },
+    "/data/folders/{id}/breadcrumb": {
+      "get": {
+        "summary": "Get folder breadcrumb path",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Get the folder path from root to the specified folder",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Breadcrumb path retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string",
+                        "description": "Folder ID"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "Folder name"
+                      },
+                      "color": {
+                        "type": "string",
+                        "description": "Folder color (if set)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid folder ID"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Failed to build breadcrumb"
+          }
+        }
+      }
+    },
+    "/data/folders/{id}/depth": {
+      "get": {
+        "summary": "Get folder depth level",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Get the depth level of a folder (0=root, 1=child, 2=grandchild)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Depth level retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "depth": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 2,
+                      "description": "Folder depth level (0-2)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid folder ID"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Failed to calculate folder depth"
+          }
+        }
+      }
+    },
+    "/data/folders/{id}/isEmpty": {
+      "get": {
+        "summary": "Check if folder is empty",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Check if a folder has no items (creatives, sources, or assets) assigned to it",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Empty status retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "isEmpty": {
+                      "type": "boolean",
+                      "description": "True if folder has no items assigned"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid folder ID"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Folder not found"
+          },
+          "500": {
+            "description": "Failed to check folder status"
+          }
+        }
+      }
+    },
+    "/data/folders/{id}/items": {
+      "post": {
+        "summary": "Add item to folder",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Add a single creative, source, or asset to a folder",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "itemId"
+                ],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "creatives",
+                      "sources",
+                      "assets"
+                    ],
+                    "description": "The type of item to add"
+                  },
+                  "itemId": {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F]{24}$",
+                    "description": "Item ID (ObjectId)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Item added to folder successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Folder"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid folder ID, item type, or item ID"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Folder not found"
+          },
+          "500": {
+            "description": "Failed to add item to folder"
+          }
+        }
+      }
+    },
+    "/data/folders/{id}/items/{type}/{itemId}": {
+      "delete": {
+        "summary": "Remove item from folder",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Remove a single creative, source, or asset from a folder",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Folder ID (ObjectId)"
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "creatives",
+                "sources",
+                "assets"
+              ]
+            },
+            "description": "The type of item to remove"
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
+            },
+            "description": "Item ID (ObjectId)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Item removed from folder successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Folder"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid folder ID, item type, or item ID"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Failed to remove item from folder"
+          }
+        }
+      }
+    },
+    "/data/folders/bulk-assign": {
+      "post": {
+        "summary": "Bulk assign items to folder",
+        "tags": [
+          "Folders"
+        ],
+        "description": "Assign multiple items to a folder at once. If folderId is null, items are removed from all folders",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "itemType",
+                  "itemIds"
+                ],
+                "properties": {
+                  "folderId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^[0-9a-fA-F]{24}$",
+                    "description": "Target folder ID (ObjectId) or null to remove from all folders"
+                  },
+                  "itemType": {
+                    "type": "string",
+                    "enum": [
+                      "creatives",
+                      "sources",
+                      "assets"
+                    ],
+                    "description": "The type of items to assign"
+                  },
+                  "itemIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[0-9a-fA-F]{24}$"
+                    },
+                    "minItems": 1,
+                    "description": "Array of item IDs (ObjectIds) to assign"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Items assigned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Items assigned successfully."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid item type, folder ID, or item IDs"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Folder not found"
+          },
+          "500": {
+            "description": "Failed to assign items"
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Folder": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string",
+              "description": "Folder ID (ObjectId)"
+            },
+            "name": {
+              "type": "string",
+              "description": "Folder name"
+            },
+            "owner": {
+              "type": "object",
+              "properties": {
+                "domain": {
+                  "type": "string",
+                  "description": "Domain ID (ObjectId)"
+                },
+                "user": {
+                  "type": "string",
+                  "description": "User ID (ObjectId)"
+                }
+              },
+              "description": "Folder owner information"
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "creatives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Array of creative IDs (ObjectIds)"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Array of source IDs (ObjectIds)"
+                },
+                "assets": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Array of asset IDs (ObjectIds)"
+                }
+              },
+              "description": "Items contained in this folder"
+            },
+            "domains": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Array of domain IDs (ObjectIds) with access"
+            },
+            "parent": {
+              "type": "string",
+              "description": "Parent folder ID (ObjectId) - omitted for root folders"
+            },
+            "attributes": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "string",
+                  "description": "Folder color code"
+                }
+              },
+              "description": "Folder attributes"
+            },
+            "created": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Creation timestamp"
+            },
+            "updated": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Last update timestamp"
+            }
+          }
+        }
+      }
+    },
+    "/data/sources": {
+      "get": {
+        "summary": "Get all sources",
+        "tags": [
+          "Sources"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sources data retrieved"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Failed to retrieve sources"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new source",
+        "tags": [
+          "Sources"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the source"
+                  },
+                  "internal": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "name"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "The name of the internal source"
+                        },
+                        "variables": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "name",
+                              "type",
+                              "value"
+                            ],
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "description": "Variable name"
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "string",
+                                  "number",
+                                  "boolean",
+                                  "date",
+                                  "date-time",
+                                  "time",
+                                  "array",
+                                  "object"
+                                ],
+                                "description": "The data type of the variable"
+                              },
+                              "value": {
+                                "type": "string",
+                                "description": "The value of the variable (stored as string)"
+                              },
+                              "description": {
+                                "type": "string",
+                                "description": "Variable description (optional)"
+                              }
+                            }
+                          },
+                          "description": "Array of typed variables with values (no path field)"
+                        }
+                      }
+                    },
+                    "description": "Array of internal sources with variables"
+                  },
+                  "external": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "name",
+                        "source",
+                        "lifetime",
+                        "timeout",
+                        "pattern"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "The name of the endpoint"
+                        },
+                        "source": {
+                          "type": "string",
+                          "description": "The URL of the endpoint"
+                        },
+                        "lifetime": {
+                          "type": "integer",
+                          "description": "Cache TTL in seconds"
+                        },
+                        "timeout": {
+                          "type": "integer",
+                          "description": "Lock timeout in seconds"
+                        },
+                        "pattern": {
+                          "type": "object",
+                          "description": "JSON Schema pattern for response validation"
+                        },
+                        "status": {
+                          "type": "string",
+                          "description": "Validation status (optional)"
+                        },
+                        "variables": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "path",
+                              "name"
+                            ],
+                            "properties": {
+                              "path": {
+                                "type": "string",
+                                "description": "JSONPath or dot notation path to data node"
+                              },
+                              "name": {
+                                "type": "string",
+                                "description": "Variable name for mapping"
+                              },
+                              "type": {
+                                "type": "string",
+                                "description": "Data type (optional)"
+                              },
+                              "description": {
+                                "type": "string",
+                                "description": "Variable description (optional)"
+                              }
+                            }
+                          },
+                          "description": "Variable mappings for data extraction (has path, no value)"
+                        }
+                      }
+                    },
+                    "description": "Array of external endpoint configurations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Source created successfully"
+          },
+          "400": {
+            "description": "Bad request - missing required fields"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Failed to create source"
+          }
+        }
+      }
+    },
+    "/data/sources/{id}": {
+      "get": {
+        "summary": "Get source by ID",
+        "tags": [
+          "Sources"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The source's MongoDB _id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Source data retrieved"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Source not found"
+          },
+          "500": {
+            "description": "Failed to retrieve source"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update source by ID",
+        "tags": [
+          "Sources"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The source's MongoDB _id"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the source"
+                  },
+                  "internal": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "name"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "The name of the internal source"
+                        },
+                        "variables": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "name",
+                              "type",
+                              "value"
+                            ],
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "description": "Variable name"
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "string",
+                                  "number",
+                                  "boolean",
+                                  "date",
+                                  "date-time",
+                                  "time",
+                                  "array",
+                                  "object"
+                                ],
+                                "description": "The data type of the variable"
+                              },
+                              "value": {
+                                "type": "string",
+                                "description": "The value of the variable (stored as string)"
+                              },
+                              "description": {
+                                "type": "string",
+                                "description": "Variable description (optional)"
+                              }
+                            }
+                          },
+                          "description": "Array of typed variables with values (no path field)"
+                        }
+                      }
+                    },
+                    "description": "Array of internal sources with variables"
+                  },
+                  "external": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "name",
+                        "source",
+                        "lifetime",
+                        "timeout",
+                        "pattern"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "The name of the endpoint"
+                        },
+                        "source": {
+                          "type": "string",
+                          "description": "The URL of the endpoint"
+                        },
+                        "lifetime": {
+                          "type": "integer",
+                          "description": "Cache TTL in seconds"
+                        },
+                        "timeout": {
+                          "type": "integer",
+                          "description": "Lock timeout in seconds"
+                        },
+                        "pattern": {
+                          "type": "object",
+                          "description": "JSON Schema pattern for response validation"
+                        },
+                        "status": {
+                          "type": "string",
+                          "description": "Validation status (optional)"
+                        },
+                        "variables": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "path",
+                              "name"
+                            ],
+                            "properties": {
+                              "path": {
+                                "type": "string",
+                                "description": "JSONPath or dot notation path to data node"
+                              },
+                              "name": {
+                                "type": "string",
+                                "description": "Variable name for mapping"
+                              },
+                              "type": {
+                                "type": "string",
+                                "description": "Data type (optional)"
+                              },
+                              "description": {
+                                "type": "string",
+                                "description": "Variable description (optional)"
+                              }
+                            }
+                          },
+                          "description": "Variable mappings for data extraction (has path, no value)"
+                        }
+                      }
+                    },
+                    "description": "Array of external endpoint configurations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Source updated successfully"
+          },
+          "400": {
+            "description": "Bad request - invalid data"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Source not found"
+          },
+          "500": {
+            "description": "Failed to update source"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete source by ID",
+        "tags": [
+          "Sources"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The source's MongoDB _id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Source deleted successfully"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Source not found"
+          },
+          "500": {
+            "description": "Failed to delete source"
+          }
+        }
+      }
+    },
+    "/data/sources/{sourceId}/{endpointId}": {
+      "get": {
+        "summary": "Get internal variable or proxy request to external source with caching",
+        "tags": [
+          "Sources"
+        ],
+        "parameters": [
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The source's MongoDB _id"
+          },
+          {
+            "name": "endpointId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The internal variable or external endpoint's MongoDB _id"
+          },
+          {
+            "name": "forceUpdate",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "description": "Force cache update by bypassing cache check and fetching fresh data (external endpoints only)"
+          },
+          {
+            "name": "readOnly",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "description": "Return only buffer metadata without triggering cache logic (external endpoints only)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Internal variable data or full buffer document with cached data and metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "description": "Internal variable response",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "Variable name"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "Variable value"
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Variable type"
+                        },
+                        "description": {
+                          "type": "string",
+                          "description": "Variable description"
+                        },
+                        "_id": {
+                          "type": "string",
+                          "description": "Variable ID"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "description": "External endpoint buffer document",
+                      "properties": {
+                        "_id": {
+                          "type": "string",
+                          "description": "Buffer document ID (same as endpoint ID)"
+                        },
+                        "data": {
+                          "type": "object",
+                          "description": "Cached response data from external API"
+                        },
+                        "timestamp": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "When data was cached"
+                        },
+                        "httpStatus": {
+                          "type": "integer",
+                          "description": "HTTP status from external API"
+                        },
+                        "errorState": {
+                          "type": "string",
+                          "description": "Error information if applicable"
+                        },
+                        "created": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "When buffer was created"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "When buffer was last updated"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Source or endpoint not found"
+          },
+          "429": {
+            "description": "Request already in progress"
+          },
+          "500": {
+            "description": "Failed to fetch external data"
+          },
+          "502": {
+            "description": "Response validation failed"
+          }
+        }
+      }
+    },
     "/data/users/create": {
       "post": {
         "summary": "Register a new user",
@@ -874,6 +2195,65 @@
                     },
                     "asset": {
                       "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/files/log": {
+      "post": {
+        "summary": "Post log records",
+        "tags": [
+          "Files"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": "string",
+                    "enum": [
+                      "info",
+                      "error",
+                      "warn",
+                      "debug"
+                    ]
+                  },
+                  "message": {
+                    "type": "string"
+                  },
+                  "meta": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "level",
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Logs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
                     }
                   }
                 }

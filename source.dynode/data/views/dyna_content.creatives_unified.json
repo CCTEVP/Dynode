@@ -3,7 +3,7 @@
   "pipeline": [
     {
       "$addFields": {
-        "origin": "creatives_assemblies"
+        "origin": "assemblies"
       }
     },
     {
@@ -28,6 +28,39 @@
             }
           }
         ]
+      }
+    },
+    {
+      "$lookup": {
+        "from": "formats",
+        "localField": "format",
+        "foreignField": "_id",
+        "as": "formatArray"
+      }
+    },
+    {
+      "$addFields": {
+        "format": {
+          "$cond": {
+            "if": {
+              "$gt": [
+                {
+                  "$size": "$formatArray"
+                },
+                0
+              ]
+            },
+            "then": {
+              "$arrayElemAt": ["$formatArray", 0]
+            },
+            "else": "$format"
+          }
+        }
+      }
+    },
+    {
+      "$project": {
+        "formatArray": 0
       }
     }
   ]

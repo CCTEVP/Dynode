@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant Client
+  participant API as Source API
+  participant SCR as scrapper.ts
+  participant DB as MongoDB
+
+  Client->>API: PUT /data/creatives/dynamics/:id (body)
+  API->>SCR: getComponents(id, body)
+  SCR->>API: GET /data/creatives/:id?children=true
+  API-->>SCR: 200 creative JSON
+  SCR-->>API: components, libraries, assets
+  API->>DB: upsert CreativeDynamicCollection
+  DB-->>API: ok
+  API-->>Client: 200 updated

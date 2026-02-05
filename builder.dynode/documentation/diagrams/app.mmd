@@ -1,0 +1,22 @@
+flowchart LR
+  APP[App.tsx]
+  L_MAIN[MainLayout]
+  L_FULL[FullLayout]
+  R_ROOT["/"]
+  R_HELP["/help"]
+  R_HELP_COMP["/help/components"]
+  R_CREATIVES["/creatives"]
+  R_EDIT["/creatives/edit/:id"]
+  R_ASSETS["/assets/upload"]
+  R_TEMPLATES["/templates"]
+  R_COMMUNITY["/community"]
+
+  APP --> L_MAIN --> R_ROOT
+  APP --> L_FULL
+  L_MAIN --> R_HELP
+  L_MAIN --> R_HELP_COMP
+  L_MAIN --> R_CREATIVES
+  L_MAIN --> R_TEMPLATES
+  L_MAIN --> R_COMMUNITY
+  L_FULL --> R_EDIT
+  L_MAIN --> R_ASSETS

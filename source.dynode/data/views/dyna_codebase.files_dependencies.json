@@ -1,0 +1,193 @@
+{
+  "viewOn": "builder",
+  "pipeline": [
+    {
+      "$addFields": {
+        "project": "builder"
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "echo",
+        "pipeline": [{ "$addFields": { "project": "echo" } }]
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "render",
+        "pipeline": [{ "$addFields": { "project": "render" } }]
+      }
+    },
+    {
+      "$unionWith": {
+        "coll": "source",
+        "pipeline": [{ "$addFields": { "project": "source" } }]
+      }
+    },
+    {
+      "$addFields": {
+        "depIds": {
+          "$filter": {
+            "input": {
+              "$map": {
+                "input": "$internalDependencies",
+                "as": "dep",
+                "in": "$$dep.id"
+              }
+            },
+            "as": "id",
+            "cond": { "$ne": ["$$id", null] }
+          }
+        }
+      }
+    },
+    {
+      "$lookup": {
+        "from": "builder",
+        "localField": "depIds",
+        "foreignField": "_id",
+        "as": "deps_builder"
+      }
+    },
+    {
+      "$lookup": {
+        "from": "echo",
+        "localField": "depIds",
+        "foreignField": "_id",
+        "as": "deps_echo"
+      }
+    },
+    {
+      "$lookup": {
+        "from": "render",
+        "localField": "depIds",
+        "foreignField": "_id",
+        "as": "deps_render"
+      }
+    },
+    {
+      "$lookup": {
+        "from": "source",
+        "localField": "depIds",
+        "foreignField": "_id",
+        "as": "deps_source"
+      }
+    },
+    {
+      "$addFields": {
+        "allDeps": {
+          "$concatArrays": [
+            "$deps_builder",
+            "$deps_echo",
+            "$deps_render",
+            "$deps_source"
+          ]
+        }
+      }
+    },
+    {
+      "$addFields": {
+        "directDependencies": {
+          "$map": {
+            "input": "$allDeps",
+            "as": "dep",
+            "in": {
+              "_id": "$$dep._id",
+              "filename": "$$dep.filename",
+              "path": "$$dep.path",
+              "category": "$$dep.category",
+              "project": {
+                "$cond": {
+                  "if": { "$eq": [{ "$type": "$$dep.project" }, "missing"] },
+                  "then": {
+                    "$switch": {
+                      "branches": [
+                        {
+                          "case": {
+                            "$in": [
+                              "$$dep._id",
+                              {
+                                "$map": {
+                                  "input": "$deps_builder",
+                                  "as": "d",
+                                  "in": "$$d._id"
+                                }
+                              }
+                            ]
+                          },
+                          "then": "builder"
+                        },
+                        {
+                          "case": {
+                            "$in": [
+                              "$$dep._id",
+                              {
+                                "$map": {
+                                  "input": "$deps_echo",
+                                  "as": "d",
+                                  "in": "$$d._id"
+                                }
+                              }
+                            ]
+                          },
+                          "then": "echo"
+                        },
+                        {
+                          "case": {
+                            "$in": [
+                              "$$dep._id",
+                              {
+                                "$map": {
+                                  "input": "$deps_render",
+                                  "as": "d",
+                                  "in": "$$d._id"
+                                }
+                              }
+                            ]
+                          },
+                          "then": "render"
+                        },
+                        {
+                          "case": {
+                            "$in": [
+                              "$$dep._id",
+                              {
+                                "$map": {
+                                  "input": "$deps_source",
+                                  "as": "d",
+                                  "in": "$$d._id"
+                                }
+                              }
+                            ]
+                          },
+                          "then": "source"
+                        }
+                      ],
+                      "default": "unknown"
+                    }
+                  },
+                  "else": "$$dep.project"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$addFields": {
+        "dependencyCount": { "$size": "$directDependencies" }
+      }
+    },
+    {
+      "$project": {
+        "depIds": 0,
+        "allDeps": 0,
+        "deps_builder": 0,
+        "deps_echo": 0,
+        "deps_render": 0,
+        "deps_source": 0
+      }
+    }
+  ]
+}

@@ -1,70 +1,96 @@
+// Load environment variables first (before any other imports)
+import dotenv from "dotenv";
+dotenv.config();
+
 import https from "https";
 import fs from "fs";
+import os from "os"; // ✅ Added to get hostname
 import express from "express";
 import path from "path";
 import { Request, Response, NextFunction } from "express";
 import indexRouter from "./routes/index";
-
+import cacheRouter from "./routes/cache";
 import logger from "./services/logger";
+import config from "./config";
 
 const app = express();
 
 console.log("indexRouter:", typeof indexRouter);
 
+// Middleware setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
+app.use("/cache", cacheRouter); // Cache management API
 
-// Load environment variables from .env file
-// This line should be at the very top of your app.js
-var createError = require("http-errors");
-var cookieParser = require("cookie-parser");
-var loggerMiddleware = require("morgan");
+// Additional imports (converted to ES6)
+import createError from "http-errors";
+import cookieParser from "cookie-parser";
+import loggerMiddleware from "morgan";
 
-require("dotenv").config();
-
-// view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.use(loggerMiddleware("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+// Removed duplicate static middleware (already defined above)
 
-// request logger middleware
+// Request logger
 app.use(function (req: Request, res: Response, next: NextFunction) {
   logger.info(`${req.method} ${req.originalUrl} - ${req.ip}`);
   next();
 });
 
-// catch 404 and forward to error handler
+// Catch 404 and forward to error handler
 app.use(function (req: Request, res: Response, next: NextFunction) {
   next(createError(404));
 });
 
-// error handler
+// Error handler
 app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
   res.render("error");
 });
-const PORT = process.env.PORT_ENV || 5000;
 
-if (process.env.NODE_ENV !== "development") {
-  const pfx = fs.readFileSync("./cert/render.dynode.pfx");
-  const passphrase = "YourVeryStrongAndSecretPasswordHere"; // The password you used in PowerShell
-  https.createServer({ pfx, passphrase }, app).listen(PORT, () => {
-    console.log(`🚀 HTTPS server listening at https://localhost:${PORT}`);
-  });
+// Server setup
+const PORT = config.port;
+const HOST = "0.0.0.0"; // ✅ Listen on all interfaces
+
+if (config.https) {
+  try {
+    const pfx = fs.readFileSync("./cert/render.dynode.pfx");
+    https.createServer({ pfx }, app).listen(PORT, HOST, () => {
+      const base =
+        config.externalOrigins.render ||
+        config.externalOrigins.source ||
+        `https://${os.hostname()}:${PORT}`; // ✅ Use hostname for friendly access
+      console.log(`🚀 HTTPS server listening (env=${config.env}) base=${base}`);
+      console.log(`🖥️ Hostname: ${os.hostname()}`);
+    });
+  } catch (e) {
+    console.warn(
+      "⚠️ HTTPS startup failed, falling back to HTTP:",
+      (e as Error).message
+    );
+    app.listen(PORT, HOST, () => {
+      const base =
+        config.externalOrigins.render ||
+        config.externalOrigins.source ||
+        `http://${os.hostname()}:${PORT}`; // ✅ Use hostname for fallback
+      console.log(`🚀 HTTP server listening (env=${config.env}) base=${base}`);
+      console.log(`🖥️ Hostname: ${os.hostname()}`);
+    });
+  }
 } else {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server listening at http://localhost:${PORT}`);
+  app.listen(PORT, HOST, () => {
+    const base =
+      config.externalOrigins.render ||
+      config.externalOrigins.source ||
+      `http://${os.hostname()}:${PORT}`; // ✅ Use hostname for fallback
+    console.log(`🚀 HTTP server listening (env=${config.env}) base=${base}`);
+    console.log(`🖥️ Hostname: ${os.hostname()}`);
   });
 }

@@ -1,0 +1,4796 @@
+[
+  {
+    "filename": ".dockerignore",
+    "path": ".dockerignore",
+    "created": "2025-09-30T08:56:44.307Z",
+    "updated": "2025-09-30T08:56:44.308Z",
+    "size": 133,
+    "description": "Docker build exclusion patterns preventing development files and dependencies from being included in container images.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "deployment",
+    "_id": "05a721ebe3ba0754116825ed1359ff1785f4bbac",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "13",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "6",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": ".env",
+    "path": ".env",
+    "created": "2025-09-30T09:06:41.471Z",
+    "updated": "2025-11-03T08:23:06.058Z",
+    "size": 615,
+    "description": "Development environment variables for local runtime including MongoDB connection, port configuration, JWT secret, and service URLs.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "config",
+    "_id": "3c84dcdc6bbe3d7817c49dcdc327b926fea1808a",
+    "history": [],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "14",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "7",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": ".env.dev",
+    "path": ".env.dev",
+    "created": "2026-01-15T13:12:48.029Z",
+    "updated": "2025-11-03T08:23:06.058Z",
+    "size": 615,
+    "description": "Development environment configuration with localhost service URLs and port settings for local testing.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "config",
+    "_id": "bf56cccda2cc742301e3bcfd8204c4e7506242fb",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "15",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "8",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": ".env.prod",
+    "path": ".env.prod",
+    "created": "2026-01-15T13:12:59.179Z",
+    "updated": "2026-01-15T13:13:23.658Z",
+    "size": 614,
+    "description": "Production environment configuration with HTTPS service endpoints and production-ready security settings.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "config",
+    "_id": "a0177f68c1620a84039b07575ad1a1e25efc0975",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "16",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "9",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": ".env.stag",
+    "path": ".env.stag",
+    "created": "2026-01-15T13:13:27.386Z",
+    "updated": "2026-01-15T13:13:23.658Z",
+    "size": 614,
+    "description": "Staging environment configuration with HTTPS service endpoints for pre-production testing and validation.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "config",
+    "_id": "1459b0ceb3686928ea7f89ce69d22af1088171b7",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "17",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "10",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": ".gitignore",
+    "path": ".gitignore",
+    "created": "2025-09-30T08:56:44.308Z",
+    "updated": "2025-09-30T08:56:44.308Z",
+    "size": 277,
+    "description": "Git version control exclusion patterns for build artifacts, dependencies, logs, and environment-specific files.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "config",
+    "_id": "a5cc2925ca8258af241be7e5b0381edf30266302",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "18",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "11",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "tasks.json",
+    "path": ".vscode/tasks.json",
+    "created": "2026-01-15T14:52:33.159Z",
+    "updated": "2026-01-15T14:53:20.184Z",
+    "size": 341,
+    "description": "VS Code task definitions for running development server and build scripts within the editor.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "data",
+    "_id": "7f05ded1fbcd0870d0e99b87d9a4bf3c9dea4c1b",
+    "history": [],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "1",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "12",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "app.ts",
+    "path": "app.ts",
+    "created": "2025-09-30T08:56:44.309Z",
+    "updated": "2026-01-23T09:30:10.346Z",
+    "size": 3251,
+    "description": "Express application entry point configuring middleware, routes, view engine, error handling, and HTTPS server with certificate support.",
+    "internalDependencies": [
+      {
+        "path": "./routes/index",
+        "resolvedPath": "routes/index.ts",
+        "id": "5d2a13840e2b59decfb02f8a5d07f44f6fe5dd66"
+      },
+      {
+        "path": "./routes/cache",
+        "resolvedPath": "routes/cache.ts",
+        "id": "42cc2c21a671cb3d9cb2e880ecda1c12c6abd6e2"
+      },
+      {
+        "path": "./services/logger",
+        "resolvedPath": "services/logger.ts",
+        "id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0"
+      },
+      {
+        "path": "./config",
+        "resolvedPath": "config.ts",
+        "id": "6c46effb109a57603f0c1712245f2abb56a631f7"
+      }
+    ],
+    "externalDependencies": [
+      "dotenv",
+      "https",
+      "fs",
+      "os",
+      "express",
+      "path",
+      "http-errors",
+      "cookie-parser",
+      "morgan"
+    ],
+    "category": "source",
+    "_id": "94012cbdbf0e0cf94a72971e951224b4fef1ce18",
+    "history": [
+      {
+        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "author": "CCTEvalencia",
+        "date": "2025-10-28T16:46:09+01:00",
+        "message": "General Standardization"
+      },
+      {
+        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T17:15:27+02:00",
+        "message": "Development + Docker environments"
+      },
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 4,
+    "externalDependencyLabels": [
+      "dotenv",
+      "https",
+      "fs",
+      "os",
+      "express",
+      "path",
+      "http-errors",
+      "cookie-parser",
+      "morgan"
+    ],
+    "directDependencies": [
+      {
+        "_id": "5d2a13840e2b59decfb02f8a5d07f44f6fe5dd66",
+        "filename": "index.ts",
+        "path": "routes/index.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "42cc2c21a671cb3d9cb2e880ecda1c12c6abd6e2",
+        "filename": "cache.ts",
+        "path": "routes/cache.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+        "filename": "logger.ts",
+        "path": "services/logger.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "6c46effb109a57603f0c1712245f2abb56a631f7",
+        "filename": "config.ts",
+        "path": "config.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": 0,
+    "isEntryPoint": true,
+    "folKey": "19",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "1",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "www",
+    "path": "bin/www",
+    "created": "2025-09-30T08:56:44.309Z",
+    "updated": "2025-10-28T11:18:22.342Z",
+    "size": 1666,
+    "description": "Node.js binary wrapper script for starting HTTP server with port normalization and error handling.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "5c26cf27b4307ebaab9d7ca44d1f72181076ad4f",
+    "history": [
+      {
+        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "author": "CCTEvalencia",
+        "date": "2025-10-28T16:46:09+01:00",
+        "message": "General Standardization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": 0,
+    "isEntryPoint": true,
+    "folKey": "2",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "2",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "render.dynode.pfx",
+    "path": "cert/render.dynode.pfx",
+    "created": "2025-09-30T08:56:44.310Z",
+    "updated": "2025-09-30T08:56:44.310Z",
+    "size": 2797,
+    "description": "SSL/TLS certificate bundle for HTTPS server encryption in development and production environments.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "security",
+    "_id": "99c94d2f600ed09763cc66a9fe63314de7c2e001",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "13",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "CHANGELOG.md",
+    "path": "CHANGELOG.md",
+    "created": "2025-09-30T08:56:44.308Z",
+    "updated": "2025-09-30T08:56:44.308Z",
+    "size": 475,
+    "description": "Version history documenting project creation, Express generator usage, and Visual Studio project setup.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "ab09011fa121d0a2bb9fa4ca76094f2482b902b7",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "20",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "14",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "config.ts",
+    "path": "config.ts",
+    "created": "2025-09-30T10:05:18.633Z",
+    "updated": "2025-09-30T15:11:14.627Z",
+    "size": 3332,
+    "description": "Centralized configuration module defining environment-specific settings for ports, origins, service URLs, HTTPS, and JWT secrets.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "6c46effb109a57603f0c1712245f2abb56a631f7",
+    "history": [
+      {
+        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T17:15:27+02:00",
+        "message": "Development + Docker environments"
+      },
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [
+      {
+        "_id": "94012cbdbf0e0cf94a72971e951224b4fef1ce18",
+        "filename": "app.ts",
+        "path": "app.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "4c741a24ad096581cbb1cd38af932ab085e760ea",
+        "filename": "auth.ts",
+        "path": "middleware/auth.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
+        "filename": "default.ts",
+        "path": "routes/dynamics/default.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f92679e68bdadd591e9037860bfbdc572593743c",
+        "filename": "bundler.ts",
+        "path": "services/bundler.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+        "filename": "logger.ts",
+        "path": "services/logger.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": 1,
+    "isEntryPoint": false,
+    "folKey": "21",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "3",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "Dockerfile",
+    "path": "Dockerfile",
+    "created": "2025-09-30T08:56:44.308Z",
+    "updated": "2025-09-30T13:07:50.879Z",
+    "size": 1611,
+    "description": "Multi-stage container build configuration compiling TypeScript, installing dependencies, and preparing production runtime environment.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "deployment",
+    "_id": "6651ddff6eb82c840ced7c1dddee15c6e1913dd4",
+    "history": [
+      {
+        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T17:15:27+02:00",
+        "message": "Development + Docker environments"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "22",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "15",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "app.mmd",
+    "path": "documentation/diagrams/app.mmd",
+    "created": "2025-09-30T08:56:44.311Z",
+    "updated": "2025-09-30T08:56:44.311Z",
+    "size": 79,
+    "description": "Mermaid flowchart diagram illustrating high-level application architecture and route structure.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "daaaf58442e4d6e93314280872a500602d50a0b6",
+    "history": [
+      {
+        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T13:02:35+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:13:53+02:00",
+        "message": "Render flowchart updated"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "4.1",
+    "folDepth": 2,
+    "folParent": "4",
+    "relKey": "16",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "bundler.mmd",
+    "path": "documentation/diagrams/bundler.mmd",
+    "created": "2025-09-30T08:56:44.311Z",
+    "updated": "2025-09-30T08:56:44.311Z",
+    "size": 532,
+    "description": "Mermaid flowchart diagram documenting asset bundling and minification process flow.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "1ea82eaaa710eee3d09bcaa5a2a38ba3ae364c1c",
+    "history": [
+      {
+        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T13:02:35+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:21:33+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:13:53+02:00",
+        "message": "Render flowchart updated"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "4.1",
+    "folDepth": 2,
+    "folParent": "4",
+    "relKey": "17",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "dynamics-flow.mmd",
+    "path": "documentation/diagrams/dynamics-flow.mmd",
+    "created": "2025-09-30T08:56:44.311Z",
+    "updated": "2025-09-30T08:56:44.311Z",
+    "size": 771,
+    "description": "Mermaid flowchart diagram showing creative rendering data flow from request to response.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "3d3b2f13fd8651b1aecb8ec376303801b5c9bf3d",
+    "history": [
+      {
+        "commitId": "637e8d4510f6f88675ce8cd603f3b5cb6ceb1685",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T14:27:09+02:00",
+        "message": "Builder flowchart updated"
+      },
+      {
+        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T13:02:35+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "bf55d5f7763934ae97af1668506b0b840fe888f1",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:28:07+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:21:33+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:13:53+02:00",
+        "message": "Render flowchart updated"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "4.1",
+    "folDepth": 2,
+    "folParent": "4",
+    "relKey": "18",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "dynamics-routes.mmd",
+    "path": "documentation/diagrams/dynamics-routes.mmd",
+    "created": "2025-09-30T08:56:44.311Z",
+    "updated": "2025-09-30T08:56:44.311Z",
+    "size": 114,
+    "description": "Mermaid flowchart diagram documenting dynamics route endpoints and parameters.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "b3f9eb1cefe72af11b658413cb5ef7e0972f04e8",
+    "history": [
+      {
+        "commitId": "637e8d4510f6f88675ce8cd603f3b5cb6ceb1685",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T14:27:09+02:00",
+        "message": "Builder flowchart updated"
+      },
+      {
+        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T13:02:35+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "bf55d5f7763934ae97af1668506b0b840fe888f1",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:28:07+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:21:33+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:13:53+02:00",
+        "message": "Render flowchart updated"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "4.1",
+    "folDepth": 2,
+    "folParent": "4",
+    "relKey": "19",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "logging.mmd",
+    "path": "documentation/diagrams/logging.mmd",
+    "created": "2025-09-30T08:56:44.312Z",
+    "updated": "2025-09-30T08:56:44.312Z",
+    "size": 158,
+    "description": "Mermaid flowchart diagram illustrating centralized logging service integration and message flow.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "e3d4e19d40a818898ff8bcef4458f7efe49629f8",
+    "history": [
+      {
+        "commitId": "637e8d4510f6f88675ce8cd603f3b5cb6ceb1685",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T14:27:09+02:00",
+        "message": "Builder flowchart updated"
+      },
+      {
+        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T13:02:35+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:21:33+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:13:53+02:00",
+        "message": "Render flowchart updated"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "4.1",
+    "folDepth": 2,
+    "folParent": "4",
+    "relKey": "20",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "auth.ts",
+    "path": "middleware/auth.ts",
+    "created": "2025-09-30T08:56:44.312Z",
+    "updated": "2025-09-30T10:06:29.548Z",
+    "size": 720,
+    "description": "JWT authentication middleware verifying bearer tokens and attaching user data to Express requests.",
+    "internalDependencies": [
+      {
+        "path": "../config",
+        "resolvedPath": "config.ts",
+        "id": "6c46effb109a57603f0c1712245f2abb56a631f7"
+      }
+    ],
+    "externalDependencies": [
+      "express",
+      "jsonwebtoken"
+    ],
+    "category": "source",
+    "_id": "4c741a24ad096581cbb1cd38af932ab085e760ea",
+    "history": [
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "express",
+      "jsonwebtoken"
+    ],
+    "directDependencies": [
+      {
+        "_id": "6c46effb109a57603f0c1712245f2abb56a631f7",
+        "filename": "config.ts",
+        "path": "config.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "5",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "21",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "CreativeAssembly.ts",
+    "path": "models_none/CreativeAssembly.ts",
+    "created": "2025-09-30T08:56:44.312Z",
+    "updated": "2025-09-30T08:56:44.313Z",
+    "size": 499,
+    "description": "Mongoose schema definition for Assembly-type creatives extending base Creative interface.",
+    "internalDependencies": [
+      {
+        "path": "./shared/Creative",
+        "resolvedPath": "models_none/shared/Creative.ts",
+        "id": "1c741b31bfae37878ee167f72f69983dbbef5c87"
+      }
+    ],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "68ac47b19e462c4f8bc7a93e64c2f10387044c7e",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [
+      {
+        "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
+        "filename": "Creative.ts",
+        "path": "models_none/shared/Creative.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "22",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "CreativeDynamic.ts",
+    "path": "models_none/CreativeDynamic.ts",
+    "created": "2025-09-30T08:56:44.313Z",
+    "updated": "2025-09-30T08:56:44.313Z",
+    "size": 578,
+    "description": "Mongoose schema definition for Dynamic-type creatives with data-driven content rendering.",
+    "internalDependencies": [
+      {
+        "path": "./shared/Creative",
+        "resolvedPath": "models_none/shared/Creative.ts",
+        "id": "1c741b31bfae37878ee167f72f69983dbbef5c87"
+      }
+    ],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "627deb80c137510a8449f353e79fa68d6d02e78a",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [
+      {
+        "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
+        "filename": "Creative.ts",
+        "path": "models_none/shared/Creative.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "23",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "CreativeInteractive.ts",
+    "path": "models_none/CreativeInteractive.ts",
+    "created": "2025-09-30T08:56:44.313Z",
+    "updated": "2025-09-30T08:56:44.313Z",
+    "size": 527,
+    "description": "Mongoose schema definition for Interactive-type creatives with user interaction capabilities.",
+    "internalDependencies": [
+      {
+        "path": "./shared/Creative",
+        "resolvedPath": "models_none/shared/Creative.ts",
+        "id": "1c741b31bfae37878ee167f72f69983dbbef5c87"
+      }
+    ],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "92742b0786494d076c485fed33d19156323792e2",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [
+      {
+        "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
+        "filename": "Creative.ts",
+        "path": "models_none/shared/Creative.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "24",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "CreativeUnified.ts",
+    "path": "models_none/CreativeUnified.ts",
+    "created": "2025-09-30T08:56:44.313Z",
+    "updated": "2025-09-30T08:56:44.313Z",
+    "size": 490,
+    "description": "Mongoose schema definition for Unified-type creatives combining multiple creative patterns.",
+    "internalDependencies": [
+      {
+        "path": "./shared/Creative",
+        "resolvedPath": "models_none/shared/Creative.ts",
+        "id": "1c741b31bfae37878ee167f72f69983dbbef5c87"
+      }
+    ],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "819e00325762e7605bda7babfc328361f6c2bc40",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [
+      {
+        "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
+        "filename": "Creative.ts",
+        "path": "models_none/shared/Creative.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "25",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "Cache.ts",
+    "path": "models_none/shared/Cache.ts",
+    "created": "2025-09-30T08:56:44.314Z",
+    "updated": "2025-09-30T08:56:44.314Z",
+    "size": 296,
+    "description": "Mongoose schema definition for cache metadata tracking creative asset caching state.",
+    "internalDependencies": [],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "e76d33ba3d4c4e0382c4de2c0484aa32a74dd981",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [],
+    "reverseDependencies": [
+      {
+        "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
+        "filename": "Creative.ts",
+        "path": "models_none/shared/Creative.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6.1",
+    "folDepth": 2,
+    "folParent": "6",
+    "relKey": "26",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "Change.ts",
+    "path": "models_none/shared/Change.ts",
+    "created": "2025-09-30T08:56:44.314Z",
+    "updated": "2025-09-30T08:56:44.314Z",
+    "size": 520,
+    "description": "Mongoose schema definition for change tracking recording creative modifications and version history.",
+    "internalDependencies": [],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "94e04227ed834364038cf2333310467112f5bf07",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [],
+    "reverseDependencies": [
+      {
+        "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
+        "filename": "Creative.ts",
+        "path": "models_none/shared/Creative.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "ee2011dd85e61507901670cce3234479293c9556",
+        "filename": "User.ts",
+        "path": "models_none/User.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6.1",
+    "folDepth": 2,
+    "folParent": "6",
+    "relKey": "27",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "Creative.ts",
+    "path": "models_none/shared/Creative.ts",
+    "created": "2025-09-30T08:56:44.314Z",
+    "updated": "2025-09-30T08:56:44.314Z",
+    "size": 1480,
+    "description": "Base Mongoose schema for all creative types defining common fields including resources, behaviors, and change tracking.",
+    "internalDependencies": [
+      {
+        "path": "./Change",
+        "resolvedPath": "models_none/shared/Change.ts",
+        "id": "94e04227ed834364038cf2333310467112f5bf07"
+      },
+      {
+        "path": "./Cache",
+        "resolvedPath": "models_none/shared/Cache.ts",
+        "id": "e76d33ba3d4c4e0382c4de2c0484aa32a74dd981"
+      }
+    ],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 2,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [
+      {
+        "_id": "94e04227ed834364038cf2333310467112f5bf07",
+        "filename": "Change.ts",
+        "path": "models_none/shared/Change.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "e76d33ba3d4c4e0382c4de2c0484aa32a74dd981",
+        "filename": "Cache.ts",
+        "path": "models_none/shared/Cache.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "68ac47b19e462c4f8bc7a93e64c2f10387044c7e",
+        "filename": "CreativeAssembly.ts",
+        "path": "models_none/CreativeAssembly.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "627deb80c137510a8449f353e79fa68d6d02e78a",
+        "filename": "CreativeDynamic.ts",
+        "path": "models_none/CreativeDynamic.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "92742b0786494d076c485fed33d19156323792e2",
+        "filename": "CreativeInteractive.ts",
+        "path": "models_none/CreativeInteractive.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "819e00325762e7605bda7babfc328361f6c2bc40",
+        "filename": "CreativeUnified.ts",
+        "path": "models_none/CreativeUnified.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6.1",
+    "folDepth": 2,
+    "folParent": "6",
+    "relKey": "28",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "User.ts",
+    "path": "models_none/User.ts",
+    "created": "2025-09-30T08:56:44.313Z",
+    "updated": "2025-09-30T08:56:44.313Z",
+    "size": 621,
+    "description": "Mongoose schema definition for user authentication and authorization with change tracking integration.",
+    "internalDependencies": [
+      {
+        "path": "./shared/Change",
+        "resolvedPath": "models_none/shared/Change.ts",
+        "id": "94e04227ed834364038cf2333310467112f5bf07"
+      }
+    ],
+    "externalDependencies": [
+      "mongoose"
+    ],
+    "category": "source",
+    "_id": "ee2011dd85e61507901670cce3234479293c9556",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "mongoose"
+    ],
+    "directDependencies": [
+      {
+        "_id": "94e04227ed834364038cf2333310467112f5bf07",
+        "filename": "Change.ts",
+        "path": "models_none/shared/Change.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "6",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "29",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "api.dynode.esproj.CoreCompileInputs.cache",
+    "path": "obj/Debug/api.dynode.esproj.CoreCompileInputs.cache",
+    "created": "2025-09-30T08:56:44.315Z",
+    "updated": "2025-09-30T08:56:44.315Z",
+    "size": 0,
+    "description": "Visual Studio build cache file tracking compilation inputs for incremental build optimization.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "build-cache",
+    "_id": "29ddb1f5200a7915819e253aa236cce4686de256",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "7.1",
+    "folDepth": 2,
+    "folParent": "7",
+    "relKey": "30",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "api.dynode.esproj.FileListAbsolute.txt",
+    "path": "obj/Debug/api.dynode.esproj.FileListAbsolute.txt",
+    "created": "2025-09-30T08:56:44.315Z",
+    "updated": "2025-09-30T08:56:44.315Z",
+    "size": 95,
+    "description": "Visual Studio build cache listing absolute paths to compiled project files.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "data",
+    "_id": "5aab24a767fb2e125bec170e83505388caebd0a9",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "7.1",
+    "folDepth": 2,
+    "folParent": "7",
+    "relKey": "31",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "package.g.props",
+    "path": "obj/Debug/package.g.props",
+    "created": "2025-09-30T08:56:44.315Z",
+    "updated": "2025-09-30T08:56:44.315Z",
+    "size": 3739,
+    "description": "MSBuild properties file generated by Visual Studio for package restore and build configuration.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "build-cache",
+    "_id": "6518363bee9e801607fb432be65a49014f689beb",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "7.1",
+    "folDepth": 2,
+    "folParent": "7",
+    "relKey": "32",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "render.dynode.esproj.CoreCompileInputs.cache",
+    "path": "obj/Debug/render.dynode.esproj.CoreCompileInputs.cache",
+    "created": "2025-09-30T08:56:44.316Z",
+    "updated": "2025-09-30T08:56:44.316Z",
+    "size": 0,
+    "description": "Visual Studio build cache file tracking TypeScript compilation inputs for incremental builds.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "build-cache",
+    "_id": "980056837f7efef11f37457a6a116ad6350d43fb",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "7.1",
+    "folDepth": 2,
+    "folParent": "7",
+    "relKey": "33",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "render.dynode.esproj.FileListAbsolute.txt",
+    "path": "obj/Debug/render.dynode.esproj.FileListAbsolute.txt",
+    "created": "2025-09-30T08:56:44.316Z",
+    "updated": "2025-09-30T08:56:44.316Z",
+    "size": 101,
+    "description": "Visual Studio build cache listing absolute paths to compiled output files.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "data",
+    "_id": "45d92f21e145f2841288ad5fd90b382155e1b1e9",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "7.1",
+    "folDepth": 2,
+    "folParent": "7",
+    "relKey": "34",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "package-lock.json",
+    "path": "package-lock.json",
+    "created": "2025-09-30T08:56:44.316Z",
+    "updated": "2026-01-23T09:30:19.978Z",
+    "size": 197392,
+    "description": "NPM dependency lock file ensuring consistent package versions across installations and environments.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "data",
+    "_id": "fa288d1472d29beccb489a676f68739ad365fc47",
+    "history": [
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "23",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "35",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "package.json",
+    "path": "package.json",
+    "created": "2025-09-30T08:56:44.317Z",
+    "updated": "2026-01-27T15:56:11.464Z",
+    "size": 1654,
+    "description": "NPM package manifest defining dependencies, scripts, and project metadata for render.dynode service.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "project-meta",
+    "_id": "7030d0b2f71b999ff89a343de08c414af32fc93a",
+    "history": [
+      {
+        "commitId": "1ecb5b86bae202f3589e1dd5da717a3679ca4788",
+        "author": "CCTEvalencia",
+        "date": "2026-01-20T16:29:24+01:00",
+        "message": "Consolidation System Fixed"
+      },
+      {
+        "commitId": "4c173f8ad935c4c14575e53a9368780022ab6475",
+        "author": "CCTEvalencia",
+        "date": "2026-01-20T14:55:22+01:00",
+        "message": "Consolidation File System Implemented"
+      },
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "24",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "36",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "logo.svg",
+    "path": "public/images/logo.svg",
+    "created": "2025-09-30T08:56:44.317Z",
+    "updated": "2025-09-30T08:56:44.317Z",
+    "size": 2094,
+    "description": "SVG logo graphic for application branding displayed in browser tab and rendered pages.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "image",
+    "_id": "2ebef2c70ba50a2b53bcbf6964a738fa4b1cb5d7",
+    "history": [
+      {
+        "commitId": "c21591feaccbb37c439a0d258dc0fca3f1eec03b",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T13:30:10+02:00",
+        "message": "Favicon fixed"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "8.1",
+    "folDepth": 2,
+    "folParent": "8",
+    "relKey": "37",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "style.css",
+    "path": "public/stylesheets/style.css",
+    "created": "2025-09-30T08:56:44.318Z",
+    "updated": "2025-09-30T08:56:44.318Z",
+    "size": 579,
+    "description": "Global CSS stylesheet providing base styling for rendered creative pages and error views.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "ce1315d608991c01b00e226a275c645a37acf96b",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "8.2",
+    "folDepth": 2,
+    "folParent": "8",
+    "relKey": "38",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "README.md",
+    "path": "README.md",
+    "created": "2025-09-30T08:56:44.308Z",
+    "updated": "2025-09-30T08:56:44.308Z",
+    "size": 2765,
+    "description": "Project documentation with architecture diagrams, route flowcharts, and request/asset flow visualizations.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d",
+    "history": [
+      {
+        "commitId": "1e37cccf4ad25d15d8b5c4b6344411882737d011",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:33:35+02:00",
+        "message": "Render flowchart fixed"
+      },
+      {
+        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T12:13:53+02:00",
+        "message": "Render flowchart updated"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "25",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "39",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "render.dynode.esproj",
+    "path": "render.dynode.esproj",
+    "created": "2025-09-30T08:56:44.318Z",
+    "updated": "2025-09-30T08:56:44.318Z",
+    "size": 313,
+    "description": "Visual Studio project file for TypeScript/Node.js development with build and debug configuration.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "project-meta",
+    "_id": "657f85721aee3cf672f824fa9f9b500193670c28",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "26",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "40",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "REQUIREMENTS.md",
+    "path": "REQUIREMENTS.md",
+    "created": "2025-10-28T10:37:19.190Z",
+    "updated": "2025-10-28T10:40:59.308Z",
+    "size": 7863,
+    "description": "Product requirements document defining goals, stakeholders, user journeys, and functional specifications for render service.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "41075dc246df109ff646c300d136057517b9abd5",
+    "history": [
+      {
+        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "author": "CCTEvalencia",
+        "date": "2025-10-28T16:46:09+01:00",
+        "message": "General Standardization"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "27",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "41",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "cache.ts",
+    "path": "routes/cache.ts",
+    "created": "2026-01-23T09:30:08.281Z",
+    "updated": "2026-01-23T09:30:08.378Z",
+    "size": 632,
+    "description": "",
+    "internalDependencies": [
+      {
+        "path": "../services/caching",
+        "resolvedPath": "services/caching.ts",
+        "id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8"
+      }
+    ],
+    "externalDependencies": [
+      "express"
+    ],
+    "category": "source",
+    "_id": "42cc2c21a671cb3d9cb2e880ecda1c12c6abd6e2",
+    "history": [],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "express"
+    ],
+    "directDependencies": [
+      {
+        "_id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8",
+        "filename": "caching.ts",
+        "path": "services/caching.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "94012cbdbf0e0cf94a72971e951224b4fef1ce18",
+        "filename": "app.ts",
+        "path": "app.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": 1,
+    "isEntryPoint": false,
+    "folKey": "9",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "4",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "routes/dynamics/default.ts",
+    "created": "2025-09-30T08:56:44.319Z",
+    "updated": "2025-10-28T12:17:15.581Z",
+    "size": 5279,
+    "description": "Express router handling creative rendering requests, asset bundling, and resource delivery with MIME type resolution.",
+    "internalDependencies": [
+      {
+        "path": "../../services/logger",
+        "resolvedPath": "services/logger.ts",
+        "id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0"
+      },
+      {
+        "path": "../../services/bundler",
+        "resolvedPath": "services/bundler.ts",
+        "id": "f92679e68bdadd591e9037860bfbdc572593743c"
+      },
+      {
+        "path": "../../services/caching",
+        "resolvedPath": "services/caching.ts",
+        "id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8"
+      },
+      {
+        "path": "../../config",
+        "resolvedPath": "config.ts",
+        "id": "6c46effb109a57603f0c1712245f2abb56a631f7"
+      },
+      {
+        "path": "../../services/behaviours",
+        "resolvedPath": "services/behaviours.ts",
+        "id": "9724337ffad0dbe511ef4928fb6a3122e00f4829"
+      }
+    ],
+    "externalDependencies": [
+      "express",
+      "axios",
+      "module",
+      "stream",
+      "https"
+    ],
+    "category": "source",
+    "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
+    "history": [
+      {
+        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "author": "CCTEvalencia",
+        "date": "2025-10-28T16:46:09+01:00",
+        "message": "General Standardization"
+      },
+      {
+        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T17:15:27+02:00",
+        "message": "Development + Docker environments"
+      },
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 5,
+    "externalDependencyLabels": [
+      "express",
+      "axios",
+      "module",
+      "stream",
+      "https"
+    ],
+    "directDependencies": [
+      {
+        "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+        "filename": "logger.ts",
+        "path": "services/logger.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f92679e68bdadd591e9037860bfbdc572593743c",
+        "filename": "bundler.ts",
+        "path": "services/bundler.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8",
+        "filename": "caching.ts",
+        "path": "services/caching.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "6c46effb109a57603f0c1712245f2abb56a631f7",
+        "filename": "config.ts",
+        "path": "config.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "9724337ffad0dbe511ef4928fb6a3122e00f4829",
+        "filename": "behaviours.ts",
+        "path": "services/behaviours.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "5d2a13840e2b59decfb02f8a5d07f44f6fe5dd66",
+        "filename": "index.ts",
+        "path": "routes/index.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": 2,
+    "isEntryPoint": false,
+    "folKey": "9.1",
+    "folDepth": 2,
+    "folParent": "9",
+    "relKey": "3.1.1",
+    "relDepth": 3,
+    "relParent": "3.1"
+  },
+  {
+    "filename": "index.ts",
+    "path": "routes/index.ts",
+    "created": "2025-09-30T08:56:44.319Z",
+    "updated": "2025-09-30T08:56:44.319Z",
+    "size": 435,
+    "description": "Root Express router configuring base routes and mounting dynamics sub-router for creative rendering.",
+    "internalDependencies": [
+      {
+        "path": "../services/logger",
+        "resolvedPath": "services/logger.ts",
+        "id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0"
+      },
+      {
+        "path": "./dynamics/default",
+        "resolvedPath": "routes/dynamics/default.ts",
+        "id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39"
+      }
+    ],
+    "externalDependencies": [
+      "express"
+    ],
+    "category": "source",
+    "_id": "5d2a13840e2b59decfb02f8a5d07f44f6fe5dd66",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 2,
+    "externalDependencyLabels": [
+      "express"
+    ],
+    "directDependencies": [
+      {
+        "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+        "filename": "logger.ts",
+        "path": "services/logger.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
+        "filename": "default.ts",
+        "path": "routes/dynamics/default.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "94012cbdbf0e0cf94a72971e951224b4fef1ce18",
+        "filename": "app.ts",
+        "path": "app.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": 1,
+    "isEntryPoint": false,
+    "folKey": "9",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "5",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "behaviours.ts",
+    "path": "services/behaviours.ts",
+    "created": "2025-10-28T12:16:56.922Z",
+    "updated": "2025-10-28T13:22:11.975Z",
+    "size": 9489,
+    "description": "Creative behavior evaluation engine processing conditional rules and applying dynamic content modifications based on date, number, string, and boolean comparisons.",
+    "internalDependencies": [
+      {
+        "path": "./logger",
+        "resolvedPath": "services/logger.ts",
+        "id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0"
+      }
+    ],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "9724337ffad0dbe511ef4928fb6a3122e00f4829",
+    "history": [
+      {
+        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "author": "CCTEvalencia",
+        "date": "2025-10-28T16:46:09+01:00",
+        "message": "General Standardization"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [],
+    "directDependencies": [
+      {
+        "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+        "filename": "logger.ts",
+        "path": "services/logger.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
+        "filename": "default.ts",
+        "path": "routes/dynamics/default.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": 3,
+    "isEntryPoint": false,
+    "folKey": "10",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "3.1.3",
+    "relDepth": 3,
+    "relParent": "3.1"
+  },
+  {
+    "filename": "bundler.ts",
+    "path": "services/bundler.ts",
+    "created": "2025-09-30T08:56:44.319Z",
+    "updated": "2026-01-23T09:29:44.859Z",
+    "size": 10265,
+    "description": "Asset bundling service concatenating and minifying JavaScript/CSS components, libraries, and custom assets for creative rendering.",
+    "internalDependencies": [
+      {
+        "path": "../services/logger",
+        "resolvedPath": "services/logger.ts",
+        "id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0"
+      },
+      {
+        "path": "../config",
+        "resolvedPath": "config.ts",
+        "id": "6c46effb109a57603f0c1712245f2abb56a631f7"
+      },
+      {
+        "path": "./caching",
+        "resolvedPath": "services/caching.ts",
+        "id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8"
+      }
+    ],
+    "externalDependencies": [
+      "fs",
+      "path",
+      "terser",
+      "clean-css"
+    ],
+    "category": "source",
+    "_id": "f92679e68bdadd591e9037860bfbdc572593743c",
+    "history": [
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 3,
+    "externalDependencyLabels": [
+      "fs",
+      "path",
+      "terser",
+      "clean-css"
+    ],
+    "directDependencies": [
+      {
+        "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+        "filename": "logger.ts",
+        "path": "services/logger.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "6c46effb109a57603f0c1712245f2abb56a631f7",
+        "filename": "config.ts",
+        "path": "config.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8",
+        "filename": "caching.ts",
+        "path": "services/caching.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
+        "filename": "default.ts",
+        "path": "routes/dynamics/default.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8",
+        "filename": "caching.ts",
+        "path": "services/caching.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": true,
+    "dependencyDepth": 3,
+    "isEntryPoint": false,
+    "folKey": "10",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "3.1.4",
+    "relDepth": 3,
+    "relParent": "3.1"
+  },
+  {
+    "filename": "caching.ts",
+    "path": "services/caching.ts",
+    "created": "2025-09-30T08:56:44.319Z",
+    "updated": "2026-01-23T09:29:21.703Z",
+    "size": 2548,
+    "description": "Service worker cache management stub providing placeholder for future creative asset caching implementation.",
+    "internalDependencies": [
+      {
+        "path": "./logger",
+        "resolvedPath": "services/logger.ts",
+        "id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0"
+      }
+    ],
+    "externalDependencies": [
+      "lru-cache"
+    ],
+    "category": "source",
+    "_id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 2,
+    "externalDependencyLabels": [
+      "lru-cache"
+    ],
+    "directDependencies": [
+      {
+        "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+        "filename": "logger.ts",
+        "path": "services/logger.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f92679e68bdadd591e9037860bfbdc572593743c",
+        "filename": "bundler.ts",
+        "path": "services/bundler.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "42cc2c21a671cb3d9cb2e880ecda1c12c6abd6e2",
+        "filename": "cache.ts",
+        "path": "routes/cache.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
+        "filename": "default.ts",
+        "path": "routes/dynamics/default.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f92679e68bdadd591e9037860bfbdc572593743c",
+        "filename": "bundler.ts",
+        "path": "services/bundler.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": true,
+    "dependencyDepth": 2,
+    "isEntryPoint": false,
+    "folKey": "10",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "3.1.2",
+    "relDepth": 3,
+    "relParent": "3.1"
+  },
+  {
+    "filename": "logger.ts",
+    "path": "services/logger.ts",
+    "created": "2025-09-30T08:56:44.319Z",
+    "updated": "2025-09-30T14:13:13.559Z",
+    "size": 1402,
+    "description": "Remote logging service forwarding application logs to centralized source.dynode endpoint with axios-based HTTP transport.",
+    "internalDependencies": [
+      {
+        "path": "../config",
+        "resolvedPath": "config.ts",
+        "id": "6c46effb109a57603f0c1712245f2abb56a631f7"
+      }
+    ],
+    "externalDependencies": [
+      "axios"
+    ],
+    "category": "source",
+    "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
+    "history": [
+      {
+        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T17:15:27+02:00",
+        "message": "Development + Docker environments"
+      },
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "axios"
+    ],
+    "directDependencies": [
+      {
+        "_id": "6c46effb109a57603f0c1712245f2abb56a631f7",
+        "filename": "config.ts",
+        "path": "config.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "reverseDependencies": [
+      {
+        "_id": "94012cbdbf0e0cf94a72971e951224b4fef1ce18",
+        "filename": "app.ts",
+        "path": "app.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
+        "filename": "default.ts",
+        "path": "routes/dynamics/default.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "5d2a13840e2b59decfb02f8a5d07f44f6fe5dd66",
+        "filename": "index.ts",
+        "path": "routes/index.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "9724337ffad0dbe511ef4928fb6a3122e00f4829",
+        "filename": "behaviours.ts",
+        "path": "services/behaviours.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f92679e68bdadd591e9037860bfbdc572593743c",
+        "filename": "bundler.ts",
+        "path": "services/bundler.ts",
+        "category": "source",
+        "project": "render"
+      },
+      {
+        "_id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8",
+        "filename": "caching.ts",
+        "path": "services/caching.ts",
+        "category": "source",
+        "project": "render"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": 1,
+    "isEntryPoint": false,
+    "folKey": "10",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "3.1",
+    "relDepth": 2,
+    "relParent": "3"
+  },
+  {
+    "filename": "tsconfig.inplace.json",
+    "path": "tsconfig.inplace.json",
+    "created": "2025-09-30T08:56:44.319Z",
+    "updated": "2025-09-30T08:56:44.320Z",
+    "size": 484,
+    "description": "TypeScript compiler configuration for in-place component compilation without output directory relocation.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "data",
+    "_id": "c620f2e4429007d3ad742bb94287d55d15f97702",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "28",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "42",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "tsconfig.json",
+    "path": "tsconfig.json",
+    "created": "2025-09-30T08:56:44.320Z",
+    "updated": "2025-09-30T11:03:09.732Z",
+    "size": 508,
+    "description": "TypeScript compiler configuration for building application with ES2020 target, CommonJS modules, and strict type checking.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "project-meta",
+    "_id": "61ebb9fd6e8cf9082658121d5d81e297791dacd0",
+    "history": [
+      {
+        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "author": "CCTEvalencia",
+        "date": "2025-09-30T13:56:47+02:00",
+        "message": "Configuration centralized per project"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "29",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "43",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "global.d.ts",
+    "path": "types/global.d.ts",
+    "created": "2025-09-30T08:56:44.320Z",
+    "updated": "2026-01-16T09:09:53.564Z",
+    "size": 1356,
+    "description": "Global TypeScript type declarations for window.creativeTicker, window.widgetInitializer, and custom animation interfaces.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "96aca723bf836baa8cbac9bdea4865165f4e2437",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "11",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "44",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/BoxLayout/default.css",
+    "created": "2025-09-30T08:56:44.321Z",
+    "updated": "2025-09-30T08:56:44.321Z",
+    "size": 155,
+    "description": "CSS styling for BoxLayout component defining container layout and positioning rules.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "f90f138f0ba0f6dd33ae4d8b033dd2ad005a13ed",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.1",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "45",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/BoxLayout/default.pug",
+    "created": "2025-09-30T08:56:44.321Z",
+    "updated": "2026-01-13T12:10:27.155Z",
+    "size": 839,
+    "description": "Pug template for BoxLayout component rendering container with nested child elements and dynamic styles.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "01fb34e1d77be18d086c1433cc63b1c0d10593e5",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.1",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "46",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/BoxLayout/default.ts",
+    "created": "2025-09-30T08:56:44.321Z",
+    "updated": "2025-09-30T08:56:44.321Z",
+    "size": 1959,
+    "description": "TypeScript initialization script for BoxLayout components with MutationObserver watching data-value attribute changes.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "df3f2a46bfd0feece0c9025819c2e1da581ae08b",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.1",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "47",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "blurAnimation.css",
+    "path": "views/components/CardWidget/blurAnimation.css",
+    "created": "2026-01-15T16:13:31.608Z",
+    "updated": "2026-01-15T16:14:45.017Z",
+    "size": 130,
+    "description": "CSS keyframe animation for CardWidget blur transition effects with configurable opacity and filter timing.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "d7de82d917db864aeda5cbb401e8a90e825444d1",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "48",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "blurAnimation.ts",
+    "path": "views/components/CardWidget/blurAnimation.ts",
+    "created": "2026-01-15T16:07:29.938Z",
+    "updated": "2026-01-16T09:34:26.748Z",
+    "size": 1302,
+    "description": "TypeScript blur animation implementation for CardWidget applying CSS filter transitions during content updates.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "499beff1f2443afd62abcbb90c6fd4bc21e79768",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "49",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/CardWidget/default.css",
+    "created": "2025-09-30T08:56:44.321Z",
+    "updated": "2025-09-30T08:56:44.321Z",
+    "size": 189,
+    "description": "CSS styling for CardWidget component defining card presentation, perspective, and base animation states.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "947fc2c237ab85675e0de62f2e7d8bb0bd8ff51e",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "50",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/CardWidget/default.pug",
+    "created": "2025-09-30T08:56:44.321Z",
+    "updated": "2026-01-16T11:00:03.420Z",
+    "size": 822,
+    "description": "Pug template for CardWidget component rendering card with animation attributes and dynamic value binding.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "543a08b80c5c7490a0b5de817fb5ee85ac262bab",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "51",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/CardWidget/default.ts",
+    "created": "2025-09-30T08:56:44.323Z",
+    "updated": "2026-01-20T16:09:28.853Z",
+    "size": 3093,
+    "description": "TypeScript initialization script for CardWidget with MutationObserver triggering animation on data-value changes.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "309ff4e22b45c83dd6035d707de5454031ee1b5a",
+    "history": [
+      {
+        "commitId": "2a465a56aac01ac09e64148cde9c6551e004c372",
+        "author": "CCTEvalencia",
+        "date": "2026-01-21T14:01:37+01:00",
+        "message": "Builder -> Help -> Codebase UI"
+      },
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "52",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "fadeAnimation.css",
+    "path": "views/components/CardWidget/fadeAnimation.css",
+    "created": "2026-01-15T16:13:31.362Z",
+    "updated": "2026-01-15T16:14:44.950Z",
+    "size": 131,
+    "description": "CSS keyframe animation for CardWidget fade transition effects with opacity timing curves.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "bea9cf14eb875c2cbf44cbd54de064e65c6ce451",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "53",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "fadeAnimation.ts",
+    "path": "views/components/CardWidget/fadeAnimation.ts",
+    "created": "2026-01-15T16:07:29.557Z",
+    "updated": "2026-01-16T08:46:45.099Z",
+    "size": 853,
+    "description": "TypeScript fade animation implementation for CardWidget applying opacity transitions during content updates.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "c7e671a61c6b37f22ad91318e18c772644163511",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "54",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "flipAnimation.css",
+    "path": "views/components/CardWidget/flipAnimation.css",
+    "created": "2026-01-15T16:13:31.433Z",
+    "updated": "2026-01-16T10:07:19.174Z",
+    "size": 219,
+    "description": "CSS 3D flip animation for CardWidget with configurable axis rotation and backface visibility handling.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "cd786c9af6c89cd1db07aa77f58e30906267dadc",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "55",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "flipAnimation.ts",
+    "path": "views/components/CardWidget/flipAnimation.ts",
+    "created": "2026-01-15T16:07:29.692Z",
+    "updated": "2026-01-16T10:59:14.878Z",
+    "size": 2640,
+    "description": "TypeScript flip animation implementation for CardWidget applying 3D rotation transforms with customizable direction, speed, and transition timing.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "d96cc882d41de9775ec242744d314ba6e730efc8",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "56",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "popAnimation.css",
+    "path": "views/components/CardWidget/popAnimation.css",
+    "created": "2026-01-15T16:13:31.523Z",
+    "updated": "2026-01-15T16:14:44.950Z",
+    "size": 137,
+    "description": "CSS scale animation for CardWidget creating pop effect with transform-based size transitions.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "db2040a974a4c390ce2d42faf7e71dc541c1cc02",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "57",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "popAnimation.ts",
+    "path": "views/components/CardWidget/popAnimation.ts",
+    "created": "2026-01-15T16:07:29.839Z",
+    "updated": "2026-01-16T08:46:34.738Z",
+    "size": 1013,
+    "description": "TypeScript pop animation implementation for CardWidget applying scale transforms with bounce effect during content updates.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "1ccddf652b1eea08b3b488e42c82f3179a505815",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "58",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "rollAnimation.css",
+    "path": "views/components/CardWidget/rollAnimation.css",
+    "created": "2025-09-30T08:56:44.323Z",
+    "updated": "2026-01-15T14:50:14.154Z",
+    "size": 1706,
+    "description": "CSS 3D roll animation for CardWidget with multi-axis rotation and perspective transformations.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "cb736d14fb06067104830c9388f8927aea75bdf0",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "59",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "rollAnimation.ts",
+    "path": "views/components/CardWidget/rollAnimation.ts",
+    "created": "2025-09-30T08:56:44.323Z",
+    "updated": "2026-01-16T10:12:27.731Z",
+    "size": 5034,
+    "description": "TypeScript roll animation implementation for CardWidget applying complex 3D rotation sequences with configurable direction, distance, and scale.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "5fdcd9862cd778e90ba59111c54a8aed691e93ef",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.2",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "60",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/ClockWidget/default.css",
+    "created": "2026-01-13T10:45:49.684Z",
+    "updated": "2026-01-13T10:46:14.472Z",
+    "size": 73,
+    "description": "CSS styling for ClockWidget component defining time display formatting and layout properties.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "66434f31cd0264ab7a2999615179af8f6758ce06",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.3",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "61",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/ClockWidget/default.pug",
+    "created": "2026-01-13T10:45:46.565Z",
+    "updated": "2026-01-13T12:19:48.922Z",
+    "size": 500,
+    "description": "Pug template for ClockWidget component rendering time elements with format configuration and timezone support.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "64d72f9658ba009ad1f70257b2d3e5e01d804a62",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.3",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "62",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/ClockWidget/default.ts",
+    "created": "2026-01-13T10:45:41.591Z",
+    "updated": "2026-01-13T13:43:27.768Z",
+    "size": 3817,
+    "description": "TypeScript initialization script for ClockWidget subscribing to creative ticker for real-time clock updates with configurable format and timezone.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "b1769dade55741b1ef94f98523a1551b530b63c6",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.3",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "63",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/CountdownWidget/default.css",
+    "created": "2025-09-30T08:56:44.324Z",
+    "updated": "2025-09-30T08:56:44.324Z",
+    "size": 84,
+    "description": "CSS styling for CountdownWidget component defining countdown timer display and unit formatting.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "82749a25bbbec41475320ce5a8c79540f8ba1130",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.4",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "64",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/CountdownWidget/default.pug",
+    "created": "2025-09-30T08:56:44.324Z",
+    "updated": "2025-09-30T08:56:44.324Z",
+    "size": 540,
+    "description": "Pug template for CountdownWidget component rendering countdown elements with unit labels and dynamic value display.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "e9fab52a37d20ec5214c6464cd76dd17014d2836",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.4",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "65",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/CountdownWidget/default.ts",
+    "created": "2025-09-30T08:56:44.324Z",
+    "updated": "2026-01-13T13:43:29.222Z",
+    "size": 5807,
+    "description": "TypeScript initialization script for CountdownWidget calculating time remaining to target date with second-precision updates via creative ticker.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "708c7d8a4bd0a1a1cc5575dc48aeed473a74b306",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.4",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "66",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/DebugWidget/default.css",
+    "created": "2025-09-30T08:56:44.324Z",
+    "updated": "2025-09-30T08:56:44.325Z",
+    "size": 76,
+    "description": "CSS styling for DebugWidget component providing development-mode visualization of creative metadata and state.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "60f51b4d57bc0ef4d91b20a113c631f4851d9ed0",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.5",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "67",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/DebugWidget/default.pug",
+    "created": "2025-09-30T08:56:44.325Z",
+    "updated": "2026-01-13T11:16:23.543Z",
+    "size": 440,
+    "description": "Pug template for DebugWidget component displaying creative ID and debug information for development troubleshooting.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "54b547a5aea29fe1e445d1ce009d99f7df29dca7",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.5",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "68",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/DebugWidget/default.ts",
+    "created": "2025-09-30T08:56:44.325Z",
+    "updated": "2025-09-30T08:56:44.325Z",
+    "size": 374,
+    "description": "TypeScript initialization stub for DebugWidget component providing placeholder for future debug functionality.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "d2f5fd862e11a7f173ae1fe9bd7ed4e38f5025f2",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.5",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "69",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/ImageWidget/default.css",
+    "created": "2025-09-30T08:56:44.325Z",
+    "updated": "2025-09-30T08:56:44.325Z",
+    "size": 117,
+    "description": "CSS styling for ImageWidget component defining image display, sizing, and object-fit properties.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "087ab93f5d1f453a86f0c9581e8e617e1764674d",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.6",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "70",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/ImageWidget/default.pug",
+    "created": "2025-09-30T08:56:44.326Z",
+    "updated": "2025-09-30T08:56:44.326Z",
+    "size": 522,
+    "description": "Pug template for ImageWidget component rendering images with source URL binding and alt text support.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "18462bf5fbd0f42062daddd15f4c50fc65d444a8",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.6",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "71",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/ImageWidget/default.ts",
+    "created": "2025-09-30T08:56:44.326Z",
+    "updated": "2025-09-30T08:56:44.326Z",
+    "size": 374,
+    "description": "TypeScript initialization stub for ImageWidget component providing placeholder for future image loading functionality.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "63c6cd0cb7de1d7e9e4b6fa48f6d2de0488c7c34",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.6",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "72",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/SlideLayout/default.css",
+    "created": "2025-09-30T08:56:44.326Z",
+    "updated": "2025-09-30T08:56:44.326Z",
+    "size": 540,
+    "description": "CSS styling for SlideLayout component defining slide container, transitions, and child element positioning.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "6d9c7c6d49555300250a7cc0de467eac95b39815",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.7",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "73",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/SlideLayout/default.pug",
+    "created": "2025-09-30T08:56:44.326Z",
+    "updated": "2026-01-13T12:09:20.085Z",
+    "size": 987,
+    "description": "Pug template for SlideLayout component rendering slide container with nested child elements and slide transition support.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "cbeda1708f03199b2170882358314ba1e351a7dc",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.7",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "74",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/SlideLayout/default.ts",
+    "created": "2025-09-30T08:56:44.326Z",
+    "updated": "2025-09-30T08:56:44.327Z",
+    "size": 374,
+    "description": "TypeScript initialization stub for SlideLayout component providing placeholder for future slide navigation functionality.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "6ccb8368cf5082be154aaf6fa666ae2da334c113",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.7",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "75",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/TextWidget/default.css",
+    "created": "2025-09-30T08:56:44.328Z",
+    "updated": "2025-09-30T08:56:44.328Z",
+    "size": 204,
+    "description": "CSS styling for TextWidget component defining text display, typography, and formatting properties.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "fca35cbb024598677e41038ce489da2b5408e1e1",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.8",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "76",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/TextWidget/default.pug",
+    "created": "2025-09-30T08:56:44.328Z",
+    "updated": "2025-09-30T08:56:44.328Z",
+    "size": 297,
+    "description": "Pug template for TextWidget component rendering text content with dynamic value binding and style attributes.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "455be41d44f18d786adfbe0521e2dfc830f01efd",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.8",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "77",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/TextWidget/default.ts",
+    "created": "2025-09-30T08:56:44.328Z",
+    "updated": "2025-09-30T08:56:44.329Z",
+    "size": 368,
+    "description": "TypeScript initialization stub for TextWidget component providing placeholder for future text formatting functionality.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "7f8ecce1c85f93abed1c65a90a13c8a5673ae198",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.8",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "78",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.css",
+    "path": "views/components/VideoWidget/default.css",
+    "created": "2025-09-30T08:56:44.329Z",
+    "updated": "2025-09-30T08:56:44.329Z",
+    "size": 58,
+    "description": "CSS styling for VideoWidget component defining video player dimensions and display properties.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "c12f1475083f4abefdcfd29a1d480f8b71e91674",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.9",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "79",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.pug",
+    "path": "views/components/VideoWidget/default.pug",
+    "created": "2025-09-30T08:56:44.329Z",
+    "updated": "2025-09-30T08:56:44.329Z",
+    "size": 617,
+    "description": "Pug template for VideoWidget component rendering HTML5 video element with source URL and autoplay configuration.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "6804ff9789f27a7c565700918951ee194cca1d25",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.9",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "80",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/components/VideoWidget/default.ts",
+    "created": "2025-09-30T08:56:44.329Z",
+    "updated": "2025-09-30T08:56:44.329Z",
+    "size": 374,
+    "description": "TypeScript initialization stub for VideoWidget component providing placeholder for future video control functionality.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "cdf47eaede8ca9bfd42095571d27ee34198d8540",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.1.9",
+    "folDepth": 3,
+    "folParent": "12.1",
+    "relKey": "81",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "error.pug",
+    "path": "views/error.pug",
+    "created": "2025-09-30T08:56:44.330Z",
+    "updated": "2025-09-30T08:56:44.330Z",
+    "size": 90,
+    "description": "Pug template for error page rendering HTTP error messages with status codes and stack traces in development mode.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "3d57f9d798a9f2c13a6d15b1ee50520fcf22de00",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "82",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "index.pug",
+    "path": "views/index.pug",
+    "created": "2025-09-30T08:56:44.330Z",
+    "updated": "2025-09-30T08:56:44.330Z",
+    "size": 137,
+    "description": "Pug template for root index page extending base layout with welcome message for service health checking.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "7d6dd6cb970fcb8fee3c8e44b6525d3af56880bf",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "83",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "layout.pug",
+    "path": "views/layout.pug",
+    "created": "2025-09-30T08:56:44.330Z",
+    "updated": "2025-10-28T14:49:46.929Z",
+    "size": 240,
+    "description": "Base Pug layout template defining HTML structure, head metadata, stylesheet links, and body block for page composition.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "e3b9a31f04c7739618ea389fb9c1a4b56c6bca15",
+    "history": [
+      {
+        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "author": "CCTEvalencia",
+        "date": "2025-10-28T16:46:09+01:00",
+        "message": "General Standardization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "84",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "content.pug",
+    "path": "views/pages/dynamics/content.pug",
+    "created": "2025-09-30T08:56:44.331Z",
+    "updated": "2025-09-30T08:56:44.331Z",
+    "size": 535,
+    "description": "Pug template for dynamics content page rendering creative elements with recursive component includes and layout processing.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "5abf2a1589b50ef714119734815e1fd6078d0f25",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.2.1",
+    "folDepth": 3,
+    "folParent": "12.2",
+    "relKey": "85",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.ts",
+    "path": "views/pages/dynamics/default.ts",
+    "created": "2025-09-30T08:56:44.331Z",
+    "updated": "2026-01-13T14:07:14.858Z",
+    "size": 4823,
+    "description": "TypeScript creative ticker implementation providing centralized interval-based update mechanism for time-dependent widgets with configurable subscription rates.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "bdb3012b4d9cf554090e0e8c32c32d08ca4843fd",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      },
+      {
+        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
+        "author": "CCTEVP",
+        "date": "2025-05-13T10:35:41+02:00",
+        "message": "First Commit"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.2.1",
+    "folDepth": 3,
+    "folParent": "12.2",
+    "relKey": "86",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "layout.pug",
+    "path": "views/pages/dynamics/layout.pug",
+    "created": "2025-09-30T08:56:44.332Z",
+    "updated": "2026-01-13T14:12:06.500Z",
+    "size": 1711,
+    "description": "Pug layout template for dynamics pages injecting creative resources (CSS/JS), metadata, autoplay settings, and component scripts.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "1fccc25675fadab0979f5f0500995f107c55d5f5",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "6a035a4944b3d1c42a39ee5713dc9f8592406858",
+        "author": "CCTEvalencia",
+        "date": "2025-11-11T13:49:36+01:00",
+        "message": "Missing port binding in ImageWidget"
+      },
+      {
+        "commitId": "c21591feaccbb37c439a0d258dc0fca3f1eec03b",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T13:30:10+02:00",
+        "message": "Favicon fixed"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.2.1",
+    "folDepth": 3,
+    "folParent": "12.2",
+    "relKey": "87",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "assets_template.js",
+    "path": "views/scripts/assets_template.js",
+    "created": "2025-09-30T08:56:44.333Z",
+    "updated": "2025-09-30T08:56:44.333Z",
+    "size": 1649,
+    "description": "Service worker script template for caching creative assets with fetch interception and cache-first strategy implementation.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "13ad3fd13bd70fa2e28cc087d6146440090bd8ca",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3",
+    "folDepth": 2,
+    "folParent": "12",
+    "relKey": "88",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/BoxLayout/default.js",
+    "created": "2025-09-30T08:56:44.333Z",
+    "updated": "2026-01-28T11:31:56.212Z",
+    "size": 1987,
+    "description": "Compiled JavaScript for BoxLayout component initialization and data-value change handling.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "c9537cde39527c247661211366e05a25828ff881",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.1",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "89",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "blurAnimation.js",
+    "path": "views/scripts/components/CardWidget/blurAnimation.js",
+    "created": "2026-01-16T09:15:40.488Z",
+    "updated": "2026-01-28T11:31:56.215Z",
+    "size": 1341,
+    "description": "Compiled JavaScript for CardWidget blur animation with CSS filter transitions.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "4cb5540c7824243d1d29ed1a6d23e2ee8845ce4b",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.2",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "90",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/CardWidget/default.js",
+    "created": "2025-09-30T08:56:44.334Z",
+    "updated": "2026-01-28T11:31:56.220Z",
+    "size": 2955,
+    "description": "Compiled JavaScript for CardWidget initialization, MutationObserver setup, and animation triggering.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "085dc2565522fcb2aa3d54431e4213dda788814f",
+    "history": [
+      {
+        "commitId": "2a465a56aac01ac09e64148cde9c6551e004c372",
+        "author": "CCTEvalencia",
+        "date": "2026-01-21T14:01:37+01:00",
+        "message": "Builder -> Help -> Codebase UI"
+      },
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.2",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "91",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "fadeAnimation.js",
+    "path": "views/scripts/components/CardWidget/fadeAnimation.js",
+    "created": "2026-01-16T09:15:40.494Z",
+    "updated": "2026-01-28T11:31:56.222Z",
+    "size": 864,
+    "description": "Compiled JavaScript for CardWidget fade animation with opacity transitions.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "6bac4103c857b0a35ecf8fbe34059fb92f8a5c2e",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.2",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "92",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "flipAnimation.js",
+    "path": "views/scripts/components/CardWidget/flipAnimation.js",
+    "created": "2026-01-16T09:15:40.495Z",
+    "updated": "2026-01-28T11:31:56.229Z",
+    "size": 2891,
+    "description": "Compiled JavaScript for CardWidget 3D flip animation with rotation transforms.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "7e2e06812297bfa18919615269edda3c49279872",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.2",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "93",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "popAnimation.js",
+    "path": "views/scripts/components/CardWidget/popAnimation.js",
+    "created": "2026-01-16T09:15:40.498Z",
+    "updated": "2026-01-28T11:31:56.232Z",
+    "size": 1027,
+    "description": "Compiled JavaScript for CardWidget pop animation with scale transforms.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "46d81524a833153cf2d40c1b9baa4edfa76c2eab",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.2",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "94",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "rollAnimation.js",
+    "path": "views/scripts/components/CardWidget/rollAnimation.js",
+    "created": "2025-09-30T08:56:44.334Z",
+    "updated": "2026-01-28T11:31:56.241Z",
+    "size": 5015,
+    "description": "Compiled JavaScript for CardWidget 3D roll animation with multi-axis rotation.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "bb538ecfa2f40c5b04a9826b77f1bc2fdd27f863",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.2",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "95",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/ClockWidget/default.js",
+    "created": "2026-01-15T14:01:13.385Z",
+    "updated": "2026-01-28T11:31:56.247Z",
+    "size": 3843,
+    "description": "Compiled JavaScript for ClockWidget initialization and real-time clock updates via ticker subscription.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "a12fca2586679dc0487e2b5d50bf61dde1adb94b",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.3",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "96",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/CountdownWidget/default.js",
+    "created": "2026-01-15T14:01:13.391Z",
+    "updated": "2026-01-28T11:31:56.254Z",
+    "size": 6042,
+    "description": "Compiled JavaScript for CountdownWidget initialization and countdown calculation with ticker updates.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "d99fbfec736eb88f9d0c3c056c17a26705e3e5cf",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.4",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "97",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/DebugWidget/default.js",
+    "created": "2025-09-30T08:56:44.335Z",
+    "updated": "2026-01-28T11:31:56.255Z",
+    "size": 384,
+    "description": "Compiled JavaScript stub for DebugWidget component initialization.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "c16ae4d305cd7e18de1ff5d41ec207496bc86710",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.5",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "98",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/ImageWidget/default.js",
+    "created": "2025-09-30T08:56:44.335Z",
+    "updated": "2026-01-28T11:31:56.255Z",
+    "size": 384,
+    "description": "Compiled JavaScript stub for ImageWidget component initialization.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "485292c89ffaf44d85ff39a3e8ca1ffd98f87fb2",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.6",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "99",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/SlideLayout/default.js",
+    "created": "2025-09-30T08:56:44.335Z",
+    "updated": "2026-01-28T11:31:56.255Z",
+    "size": 384,
+    "description": "Compiled JavaScript stub for SlideLayout component initialization.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "31cd770e26d358565d26a5340d2871b4243a3d6e",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.7",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "100",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/TextWidget/default.js",
+    "created": "2025-09-30T08:56:44.337Z",
+    "updated": "2026-01-28T11:31:56.256Z",
+    "size": 376,
+    "description": "Compiled JavaScript stub for TextWidget component initialization.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "baef52bff99fe4e3682c95343998a831c382edc8",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.8",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "101",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/components/VideoWidget/default.js",
+    "created": "2025-09-30T08:56:44.337Z",
+    "updated": "2026-01-28T11:31:56.257Z",
+    "size": 384,
+    "description": "Compiled JavaScript stub for VideoWidget component initialization.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "431ff58258ca82cce8d21f7821aa422d32236a71",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.1.9",
+    "folDepth": 4,
+    "folParent": "12.3.1",
+    "relKey": "102",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "manager_template.js",
+    "path": "views/scripts/manager_template.js",
+    "created": "2025-09-30T08:56:44.338Z",
+    "updated": "2025-09-30T08:56:44.338Z",
+    "size": 1951,
+    "description": "Service worker registration manager handling SW lifecycle, updates, and unregistration for creative asset caching.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "2cb349b8d23a044d736826fc783e5c249e773407",
+    "history": [
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3",
+    "folDepth": 2,
+    "folParent": "12",
+    "relKey": "103",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "default.js",
+    "path": "views/scripts/pages/dynamics/default.js",
+    "created": "2025-09-30T08:56:44.338Z",
+    "updated": "2026-01-28T11:31:56.209Z",
+    "size": 5222,
+    "description": "Compiled JavaScript for creative ticker global singleton providing interval-based updates for time-dependent widgets.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "df5af6bd5c04025ff326051059152a8051161c56",
+    "history": [
+      {
+        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "author": "CCTEvalencia",
+        "date": "2026-01-16T13:18:33+01:00",
+        "message": "CardWidget Animations and Build Automation"
+      },
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      },
+      {
+        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "author": "CCTEvalencia",
+        "date": "2025-09-25T10:24:30+02:00",
+        "message": "Switch to Node.js"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.2.1",
+    "folDepth": 4,
+    "folParent": "12.3.2",
+    "relKey": "104",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "formatting.js",
+    "path": "views/scripts/utils/formatting.js",
+    "created": "2026-01-13T12:31:03.722Z",
+    "updated": "2026-01-13T12:31:03.722Z",
+    "size": 337,
+    "description": "Compiled JavaScript utility functions for widget time formatting with leading zero padding.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "786ea83a6a97022ab0069250526d812a07fe0fdc",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.3.3",
+    "folDepth": 3,
+    "folParent": "12.3",
+    "relKey": "105",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "formatting.ts",
+    "path": "views/utils/formatting.ts",
+    "created": "2026-01-13T10:50:59.098Z",
+    "updated": "2026-01-13T10:51:15.397Z",
+    "size": 235,
+    "description": "TypeScript utility module providing time value formatting with leading zero padding for clock and countdown widgets.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "db333b5e34eb5cd9c79cfada96960830f216c9e3",
+    "history": [
+      {
+        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "author": "CCTEvalencia",
+        "date": "2026-01-13T15:16:57+01:00",
+        "message": "Added Clock Widget and General Optimization"
+      }
+    ],
+    "project": "render",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "12.4",
+    "folDepth": 2,
+    "folParent": "12",
+    "relKey": "106",
+    "relDepth": 1,
+    "relParent": "0"
+  }
+]

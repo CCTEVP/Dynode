@@ -12,17 +12,13 @@ RUN npm ci
 # Copy everything (use .dockerignore to exclude unwanted files)
 COPY . .
 
-# Accept build arguments
-ARG SOURCE_API_URL=https://localhost:3333
-ARG RENDER_BASE_URL=https://localhost:5555
-ARG BUILDER_BASE_URL=https://localhost:4444
-
-# Set environment variables for build
-ENV SOURCE_API_URL=${SOURCE_API_URL}
-ENV RENDER_BASE_URL=${RENDER_BASE_URL}
-ENV BUILDER_BASE_URL=${BUILDER_BASE_URL}
+## Removed SOURCE/RENDER/BUILDER base URL ARG/ENV – static config handles these
 
 # Build the application
+ARG APP_ENV_DOCKER=docker
+# Replace APP_ENV constant in config.ts for container build (no runtime env var usage)
+RUN sed -i 's/const APP_ENV: AppEnv = "[^"]*";/const APP_ENV: AppEnv = "'"${APP_ENV_DOCKER}"'";/' config.ts
+ENV DOCKER_BUILD=true
 RUN npm run build
 
 # Production stage
@@ -44,8 +40,7 @@ COPY --from=builder /app/files/ ./dist/files/
 COPY --from=builder /app/cert/ ./cert/
 COPY --from=builder /app/views/ ./views/
 
-# Copy environment file if it exists
-COPY .env* ./
+## Omit .env copies – runtime no longer depends on env files
 
 # Create logs directory
 RUN mkdir -p logs
@@ -58,12 +53,12 @@ RUN addgroup -g 1001 -S nodejs && \
 RUN chown -R dynode:nodejs /app
 USER dynode
 
-# Expose port
-EXPOSE 3333
+# Expose internal port 80 (host maps 3000 -> 80)
+EXPOSE 80
 
-# Health check
+# Health check (HTTP – config.https is false for docker/dev)
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('https://localhost:3333/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+  CMD node -e "require('http').get('http://localhost:80/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
 
 # Start application
 CMD ["node", "dist/app.js"]

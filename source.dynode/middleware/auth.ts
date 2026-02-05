@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
+import config from "../config";
 
 declare module "express-serve-static-core" {
   interface Request {
@@ -16,7 +17,8 @@ export function authenticateToken(
   const token = authHeader && authHeader.split(" ")[1];
   if (!token) return res.sendStatus(401);
 
-  jwt.verify(token, process.env.JWT_SECRET as string, (err, user) => {
+  const secret = (config.jwtSecret as string) || ""; // empty fallback
+  jwt.verify(token, secret, (err, user) => {
     if (err) return res.sendStatus(403);
     req.user = user; // user contains userId and username
     next();
