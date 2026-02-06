@@ -2,7 +2,7 @@
   {
     "filename": ".dockerignore",
     "path": ".dockerignore",
-    "created": "2025-09-30T08:56:44.307Z",
+    "created": "2026-02-05T08:19:41.686Z",
     "updated": "2025-09-30T08:56:44.308Z",
     "size": 133,
     "description": "Docker build exclusion patterns preventing development files and dependencies from being included in container images.",
@@ -12,10 +12,10 @@
     "_id": "05a721ebe3ba0754116825ed1359ff1785f4bbac",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a6ca27d4be4322eace1c23957d0dd014a242d700",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-31T13:04:39+02:00",
+        "message": "Containerization Completed"
       }
     ],
     "project": "render",
@@ -36,7 +36,7 @@
   {
     "filename": ".env",
     "path": ".env",
-    "created": "2025-09-30T09:06:41.471Z",
+    "created": "2026-02-05T08:19:41.687Z",
     "updated": "2025-11-03T08:23:06.058Z",
     "size": 615,
     "description": "Development environment variables for local runtime including MongoDB connection, port configuration, JWT secret, and service URLs.",
@@ -63,7 +63,7 @@
   {
     "filename": ".env.dev",
     "path": ".env.dev",
-    "created": "2026-01-15T13:12:48.029Z",
+    "created": "2026-02-05T08:19:41.688Z",
     "updated": "2025-11-03T08:23:06.058Z",
     "size": 615,
     "description": "Development environment configuration with localhost service URLs and port settings for local testing.",
@@ -73,10 +73,10 @@
     "_id": "bf56cccda2cc742301e3bcfd8204c4e7506242fb",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -97,7 +97,7 @@
   {
     "filename": ".env.prod",
     "path": ".env.prod",
-    "created": "2026-01-15T13:12:59.179Z",
+    "created": "2026-02-05T08:19:41.689Z",
     "updated": "2026-01-15T13:13:23.658Z",
     "size": 614,
     "description": "Production environment configuration with HTTPS service endpoints and production-ready security settings.",
@@ -107,10 +107,10 @@
     "_id": "a0177f68c1620a84039b07575ad1a1e25efc0975",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -131,7 +131,7 @@
   {
     "filename": ".env.stag",
     "path": ".env.stag",
-    "created": "2026-01-15T13:13:27.386Z",
+    "created": "2026-02-05T08:19:41.690Z",
     "updated": "2026-01-15T13:13:23.658Z",
     "size": 614,
     "description": "Staging environment configuration with HTTPS service endpoints for pre-production testing and validation.",
@@ -141,10 +141,10 @@
     "_id": "1459b0ceb3686928ea7f89ce69d22af1088171b7",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -165,7 +165,7 @@
   {
     "filename": ".gitignore",
     "path": ".gitignore",
-    "created": "2025-09-30T08:56:44.308Z",
+    "created": "2026-02-05T08:19:41.691Z",
     "updated": "2025-09-30T08:56:44.308Z",
     "size": 277,
     "description": "Git version control exclusion patterns for build artifacts, dependencies, logs, and environment-specific files.",
@@ -175,10 +175,16 @@
     "_id": "a5cc2925ca8258af241be7e5b0381edf30266302",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -199,7 +205,7 @@
   {
     "filename": "tasks.json",
     "path": ".vscode/tasks.json",
-    "created": "2026-01-15T14:52:33.159Z",
+    "created": "2026-02-05T08:19:41.794Z",
     "updated": "2026-01-15T14:53:20.184Z",
     "size": 341,
     "description": "VS Code task definitions for running development server and build scripts within the editor.",
@@ -226,9 +232,9 @@
   {
     "filename": "app.ts",
     "path": "app.ts",
-    "created": "2025-09-30T08:56:44.309Z",
-    "updated": "2026-01-23T09:30:10.346Z",
-    "size": 3251,
+    "created": "2026-02-05T08:19:41.692Z",
+    "updated": "2026-02-05T09:19:58.265Z",
+    "size": 3154,
     "description": "Express application entry point configuring middleware, routes, view engine, error handling, and HTTPS server with certificate support.",
     "internalDependencies": [
       {
@@ -267,28 +273,46 @@
     "_id": "94012cbdbf0e0cf94a72971e951224b4fef1ce18",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T17:15:27+02:00",
-        "message": "Development + Docker environments"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "d34b2c2b3b1c141c4cff45301bd6b832c4459493",
+        "author": "CCTEvalencia",
+        "date": "2025-06-13T11:38:53+02:00",
+        "message": "Endpoints for Creatives by Type"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -348,7 +372,7 @@
   {
     "filename": "www",
     "path": "bin/www",
-    "created": "2025-09-30T08:56:44.309Z",
+    "created": "2026-02-05T08:19:41.798Z",
     "updated": "2025-10-28T11:18:22.342Z",
     "size": 1666,
     "description": "Node.js binary wrapper script for starting HTTP server with port normalization and error handling.",
@@ -358,16 +382,22 @@
     "_id": "5c26cf27b4307ebaab9d7ca44d1f72181076ad4f",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -388,7 +418,7 @@
   {
     "filename": "render.dynode.pfx",
     "path": "cert/render.dynode.pfx",
-    "created": "2025-09-30T08:56:44.310Z",
+    "created": "2026-02-05T08:19:41.806Z",
     "updated": "2025-09-30T08:56:44.310Z",
     "size": 2797,
     "description": "SSL/TLS certificate bundle for HTTPS server encryption in development and production environments.",
@@ -398,10 +428,10 @@
     "_id": "99c94d2f600ed09763cc66a9fe63314de7c2e001",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
       }
     ],
     "project": "render",
@@ -422,7 +452,7 @@
   {
     "filename": "CHANGELOG.md",
     "path": "CHANGELOG.md",
-    "created": "2025-09-30T08:56:44.308Z",
+    "created": "2026-02-05T08:19:41.736Z",
     "updated": "2025-09-30T08:56:44.308Z",
     "size": 475,
     "description": "Version history documenting project creation, Express generator usage, and Visual Studio project setup.",
@@ -432,10 +462,16 @@
     "_id": "ab09011fa121d0a2bb9fa4ca76094f2482b902b7",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -456,7 +492,7 @@
   {
     "filename": "config.ts",
     "path": "config.ts",
-    "created": "2025-09-30T10:05:18.633Z",
+    "created": "2026-02-05T08:19:41.737Z",
     "updated": "2025-09-30T15:11:14.627Z",
     "size": 3332,
     "description": "Centralized configuration module defining environment-specific settings for ports, origins, service URLs, HTTPS, and JWT secrets.",
@@ -466,16 +502,10 @@
     "_id": "6c46effb109a57603f0c1712245f2abb56a631f7",
     "history": [
       {
-        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T17:15:27+02:00",
-        "message": "Development + Docker environments"
-      },
-      {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
-        "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -532,7 +562,7 @@
   {
     "filename": "Dockerfile",
     "path": "Dockerfile",
-    "created": "2025-09-30T08:56:44.308Z",
+    "created": "2026-02-05T08:19:41.768Z",
     "updated": "2025-09-30T13:07:50.879Z",
     "size": 1611,
     "description": "Multi-stage container build configuration compiling TypeScript, installing dependencies, and preparing production runtime environment.",
@@ -542,16 +572,28 @@
     "_id": "6651ddff6eb82c840ced7c1dddee15c6e1913dd4",
     "history": [
       {
-        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T17:15:27+02:00",
-        "message": "Development + Docker environments"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a6ca27d4be4322eace1c23957d0dd014a242d700",
+        "author": "CCTEvalencia",
+        "date": "2025-07-31T13:04:39+02:00",
+        "message": "Containerization Completed"
       }
     ],
     "project": "render",
@@ -572,7 +614,7 @@
   {
     "filename": "app.mmd",
     "path": "documentation/diagrams/app.mmd",
-    "created": "2025-09-30T08:56:44.311Z",
+    "created": "2026-02-05T08:19:42.327Z",
     "updated": "2025-09-30T08:56:44.311Z",
     "size": 79,
     "description": "Mermaid flowchart diagram illustrating high-level application architecture and route structure.",
@@ -582,16 +624,10 @@
     "_id": "daaaf58442e4d6e93314280872a500602d50a0b6",
     "history": [
       {
-        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T13:02:35+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:13:53+02:00",
-        "message": "Render flowchart updated"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -612,7 +648,7 @@
   {
     "filename": "bundler.mmd",
     "path": "documentation/diagrams/bundler.mmd",
-    "created": "2025-09-30T08:56:44.311Z",
+    "created": "2026-02-05T08:19:42.329Z",
     "updated": "2025-09-30T08:56:44.311Z",
     "size": 532,
     "description": "Mermaid flowchart diagram documenting asset bundling and minification process flow.",
@@ -622,22 +658,10 @@
     "_id": "1ea82eaaa710eee3d09bcaa5a2a38ba3ae364c1c",
     "history": [
       {
-        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T13:02:35+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:21:33+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:13:53+02:00",
-        "message": "Render flowchart updated"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -658,7 +682,7 @@
   {
     "filename": "dynamics-flow.mmd",
     "path": "documentation/diagrams/dynamics-flow.mmd",
-    "created": "2025-09-30T08:56:44.311Z",
+    "created": "2026-02-05T08:19:42.330Z",
     "updated": "2025-09-30T08:56:44.311Z",
     "size": 771,
     "description": "Mermaid flowchart diagram showing creative rendering data flow from request to response.",
@@ -668,34 +692,10 @@
     "_id": "3d3b2f13fd8651b1aecb8ec376303801b5c9bf3d",
     "history": [
       {
-        "commitId": "637e8d4510f6f88675ce8cd603f3b5cb6ceb1685",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T14:27:09+02:00",
-        "message": "Builder flowchart updated"
-      },
-      {
-        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T13:02:35+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "bf55d5f7763934ae97af1668506b0b840fe888f1",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:28:07+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:21:33+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:13:53+02:00",
-        "message": "Render flowchart updated"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -716,7 +716,7 @@
   {
     "filename": "dynamics-routes.mmd",
     "path": "documentation/diagrams/dynamics-routes.mmd",
-    "created": "2025-09-30T08:56:44.311Z",
+    "created": "2026-02-05T08:19:42.331Z",
     "updated": "2025-09-30T08:56:44.311Z",
     "size": 114,
     "description": "Mermaid flowchart diagram documenting dynamics route endpoints and parameters.",
@@ -726,34 +726,10 @@
     "_id": "b3f9eb1cefe72af11b658413cb5ef7e0972f04e8",
     "history": [
       {
-        "commitId": "637e8d4510f6f88675ce8cd603f3b5cb6ceb1685",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T14:27:09+02:00",
-        "message": "Builder flowchart updated"
-      },
-      {
-        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T13:02:35+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "bf55d5f7763934ae97af1668506b0b840fe888f1",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:28:07+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:21:33+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:13:53+02:00",
-        "message": "Render flowchart updated"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -774,7 +750,7 @@
   {
     "filename": "logging.mmd",
     "path": "documentation/diagrams/logging.mmd",
-    "created": "2025-09-30T08:56:44.312Z",
+    "created": "2026-02-05T08:19:42.332Z",
     "updated": "2025-09-30T08:56:44.312Z",
     "size": 158,
     "description": "Mermaid flowchart diagram illustrating centralized logging service integration and message flow.",
@@ -784,28 +760,10 @@
     "_id": "e3d4e19d40a818898ff8bcef4458f7efe49629f8",
     "history": [
       {
-        "commitId": "637e8d4510f6f88675ce8cd603f3b5cb6ceb1685",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T14:27:09+02:00",
-        "message": "Builder flowchart updated"
-      },
-      {
-        "commitId": "1819a2cd46a5dd3de4279a20dc787a857c9c7881",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T13:02:35+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "906bcc9ae177a40e6688c7421fb2dd3d7e1bed2f",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:21:33+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:13:53+02:00",
-        "message": "Render flowchart updated"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -826,7 +784,7 @@
   {
     "filename": "auth.ts",
     "path": "middleware/auth.ts",
-    "created": "2025-09-30T08:56:44.312Z",
+    "created": "2026-02-05T08:19:42.335Z",
     "updated": "2025-09-30T10:06:29.548Z",
     "size": 720,
     "description": "JWT authentication middleware verifying bearer tokens and attaching user data to Express requests.",
@@ -845,16 +803,22 @@
     "_id": "4c741a24ad096581cbb1cd38af932ab085e760ea",
     "history": [
       {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -886,7 +850,7 @@
   {
     "filename": "CreativeAssembly.ts",
     "path": "models_none/CreativeAssembly.ts",
-    "created": "2025-09-30T08:56:44.312Z",
+    "created": "2026-02-05T08:19:42.340Z",
     "updated": "2025-09-30T08:56:44.313Z",
     "size": 499,
     "description": "Mongoose schema definition for Assembly-type creatives extending base Creative interface.",
@@ -904,10 +868,22 @@
     "_id": "68ac47b19e462c4f8bc7a93e64c2f10387044c7e",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "d34b2c2b3b1c141c4cff45301bd6b832c4459493",
+        "author": "CCTEvalencia",
+        "date": "2025-06-13T11:38:53+02:00",
+        "message": "Endpoints for Creatives by Type"
       }
     ],
     "project": "render",
@@ -938,7 +914,7 @@
   {
     "filename": "CreativeDynamic.ts",
     "path": "models_none/CreativeDynamic.ts",
-    "created": "2025-09-30T08:56:44.313Z",
+    "created": "2026-02-05T08:19:42.341Z",
     "updated": "2025-09-30T08:56:44.313Z",
     "size": 578,
     "description": "Mongoose schema definition for Dynamic-type creatives with data-driven content rendering.",
@@ -956,10 +932,22 @@
     "_id": "627deb80c137510a8449f353e79fa68d6d02e78a",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "d34b2c2b3b1c141c4cff45301bd6b832c4459493",
+        "author": "CCTEvalencia",
+        "date": "2025-06-13T11:38:53+02:00",
+        "message": "Endpoints for Creatives by Type"
       }
     ],
     "project": "render",
@@ -990,7 +978,7 @@
   {
     "filename": "CreativeInteractive.ts",
     "path": "models_none/CreativeInteractive.ts",
-    "created": "2025-09-30T08:56:44.313Z",
+    "created": "2026-02-05T08:19:42.343Z",
     "updated": "2025-09-30T08:56:44.313Z",
     "size": 527,
     "description": "Mongoose schema definition for Interactive-type creatives with user interaction capabilities.",
@@ -1008,10 +996,22 @@
     "_id": "92742b0786494d076c485fed33d19156323792e2",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "d34b2c2b3b1c141c4cff45301bd6b832c4459493",
+        "author": "CCTEvalencia",
+        "date": "2025-06-13T11:38:53+02:00",
+        "message": "Endpoints for Creatives by Type"
       }
     ],
     "project": "render",
@@ -1042,7 +1042,7 @@
   {
     "filename": "CreativeUnified.ts",
     "path": "models_none/CreativeUnified.ts",
-    "created": "2025-09-30T08:56:44.313Z",
+    "created": "2026-02-05T08:19:42.345Z",
     "updated": "2025-09-30T08:56:44.313Z",
     "size": 490,
     "description": "Mongoose schema definition for Unified-type creatives combining multiple creative patterns.",
@@ -1060,10 +1060,22 @@
     "_id": "819e00325762e7605bda7babfc328361f6c2bc40",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "d34b2c2b3b1c141c4cff45301bd6b832c4459493",
+        "author": "CCTEvalencia",
+        "date": "2025-06-13T11:38:53+02:00",
+        "message": "Endpoints for Creatives by Type"
       }
     ],
     "project": "render",
@@ -1094,7 +1106,7 @@
   {
     "filename": "Cache.ts",
     "path": "models_none/shared/Cache.ts",
-    "created": "2025-09-30T08:56:44.314Z",
+    "created": "2026-02-05T08:19:42.353Z",
     "updated": "2025-09-30T08:56:44.314Z",
     "size": 296,
     "description": "Mongoose schema definition for cache metadata tracking creative asset caching state.",
@@ -1106,10 +1118,22 @@
     "_id": "e76d33ba3d4c4e0382c4de2c0484aa32a74dd981",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "d34b2c2b3b1c141c4cff45301bd6b832c4459493",
+        "author": "CCTEvalencia",
+        "date": "2025-06-13T11:38:53+02:00",
+        "message": "Endpoints for Creatives by Type"
       }
     ],
     "project": "render",
@@ -1140,7 +1164,7 @@
   {
     "filename": "Change.ts",
     "path": "models_none/shared/Change.ts",
-    "created": "2025-09-30T08:56:44.314Z",
+    "created": "2026-02-05T08:19:42.357Z",
     "updated": "2025-09-30T08:56:44.314Z",
     "size": 520,
     "description": "Mongoose schema definition for change tracking recording creative modifications and version history.",
@@ -1152,10 +1176,22 @@
     "_id": "94e04227ed834364038cf2333310467112f5bf07",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1193,7 +1229,7 @@
   {
     "filename": "Creative.ts",
     "path": "models_none/shared/Creative.ts",
-    "created": "2025-09-30T08:56:44.314Z",
+    "created": "2026-02-05T08:19:42.359Z",
     "updated": "2025-09-30T08:56:44.314Z",
     "size": 1480,
     "description": "Base Mongoose schema for all creative types defining common fields including resources, behaviors, and change tracking.",
@@ -1216,10 +1252,22 @@
     "_id": "1c741b31bfae37878ee167f72f69983dbbef5c87",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "d34b2c2b3b1c141c4cff45301bd6b832c4459493",
+        "author": "CCTEvalencia",
+        "date": "2025-06-13T11:38:53+02:00",
+        "message": "Endpoints for Creatives by Type"
       }
     ],
     "project": "render",
@@ -1286,7 +1334,7 @@
   {
     "filename": "User.ts",
     "path": "models_none/User.ts",
-    "created": "2025-09-30T08:56:44.313Z",
+    "created": "2026-02-05T08:19:42.347Z",
     "updated": "2025-09-30T08:56:44.313Z",
     "size": 621,
     "description": "Mongoose schema definition for user authentication and authorization with change tracking integration.",
@@ -1304,10 +1352,22 @@
     "_id": "ee2011dd85e61507901670cce3234479293c9556",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1338,7 +1398,7 @@
   {
     "filename": "api.dynode.esproj.CoreCompileInputs.cache",
     "path": "obj/Debug/api.dynode.esproj.CoreCompileInputs.cache",
-    "created": "2025-09-30T08:56:44.315Z",
+    "created": "2026-02-05T08:20:03.306Z",
     "updated": "2025-09-30T08:56:44.315Z",
     "size": 0,
     "description": "Visual Studio build cache file tracking compilation inputs for incremental build optimization.",
@@ -1348,15 +1408,15 @@
     "_id": "29ddb1f5200a7915819e253aa236cce4686de256",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
       },
       {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
         "message": "First Commit"
       }
     ],
@@ -1378,7 +1438,7 @@
   {
     "filename": "api.dynode.esproj.FileListAbsolute.txt",
     "path": "obj/Debug/api.dynode.esproj.FileListAbsolute.txt",
-    "created": "2025-09-30T08:56:44.315Z",
+    "created": "2026-02-05T08:20:03.307Z",
     "updated": "2025-09-30T08:56:44.315Z",
     "size": 95,
     "description": "Visual Studio build cache listing absolute paths to compiled project files.",
@@ -1388,10 +1448,16 @@
     "_id": "5aab24a767fb2e125bec170e83505388caebd0a9",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1412,7 +1478,7 @@
   {
     "filename": "package.g.props",
     "path": "obj/Debug/package.g.props",
-    "created": "2025-09-30T08:56:44.315Z",
+    "created": "2026-02-05T08:20:03.308Z",
     "updated": "2025-09-30T08:56:44.315Z",
     "size": 3739,
     "description": "MSBuild properties file generated by Visual Studio for package restore and build configuration.",
@@ -1422,10 +1488,22 @@
     "_id": "6518363bee9e801607fb432be65a49014f689beb",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1446,7 +1524,7 @@
   {
     "filename": "render.dynode.esproj.CoreCompileInputs.cache",
     "path": "obj/Debug/render.dynode.esproj.CoreCompileInputs.cache",
-    "created": "2025-09-30T08:56:44.316Z",
+    "created": "2026-02-05T08:20:03.313Z",
     "updated": "2025-09-30T08:56:44.316Z",
     "size": 0,
     "description": "Visual Studio build cache file tracking TypeScript compilation inputs for incremental builds.",
@@ -1456,15 +1534,15 @@
     "_id": "980056837f7efef11f37457a6a116ad6350d43fb",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
       },
       {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
         "message": "First Commit"
       }
     ],
@@ -1486,7 +1564,7 @@
   {
     "filename": "render.dynode.esproj.FileListAbsolute.txt",
     "path": "obj/Debug/render.dynode.esproj.FileListAbsolute.txt",
-    "created": "2025-09-30T08:56:44.316Z",
+    "created": "2026-02-05T08:20:03.314Z",
     "updated": "2025-09-30T08:56:44.316Z",
     "size": 101,
     "description": "Visual Studio build cache listing absolute paths to compiled output files.",
@@ -1496,10 +1574,10 @@
     "_id": "45d92f21e145f2841288ad5fd90b382155e1b1e9",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
       }
     ],
     "project": "render",
@@ -1520,7 +1598,7 @@
   {
     "filename": "package-lock.json",
     "path": "package-lock.json",
-    "created": "2025-09-30T08:56:44.316Z",
+    "created": "2026-02-05T08:19:41.769Z",
     "updated": "2026-01-23T09:30:19.978Z",
     "size": 197392,
     "description": "NPM dependency lock file ensuring consistent package versions across installations and environments.",
@@ -1530,16 +1608,34 @@
     "_id": "fa288d1472d29beccb489a676f68739ad365fc47",
     "history": [
       {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1560,7 +1656,7 @@
   {
     "filename": "package.json",
     "path": "package.json",
-    "created": "2025-09-30T08:56:44.317Z",
+    "created": "2026-02-05T08:19:41.777Z",
     "updated": "2026-01-27T15:56:11.464Z",
     "size": 1654,
     "description": "NPM package manifest defining dependencies, scripts, and project metadata for render.dynode service.",
@@ -1570,28 +1666,58 @@
     "_id": "7030d0b2f71b999ff89a343de08c414af32fc93a",
     "history": [
       {
-        "commitId": "1ecb5b86bae202f3589e1dd5da717a3679ca4788",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-20T16:29:24+01:00",
-        "message": "Consolidation System Fixed"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "4c173f8ad935c4c14575e53a9368780022ab6475",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2026-01-20T14:55:22+01:00",
-        "message": "Consolidation File System Implemented"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
       },
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a6ca27d4be4322eace1c23957d0dd014a242d700",
+        "author": "CCTEvalencia",
+        "date": "2025-07-31T13:04:39+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1612,7 +1738,7 @@
   {
     "filename": "logo.svg",
     "path": "public/images/logo.svg",
-    "created": "2025-09-30T08:56:44.317Z",
+    "created": "2026-02-05T08:20:03.320Z",
     "updated": "2025-09-30T08:56:44.317Z",
     "size": 2094,
     "description": "SVG logo graphic for application branding displayed in browser tab and rendered pages.",
@@ -1622,10 +1748,10 @@
     "_id": "2ebef2c70ba50a2b53bcbf6964a738fa4b1cb5d7",
     "history": [
       {
-        "commitId": "c21591feaccbb37c439a0d258dc0fca3f1eec03b",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T13:30:10+02:00",
-        "message": "Favicon fixed"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -1646,7 +1772,7 @@
   {
     "filename": "style.css",
     "path": "public/stylesheets/style.css",
-    "created": "2025-09-30T08:56:44.318Z",
+    "created": "2026-02-05T08:20:03.324Z",
     "updated": "2025-09-30T08:56:44.318Z",
     "size": 579,
     "description": "Global CSS stylesheet providing base styling for rendered creative pages and error views.",
@@ -1656,10 +1782,22 @@
     "_id": "ce1315d608991c01b00e226a275c645a37acf96b",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1680,7 +1818,7 @@
   {
     "filename": "README.md",
     "path": "README.md",
-    "created": "2025-09-30T08:56:44.308Z",
+    "created": "2026-02-05T08:19:41.778Z",
     "updated": "2025-09-30T08:56:44.308Z",
     "size": 2765,
     "description": "Project documentation with architecture diagrams, route flowcharts, and request/asset flow visualizations.",
@@ -1690,16 +1828,10 @@
     "_id": "8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d",
     "history": [
       {
-        "commitId": "1e37cccf4ad25d15d8b5c4b6344411882737d011",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T12:33:35+02:00",
-        "message": "Render flowchart fixed"
-      },
-      {
-        "commitId": "41382f0aab71d0382ce86d3bfc4b4cca9ff87c1a",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T12:13:53+02:00",
-        "message": "Render flowchart updated"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -1720,7 +1852,7 @@
   {
     "filename": "render.dynode.esproj",
     "path": "render.dynode.esproj",
-    "created": "2025-09-30T08:56:44.318Z",
+    "created": "2026-02-05T08:19:41.779Z",
     "updated": "2025-09-30T08:56:44.318Z",
     "size": 313,
     "description": "Visual Studio project file for TypeScript/Node.js development with build and debug configuration.",
@@ -1730,10 +1862,16 @@
     "_id": "657f85721aee3cf672f824fa9f9b500193670c28",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1754,7 +1892,7 @@
   {
     "filename": "REQUIREMENTS.md",
     "path": "REQUIREMENTS.md",
-    "created": "2025-10-28T10:37:19.190Z",
+    "created": "2026-02-05T08:19:41.779Z",
     "updated": "2025-10-28T10:40:59.308Z",
     "size": 7863,
     "description": "Product requirements document defining goals, stakeholders, user journeys, and functional specifications for render service.",
@@ -1764,10 +1902,10 @@
     "_id": "41075dc246df109ff646c300d136057517b9abd5",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -1788,7 +1926,7 @@
   {
     "filename": "cache.ts",
     "path": "routes/cache.ts",
-    "created": "2026-01-23T09:30:08.281Z",
+    "created": "2026-02-05T08:20:03.335Z",
     "updated": "2026-01-23T09:30:08.378Z",
     "size": 632,
     "description": "",
@@ -1804,7 +1942,14 @@
     ],
     "category": "source",
     "_id": "42cc2c21a671cb3d9cb2e880ecda1c12c6abd6e2",
-    "history": [],
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
     "project": "render",
     "dependencyCount": 1,
     "externalDependencyLabels": [
@@ -1841,9 +1986,9 @@
   {
     "filename": "default.ts",
     "path": "routes/dynamics/default.ts",
-    "created": "2025-09-30T08:56:44.319Z",
-    "updated": "2025-10-28T12:17:15.581Z",
-    "size": 5279,
+    "created": "2026-02-05T08:20:03.339Z",
+    "updated": "2026-02-05T09:20:59.277Z",
+    "size": 5140,
     "description": "Express router handling creative rendering requests, asset bundling, and resource delivery with MIME type resolution.",
     "internalDependencies": [
       {
@@ -1883,28 +2028,82 @@
     "_id": "e42c3a94a5beab691ee0efa10cd2d15e73e8ad39",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "commitId": "538e142cb20de14496adedbd88abcf043b725ddb",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T17:15:27+02:00",
-        "message": "Development + Docker environments"
+        "date": "2025-09-15T16:39:20+02:00",
+        "message": "MVP for Cloud"
       },
       {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a6ca27d4be4322eace1c23957d0dd014a242d700",
+        "author": "CCTEvalencia",
+        "date": "2025-07-31T13:04:39+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "8f8d0bfc8612741917689fb572b85cf453f5be70",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:30:04+02:00",
+        "message": "Remove unnecesary console.log"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
+        "author": "CCTEvalencia",
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
+        "author": "CCTEvalencia",
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -1975,7 +2174,7 @@
   {
     "filename": "index.ts",
     "path": "routes/index.ts",
-    "created": "2025-09-30T08:56:44.319Z",
+    "created": "2026-02-05T08:20:03.335Z",
     "updated": "2025-09-30T08:56:44.319Z",
     "size": 435,
     "description": "Root Express router configuring base routes and mounting dynamics sub-router for creative rendering.",
@@ -1998,10 +2197,28 @@
     "_id": "5d2a13840e2b59decfb02f8a5d07f44f6fe5dd66",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a6ca27d4be4322eace1c23957d0dd014a242d700",
+        "author": "CCTEvalencia",
+        "date": "2025-07-31T13:04:39+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -2047,7 +2264,7 @@
   {
     "filename": "behaviours.ts",
     "path": "services/behaviours.ts",
-    "created": "2025-10-28T12:16:56.922Z",
+    "created": "2026-02-05T08:20:03.355Z",
     "updated": "2025-10-28T13:22:11.975Z",
     "size": 9489,
     "description": "Creative behavior evaluation engine processing conditional rules and applying dynamic content modifications based on date, number, string, and boolean comparisons.",
@@ -2063,10 +2280,10 @@
     "_id": "9724337ffad0dbe511ef4928fb6a3122e00f4829",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2103,9 +2320,9 @@
   {
     "filename": "bundler.ts",
     "path": "services/bundler.ts",
-    "created": "2025-09-30T08:56:44.319Z",
-    "updated": "2026-01-23T09:29:44.859Z",
-    "size": 10265,
+    "created": "2026-02-05T08:20:03.358Z",
+    "updated": "2026-02-05T09:21:36.064Z",
+    "size": 10273,
     "description": "Asset bundling service concatenating and minifying JavaScript/CSS components, libraries, and custom assets for creative rendering.",
     "internalDependencies": [
       {
@@ -2134,16 +2351,46 @@
     "_id": "f92679e68bdadd591e9037860bfbdc572593743c",
     "history": [
       {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "8f8d0bfc8612741917689fb572b85cf453f5be70",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:30:04+02:00",
+        "message": "Remove unnecesary console.log"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
+        "author": "CCTEvalencia",
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
       }
     ],
     "project": "render",
@@ -2206,7 +2453,7 @@
   {
     "filename": "caching.ts",
     "path": "services/caching.ts",
-    "created": "2025-09-30T08:56:44.319Z",
+    "created": "2026-02-05T08:20:03.359Z",
     "updated": "2026-01-23T09:29:21.703Z",
     "size": 2548,
     "description": "Service worker cache management stub providing placeholder for future creative asset caching implementation.",
@@ -2224,10 +2471,16 @@
     "_id": "f2a3e8012d82697fd2bd0ce5c625e573b4a6aee8",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
       }
     ],
     "project": "render",
@@ -2287,9 +2540,9 @@
   {
     "filename": "logger.ts",
     "path": "services/logger.ts",
-    "created": "2025-09-30T08:56:44.319Z",
-    "updated": "2025-09-30T14:13:13.559Z",
-    "size": 1402,
+    "created": "2026-02-05T08:20:03.370Z",
+    "updated": "2026-02-05T09:21:59.705Z",
+    "size": 1405,
     "description": "Remote logging service forwarding application logs to centralized source.dynode endpoint with axios-based HTTP transport.",
     "internalDependencies": [
       {
@@ -2305,22 +2558,46 @@
     "_id": "80286fd7777d2fe5c88f26a224435f5b75a31bf0",
     "history": [
       {
-        "commitId": "8abfbdb3b7228fcc04cc6a18238dadd1006dd83f",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T17:15:27+02:00",
-        "message": "Development + Docker environments"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a6ca27d4be4322eace1c23957d0dd014a242d700",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-31T13:04:39+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
+        "author": "CCTEvalencia",
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
+        "author": "CCTEvalencia",
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -2394,7 +2671,7 @@
   {
     "filename": "tsconfig.inplace.json",
     "path": "tsconfig.inplace.json",
-    "created": "2025-09-30T08:56:44.319Z",
+    "created": "2026-02-05T08:19:41.791Z",
     "updated": "2025-09-30T08:56:44.320Z",
     "size": 484,
     "description": "TypeScript compiler configuration for in-place component compilation without output directory relocation.",
@@ -2404,10 +2681,16 @@
     "_id": "c620f2e4429007d3ad742bb94287d55d15f97702",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -2428,7 +2711,7 @@
   {
     "filename": "tsconfig.json",
     "path": "tsconfig.json",
-    "created": "2025-09-30T08:56:44.320Z",
+    "created": "2026-02-05T08:19:41.792Z",
     "updated": "2025-09-30T11:03:09.732Z",
     "size": 508,
     "description": "TypeScript compiler configuration for building application with ES2020 target, CommonJS modules, and strict type checking.",
@@ -2438,16 +2721,28 @@
     "_id": "61ebb9fd6e8cf9082658121d5d81e297791dacd0",
     "history": [
       {
-        "commitId": "28473eb89913b5fa225dd16fa31429ba4033fa66",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-09-30T13:56:47+02:00",
-        "message": "Configuration centralized per project"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -2468,7 +2763,7 @@
   {
     "filename": "global.d.ts",
     "path": "types/global.d.ts",
-    "created": "2025-09-30T08:56:44.320Z",
+    "created": "2026-02-05T08:20:03.374Z",
     "updated": "2026-01-16T09:09:53.564Z",
     "size": 1356,
     "description": "Global TypeScript type declarations for window.creativeTicker, window.widgetInitializer, and custom animation interfaces.",
@@ -2478,16 +2773,22 @@
     "_id": "96aca723bf836baa8cbac9bdea4865165f4e2437",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -2508,7 +2809,7 @@
   {
     "filename": "default.css",
     "path": "views/components/BoxLayout/default.css",
-    "created": "2025-09-30T08:56:44.321Z",
+    "created": "2026-02-05T08:20:03.384Z",
     "updated": "2025-09-30T08:56:44.321Z",
     "size": 155,
     "description": "CSS styling for BoxLayout component defining container layout and positioning rules.",
@@ -2518,16 +2819,10 @@
     "_id": "f90f138f0ba0f6dd33ae4d8b033dd2ad005a13ed",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
-      },
-      {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -2548,7 +2843,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/BoxLayout/default.pug",
-    "created": "2025-09-30T08:56:44.321Z",
+    "created": "2026-02-05T08:20:03.385Z",
     "updated": "2026-01-13T12:10:27.155Z",
     "size": 839,
     "description": "Pug template for BoxLayout component rendering container with nested child elements and dynamic styles.",
@@ -2558,16 +2853,28 @@
     "_id": "01fb34e1d77be18d086c1433cc63b1c0d10593e5",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -2588,7 +2895,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/BoxLayout/default.ts",
-    "created": "2025-09-30T08:56:44.321Z",
+    "created": "2026-02-05T08:20:03.397Z",
     "updated": "2025-09-30T08:56:44.321Z",
     "size": 1959,
     "description": "TypeScript initialization script for BoxLayout components with MutationObserver watching data-value attribute changes.",
@@ -2598,10 +2905,22 @@
     "_id": "df3f2a46bfd0feece0c9025819c2e1da581ae08b",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -2622,7 +2941,7 @@
   {
     "filename": "blurAnimation.css",
     "path": "views/components/CardWidget/blurAnimation.css",
-    "created": "2026-01-15T16:13:31.608Z",
+    "created": "2026-02-05T08:20:03.401Z",
     "updated": "2026-01-15T16:14:45.017Z",
     "size": 130,
     "description": "CSS keyframe animation for CardWidget blur transition effects with configurable opacity and filter timing.",
@@ -2632,10 +2951,10 @@
     "_id": "d7de82d917db864aeda5cbb401e8a90e825444d1",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2656,7 +2975,7 @@
   {
     "filename": "blurAnimation.ts",
     "path": "views/components/CardWidget/blurAnimation.ts",
-    "created": "2026-01-15T16:07:29.938Z",
+    "created": "2026-02-05T08:20:03.402Z",
     "updated": "2026-01-16T09:34:26.748Z",
     "size": 1302,
     "description": "TypeScript blur animation implementation for CardWidget applying CSS filter transitions during content updates.",
@@ -2666,10 +2985,10 @@
     "_id": "499beff1f2443afd62abcbb90c6fd4bc21e79768",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2690,7 +3009,7 @@
   {
     "filename": "default.css",
     "path": "views/components/CardWidget/default.css",
-    "created": "2025-09-30T08:56:44.321Z",
+    "created": "2026-02-05T08:20:03.418Z",
     "updated": "2025-09-30T08:56:44.321Z",
     "size": 189,
     "description": "CSS styling for CardWidget component defining card presentation, perspective, and base animation states.",
@@ -2700,16 +3019,10 @@
     "_id": "947fc2c237ab85675e0de62f2e7d8bb0bd8ff51e",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
-      },
-      {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -2730,7 +3043,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/CardWidget/default.pug",
-    "created": "2025-09-30T08:56:44.321Z",
+    "created": "2026-02-05T08:20:03.420Z",
     "updated": "2026-01-16T11:00:03.420Z",
     "size": 822,
     "description": "Pug template for CardWidget component rendering card with animation attributes and dynamic value binding.",
@@ -2740,16 +3053,28 @@
     "_id": "543a08b80c5c7490a0b5de817fb5ee85ac262bab",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -2770,7 +3095,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/CardWidget/default.ts",
-    "created": "2025-09-30T08:56:44.323Z",
+    "created": "2026-02-05T08:20:03.427Z",
     "updated": "2026-01-20T16:09:28.853Z",
     "size": 3093,
     "description": "TypeScript initialization script for CardWidget with MutationObserver triggering animation on data-value changes.",
@@ -2780,22 +3105,28 @@
     "_id": "309ff4e22b45c83dd6035d707de5454031ee1b5a",
     "history": [
       {
-        "commitId": "2a465a56aac01ac09e64148cde9c6551e004c372",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-21T14:01:37+01:00",
-        "message": "Builder -> Help -> Codebase UI"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -2816,7 +3147,7 @@
   {
     "filename": "fadeAnimation.css",
     "path": "views/components/CardWidget/fadeAnimation.css",
-    "created": "2026-01-15T16:13:31.362Z",
+    "created": "2026-02-05T08:20:03.428Z",
     "updated": "2026-01-15T16:14:44.950Z",
     "size": 131,
     "description": "CSS keyframe animation for CardWidget fade transition effects with opacity timing curves.",
@@ -2826,10 +3157,10 @@
     "_id": "bea9cf14eb875c2cbf44cbd54de064e65c6ce451",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2850,7 +3181,7 @@
   {
     "filename": "fadeAnimation.ts",
     "path": "views/components/CardWidget/fadeAnimation.ts",
-    "created": "2026-01-15T16:07:29.557Z",
+    "created": "2026-02-05T08:20:03.429Z",
     "updated": "2026-01-16T08:46:45.099Z",
     "size": 853,
     "description": "TypeScript fade animation implementation for CardWidget applying opacity transitions during content updates.",
@@ -2860,10 +3191,10 @@
     "_id": "c7e671a61c6b37f22ad91318e18c772644163511",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2884,7 +3215,7 @@
   {
     "filename": "flipAnimation.css",
     "path": "views/components/CardWidget/flipAnimation.css",
-    "created": "2026-01-15T16:13:31.433Z",
+    "created": "2026-02-05T08:20:03.430Z",
     "updated": "2026-01-16T10:07:19.174Z",
     "size": 219,
     "description": "CSS 3D flip animation for CardWidget with configurable axis rotation and backface visibility handling.",
@@ -2894,10 +3225,10 @@
     "_id": "cd786c9af6c89cd1db07aa77f58e30906267dadc",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2918,7 +3249,7 @@
   {
     "filename": "flipAnimation.ts",
     "path": "views/components/CardWidget/flipAnimation.ts",
-    "created": "2026-01-15T16:07:29.692Z",
+    "created": "2026-02-05T08:20:03.431Z",
     "updated": "2026-01-16T10:59:14.878Z",
     "size": 2640,
     "description": "TypeScript flip animation implementation for CardWidget applying 3D rotation transforms with customizable direction, speed, and transition timing.",
@@ -2928,10 +3259,10 @@
     "_id": "d96cc882d41de9775ec242744d314ba6e730efc8",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2952,7 +3283,7 @@
   {
     "filename": "popAnimation.css",
     "path": "views/components/CardWidget/popAnimation.css",
-    "created": "2026-01-15T16:13:31.523Z",
+    "created": "2026-02-05T08:20:03.453Z",
     "updated": "2026-01-15T16:14:44.950Z",
     "size": 137,
     "description": "CSS scale animation for CardWidget creating pop effect with transform-based size transitions.",
@@ -2962,10 +3293,10 @@
     "_id": "db2040a974a4c390ce2d42faf7e71dc541c1cc02",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -2986,7 +3317,7 @@
   {
     "filename": "popAnimation.ts",
     "path": "views/components/CardWidget/popAnimation.ts",
-    "created": "2026-01-15T16:07:29.839Z",
+    "created": "2026-02-05T08:20:03.454Z",
     "updated": "2026-01-16T08:46:34.738Z",
     "size": 1013,
     "description": "TypeScript pop animation implementation for CardWidget applying scale transforms with bounce effect during content updates.",
@@ -2996,10 +3327,10 @@
     "_id": "1ccddf652b1eea08b3b488e42c82f3179a505815",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -3020,7 +3351,7 @@
   {
     "filename": "rollAnimation.css",
     "path": "views/components/CardWidget/rollAnimation.css",
-    "created": "2025-09-30T08:56:44.323Z",
+    "created": "2026-02-05T08:20:03.455Z",
     "updated": "2026-01-15T14:50:14.154Z",
     "size": 1706,
     "description": "CSS 3D roll animation for CardWidget with multi-axis rotation and perspective transformations.",
@@ -3030,16 +3361,22 @@
     "_id": "cb736d14fb06067104830c9388f8927aea75bdf0",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3060,7 +3397,7 @@
   {
     "filename": "rollAnimation.ts",
     "path": "views/components/CardWidget/rollAnimation.ts",
-    "created": "2025-09-30T08:56:44.323Z",
+    "created": "2026-02-05T08:20:03.456Z",
     "updated": "2026-01-16T10:12:27.731Z",
     "size": 5034,
     "description": "TypeScript roll animation implementation for CardWidget applying complex 3D rotation sequences with configurable direction, distance, and scale.",
@@ -3070,16 +3407,22 @@
     "_id": "5fdcd9862cd778e90ba59111c54a8aed691e93ef",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3100,7 +3443,7 @@
   {
     "filename": "default.css",
     "path": "views/components/ClockWidget/default.css",
-    "created": "2026-01-13T10:45:49.684Z",
+    "created": "2026-02-05T08:20:03.471Z",
     "updated": "2026-01-13T10:46:14.472Z",
     "size": 73,
     "description": "CSS styling for ClockWidget component defining time display formatting and layout properties.",
@@ -3110,16 +3453,16 @@
     "_id": "66434f31cd0264ab7a2999615179af8f6758ce06",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3140,7 +3483,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/ClockWidget/default.pug",
-    "created": "2026-01-13T10:45:46.565Z",
+    "created": "2026-02-05T08:20:03.472Z",
     "updated": "2026-01-13T12:19:48.922Z",
     "size": 500,
     "description": "Pug template for ClockWidget component rendering time elements with format configuration and timezone support.",
@@ -3150,10 +3493,10 @@
     "_id": "64d72f9658ba009ad1f70257b2d3e5e01d804a62",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -3174,7 +3517,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/ClockWidget/default.ts",
-    "created": "2026-01-13T10:45:41.591Z",
+    "created": "2026-02-05T08:20:03.473Z",
     "updated": "2026-01-13T13:43:27.768Z",
     "size": 3817,
     "description": "TypeScript initialization script for ClockWidget subscribing to creative ticker for real-time clock updates with configurable format and timezone.",
@@ -3184,10 +3527,10 @@
     "_id": "b1769dade55741b1ef94f98523a1551b530b63c6",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -3208,7 +3551,7 @@
   {
     "filename": "default.css",
     "path": "views/components/CountdownWidget/default.css",
-    "created": "2025-09-30T08:56:44.324Z",
+    "created": "2026-02-05T08:20:03.486Z",
     "updated": "2025-09-30T08:56:44.324Z",
     "size": 84,
     "description": "CSS styling for CountdownWidget component defining countdown timer display and unit formatting.",
@@ -3218,16 +3561,10 @@
     "_id": "82749a25bbbec41475320ce5a8c79540f8ba1130",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
-      },
-      {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3248,7 +3585,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/CountdownWidget/default.pug",
-    "created": "2025-09-30T08:56:44.324Z",
+    "created": "2026-02-05T08:20:03.487Z",
     "updated": "2025-09-30T08:56:44.324Z",
     "size": 540,
     "description": "Pug template for CountdownWidget component rendering countdown elements with unit labels and dynamic value display.",
@@ -3258,10 +3595,28 @@
     "_id": "e9fab52a37d20ec5214c6464cd76dd17014d2836",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -3282,7 +3637,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/CountdownWidget/default.ts",
-    "created": "2025-09-30T08:56:44.324Z",
+    "created": "2026-02-05T08:20:03.488Z",
     "updated": "2026-01-13T13:43:29.222Z",
     "size": 5807,
     "description": "TypeScript initialization script for CountdownWidget calculating time remaining to target date with second-precision updates via creative ticker.",
@@ -3292,16 +3647,28 @@
     "_id": "708c7d8a4bd0a1a1cc5575dc48aeed473a74b306",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3322,7 +3689,7 @@
   {
     "filename": "default.css",
     "path": "views/components/DebugWidget/default.css",
-    "created": "2025-09-30T08:56:44.324Z",
+    "created": "2026-02-05T08:20:03.492Z",
     "updated": "2025-09-30T08:56:44.325Z",
     "size": 76,
     "description": "CSS styling for DebugWidget component providing development-mode visualization of creative metadata and state.",
@@ -3332,10 +3699,10 @@
     "_id": "60f51b4d57bc0ef4d91b20a113c631f4851d9ed0",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3356,7 +3723,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/DebugWidget/default.pug",
-    "created": "2025-09-30T08:56:44.325Z",
+    "created": "2026-02-05T08:20:03.493Z",
     "updated": "2026-01-13T11:16:23.543Z",
     "size": 440,
     "description": "Pug template for DebugWidget component displaying creative ID and debug information for development troubleshooting.",
@@ -3366,16 +3733,40 @@
     "_id": "54b547a5aea29fe1e445d1ce009d99f7df29dca7",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
+        "author": "CCTEvalencia",
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -3396,7 +3787,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/DebugWidget/default.ts",
-    "created": "2025-09-30T08:56:44.325Z",
+    "created": "2026-02-05T08:20:03.494Z",
     "updated": "2025-09-30T08:56:44.325Z",
     "size": 374,
     "description": "TypeScript initialization stub for DebugWidget component providing placeholder for future debug functionality.",
@@ -3406,10 +3797,22 @@
     "_id": "d2f5fd862e11a7f173ae1fe9bd7ed4e38f5025f2",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3430,7 +3833,7 @@
   {
     "filename": "default.css",
     "path": "views/components/ImageWidget/default.css",
-    "created": "2025-09-30T08:56:44.325Z",
+    "created": "2026-02-05T08:20:03.497Z",
     "updated": "2025-09-30T08:56:44.325Z",
     "size": 117,
     "description": "CSS styling for ImageWidget component defining image display, sizing, and object-fit properties.",
@@ -3440,16 +3843,10 @@
     "_id": "087ab93f5d1f453a86f0c9581e8e617e1764674d",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
-      },
-      {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3470,7 +3867,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/ImageWidget/default.pug",
-    "created": "2025-09-30T08:56:44.326Z",
+    "created": "2026-02-05T08:20:03.498Z",
     "updated": "2025-09-30T08:56:44.326Z",
     "size": 522,
     "description": "Pug template for ImageWidget component rendering images with source URL binding and alt text support.",
@@ -3480,10 +3877,40 @@
     "_id": "18462bf5fbd0f42062daddd15f4c50fc65d444a8",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a6ca27d4be4322eace1c23957d0dd014a242d700",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-31T13:04:39+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
+        "author": "CCTEvalencia",
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
+        "author": "CCTEvalencia",
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -3504,7 +3931,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/ImageWidget/default.ts",
-    "created": "2025-09-30T08:56:44.326Z",
+    "created": "2026-02-05T08:20:03.499Z",
     "updated": "2025-09-30T08:56:44.326Z",
     "size": 374,
     "description": "TypeScript initialization stub for ImageWidget component providing placeholder for future image loading functionality.",
@@ -3514,10 +3941,22 @@
     "_id": "63c6cd0cb7de1d7e9e4b6fa48f6d2de0488c7c34",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3538,7 +3977,7 @@
   {
     "filename": "default.css",
     "path": "views/components/SlideLayout/default.css",
-    "created": "2025-09-30T08:56:44.326Z",
+    "created": "2026-02-05T08:20:03.503Z",
     "updated": "2025-09-30T08:56:44.326Z",
     "size": 540,
     "description": "CSS styling for SlideLayout component defining slide container, transitions, and child element positioning.",
@@ -3548,16 +3987,10 @@
     "_id": "6d9c7c6d49555300250a7cc0de467eac95b39815",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
-      },
-      {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3578,7 +4011,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/SlideLayout/default.pug",
-    "created": "2025-09-30T08:56:44.326Z",
+    "created": "2026-02-05T08:20:03.504Z",
     "updated": "2026-01-13T12:09:20.085Z",
     "size": 987,
     "description": "Pug template for SlideLayout component rendering slide container with nested child elements and slide transition support.",
@@ -3588,16 +4021,28 @@
     "_id": "cbeda1708f03199b2170882358314ba1e351a7dc",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -3618,7 +4063,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/SlideLayout/default.ts",
-    "created": "2025-09-30T08:56:44.326Z",
+    "created": "2026-02-05T08:20:03.505Z",
     "updated": "2025-09-30T08:56:44.327Z",
     "size": 374,
     "description": "TypeScript initialization stub for SlideLayout component providing placeholder for future slide navigation functionality.",
@@ -3628,10 +4073,22 @@
     "_id": "6ccb8368cf5082be154aaf6fa666ae2da334c113",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3652,7 +4109,7 @@
   {
     "filename": "default.css",
     "path": "views/components/TextWidget/default.css",
-    "created": "2025-09-30T08:56:44.328Z",
+    "created": "2026-02-05T08:20:03.509Z",
     "updated": "2025-09-30T08:56:44.328Z",
     "size": 204,
     "description": "CSS styling for TextWidget component defining text display, typography, and formatting properties.",
@@ -3662,16 +4119,10 @@
     "_id": "fca35cbb024598677e41038ce489da2b5408e1e1",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
-      },
-      {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3692,7 +4143,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/TextWidget/default.pug",
-    "created": "2025-09-30T08:56:44.328Z",
+    "created": "2026-02-05T08:20:03.510Z",
     "updated": "2025-09-30T08:56:44.328Z",
     "size": 297,
     "description": "Pug template for TextWidget component rendering text content with dynamic value binding and style attributes.",
@@ -3702,10 +4153,22 @@
     "_id": "455be41d44f18d786adfbe0521e2dfc830f01efd",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -3726,7 +4189,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/TextWidget/default.ts",
-    "created": "2025-09-30T08:56:44.328Z",
+    "created": "2026-02-05T08:20:03.511Z",
     "updated": "2025-09-30T08:56:44.329Z",
     "size": 368,
     "description": "TypeScript initialization stub for TextWidget component providing placeholder for future text formatting functionality.",
@@ -3736,10 +4199,22 @@
     "_id": "7f8ecce1c85f93abed1c65a90a13c8a5673ae198",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3760,7 +4235,7 @@
   {
     "filename": "default.css",
     "path": "views/components/VideoWidget/default.css",
-    "created": "2025-09-30T08:56:44.329Z",
+    "created": "2026-02-05T08:20:03.526Z",
     "updated": "2025-09-30T08:56:44.329Z",
     "size": 58,
     "description": "CSS styling for VideoWidget component defining video player dimensions and display properties.",
@@ -3770,16 +4245,10 @@
     "_id": "c12f1475083f4abefdcfd29a1d480f8b71e91674",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
-      },
-      {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3800,7 +4269,7 @@
   {
     "filename": "default.pug",
     "path": "views/components/VideoWidget/default.pug",
-    "created": "2025-09-30T08:56:44.329Z",
+    "created": "2026-02-05T08:20:03.527Z",
     "updated": "2025-09-30T08:56:44.329Z",
     "size": 617,
     "description": "Pug template for VideoWidget component rendering HTML5 video element with source URL and autoplay configuration.",
@@ -3810,10 +4279,40 @@
     "_id": "6804ff9789f27a7c565700918951ee194cca1d25",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
+        "author": "CCTEvalencia",
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
+        "author": "CCTEvalencia",
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
       }
     ],
     "project": "render",
@@ -3834,7 +4333,7 @@
   {
     "filename": "default.ts",
     "path": "views/components/VideoWidget/default.ts",
-    "created": "2025-09-30T08:56:44.329Z",
+    "created": "2026-02-05T08:20:03.528Z",
     "updated": "2025-09-30T08:56:44.329Z",
     "size": 374,
     "description": "TypeScript initialization stub for VideoWidget component providing placeholder for future video control functionality.",
@@ -3844,10 +4343,22 @@
     "_id": "cdf47eaede8ca9bfd42095571d27ee34198d8540",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -3868,7 +4379,7 @@
   {
     "filename": "error.pug",
     "path": "views/error.pug",
-    "created": "2025-09-30T08:56:44.330Z",
+    "created": "2026-02-05T08:20:03.378Z",
     "updated": "2025-09-30T08:56:44.330Z",
     "size": 90,
     "description": "Pug template for error page rendering HTTP error messages with status codes and stack traces in development mode.",
@@ -3878,10 +4389,16 @@
     "_id": "3d57f9d798a9f2c13a6d15b1ee50520fcf22de00",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -3902,7 +4419,7 @@
   {
     "filename": "index.pug",
     "path": "views/index.pug",
-    "created": "2025-09-30T08:56:44.330Z",
+    "created": "2026-02-05T08:20:03.379Z",
     "updated": "2025-09-30T08:56:44.330Z",
     "size": 137,
     "description": "Pug template for root index page extending base layout with welcome message for service health checking.",
@@ -3912,10 +4429,34 @@
     "_id": "7d6dd6cb970fcb8fee3c8e44b6525d3af56880bf",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -3936,7 +4477,7 @@
   {
     "filename": "layout.pug",
     "path": "views/layout.pug",
-    "created": "2025-09-30T08:56:44.330Z",
+    "created": "2026-02-05T08:20:03.380Z",
     "updated": "2025-10-28T14:49:46.929Z",
     "size": 240,
     "description": "Base Pug layout template defining HTML structure, head metadata, stylesheet links, and body block for page composition.",
@@ -3946,16 +4487,52 @@
     "_id": "e3b9a31f04c7739618ea389fb9c1a4b56c6bca15",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
+        "author": "CCTEvalencia",
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
+        "author": "CCTEvalencia",
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -3976,7 +4553,7 @@
   {
     "filename": "content.pug",
     "path": "views/pages/dynamics/content.pug",
-    "created": "2025-09-30T08:56:44.331Z",
+    "created": "2026-02-05T08:20:03.533Z",
     "updated": "2025-09-30T08:56:44.331Z",
     "size": 535,
     "description": "Pug template for dynamics content page rendering creative elements with recursive component includes and layout processing.",
@@ -3986,10 +4563,40 @@
     "_id": "5abf2a1589b50ef714119734815e1fd6078d0f25",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
+      },
+      {
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
+        "author": "CCTEvalencia",
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -4010,7 +4617,7 @@
   {
     "filename": "default.ts",
     "path": "views/pages/dynamics/default.ts",
-    "created": "2025-09-30T08:56:44.331Z",
+    "created": "2026-02-05T08:20:03.534Z",
     "updated": "2026-01-13T14:07:14.858Z",
     "size": 4823,
     "description": "TypeScript creative ticker implementation providing centralized interval-based update mechanism for time-dependent widgets with configurable subscription rates.",
@@ -4020,22 +4627,22 @@
     "_id": "bdb3012b4d9cf554090e0e8c32c32d08ca4843fd",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
-        "message": "First Commit"
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4056,7 +4663,7 @@
   {
     "filename": "layout.pug",
     "path": "views/pages/dynamics/layout.pug",
-    "created": "2025-09-30T08:56:44.332Z",
+    "created": "2026-02-05T08:20:03.550Z",
     "updated": "2026-01-13T14:12:06.500Z",
     "size": 1711,
     "description": "Pug layout template for dynamics pages injecting creative resources (CSS/JS), metadata, autoplay settings, and component scripts.",
@@ -4066,28 +4673,58 @@
     "_id": "1fccc25675fadab0979f5f0500995f107c55d5f5",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "6a035a4944b3d1c42a39ee5713dc9f8592406858",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-11-11T13:49:36+01:00",
-        "message": "Missing port binding in ImageWidget"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "c21591feaccbb37c439a0d258dc0fca3f1eec03b",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T13:30:10+02:00",
-        "message": "Favicon fixed"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "86a5c4eb715cb9dc03e8e9f635cb09241e9fee64",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-08T12:59:34+02:00",
+        "message": "Dynhamics -> Assets endpoint"
+      },
+      {
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
+        "author": "CCTEvalencia",
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
+      },
+      {
+        "commitId": "9453484393658226a1137111cb1ce8976a3b18ce",
+        "author": "CCTEvalencia",
+        "date": "2025-06-27T13:33:06+02:00",
+        "message": "Identifying components, animations and assets"
+      },
+      {
+        "commitId": "6d4dd0621c3b8d8d378169d440e2cdf15420e6a5",
+        "author": "CCTEvalencia",
+        "date": "2025-06-25T15:33:29+02:00",
+        "message": "Render view completed"
+      },
+      {
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
+        "author": "CCTEvalencia",
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
+      },
+      {
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "render",
@@ -4108,7 +4745,7 @@
   {
     "filename": "assets_template.js",
     "path": "views/scripts/assets_template.js",
-    "created": "2025-09-30T08:56:44.333Z",
+    "created": "2026-02-05T08:20:03.566Z",
     "updated": "2025-09-30T08:56:44.333Z",
     "size": 1649,
     "description": "Service worker script template for caching creative assets with fetch interception and cache-first strategy implementation.",
@@ -4118,10 +4755,10 @@
     "_id": "13ad3fd13bd70fa2e28cc087d6146440090bd8ca",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4142,8 +4779,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/BoxLayout/default.js",
-    "created": "2025-09-30T08:56:44.333Z",
-    "updated": "2026-01-28T11:31:56.212Z",
+    "created": "2026-02-05T08:20:03.586Z",
+    "updated": "2026-02-06T09:10:32.794Z",
     "size": 1987,
     "description": "Compiled JavaScript for BoxLayout component initialization and data-value change handling.",
     "internalDependencies": [],
@@ -4152,10 +4789,22 @@
     "_id": "c9537cde39527c247661211366e05a25828ff881",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4176,8 +4825,8 @@
   {
     "filename": "blurAnimation.js",
     "path": "views/scripts/components/CardWidget/blurAnimation.js",
-    "created": "2026-01-16T09:15:40.488Z",
-    "updated": "2026-01-28T11:31:56.215Z",
+    "created": "2026-02-05T08:20:03.589Z",
+    "updated": "2026-02-06T09:10:32.798Z",
     "size": 1341,
     "description": "Compiled JavaScript for CardWidget blur animation with CSS filter transitions.",
     "internalDependencies": [],
@@ -4186,10 +4835,10 @@
     "_id": "4cb5540c7824243d1d29ed1a6d23e2ee8845ce4b",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -4210,8 +4859,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/CardWidget/default.js",
-    "created": "2025-09-30T08:56:44.334Z",
-    "updated": "2026-01-28T11:31:56.220Z",
+    "created": "2026-02-05T08:20:03.590Z",
+    "updated": "2026-02-06T09:10:32.803Z",
     "size": 2955,
     "description": "Compiled JavaScript for CardWidget initialization, MutationObserver setup, and animation triggering.",
     "internalDependencies": [],
@@ -4220,22 +4869,28 @@
     "_id": "085dc2565522fcb2aa3d54431e4213dda788814f",
     "history": [
       {
-        "commitId": "2a465a56aac01ac09e64148cde9c6551e004c372",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-21T14:01:37+01:00",
-        "message": "Builder -> Help -> Codebase UI"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4256,8 +4911,8 @@
   {
     "filename": "fadeAnimation.js",
     "path": "views/scripts/components/CardWidget/fadeAnimation.js",
-    "created": "2026-01-16T09:15:40.494Z",
-    "updated": "2026-01-28T11:31:56.222Z",
+    "created": "2026-02-05T08:20:03.591Z",
+    "updated": "2026-02-06T09:10:32.805Z",
     "size": 864,
     "description": "Compiled JavaScript for CardWidget fade animation with opacity transitions.",
     "internalDependencies": [],
@@ -4266,10 +4921,10 @@
     "_id": "6bac4103c857b0a35ecf8fbe34059fb92f8a5c2e",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -4290,8 +4945,8 @@
   {
     "filename": "flipAnimation.js",
     "path": "views/scripts/components/CardWidget/flipAnimation.js",
-    "created": "2026-01-16T09:15:40.495Z",
-    "updated": "2026-01-28T11:31:56.229Z",
+    "created": "2026-02-05T08:20:03.592Z",
+    "updated": "2026-02-06T09:10:32.811Z",
     "size": 2891,
     "description": "Compiled JavaScript for CardWidget 3D flip animation with rotation transforms.",
     "internalDependencies": [],
@@ -4300,10 +4955,10 @@
     "_id": "7e2e06812297bfa18919615269edda3c49279872",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -4324,8 +4979,8 @@
   {
     "filename": "popAnimation.js",
     "path": "views/scripts/components/CardWidget/popAnimation.js",
-    "created": "2026-01-16T09:15:40.498Z",
-    "updated": "2026-01-28T11:31:56.232Z",
+    "created": "2026-02-05T08:20:03.594Z",
+    "updated": "2026-02-06T09:10:32.814Z",
     "size": 1027,
     "description": "Compiled JavaScript for CardWidget pop animation with scale transforms.",
     "internalDependencies": [],
@@ -4334,10 +4989,10 @@
     "_id": "46d81524a833153cf2d40c1b9baa4edfa76c2eab",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -4358,8 +5013,8 @@
   {
     "filename": "rollAnimation.js",
     "path": "views/scripts/components/CardWidget/rollAnimation.js",
-    "created": "2025-09-30T08:56:44.334Z",
-    "updated": "2026-01-28T11:31:56.241Z",
+    "created": "2026-02-05T08:20:03.595Z",
+    "updated": "2026-02-06T09:10:32.822Z",
     "size": 5015,
     "description": "Compiled JavaScript for CardWidget 3D roll animation with multi-axis rotation.",
     "internalDependencies": [],
@@ -4368,16 +5023,22 @@
     "_id": "bb538ecfa2f40c5b04a9826b77f1bc2fdd27f863",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4398,8 +5059,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/ClockWidget/default.js",
-    "created": "2026-01-15T14:01:13.385Z",
-    "updated": "2026-01-28T11:31:56.247Z",
+    "created": "2026-02-05T08:20:03.599Z",
+    "updated": "2026-02-06T09:10:32.829Z",
     "size": 3843,
     "description": "Compiled JavaScript for ClockWidget initialization and real-time clock updates via ticker subscription.",
     "internalDependencies": [],
@@ -4408,10 +5069,10 @@
     "_id": "a12fca2586679dc0487e2b5d50bf61dde1adb94b",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -4432,8 +5093,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/CountdownWidget/default.js",
-    "created": "2026-01-15T14:01:13.391Z",
-    "updated": "2026-01-28T11:31:56.254Z",
+    "created": "2026-02-05T08:20:03.602Z",
+    "updated": "2026-02-06T09:10:32.839Z",
     "size": 6042,
     "description": "Compiled JavaScript for CountdownWidget initialization and countdown calculation with ticker updates.",
     "internalDependencies": [],
@@ -4442,22 +5103,28 @@
     "_id": "d99fbfec736eb88f9d0c3c056c17a26705e3e5cf",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4478,8 +5145,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/DebugWidget/default.js",
-    "created": "2025-09-30T08:56:44.335Z",
-    "updated": "2026-01-28T11:31:56.255Z",
+    "created": "2026-02-05T08:20:03.605Z",
+    "updated": "2026-02-06T09:10:32.840Z",
     "size": 384,
     "description": "Compiled JavaScript stub for DebugWidget component initialization.",
     "internalDependencies": [],
@@ -4488,10 +5155,22 @@
     "_id": "c16ae4d305cd7e18de1ff5d41ec207496bc86710",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4512,8 +5191,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/ImageWidget/default.js",
-    "created": "2025-09-30T08:56:44.335Z",
-    "updated": "2026-01-28T11:31:56.255Z",
+    "created": "2026-02-05T08:20:03.610Z",
+    "updated": "2026-02-06T09:10:32.841Z",
     "size": 384,
     "description": "Compiled JavaScript stub for ImageWidget component initialization.",
     "internalDependencies": [],
@@ -4522,10 +5201,22 @@
     "_id": "485292c89ffaf44d85ff39a3e8ca1ffd98f87fb2",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4546,8 +5237,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/SlideLayout/default.js",
-    "created": "2025-09-30T08:56:44.335Z",
-    "updated": "2026-01-28T11:31:56.255Z",
+    "created": "2026-02-05T08:20:03.613Z",
+    "updated": "2026-02-06T09:10:32.842Z",
     "size": 384,
     "description": "Compiled JavaScript stub for SlideLayout component initialization.",
     "internalDependencies": [],
@@ -4556,10 +5247,22 @@
     "_id": "31cd770e26d358565d26a5340d2871b4243a3d6e",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4580,8 +5283,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/TextWidget/default.js",
-    "created": "2025-09-30T08:56:44.337Z",
-    "updated": "2026-01-28T11:31:56.256Z",
+    "created": "2026-02-05T08:20:03.616Z",
+    "updated": "2026-02-06T09:10:32.842Z",
     "size": 376,
     "description": "Compiled JavaScript stub for TextWidget component initialization.",
     "internalDependencies": [],
@@ -4590,10 +5293,22 @@
     "_id": "baef52bff99fe4e3682c95343998a831c382edc8",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4614,8 +5329,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/components/VideoWidget/default.js",
-    "created": "2025-09-30T08:56:44.337Z",
-    "updated": "2026-01-28T11:31:56.257Z",
+    "created": "2026-02-05T08:20:03.620Z",
+    "updated": "2026-02-06T09:10:32.843Z",
     "size": 384,
     "description": "Compiled JavaScript stub for VideoWidget component initialization.",
     "internalDependencies": [],
@@ -4624,10 +5339,22 @@
     "_id": "431ff58258ca82cce8d21f7821aa422d32236a71",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
+        "author": "CCTEvalencia",
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
+      },
+      {
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
+        "author": "CCTEvalencia",
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4648,7 +5375,7 @@
   {
     "filename": "manager_template.js",
     "path": "views/scripts/manager_template.js",
-    "created": "2025-09-30T08:56:44.338Z",
+    "created": "2026-02-05T08:20:03.576Z",
     "updated": "2025-09-30T08:56:44.338Z",
     "size": 1951,
     "description": "Service worker registration manager handling SW lifecycle, updates, and unregistration for creative asset caching.",
@@ -4658,10 +5385,10 @@
     "_id": "2cb349b8d23a044d736826fc783e5c249e773407",
     "history": [
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "5b2b164a054efd8d6124533691b29f3181cb4499",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-07-22T10:25:20+02:00",
+        "message": "Named Assets for Styles and Caching"
       }
     ],
     "project": "render",
@@ -4682,8 +5409,8 @@
   {
     "filename": "default.js",
     "path": "views/scripts/pages/dynamics/default.js",
-    "created": "2025-09-30T08:56:44.338Z",
-    "updated": "2026-01-28T11:31:56.209Z",
+    "created": "2026-02-05T08:20:03.626Z",
+    "updated": "2026-02-06T09:10:32.789Z",
     "size": 5222,
     "description": "Compiled JavaScript for creative ticker global singleton providing interval-based updates for time-dependent widgets.",
     "internalDependencies": [],
@@ -4692,22 +5419,22 @@
     "_id": "df5af6bd5c04025ff326051059152a8051161c56",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "371f5c531fea9ec457fd3cba31438166faebc111",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2025-08-06T12:26:48+02:00",
+        "message": "Containerization Completed"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "a1281de9d97fa27cc08f81b2a9b3ff38236dbb22",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-08-05T10:20:37+02:00",
+        "message": "Containerization Completed"
       }
     ],
     "project": "render",
@@ -4728,7 +5455,7 @@
   {
     "filename": "formatting.js",
     "path": "views/scripts/utils/formatting.js",
-    "created": "2026-01-13T12:31:03.722Z",
+    "created": "2026-02-05T08:20:03.630Z",
     "updated": "2026-01-13T12:31:03.722Z",
     "size": 337,
     "description": "Compiled JavaScript utility functions for widget time formatting with leading zero padding.",
@@ -4738,10 +5465,10 @@
     "_id": "786ea83a6a97022ab0069250526d812a07fe0fdc",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",
@@ -4762,7 +5489,7 @@
   {
     "filename": "formatting.ts",
     "path": "views/utils/formatting.ts",
-    "created": "2026-01-13T10:50:59.098Z",
+    "created": "2026-02-05T08:20:03.634Z",
     "updated": "2026-01-13T10:51:15.397Z",
     "size": 235,
     "description": "TypeScript utility module providing time value formatting with leading zero padding for clock and countdown widgets.",
@@ -4772,10 +5499,10 @@
     "_id": "db333b5e34eb5cd9c79cfada96960830f216c9e3",
     "history": [
       {
-        "commitId": "8b39585d64c9c1dc3c44932dfeb47a2ea5f465a9",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-13T15:16:57+01:00",
-        "message": "Added Clock Widget and General Optimization"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "render",

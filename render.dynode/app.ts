@@ -15,8 +15,6 @@ import config from "./config";
 
 const app = express();
 
-console.log("indexRouter:", typeof indexRouter);
-
 // Middleware setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -59,6 +57,14 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
 const PORT = config.port;
 const HOST = "0.0.0.0"; // ✅ Listen on all interfaces
 
+// Log initialization
+logger.info("render.dynode starting", {
+  env: config.env,
+  port: PORT,
+  https: config.https,
+  sourceBase: config.externalOrigins.source,
+});
+
 if (config.https) {
   try {
     const pfx = fs.readFileSync("./cert/render.dynode.pfx");
@@ -67,21 +73,20 @@ if (config.https) {
         config.externalOrigins.render ||
         config.externalOrigins.source ||
         `https://${os.hostname()}:${PORT}`; // ✅ Use hostname for friendly access
-      console.log(`🚀 HTTPS server listening (env=${config.env}) base=${base}`);
-      console.log(`🖥️ Hostname: ${os.hostname()}`);
+      logger.info(`HTTPS server listening (env=${config.env}) base=${base}`);
+      logger.info(`Hostname: ${os.hostname()}`);
     });
   } catch (e) {
-    console.warn(
-      "⚠️ HTTPS startup failed, falling back to HTTP:",
-      (e as Error).message
-    );
+    logger.warn("HTTPS startup failed, falling back to HTTP", {
+      error: (e as Error).message,
+    });
     app.listen(PORT, HOST, () => {
       const base =
         config.externalOrigins.render ||
         config.externalOrigins.source ||
         `http://${os.hostname()}:${PORT}`; // ✅ Use hostname for fallback
-      console.log(`🚀 HTTP server listening (env=${config.env}) base=${base}`);
-      console.log(`🖥️ Hostname: ${os.hostname()}`);
+      logger.info(`HTTP server listening (env=${config.env}) base=${base}`);
+      logger.info(`Hostname: ${os.hostname()}`);
     });
   }
 } else {
@@ -90,7 +95,7 @@ if (config.https) {
       config.externalOrigins.render ||
       config.externalOrigins.source ||
       `http://${os.hostname()}:${PORT}`; // ✅ Use hostname for fallback
-    console.log(`🚀 HTTP server listening (env=${config.env}) base=${base}`);
-    console.log(`🖥️ Hostname: ${os.hostname()}`);
+    logger.info(`HTTP server listening (env=${config.env}) base=${base}`);
+    logger.info(`Hostname: ${os.hostname()}`);
   });
 }

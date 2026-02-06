@@ -23,7 +23,7 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
 
     logger.info(
       `Using model: ${Model.modelName}, collection: ${Model.collection.name}`,
-      { filter }
+      { filter },
     );
 
     // Use lean() to return plain objects and let the view supply whatever fields it defines
@@ -38,7 +38,6 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
 // Get element by ID
 router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
   const elementId = req.params.id;
-  console.log("Fetching element with ID:", elementId);
   try {
     const rawMode = req.query.mode;
     const mode = Array.isArray(rawMode)

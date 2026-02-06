@@ -1,9 +1,9 @@
 # Launch each project in its own Windows Terminal tab
 $projects = @(
-	@{ Title = "source.dynode"; Path = "E:\Development\Web\NODE\dn-dynamic-campaign-tools\source.dynode" },
-	@{ Title = "builder.dynode"; Path = "E:\Development\Web\NODE\dn-dynamic-campaign-tools\builder.dynode" },
-	@{ Title = "render.dynode"; Path = "E:\Development\Web\NODE\dn-dynamic-campaign-tools\render.dynode" },
-	@{ Title = "echo.dynode"; Path = "E:\Development\Web\NODE\dn-dynamic-campaign-tools\echo.dynode" }
+	@{ Title = "source.dynode"; Path = "E:\Development\Web\NODE\dynode\source.dynode"; Timeout=15000 },
+	@{ Title = "builder.dynode"; Path = "E:\Development\Web\NODE\dynode\builder.dynode"; Timeout=500 },
+	@{ Title = "render.dynode"; Path = "E:\Development\Web\NODE\dynode\render.dynode"; Timeout=500 },
+	@{ Title = "echo.dynode"; Path = "E:\Development\Web\NODE\dynode\echo.dynode"; Timeout=500 }
 )
 
 foreach ($project in $projects) {
@@ -19,5 +19,5 @@ foreach ($project in $projects) {
 	)
 
 	Start-Process wt.exe -ArgumentList $arguments
-	Start-Sleep -Milliseconds 500
+	Start-Sleep -Milliseconds $project.Timeout
 }

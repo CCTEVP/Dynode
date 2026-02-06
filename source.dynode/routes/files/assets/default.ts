@@ -65,13 +65,36 @@ router.post("/", upload.array("files"), async (req: Request, res: Response) => {
       }
 
       asset.updated = now;
-      asset.changes.push({
+
+      const changeRecord = {
         timestamp: now,
         user: new mongoose.Types.ObjectId(editorUserId),
-      });
+        oldValue: null,
+        newValue: null,
+      };
 
-      await asset.save();
+      // Use findByIdAndUpdate to avoid validation on existing subdocuments
+      const updatedAsset = await Asset.findByIdAndUpdate(
+        bundleId,
+        {
+          $set: {
+            bundle: asset.bundle,
+            updated: now,
+          },
+          $push: {
+            changes: changeRecord,
+          },
+        },
+        { new: true, runValidators: false },
+      );
+
+      if (!updatedAsset) {
+        res.status(404).json({ error: "Failed to update bundle." });
+        return;
+      }
+
       logger.info(`Files added to bundle ${bundleId}`);
+      asset = updatedAsset;
     } else {
       // Create new bundle with single asset item
       asset = new Asset({

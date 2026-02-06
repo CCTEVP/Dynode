@@ -1,0 +1,95 @@
+/* ThemeSwitch Component Styles */
+/* Self-contained theme toggle button that appears in bottom-right corner */
+
+.theme-toggle-corner {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 15, 15, 0.95);
+  cursor: pointer;
+  z-index: 2000;
+  transition:
+    width 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.2s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.3;
+}
+
+.theme-toggle-corner[data-mode="light"] {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-track {
+  position: absolute;
+  inset: 4px;
+  border-radius: 999px;
+  background: var(--colorFillSecondary, rgba(0, 0, 0, 0.08));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.theme-toggle-knob {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--colorBgContainer, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle-icon {
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.theme-toggle-corner:hover {
+  background: rgba(15, 15, 15, 0.98);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  width: 68px;
+  opacity: 1;
+}
+
+.theme-toggle-corner[data-mode="light"]:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+[data-theme="dark"] .theme-toggle-corner:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.theme-toggle-corner:hover .theme-toggle-track {
+  opacity: 1;
+}
+
+.theme-toggle-corner:hover .theme-toggle-icon {
+  opacity: 1;
+}
+
+.theme-toggle-corner:hover[data-mode="dark"] .theme-toggle-knob {
+  transform: translateX(36px);
+}

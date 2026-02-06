@@ -3,8 +3,8 @@ import ImagePreview from "./ImagePreview";
 import VideoPreview from "./VideoPreview";
 import FontPreview from "./FontPreview";
 import { Typography } from "antd";
-import env from "../../../config/env";
-import type { AssetPath } from "../../types/assets";
+import env from "../../../../config/env";
+import type { AssetPath } from "../../../types/assets";
 
 const { Text } = Typography;
 
@@ -23,15 +23,15 @@ const MediaPreview: React.FC<MediaPreviewProps> = ({
 }) => {
   // Construct URL based on environment
   const baseUrl =
-    env.env === "docker"
+    (env.env as string) === "docker"
       ? "/api"
-      : env.externalOrigins.render || "http://localhost:5555";
+      : env.externalOrigins?.render || "http://localhost:5555";
 
   // If we have a creativeId, use the dynamics route pattern
   // Otherwise, use direct source.dynode file serving
   const url = creativeId
     ? `${baseUrl}/dynamics/${creativeId}/${path.filename}.${path.extension}`
-    : `${env.env === "docker" ? "/api" : env.externalOrigins.source}/files/assets/${path.filename}.${path.extension}`;
+    : `${(env.env as string) === "docker" ? "/api" : env.externalOrigins?.source}/files/assets/${path.filename}.${path.extension}`;
 
   switch (kind) {
     case "image":

@@ -2,12 +2,21 @@ import env from "../../config/env";
 // Use internal service base in docker; otherwise external origin
 // In docker, use nginx /api proxy (browser can't resolve internal DNS names)
 const sourceBase = env.env === "docker" ? "/api" : env.externalOrigins.source;
-const API_URL = `${sourceBase}/files/logs`;
+const API_URL = `${sourceBase}/files/log`;
 const ORIGIN = "build.dynode"; // <-- Add your constant origin here
 
 type LogLevel = "info" | "error" | "warn" | "debug";
 
 async function logToServer(level: LogLevel, message: string, meta?: any) {
+  // Console output for local debugging
+  const consoleMethod =
+    level === "error" ? "error" : level === "warn" ? "warn" : "log";
+  if (meta) {
+    console[consoleMethod](`[${ORIGIN}] ${message}`, meta);
+  } else {
+    console[consoleMethod](`[${ORIGIN}] ${message}`);
+  }
+
   try {
     await fetch(API_URL, {
       method: "POST",
@@ -21,9 +30,11 @@ async function logToServer(level: LogLevel, message: string, meta?: any) {
       // credentials: "include", // Uncomment if you need cookies/auth
     });
   } catch (err) {
-    // Optionally, fallback to console if server logging fails
+    // Fallback to console if server logging fails
     // eslint-disable-next-line no-console
-    console.warn(`Remote log send failed: ${(err as any)?.message}`);
+    console.warn(
+      `[${ORIGIN}] Remote log send failed: ${(err as any)?.message}`,
+    );
   }
 }
 

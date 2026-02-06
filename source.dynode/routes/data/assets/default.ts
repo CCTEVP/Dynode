@@ -77,6 +77,10 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     const editorUserId = req.user?.userId || "000000000000000000000000";
     const now = new Date();
 
+    logger.info(`[Assets Update] PUT /data/assets/${id}`, {
+      requestBody: req.body,
+    });
+
     if (!mongoose.Types.ObjectId.isValid(id)) {
       res.status(400).json({ message: "Invalid asset bundle ID." });
       return;
@@ -88,9 +92,53 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
       return;
     }
 
+    logger.info(`[Assets Update] Found asset`, {
+      _id: asset._id,
+      name: asset.name,
+      bundleCount: asset.bundle?.length || 0,
+    });
+
     // Ensure created field exists (for legacy docs)
     if (!asset.created) {
       asset.created = now;
+    }
+
+    // Store raw request body for change tracking (before conversion)
+    const rawRequestData = JSON.parse(JSON.stringify(req.body));
+
+    // Helper function to convert string _id to ObjectId in bundle items
+    const convertBundleIds = (bundle: any[]) => {
+      if (!Array.isArray(bundle)) return bundle;
+      return bundle.map((item, idx) => {
+        logger.debug(`[Assets Update] Converting bundle item ${idx}`, { item });
+        const converted = { ...item };
+        if (converted._id && typeof converted._id === "string") {
+          converted._id = new mongoose.Types.ObjectId(converted._id);
+        }
+        // Convert timestamps to Date objects if they are strings
+        if (converted.created && typeof converted.created === "string") {
+          converted.created = new Date(converted.created);
+        } else if (!converted.created) {
+          converted.created = now;
+        }
+        if (converted.updated && typeof converted.updated === "string") {
+          converted.updated = new Date(converted.updated);
+        } else if (!converted.updated) {
+          converted.updated = now;
+        }
+        logger.debug(`[Assets Update] Converted to`, { converted });
+        return converted;
+      });
+    };
+
+    // Convert string _id values to ObjectId for bundle array
+    const updates = { ...req.body };
+    if (updates.bundle) {
+      logger.info(
+        `[Assets Update] Converting ${updates.bundle.length} bundle items`,
+      );
+      updates.bundle = convertBundleIds(updates.bundle);
+      logger.info(`[Assets Update] Bundle conversion complete`);
     }
 
     // Compare updatable fields
@@ -99,36 +147,66 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     const newValue: Record<string, any> = {};
 
     // Compare and update 'name'
-    if (asset.name !== req.body.name) {
+    if (asset.name !== updates.name) {
       oldValue.name = asset.name;
-      newValue.name = req.body.name;
-      asset.name = req.body.name || "";
+      newValue.name = rawRequestData.name;
+      asset.name = updates.name || "";
       changed = true;
     }
+
     // Compare and update 'bundle'
-    if (JSON.stringify(asset.bundle) !== JSON.stringify(req.body.bundle)) {
-      oldValue.bundle = asset.bundle;
-      newValue.bundle = req.body.bundle;
-      asset.bundle = req.body.bundle || [];
+    const oldBundleStr = JSON.stringify(asset.bundle);
+    const newBundleStr = JSON.stringify(updates.bundle);
+    logger.info(
+      `[Assets Update] Comparing bundles - changed: ${oldBundleStr !== newBundleStr}`,
+    );
+    if (oldBundleStr !== newBundleStr) {
+      oldValue.bundle = JSON.parse(JSON.stringify(asset.bundle));
+      newValue.bundle = rawRequestData.bundle; // Use raw data, not converted
+      asset.bundle = updates.bundle || [];
       changed = true;
     }
 
     if (changed) {
-      asset.updated = now;
-      asset.changes.push({
+      const changeRecord = {
         timestamp: now,
         user: new mongoose.Types.ObjectId(editorUserId),
         oldValue,
         newValue,
-      });
-      await asset.save();
-      logger.info(`Asset bundle updated: ${id}`);
+      };
+
+      // Use findByIdAndUpdate to avoid validation errors on existing subdocuments
+      const updatedAsset = await AssetsCollection.findByIdAndUpdate(
+        id,
+        {
+          $set: {
+            name: asset.name,
+            bundle: asset.bundle,
+            updated: now,
+          },
+          $push: {
+            changes: changeRecord,
+          },
+        },
+        {
+          new: true,
+          runValidators: false,
+        },
+      );
+
+      logger.info(`Asset bundle updated with ID: ${id}`);
+      res.json(updatedAsset);
     } else {
       logger.info(`Asset bundle update request with no changes for ID: ${id}`);
+      res.json(asset);
     }
-    res.json(asset);
   } catch (error) {
-    logger.error("Error updating asset bundle:", error);
+    logger.error("Error updating asset bundle", {
+      error,
+      errorName: (error as any).name,
+      errorMessage: (error as any).message,
+      errorStack: (error as any).stack,
+    });
     res.status(500).json({ message: "Failed to update asset bundle." });
   }
 });

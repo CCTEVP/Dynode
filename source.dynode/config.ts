@@ -62,6 +62,10 @@ interface BaseEnvConfig {
   logsFolder: string;
   assetsFolder: string;
   jwtSecret?: string;
+  // Database logging configuration
+  logRetentionDays: number; // Days to retain logs in MongoDB
+  enableDbLogging: boolean; // Enable/disable MongoDB logging
+  logDbUri?: string; // Optional separate database for logs (defaults to mongoUri)
 }
 
 // Helper to collect non-empty origins
@@ -95,6 +99,9 @@ const configs: Record<AppEnv, BaseEnvConfig> = {
       logsFolder: "../logs",
       assetsFolder: "../files",
       jwtSecret: "your_super_secret_key", // set manually if needed
+      logRetentionDays: 1,
+      enableDbLogging: true, // Enable for testing MongoDB logging
+      logDbUri: "mongodb://localhost:27017/dyna_stats",
     };
   })(),
   production: (() => {
@@ -119,6 +126,9 @@ const configs: Record<AppEnv, BaseEnvConfig> = {
       logsFolder: "../logs",
       assetsFolder: "../files",
       jwtSecret: undefined, // DO NOT commit real secret
+      logRetentionDays: 7,
+      enableDbLogging: true,
+      logDbUri: "mongodb://localhost:27017/dyna_stats",
     };
   })(),
   staging: (() => {
@@ -143,6 +153,9 @@ const configs: Record<AppEnv, BaseEnvConfig> = {
       logsFolder: "../logs",
       assetsFolder: "../files",
       jwtSecret: undefined,
+      logRetentionDays: 7,
+      enableDbLogging: true,
+      logDbUri: "mongodb://localhost:27017/dyna_stats",
     };
   })(),
   test: (() => {
@@ -167,6 +180,9 @@ const configs: Record<AppEnv, BaseEnvConfig> = {
       logsFolder: "../logs",
       assetsFolder: "../files",
       jwtSecret: undefined,
+      logRetentionDays: 7,
+      enableDbLogging: false,
+      logDbUri: "mongodb://localhost:27017/dyna_stats",
     };
   })(),
   docker: (() => {
@@ -194,6 +210,9 @@ const configs: Record<AppEnv, BaseEnvConfig> = {
       logsFolder: "../logs",
       assetsFolder: "../files",
       jwtSecret: "your_super_secret_key",
+      logRetentionDays: 7,
+      enableDbLogging: false,
+      logDbUri: "mongodb://mongo:27017/dyna_stats", // Docker uses 'mongo' hostname
     };
   })(),
 };

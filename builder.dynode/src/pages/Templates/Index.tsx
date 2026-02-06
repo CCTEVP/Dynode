@@ -5,10 +5,8 @@ const { Title, Text } = Typography;
 
 const Templates: React.FC = () => {
   useEffect(() => {
-    const searchHandler = (e: any) => {
+    const searchHandler = (_e: any) => {
       // placeholder: pages can react to header search via this event
-      // eslint-disable-next-line no-console
-      console.log("Templates search:", e.detail);
     };
     window.addEventListener("search", searchHandler as EventListener);
     return () =>

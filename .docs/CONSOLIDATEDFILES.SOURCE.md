@@ -2,31 +2,31 @@
 
 > Auto-generated documentation from project analysis
 
-**Generated:** 28/01/2026, 09:16:22
+**Generated:** 06/02/2026, 10:40:31
 
 ## 📊 Overview
 
 | Metric | Value |
 |--------|-------|
-| Total Files | 127 |
-| Total Size | 31.42 MB |
-| Files with Descriptions | 120 (94%) |
-| Internal Dependencies | 81 |
-| External Dependencies | 21 |
+| Total Files | 163 |
+| Total Size | 40.85 MB |
+| Files with Descriptions | 120 (74%) |
+| Internal Dependencies | 98 |
+| External Dependencies | 22 |
 | Categories | 11 |
 
 ## 📑 Table of Contents
 
 - [Build Cache](#build-cache) (2 files)
 - [Config](#config) (5 files)
-- [Data](#data) (42 files)
+- [Data](#data) (46 files)
 - [Deployment](#deployment) (2 files)
 - [Documentation](#documentation) (10 files)
-- [Image](#image) (2 files)
+- [Image](#image) (24 files)
 - [Other](#other) (11 files)
 - [Project Meta](#project-meta) (3 files)
 - [Security](#security) (1 files)
-- [Source](#source) (45 files)
+- [Source](#source) (55 files)
 - [Style](#style) (4 files)
 
 ---
@@ -40,13 +40,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 0 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | build-cache |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -57,12 +57,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.52 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | build-cache |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -75,7 +77,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 675 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 ---
@@ -87,12 +89,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 675 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -103,12 +105,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 674 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -119,12 +121,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 646 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -135,12 +137,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 277 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | config |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -153,28 +157,37 @@
 | Property | Value |
 |----------|-------|
 | Size | 92 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
+---
+
+### `.vscode/tasks.json`
+
+| Property | Value |
+|----------|-------|
+| Size | 226 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | data |
 ---
 
 ### `data/collections/dyna_codebase.builder.json`
 
 | Property | Value |
 |----------|-------|
-| Size | 288.22 KB |
-| Created | Jan 20, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 349.42 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 28, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation File System Implemented *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -182,15 +195,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 94.62 KB |
-| Created | Jan 20, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 106.29 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 28, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation File System Implemented *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -198,15 +209,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 129.75 KB |
-| Created | Jan 20, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 143.85 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 28, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation File System Implemented *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -214,15 +223,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 180.35 KB |
-| Created | Jan 20, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 195.8 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 28, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation File System Implemented *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -233,12 +240,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.02 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -249,14 +256,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.31 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -267,13 +273,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 11.92 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -284,13 +289,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 55.54 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -301,14 +306,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 9.21 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
 - *...and 1 more commits*
 
 ---
@@ -320,13 +325,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 722 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -337,12 +342,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 185 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -353,15 +358,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 26.92 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 20, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -372,12 +376,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 859 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -388,12 +392,26 @@
 | Property | Value |
 |----------|-------|
 | Size | 887 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
+
+---
+
+### `data/collections/dyna_content.sources.json`
+
+| Property | Value |
+|----------|-------|
+| Size | 9.42 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | data |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -404,13 +422,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.69 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -419,12 +437,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.47 KB |
-| Created | Jan 20, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 20, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -433,12 +451,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.13 KB |
-| Created | Jan 20, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 21, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -449,12 +467,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 226 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -465,12 +483,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 61 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -481,12 +499,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.41 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -497,12 +515,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.42 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -513,12 +531,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 639 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -529,13 +547,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.22 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -545,13 +563,14 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.78 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 1.4 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -562,12 +581,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 9.71 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -578,13 +597,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.53 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -595,12 +616,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 95 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -610,16 +632,16 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 25.17 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Size | 66.18 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -629,14 +651,15 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 206.23 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 23, 2026 |
+| Size | 203.02 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -647,12 +670,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.07 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -663,12 +686,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.66 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -679,12 +702,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.15 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -695,12 +718,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.38 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -711,12 +734,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.6 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -727,12 +751,40 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.58 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+
+---
+
+### `routes/data/folders/openapi.json`
+
+| Property | Value |
+|----------|-------|
+| Size | 19.41 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | data |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `routes/data/sources/openapi.json`
+
+| Property | Value |
+|----------|-------|
+| Size | 17.56 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 2, 2026 |
+| Category | data |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -743,12 +795,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.18 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -759,12 +811,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.12 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -775,12 +827,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.06 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -791,12 +843,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.18 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -807,12 +860,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.37 KB |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -823,12 +876,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 31 Bytes |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -841,12 +894,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 133 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | deployment |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -857,14 +913,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.7 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | deployment |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -877,12 +934,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 465 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -893,12 +951,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 371 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -909,13 +967,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 479 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -926,13 +983,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 166 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -943,13 +999,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 202 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -960,13 +1015,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 558 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -977,13 +1031,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 196 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -994,12 +1047,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 455 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1010,12 +1063,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.48 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1026,19 +1079,236 @@
 | Property | Value |
 |----------|-------|
 | Size | 8.7 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Render flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Flowchart updated *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
 ## Image
+
+### `files/image/1e4bd6bd772692f405f8.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 230.23 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/21fb467b770a2bc6ab21.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 504.54 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | image |
+---
+
+### `files/image/2a9fc0bbee4e6d0c1e9b.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 504.54 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | image |
+---
+
+### `files/image/4742b2bc991b9250da46.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 504.54 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/4a06c8cbfefe1e2b3b83.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 418.78 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/5401cd94e082c7830602.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 742.83 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/55e2529824a1d4fab6df.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 481.4 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/672e9c44344870fac7ba.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 206.16 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/72a147574d3993568224.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 702.46 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | image |
+---
+
+### `files/image/993e1c47d73c9cacdd1f.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 229.19 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/9a6bfebaf8ab1112408e.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 206.16 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/a252ac6025e04c21d497.png`
+
+| Property | Value |
+|----------|-------|
+| Size | 237.6 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/a2edc91c204d3c310ec0.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 504.54 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/ab0523b2632a7aab9989.png`
+
+| Property | Value |
+|----------|-------|
+| Size | 237.6 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/b3e95e6755b9235966a8.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 206.16 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | image |
+---
+
+### `files/image/c2896d7319294c9d5d94.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 702.46 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | image |
+---
+
+### `files/image/d0d78e22f5bdcb15445b.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 261.56 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | image |
+---
+
+### `files/image/e1868fcdef78e65de4ee.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 276.93 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/e2c7f3d214524530377b.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 323.29 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/e3187c04de54ea9aca57.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 991.59 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/f378faa1864232ddaa9f.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 702.46 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
+
+### `files/image/ffb4db8c7ae1b0bdce0f.jpg`
+
+| Property | Value |
+|----------|-------|
+| Size | 230.23 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | image |
+---
 
 ### `files/image/llYL5vXDOJh6h24TpVTn.jpg`
 
@@ -1047,12 +1317,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.18 MB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1063,12 +1333,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.04 KB |
-| Created | Oct 28, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Sep 25, 2025** - Favicon fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1081,12 +1351,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.63 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1097,12 +1368,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 31.43 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1113,12 +1385,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 24.11 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1129,12 +1402,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 30.64 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1145,12 +1419,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 23.47 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1161,12 +1436,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 31.03 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1177,12 +1453,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 23.9 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1193,13 +1470,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 28.89 MB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -1210,12 +1486,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 90 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1226,12 +1503,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 71 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1242,12 +1520,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 132 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1259,16 +1538,16 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.93 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Size | 1.96 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
 | Category | project-meta |
 **Recent History:**
 
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation File System Implemented *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -1279,12 +1558,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 311 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | project-meta |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1295,13 +1575,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 348 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | project-meta |
 **Recent History:**
 
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1314,12 +1595,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.73 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | security |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
 
 ---
 
@@ -1331,9 +1612,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 5.87 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 23, 2026 |
+| Size | 7.21 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1347,6 +1628,7 @@
 - `./routes/auth` → `routes/auth.ts`
 - `./services/logger` → `services/logger.ts`
 - `./config` → `config.ts`
+- `./models/collections/BufferCollection` → `models/collections/BufferCollection.ts`
 
 **External Dependencies:**
 
@@ -1363,9 +1645,10 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 6 more commits*
 
 ---
 
@@ -1375,9 +1658,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 6.51 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 23, 2026 |
+| Size | 6.9 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
 | Category | source |
 **External Dependencies:**
 
@@ -1385,9 +1668,25 @@
 
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `fix-best-for-summer.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 854 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `mongoose`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1398,7 +1697,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 764 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1413,8 +1712,9 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1424,9 +1724,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 723 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 1.45 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1435,12 +1735,31 @@
 
 **External Dependencies:**
 
-- `inspector`
 - `mongoose`
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+
+---
+
+### `models/collections/BufferCollection.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 838 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `mongoose`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1451,7 +1770,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.1 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1467,7 +1786,7 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1478,7 +1797,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 555 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1492,7 +1811,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1503,7 +1824,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 626 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1517,7 +1838,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1528,7 +1851,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 572 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1542,7 +1865,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1553,7 +1878,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.32 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | source |
 
@@ -1569,8 +1894,32 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+
+---
+
+### `models/collections/SourcesCollection.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 1.8 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 2, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../shared/ChangeSchema` → `models/shared/ChangeSchema.ts`
+
+**External Dependencies:**
+
+- `mongoose`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1581,7 +1930,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 813 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1595,7 +1944,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1606,7 +1957,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.07 KB |
-| Created | Oct 28, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1615,7 +1966,7 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1626,7 +1977,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 296 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1635,7 +1986,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- **Jun 13, 2025** - Endpoints for Creatives by Type *(CCTEvalencia)*
 
 ---
 
@@ -1646,8 +1999,8 @@
 | Property | Value |
 |----------|-------|
 | Size | 520 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 **External Dependencies:**
 
@@ -1655,7 +2008,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1666,7 +2021,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 252 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1675,7 +2030,7 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1686,7 +2041,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 961 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1701,7 +2056,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1712,7 +2069,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.28 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1726,7 +2083,10 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -1737,7 +2097,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 551 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1751,7 +2111,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1762,7 +2124,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 543 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1776,7 +2138,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1787,7 +2151,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 568 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1801,7 +2165,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1812,7 +2178,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 572 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1826,7 +2192,10 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -1837,7 +2206,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 621 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1851,7 +2220,10 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -1862,7 +2234,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 509 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1876,7 +2248,7 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
 
 ---
 
@@ -1887,7 +2259,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 489 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1901,7 +2273,7 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
 
 ---
 
@@ -1911,9 +2283,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 7.15 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 7 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1930,8 +2302,35 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+
+---
+
+### `routes/data/assets/default.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 8.88 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../models/collections/AssetsCollection` → `models/collections/AssetsCollection.ts`
+- `../../../services/logger` → `services/logger.ts`
+
+**External Dependencies:**
+
+- `express`
+- `fs`
+- `mongoose`
+- `path`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1940,7 +2339,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.88 KB |
-| Created | Jan 21, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 21, 2026 |
 | Category | source |
 
@@ -1956,7 +2355,7 @@
 
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1967,7 +2366,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.47 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1982,7 +2381,7 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1992,9 +2391,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 3.42 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 3.47 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -2010,7 +2409,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -2020,9 +2421,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 2.69 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 2.63 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -2041,8 +2442,10 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- *...and 7 more commits*
 
 ---
 
@@ -2052,9 +2455,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 3.77 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 13, 2026 |
+| Size | 3.71 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -2070,9 +2473,10 @@
 
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -2083,7 +2487,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.09 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2100,7 +2504,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -2110,9 +2516,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 811 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Jan 21, 2026 |
+| Size | 1.04 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -2121,8 +2527,11 @@
 - `./components/default` → `routes/data/components/default.ts`
 - `./elements/default` → `routes/data/elements/default.ts`
 - `./codebase/default` → `routes/data/codebase/default.ts`
-- `../../services/logger` → `services/logger.ts`
 - `./users/default` → `routes/data/users/default.ts`
+- `./sources/default` → `routes/data/sources/default.ts`
+- `./assets/default` → `routes/data/assets/default.ts`
+- `./folders/default` → `routes/data/folders/default.ts`
+- `../../services/logger` → `services/logger.ts`
 
 **External Dependencies:**
 
@@ -2130,8 +2539,10 @@
 
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -2141,9 +2552,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 2.24 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 2.19 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -2160,7 +2571,60 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+
+---
+
+### `routes/data/folders/default.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 25.14 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../services/logger` → `services/logger.ts`
+
+**External Dependencies:**
+
+- `express`
+- `mongoose`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `routes/data/sources/default.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 15.13 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../models/collections/SourcesCollection` → `models/collections/SourcesCollection.ts`
+- `../../../services/logger` → `services/logger.ts`
+- `../../../services/validator` → `services/validator.ts`
+- `../../../services/caching` → `services/caching.ts`
+- `../../../services/schemaGenerator` → `services/schemaGenerator.ts`
+- `../../../app` → `app.ts`
+
+**External Dependencies:**
+
+- `express`
+- `mongoose`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2171,7 +2635,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.12 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2187,7 +2651,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -2197,9 +2663,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 2.97 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 5.04 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -2212,11 +2678,15 @@
 
 - `express`
 - `fs`
+- `mongoose`
 - `path`
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -2227,7 +2697,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 521 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 23, 2026 |
 | Category | source |
 
@@ -2242,8 +2712,10 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -2254,7 +2726,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 452 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jul 3, 2025 |
 | Category | source |
 
@@ -2268,7 +2740,7 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2279,7 +2751,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 263 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -2288,8 +2760,9 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -2300,7 +2773,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.24 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2317,8 +2790,10 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -2329,7 +2804,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.99 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | source |
 
@@ -2346,10 +2821,10 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -2360,7 +2835,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.45 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 20, 2026 |
 | Category | source |
 **External Dependencies:**
@@ -2372,9 +2847,7 @@
 
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2385,7 +2858,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.18 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 20, 2026 |
 | Category | source |
 **External Dependencies:**
@@ -2397,9 +2870,9 @@
 
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -2410,7 +2883,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 7.05 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 
@@ -2426,10 +2899,34 @@
 
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
 - *...and 1 more commits*
+
+---
+
+### `services/caching.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 3.83 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `./logger` → `services/logger.ts`
+- `../app` → `app.ts`
+
+**External Dependencies:**
+
+- `mongoose`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2440,7 +2937,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.45 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2457,8 +2954,10 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -2468,9 +2967,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 3.29 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 3.39 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -2486,8 +2985,24 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
+
+---
+
+### `services/schemaGenerator.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 1.03 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2498,7 +3013,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 7.6 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | source |
 
@@ -2508,10 +3023,51 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- *...and 3 more commits*
+
+---
+
+### `services/validator.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 857 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `./logger` → `services/logger.ts`
+
+**External Dependencies:**
+
+- `ajv`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `test-folders.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 3.19 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `mongoose`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2524,12 +3080,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 248 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -2540,12 +3096,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 251 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -2556,12 +3112,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 257 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -2572,29 +3128,29 @@
 | Property | Value |
 |----------|-------|
 | Size | 119 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
 ## 📦 External Dependencies Summary
 
-Total unique external packages: **21**
+Total unique external packages: **22**
 
 | Package | Usage Count |
 |---------|-------------|
-| `mongoose` | 23 |
-| `express` | 18 |
-| `fs` | 8 |
-| `path` | 7 |
+| `mongoose` | 32 |
+| `express` | 21 |
+| `fs` | 9 |
+| `path` | 8 |
 | `dotenv` | 3 |
 | `jsonwebtoken` | 3 |
 | `mongodb` | 3 |
-| `inspector` | 2 |
 | `crypto` | 2 |
 | `bcrypt` | 2 |
 | `https` | 1 |
@@ -2602,10 +3158,12 @@ Total unique external packages: **21**
 | `http-errors` | 1 |
 | `cookie-parser` | 1 |
 | `morgan` | 1 |
+| `inspector` | 1 |
 | `swagger-jsdoc` | 1 |
 | `swagger-ui-express` | 1 |
 | `os` | 1 |
 | `winston` | 1 |
 | `winston-daily-rotate-file` | 1 |
 | `multer` | 1 |
+| `ajv` | 1 |
 

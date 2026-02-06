@@ -20,12 +20,18 @@
       }
     ]
   },
-  "name": "Home",
+  "name": "Favorites",
   "domains": [
     {
       "$oid": "68a6d22e8c127df5e97b6a98"
     }
-  ]
+  ],
+  "attributes": {
+    "color": "#177ddc"
+  },
+  "updated": {
+    "$date": "2026-02-04T14:17:25.302Z"
+  }
 },
 {
   "_id": {
@@ -46,10 +52,82 @@
       }
     ]
   },
-  "name": "Home (Sample)",
+  "name": "Deprecated",
   "domains": [
     {
       "$oid": "68a6d3d78c127df5e97b6aa9"
     }
-  ]
+  ],
+  "parent": {
+    "$oid": "68a6d1718c127df5e97b6a8f"
+  },
+  "attributes": {
+    "color": "#1890ff"
+  },
+  "updated": {
+    "$date": "2026-02-04T15:18:53.785Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "698341b51e65610bc55202df"
+  },
+  "owner": {
+    "domain": {
+      "$oid": "68a6d1e18c127df5e97b6a91"
+    },
+    "user": {
+      "$oid": "68a6d1ec8c127df5e97b6a92"
+    }
+  },
+  "items": {
+    "creatives": [
+      {
+        "$oid": "686e46b707275a7485360455"
+      }
+    ]
+  },
+  "name": "Active",
+  "domains": [
+    {
+      "$oid": "68a6d3d78c127df5e97b6aa9"
+    }
+  ],
+  "parent": {
+    "$oid": "68a6d1718c127df5e97b6a8f"
+  },
+  "attributes": {
+    "color": "#1890ff"
+  },
+  "updated": {
+    "$date": "2026-02-04T15:18:47.337Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "698343261e65610bc55202e0"
+  },
+  "owner": {
+    "domain": {
+      "$oid": "68a6d1e18c127df5e97b6a91"
+    },
+    "user": {
+      "$oid": "68a6d1ec8c127df5e97b6a92"
+    }
+  },
+  "items": {
+    "creatives": []
+  },
+  "name": "Best for Summer",
+  "domains": [
+    {
+      "$oid": "68a6d22e8c127df5e97b6a98"
+    }
+  ],
+  "attributes": {
+    "color": "#52c41a"
+  },
+  "updated": {
+    "$date": "2026-02-04T15:18:25.511Z"
+  }
 }]

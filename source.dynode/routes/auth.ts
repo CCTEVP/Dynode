@@ -14,14 +14,17 @@ const verificationCodes = new Map<
 >();
 
 // Clean up expired codes every 5 minutes
-setInterval(() => {
-  const now = new Date();
-  for (const [email, data] of verificationCodes.entries()) {
-    if (data.expires < now) {
-      verificationCodes.delete(email);
+setInterval(
+  () => {
+    const now = new Date();
+    for (const [email, data] of verificationCodes.entries()) {
+      if (data.expires < now) {
+        verificationCodes.delete(email);
+      }
     }
-  }
-}, 5 * 60 * 1000);
+  },
+  5 * 60 * 1000,
+);
 
 // Generate random 6-digit code
 function generateVerificationCode(): string {
@@ -31,16 +34,11 @@ function generateVerificationCode(): string {
 // Send email (mock implementation - replace with actual email service)
 async function sendVerificationEmail(
   email: string,
-  code: string
+  code: string,
 ): Promise<boolean> {
   try {
     // TODO: Implement actual email sending with your email service
     // For now, just log the code (for development only)
-    console.log("\n" + "=".repeat(50));
-    console.log(`🔐 VERIFICATION CODE for ${email}`);
-    console.log(`📧 Code: ${code}`);
-    console.log("=".repeat(50) + "\n");
-
     logger.info(`Verification code for ${email}: ${code}`);
 
     // In production, replace this with actual email sending:
@@ -204,7 +202,7 @@ router.post("/verify-code", async (req: Request, res: Response) => {
         domains: user.domains || [],
       },
       (config.jwtSecret as string) || "",
-      { expiresIn: "24h" }
+      { expiresIn: "24h" },
     );
 
     // Clean up verification code
@@ -242,7 +240,7 @@ router.get("/me", async (req: Request, res: Response) => {
   try {
     const decoded = jwt.verify(
       token,
-      (config.jwtSecret as string) || ""
+      (config.jwtSecret as string) || "",
     ) as any;
     // Populate domains so the /me response returns domain ids (or documents if available)
     const user = await User.findById(decoded.userId)

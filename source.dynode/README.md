@@ -1,308 +1,346 @@
-# Source (DYNODE) — Architecture & Flowchart
+# Source.dynode - Core API Service
 
-This document maps how the source.dynode service is wired: app bootstrap, middleware, routes, services, and models. Start with the flowchart to see how each file contributes to the application.
+> **Core backend API and system of record for the Dynode ecosystem**
 
-> Generated on 2025-09-25. If you move files, update the labels below accordingly.
+## Overview
 
-## High-level architecture (flowchart)
+Source.dynode is the central API service that provides authentication, data management, asset storage, and serves as the system of record for the entire Dynode platform. It exposes RESTful APIs for creative management, user authentication, and asset handling.
 
-```mermaid
-flowchart LR
-  app[app.ts]
-  r_docs[/docs/]
-  r_login[/login/]
-  r_auth[/auth/]
-  r_data[/data/]
-  r_files[/files/]
-  r_el[/elements/]
-  r_cr[/creatives/]
-  r_assets[assets]
-  r_logs[logs]
+## Technology Stack
 
-  app --> r_docs
-  app --> r_login
-  app --> r_auth
-  app --> r_data
-  app --> r_files
-  r_data --> r_el
-  r_data --> r_cr
-  r_files --> r_assets
-  r_files --> r_logs
+- **Runtime**: Node.js 18+
+- **Framework**: Express 5.1
+- **Language**: TypeScript 5.8
+- **Database**: MongoDB 5.0+ with Mongoose 8.0
+- **Authentication**: JWT (jsonwebtoken 9.0) + bcrypt 6.0
+- **Logging**: Winston 3.17 with daily rotate file
+- **API Docs**: Swagger UI + OpenAPI 3.0
+
+## Key Features
+
+### Authentication
+
+- **Email + Verification Code**: 6-digit code with 10-minute expiration
+- **Password-based Login**: bcrypt hashed passwords with JWT tokens
+- **JWT Tokens**: 24-hour expiration, includes user ID, username, and domains
+
+### Data Management
+
+- **Dual MongoDB Connections**: Separate databases for content and cache
+- **Materialized Views**: Pre-computed aggregations for performance
+- **CRUD Operations**: Full support for creatives, elements, components, assets, users
+- **Resource Scraping**: Automatic extraction of components, libraries, and assets from creatives
+
+### Asset Storage
+
+- **Multer Integration**: Multi-file upload support
+- **File System Storage**: Organized by asset type
+- **Metadata Management**: Asset cataloging and retrieval
+
+### Logging Aggregation
+
+- **Centralized Logging**: Receives logs from builder and render services
+- **Daily Rotation**: Automatic log file rotation
+- **Structured Logging**: JSON format with timestamps and metadata
+
+## Architecture
+
+### Application Structure
+
+```
+source.dynode/
+├── app.ts                  # Application entry point
+├── config.ts               # Environment-based configuration
+├── routes/
+│   ├── auth.ts             # Authentication endpoints
+│   ├── login.ts            # Password login
+│   ├── data.ts             # CRUD operations
+│   ├── files.ts            # Asset and log endpoints
+│   └── docs.ts             # Swagger documentation
+├── models/
+│   ├── collections/        # MongoDB collections
+│   └── views/              # Materialized views
+├── services/
+│   ├── logger.ts           # Winston logger
+│   ├── register.ts         # Multer storage
+│   └── scrapper.ts         # Resource extraction
+└── middleware/
+    └── auth.ts             # JWT authentication
 ```
 
-### Reading the flowchart
+### Dual MongoDB Architecture
 
-- app.ts loads config, connects to MongoDB, sets middleware, mounts routers, and starts HTTP/HTTPS.
-- Middleware are standard Express middlewares; JWT auth is defined but currently disabled for /data and /files in app.ts.
-- Routes dispatch to services (logger, register/upload, scrapper) and to Mongoose models (collections for raw docs, views for joined/denormalized data).
-- services/register saves files under `source.dynode/files/*` and returns metadata used by `AssetsCollection`.
-- services/scrapper fetches the creative JSON from this API (`/data/creatives/:id?children=true`) and extracts components/libraries/assets metadata to store alongside creatives.
+**Content Database** (`dyna_content`):
 
-## Request lifecycles (concise)
+- Primary data store for all business entities
+- Collections: users_collection, assets_collection, components_collection, elements_collection
+- Creative collections: creatives_assemblies, creatives_dynamics, creatives_interactives
+- Materialized views for optimized reads
 
-- GET /docs
+**Cache Database** (`dyna_sources`):
 
-  - routes/swagger.ts serves Swagger UI (OpenAPI from `openapi.json`).
+- Temporary buffer storage
+- Collection: BufferCollection
+- Used for transient data
 
-- POST /login
+### Configuration System
 
-  - routes/login.ts → UsersCollection: verifies password with bcrypt, returns JWT if valid.
+Environment-based configuration supports:
 
-- POST /auth/check-email → POST /auth/verify-code
+- `development` - Local development (HTTP, localhost)
+- `production` - Production deployment (HTTPS, strict security)
+- `staging` - Staging environment
+- `test` - Automated testing
+- `docker` - Docker Compose (internal networking)
 
-  - routes/auth.ts: issues a 6-digit code (logs it for dev), validates code, then signs a JWT; also GET /auth/me to decode JWT and return current user.
+## API Endpoints
 
-- GET /data/elements?mode=assets|binding
+### Authentication
 
-  - routes/data/elements/default.ts → ElementsCollection or ElementsAssetsView/ElementsBindingView based on mode.
+**POST /auth/check-email**
 
-- GET /data/creatives
+- Initiate email verification
+- Generates 6-digit code (10-minute expiration)
+- Returns: `{success: boolean, message: string}`
 
-  - routes/data/creatives/default.ts → CreativeUnifiedView (flat) or CreativeUnifiedViewElements (children=true).
+**POST /auth/verify-code**
 
-- GET/PUT /data/creatives/{assemblies|dynamics|interactives}
+- Verify 6-digit code
+- Returns JWT token on success
+- Body: `{email: string, code: string}`
+- Response: `{success: boolean, token: string}`
 
-  - routers under routes/data/creatives/\* use Collection (flat) or View (children=true) models.
-  - PUT routes call services/scrapper.getComponents() to derive resources, then upsert into the Collection.
+**GET /auth/me**
 
-- POST /files/assets
-  - routes/files/assets/default.ts uses multer storage in services/register.ts to save files, then creates an `AssetsCollection` document, logging via `services/logger.ts`.
+- Get current user profile
+- Requires: JWT token in Authorization header
+- Returns: User object with domains
 
-## File-by-file contribution map (key files)
+**POST /login**
 
-- app.ts: Application entrypoint; config, DB, middleware, routes, error handling, server start.
-- middleware/auth.ts: JWT verification middleware (can be mounted per-route).
-- services/
-  - logger.ts: Winston logger with console + daily rotate file transports.
-  - register.ts: Multer storage (dest by kind) + helper to infer asset info.
-  - scrapper.ts: Parses creative JSON to extract components/libraries/assets grouping.
-- routes/
-  - index.ts: Renders Pug index.
-  - swagger.ts: Swagger UI for OpenAPI.
-  - login.ts: Username/password auth issuing JWT.
-  - auth.ts: Email+code verification flow, issues JWT, user profile via /me.
-  - data/default.ts: Mounts elements, creatives, components, users routers.
-  - data/elements/default.ts: Lists elements via collection or specific materialized views.
-  - data/components/default.ts: Lists/gets components collection.
-  - data/creatives/default.ts: Lists unified creatives (flat or with children); get by id via elements view.
-  - data/creatives/\*/default.ts: Assemblies/Dynamics/Interactives CRUD using corresponding collection or view; PUT updates resources via scrapper.
-  - data/users/default.ts: Create user, reset password, edit user.
-  - files/default.ts: Mounts assets and logs routers.
-  - files/assets/default.ts: Uploads assets to disk and records `AssetsCollection` doc.
-  - files/logs/default.ts: Accepts client logs and forwards to winston.
-- models/
-  - shared/\*: Reusable sub-schemas and base creative schemas (collection + view variants).
-  - collections/\*: Mongoose models pointing to core MongoDB collections.
-  - views/\*: Mongoose models pointing to materialized “view” collections.
-- views/\*.pug: Server-side templates for index/error layout.
+- Password-based authentication
+- Body: `{username: string, password: string}`
+- Returns: `{token: string}`
 
-## Readable diagrams (open in VS Code Mermaid Preview)
+### Creatives
 
-- documentation/diagrams/app.mmd — App bootstrap + middleware
-- documentation/diagrams/routes-top.mmd — Top-level routes
-- documentation/diagrams/data-elements.mmd — Elements data path
-- documentation/diagrams/data-creatives.mmd — Creatives data path
-- documentation/diagrams/files.mmd — Files (assets, logs) and services
-- documentation/diagrams/models.mmd — Collections and Views
-- documentation/diagrams/seq-put-dynamic.mmd — Sequence: update a dynamic creative
+**GET /data/creatives**
 
-## Per-area diagrams (embedded)
+- List all creatives
+- Query params: `?type=dynamics&limit=50`
 
-### App bootstrap + middleware
+**GET /data/creatives/:id**
 
-```mermaid
-flowchart LR
-  subgraph APP[App bootstrap]
-    A[app.ts]
-    ENV[.env]
-    DB[(MongoDB)]
-    CERT[cert/source.dynode.pfx]
-    A --> ENV
-    A --> DB
-    A --> CERT
-  end
+- Get creative by ID
+- Query params: `?children=true` (include nested elements)
 
-  subgraph MW[Middleware]
-    CORS[cors]
-    COOKIE[cookie-parser]
-    MORGAN[morgan]
-    AUTH[authenticateToken]
-  end
+**PUT /data/creatives/:type/:id**
 
-  A --> CORS
-  A --> COOKIE
-  A --> MORGAN
-  A -.-> AUTH
-```
+- Update creative
+- Types: `assemblies`, `dynamics`, `interactives`
+- Automatically triggers resource scraping
 
-### Top-level routes
+**DELETE /data/creatives/:type/:id**
 
-```mermaid
-flowchart LR
-  A[app.ts]
-  R0[/ \/ /]
-  R1[/docs/]
-  R2[/login/]
-  R3[/auth/]
-  RD[/data/]
-  RF[/files/]
+- Delete creative
 
-  A --> R0
-  A --> R1
-  A --> R2
-  A --> R3
-  A --> RD
-  A --> RF
-```
+### Assets
 
-### Data: elements
+**POST /files/assets**
 
-```mermaid
-flowchart TD
-  D[/data/]
-  E[/elements/]
-  D --> E
-  E --> EC[[ElementsCollection]]
-  E --> EVA[[ElementsAssetsView]]
-  E --> EVB[[ElementsBindingView]]
-```
+- Upload assets (multipart/form-data)
+- Supports multiple files
+- Returns: Array of uploaded file metadata
 
-### Data: creatives
+**GET /files/assets/:filename**
 
-```mermaid
-flowchart TD
-  D[/data/]
-  C[/creatives/]
-  D --> C
+- Download asset file
+- Supports images, videos, fonts
 
-  C --> A[assemblies]
-  C --> Y[dynamics]
-  C --> I[interactives]
-  C --> U[unified]
+### Logging
 
-  A --> CA[[CreativeAssemblyCollection]]
-  A --> CAV[[CreativeAssemblyView]]
+**POST /files/logs**
 
-  Y --> CD[[CreativeDynamicCollection]]
-  Y --> CDV[[CreativeDynamicView]]
+- Forward logs from other services
+- Body: `{level: string, message: string, meta: object}`
 
-  I --> CI[[CreativeInteractiveCollection]]
-  I --> CIV[[CreativeInteractiveView]]
+### Documentation
 
-  U --> VU[[CreativeUnifiedView]]
-  U --> VUE[[CreativeUnifiedViewElements]]
-```
+**GET /docs**
 
-### Files: assets + logs
+- Swagger UI interface
+- Interactive API documentation
 
-```mermaid
-flowchart TD
-  F[/files/]
-  A[assets]
-  L[logs]
-  F --> A
-  F --> L
-
-  A --> REG[[services/register.ts]]
-  L --> LOG[[services/logger.ts]]
-
-  REG --> OUT[(files/)]
-  LOG --> LOGS[(logs/)]
-```
-
-### Data models: collections vs views
-
-```mermaid
-flowchart LR
-  subgraph Collections
-    CUSR[[UsersCollection]]
-    CAST[[AssetsCollection]]
-    CEL[[ElementsCollection]]
-    CCOMP[[ComponentsCollection]]
-    CCA[[CreativeAssemblyCollection]]
-    CCD[[CreativeDynamicCollection]]
-    CCI[[CreativeInteractiveCollection]]
-  end
-
-  subgraph Views
-    VUNI[[CreativeUnifiedView]]
-    VUNIEL[[CreativeUnifiedViewElements]]
-    VCA[[CreativeAssemblyView]]
-    VCD[[CreativeDynamicView]]
-    VCI[[CreativeInteractiveView]]
-    VEA[[ElementsAssetsView]]
-    VEB[[ElementsBindingView]]
-  end
-```
-
-### Sequence: PUT /data/creatives/dynamics/:id
-
-```mermaid
-sequenceDiagram
-  participant Client
-  participant API as Source API
-  participant SCR as scrapper.ts
-  participant DB as MongoDB
-
-  Client->>API: PUT /data/creatives/dynamics/:id (body)
-  API->>SCR: getComponents(id, body)
-  SCR->>API: GET /data/creatives/:id?children=true
-  API-->>SCR: 200 creative JSON
-  SCR-->>API: components, libraries, assets
-  API->>DB: upsert CreativeDynamicCollection
-  DB-->>API: ok
-  API-->>Client: 200 updated
-```
-
-## Advanced diagram (local preview)
-
-For a richer diagram with icons and special shapes, open `docs/flowchart-advanced.mmd` in VS Code and use the Mermaid Preview extension.
-
-## Setup and run
+## Setup & Installation
 
 ### Prerequisites
 
-- Node.js (18+ recommended)
-- MongoDB running locally or a connection string
+- Node.js 18 or higher
+- MongoDB 5.0 or higher
+- npm or yarn
 
-### Environment variables (.env)
+### Installation
 
-Create `source.dynode/.env`:
+```bash
+# Install dependencies
+npm install
 
-```ini
+# Copy environment file
+cp .env.dev .env
+
+# Configure MongoDB connection
+# Edit .env and set MONGO_URI
+```
+
+### Environment Variables
+
+```env
+# Application
 NODE_ENV=development
-PORT_ENV=3000
+APP_ENV=development
+PORT_ENV=3333
+
+# MongoDB
 MONGO_URI=mongodb://localhost:27017/dyna_content
+CACHE_MONGO_URI=mongodb://localhost:27017/dyna_sources
 
-# CORS allowlist (origins that can call this API)
-SOURCE_API_URL=http://localhost:3000
-RENDER_BASE_URL=http://localhost:4000
-BUILDER_BASE_URL=http://localhost:5000
+# JWT
+JWT_SECRET=your_super_secret_key
 
-# Folders are resolved relative to dist runtime
-SOURCE_LOGS_FOLDER=../logs
-SOURCE_ASSETS_FOLDER=../files
-
-# Optional logging levels
-LOG_LEVEL=debug
-CONSOLE_LOG_LEVEL=debug
-FILE_LOG_LEVEL=info
+# HTTPS (production)
+HTTPS_ENABLED=false
+PFX_PASSWORD=
 ```
 
-### Run locally (watch)
+### Running Locally
 
-```powershell
-npm ci
+```bash
+# Development mode (with hot reload)
 npm run dev
-```
 
-### Build and start (prod-like)
-
-```powershell
+# Production build
 npm run build
 npm start
 ```
 
-### API docs
+### Access Points
 
-- After the server starts, open: http://localhost:3000/docs
+- **API**: http://localhost:3333
+- **Swagger Docs**: http://localhost:3333/docs
+
+## Development
+
+### TypeScript Compilation
+
+```bash
+# Compile TypeScript
+npm run build
+
+# Watch mode
+npm run dev
+```
+
+### Database Management
+
+```bash
+# Reset database (development only)
+npm run db:reset
+```
+
+### Testing
+
+```bash
+# Run tests
+npm test
+```
+
+## Docker Deployment
+
+### Build Image
+
+```bash
+docker build -t source-dynode:latest .
+```
+
+### Run Container
+
+```bash
+docker run -d \
+  -p 3333:443 \
+  -e APP_ENV=docker \
+  -e MONGO_URI=mongodb://mongo:27017/dyna_content \
+  source-dynode:latest
+```
+
+### Docker Compose
+
+```yaml
+services:
+  source:
+    build: .
+    ports:
+      - "3333:443"
+    environment:
+      - APP_ENV=docker
+      - MONGO_URI=mongodb://mongo:27017/dyna_content
+    depends_on:
+      - mongo
+```
+
+## Security Considerations
+
+### Authentication
+
+- JWT tokens expire after 24 hours
+- Verification codes expire after 10 minutes
+- Maximum 3 verification attempts
+- Passwords hashed with bcrypt (salt rounds: 10)
+
+### API Security
+
+- CORS configured with allowed origins
+- JWT middleware on protected routes
+- Input validation with Ajv
+- File upload size limits
+
+### Production Checklist
+
+- [ ] Set strong JWT_SECRET in environment
+- [ ] Enable HTTPS with valid certificates
+- [ ] Configure production MongoDB with authentication
+- [ ] Set up proper CORS origins
+- [ ] Enable rate limiting
+- [ ] Configure log rotation
+
+## Troubleshooting
+
+### MongoDB Connection Failed
+
+- Verify MongoDB is running: `mongod --version`
+- Check connection string in `.env`
+- Ensure MongoDB is accessible on the specified port
+
+### JWT Token Invalid
+
+- Check JWT_SECRET is set correctly
+- Verify token hasn't expired (24h default)
+- Ensure Authorization header format: `Bearer <token>`
+
+### File Upload Fails
+
+- Check disk space
+- Verify upload directory permissions
+- Check file size limits in Multer config
+
+## Contributing
+
+See the main [Dynode README](file:///E:/Development/Web/NODE/Dynode/.docs/README.md) for contribution guidelines.
+
+## License
+
+[Specify license]
+
+---
+
+**Version**: 3.0  
+**Last Updated**: February 6, 2026

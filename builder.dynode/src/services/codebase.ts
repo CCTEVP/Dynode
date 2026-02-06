@@ -1,5 +1,6 @@
 import env from "../config/env";
 import type { CodebaseFile } from "../types/codebase";
+import logger from "./logger";
 
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
@@ -42,7 +43,7 @@ class CodebaseService {
 
       return item.data;
     } catch (error) {
-      console.error("Cache read error:", error);
+      logger.warn("Cache read error", { error, key });
       return null;
     }
   }
@@ -55,7 +56,7 @@ class CodebaseService {
       };
       sessionStorage.setItem(this.getCacheKey(key), JSON.stringify(item));
     } catch (error) {
-      console.error("Cache write error:", error);
+      logger.warn("Cache write error", { error, key });
     }
   }
 
@@ -90,7 +91,11 @@ class CodebaseService {
       this.setCache(cacheKey, data);
       return data;
     } catch (error) {
-      console.error("Error fetching codebase files:", error);
+      logger.error("Error fetching codebase files", {
+        error,
+        project,
+        category,
+      });
       throw error;
     }
   }
@@ -115,7 +120,7 @@ class CodebaseService {
       this.setCache(cacheKey, data);
       return data;
     } catch (error) {
-      console.error("Error fetching file details:", error);
+      logger.error("Error fetching file details", { error, id });
       throw error;
     }
   }

@@ -2,29 +2,29 @@
 
 > Auto-generated documentation from project analysis
 
-**Generated:** 28/01/2026, 09:16:24
+**Generated:** 06/02/2026, 10:40:33
 
 ## 📊 Overview
 
 | Metric | Value |
 |--------|-------|
-| Total Files | 94 |
-| Total Size | 4.29 MB |
-| Files with Descriptions | 94 (100%) |
-| Internal Dependencies | 11 |
-| External Dependencies | 10 |
+| Total Files | 106 |
+| Total Size | 4.39 MB |
+| Files with Descriptions | 93 (88%) |
+| Internal Dependencies | 17 |
+| External Dependencies | 13 |
 | Categories | 9 |
 
 ## 📑 Table of Contents
 
-- [Config](#config) (4 files)
+- [Config](#config) (5 files)
 - [Data](#data) (4 files)
 - [Deployment](#deployment) (2 files)
-- [Documentation](#documentation) (30 files)
+- [Documentation](#documentation) (35 files)
 - [Image](#image) (6 files)
 - [Other](#other) (19 files)
 - [Project Meta](#project-meta) (2 files)
-- [Source](#source) (22 files)
+- [Source](#source) (28 files)
 - [Style](#style) (5 files)
 
 ---
@@ -38,12 +38,26 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.69 KB |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `.env.example`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.6 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | config |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -54,12 +68,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.69 KB |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -70,12 +84,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.69 KB |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -86,12 +100,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 233 Bytes |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | config |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -104,12 +118,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 338 Bytes |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 2, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -120,12 +134,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 479.21 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -135,13 +149,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 93.28 KB |
-| Created | Oct 23, 2025 |
-| Updated | Oct 16, 2025 |
+| Size | 107.34 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -152,14 +166,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 0 Bytes |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -172,12 +186,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 685 Bytes |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 16, 2025 |
 | Category | deployment |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -188,16 +202,100 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.24 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 23, 2025 |
 | Category | deployment |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
 ## Documentation
+
+### `.docs/IMPLEMENTATION-GUIDE.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 13.55 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `.docs/INTEGRATION-CHECKLIST.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 7.34 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `.docs/LOGGING-INTEGRATION.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 5.7 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `.docs/PRODUCTION-READINESS.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 13.32 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `.docs/README.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 14.72 KB |
+| Created | Feb 5, 2026 |
+| Updated | Nov 12, 2025 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `.docs/SUMMARY.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 9.78 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
 
 ### `client/CFC_RadioActivation_Storm_Verbose/README.md`
 
@@ -206,12 +304,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.47 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 16, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -222,12 +320,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 16.94 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -238,12 +336,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 7.5 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -254,12 +352,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 12.67 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -270,12 +368,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 8.69 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -286,12 +384,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 9.47 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -302,12 +400,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 16.36 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -318,12 +416,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.23 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -334,12 +432,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.45 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -350,12 +448,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.57 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -366,12 +464,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.94 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -382,12 +480,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.48 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -398,12 +496,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.87 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -414,12 +512,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.48 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -430,12 +528,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.13 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -446,12 +544,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 11.38 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -462,12 +560,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 10.08 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -478,12 +576,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.89 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -494,12 +592,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.8 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -510,12 +608,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.1 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -526,12 +624,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 9.06 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -542,12 +640,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 13.11 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -558,12 +656,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.78 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -574,12 +672,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.8 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -590,12 +688,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.71 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -606,29 +704,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 9.78 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
-
----
-
-### `README.md`
-
-**Description:** Main project documentation covering architecture, features, authentication setup, and deployment instructions.
-
-| Property | Value |
-|----------|-------|
-| Size | 14.72 KB |
-| Created | Oct 23, 2025 |
-| Updated | Nov 12, 2025 |
-| Category | documentation |
-**Recent History:**
-
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -639,12 +720,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 7.35 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -655,12 +736,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.39 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -671,12 +752,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.3 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -689,12 +770,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 55.33 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 8, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -705,12 +786,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 157.01 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 8, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -721,12 +802,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 55.33 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 8, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -737,12 +818,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 157.01 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 8, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -753,12 +834,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 694.13 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 2, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -769,13 +850,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.04 KB |
-| Created | Oct 28, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Favicon fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -788,12 +868,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.37 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 7, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -804,12 +884,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.06 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 9, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -820,12 +900,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 213.38 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -836,12 +916,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.38 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 20, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -852,12 +932,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.14 MB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 8, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -868,12 +948,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 695 Bytes |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 16, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -884,12 +964,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.6 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Dec 11, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -900,12 +980,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.63 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -916,12 +996,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.27 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 20, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -932,12 +1012,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 747.32 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -948,12 +1028,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.29 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 7, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -964,12 +1044,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.11 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 7, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -980,12 +1060,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.32 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 2, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -996,13 +1076,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 11.56 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1013,12 +1092,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.42 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1029,12 +1108,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.07 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1045,12 +1124,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 16.31 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1061,12 +1140,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 12.89 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1077,12 +1156,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.22 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1095,13 +1174,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 311 Bytes |
-| Created | Nov 12, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | project-meta |
 **Recent History:**
 
-- **Nov 12, 2025** - Visual Studio 2026 Compliance *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1111,16 +1191,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.13 KB |
-| Created | Oct 23, 2025 |
-| Updated | Jan 20, 2026 |
+| Size | 1.21 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
 | Category | project-meta |
 **Recent History:**
 
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation File System Implemented *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1133,12 +1210,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 12.15 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Dec 11, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1149,12 +1226,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 26.68 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Dec 11, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1165,12 +1242,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 13.68 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Dec 11, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1181,12 +1258,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 13.08 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Dec 11, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1197,12 +1274,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 26.5 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Dec 11, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1212,17 +1289,22 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 6.65 KB |
-| Created | Oct 23, 2025 |
-| Updated | Oct 17, 2025 |
+| Size | 6.62 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 2, 2026 |
 | Category | source |
+
+**Internal Dependencies:**
+
+- `../services/logger.js` → `src/services/logger.js`
+
 **External Dependencies:**
 
 - `crypto`
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1232,10 +1314,15 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 9.11 KB |
-| Created | Oct 23, 2025 |
-| Updated | Oct 21, 2025 |
+| Size | 9.59 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
 | Category | source |
+
+**Internal Dependencies:**
+
+- `../services/logger.js` → `src/services/logger.js`
+
 **External Dependencies:**
 
 - `crypto`
@@ -1245,7 +1332,26 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/config/validation.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 7.13 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../services/logger.js` → `src/services/logger.js`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1256,7 +1362,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.29 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | source |
 
@@ -1266,7 +1372,68 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/middleware/cors.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.29 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../services/logger.js` → `src/services/logger.js`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/middleware/error-handler.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.84 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../services/logger.js` → `src/services/logger.js`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/middleware/rate-limiter.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.09 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../services/logger.js` → `src/services/logger.js`
+
+**External Dependencies:**
+
+- `express-rate-limit`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1277,7 +1444,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.07 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1286,7 +1453,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1297,12 +1464,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.45 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1313,7 +1480,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 7.32 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | source |
 
@@ -1323,7 +1490,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1334,7 +1501,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.15 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | source |
 
@@ -1351,7 +1518,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1362,7 +1529,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 16.7 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 23, 2025 |
 | Category | source |
 
@@ -1372,7 +1539,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1383,12 +1550,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.46 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 22, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1399,7 +1566,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 33.72 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | source |
 
@@ -1424,8 +1591,28 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/services/logger.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 6.33 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `dotenv`
+- `http`
+- `https`
+- `winston`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1436,7 +1623,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 20.9 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1445,7 +1632,21 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/utils/duration.js`
+
+| Property | Value |
+|----------|-------|
+| Size | 7.33 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1456,7 +1657,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.22 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1465,7 +1666,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1476,7 +1677,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.71 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1485,7 +1686,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1496,12 +1697,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.7 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1512,12 +1713,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.92 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 17, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1528,7 +1729,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.16 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1537,7 +1738,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1548,7 +1749,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.71 KB |
-| Created | Oct 23, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 14, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1557,7 +1758,7 @@
 
 **Recent History:**
 
-- **Oct 23, 2025** - Echo Project included *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1570,12 +1771,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 6.77 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 7, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1586,12 +1787,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.99 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 21, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1602,12 +1803,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.13 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 16, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1618,12 +1819,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.87 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 20, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1634,29 +1835,32 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.77 KB |
-| Created | Dec 11, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 9, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Dec 11, 2025** - Echo Project Docker Integration *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
 ## 📦 External Dependencies Summary
 
-Total unique external packages: **10**
+Total unique external packages: **13**
 
 | Package | Usage Count |
 |---------|-------------|
-| `http` | 5 |
+| `http` | 6 |
 | `crypto` | 3 |
+| `dotenv` | 3 |
 | `url` | 3 |
 | `path` | 3 |
-| `dotenv` | 2 |
+| `express-rate-limit` | 1 |
 | `fs/promises` | 1 |
 | `ws` | 1 |
 | `swagger-ui-express` | 1 |
 | `fs` | 1 |
+| `winston` | 1 |
+| `https` | 1 |
 | `swagger-jsdoc` | 1 |
 

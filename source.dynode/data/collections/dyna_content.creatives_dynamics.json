@@ -391,24 +391,53 @@
 },
 {
   "_id": {
-    "$oid": "6764f1fb84d9c8beb0a96b3e"
+    "$oid": "698086b61e65610bc55202b7"
   },
+  "created": {
+    "$date": "2026-01-13T12:10:14.599Z"
+  },
+  "name": "Weather Creative",
+  "styles": {
+    "width": "1080px",
+    "height": "1920px",
+    "position": "relative"
+  },
+  "updated": {
+    "$date": "2025-06-27T11:14:14.599Z"
+  },
+  "format": {
+    "$oid": "67e53f627acf34a2c37476fa"
+  },
+  "parent": [
+    {
+      "$oid": "67ee438ad760d87e72bd4e53"
+    }
+  ],
+  "status": "",
+  "changes": [
+    {
+      "timestamp": {
+        "$date": "2025-04-02T22:00:00.000Z"
+      },
+      "user": {
+        "$oid": "682c6c124316fd10c3c2c8e1"
+      }
+    }
+  ],
   "cache": {
-    "duration": "20"
+    "duration": "1"
   },
-  "changes": [],
-  "name": "TestCreative",
-  "parent": [],
   "resources": {
     "created": {
-      "$date": "2026-01-13T13:01:22.037Z"
+      "$date": "2026-01-13T13:10:54.318Z"
     },
     "updated": {
-      "$date": "2026-01-13T13:01:22.037Z"
+      "$date": "2026-01-13T13:10:54.318Z"
     },
     "components": [
       "SlideLayout",
-      "CountdownWidget",
+      "ImageWidget",
+      "ClockWidget",
       "BoxLayout",
       "CardWidget",
       "TextWidget"
@@ -417,14 +446,50 @@
       "CardWidget/rollAnimation"
     ],
     "assets": {
-      "font-64c82e7e5c12b30012ab3c45": {
-        "name": "Roboto-Black",
+      "image-67e5322d7acf34a2c37476a3": {
+        "name": "Background",
         "paths": [
-          "/dynamics/6764f1fb84d9c8beb0a96b3e/670b74de8c5b0bd7ccc424ce.opt.ttf"
+          "/dynamics/696628311e65610bc55201f5/llYL5vXDOJh6h24TpVTn.opt.jpg"
+        ]
+      },
+      "font-68663bd805087de3712cd69b": {
+        "name": "Bauer SansSerif Bold",
+        "paths": [
+          "/dynamics/696628311e65610bc55201f5/bauermediasans-bold-webfont.opt.woff",
+          "/dynamics/696628311e65610bc55201f5/bauermediasans-bold-webfont.opt.woff2"
+        ]
+      },
+      "font-6866596c05087de3712cd6a2": {
+        "name": "Bauer SansSerif Regular",
+        "paths": [
+          "/dynamics/696628311e65610bc55201f5/bauermediasans-regular-webfont.opt.woff",
+          "/dynamics/696628311e65610bc55201f5/bauermediasans-regular-webfont.opt.woff2"
         ]
       }
     }
   },
-  "status": [],
-  "styles": {}
+  "folder": {
+    "$oid": "68a6d1718c127df5e97b6a8f"
+  },
+  "behaviours": {
+    "autoplay": true
+  },
+  "sources": [
+    {
+      "source": {
+        "$oid": "697b2e461e65610bc5520297"
+      },
+      "endpoint": {
+        "$oid": "697b354c1e65610bc5520298"
+      }
+    },
+    {
+      "source": {
+        "$oid": "697b2e461e65610bc5520297"
+      },
+      "endpoint": {
+        "$oid": "6980740a1e65610bc55202ae"
+      }
+    }
+  ]
 }]

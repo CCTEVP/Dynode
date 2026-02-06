@@ -1,0 +1,15 @@
+[
+  {
+    "_id": {
+      "$oid": "6985c52a1e65610bc5520307"
+    },
+    "level": "debug",
+    "message": "GET /api/users",
+    "timestamp": "2026-02-06T10:30:00.000Z",
+    "origin": "source.dynode",
+    "hostname": "dynode-server-1",
+    "userId": "507f...",
+    "sessionId": "a3c4...",
+    "metadata": {}
+  }
+]

@@ -2,17 +2,17 @@
 
 > Auto-generated documentation from project analysis
 
-**Generated:** 28/01/2026, 09:16:23
+**Generated:** 06/02/2026, 10:40:32
 
 ## 📊 Overview
 
 | Metric | Value |
 |--------|-------|
-| Total Files | 175 |
-| Total Size | 606.55 KB |
-| Files with Descriptions | 168 (96%) |
-| Internal Dependencies | 134 |
-| External Dependencies | 17 |
+| Total Files | 213 |
+| Total Size | 928.91 KB |
+| Files with Descriptions | 163 (77%) |
+| Internal Dependencies | 226 |
+| External Dependencies | 19 |
 | Categories | 11 |
 
 ## 📑 Table of Contents
@@ -21,13 +21,13 @@
 - [Config](#config) (6 files)
 - [Data](#data) (5 files)
 - [Deployment](#deployment) (2 files)
-- [Documentation](#documentation) (6 files)
+- [Documentation](#documentation) (10 files)
 - [Image](#image) (4 files)
 - [Other](#other) (8 files)
 - [Project Meta](#project-meta) (3 files)
 - [Security](#security) (1 files)
-- [Source](#source) (121 files)
-- [Style](#style) (17 files)
+- [Source](#source) (147 files)
+- [Style](#style) (25 files)
 
 ---
 
@@ -40,13 +40,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.72 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | build-cache |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -57,14 +59,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 0 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | build-cache |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -77,7 +79,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 641 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 ---
@@ -89,12 +91,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 641 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -105,12 +107,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 641 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -121,12 +123,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 641 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -137,13 +139,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 277 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -154,15 +157,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.97 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -175,13 +175,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 101 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -191,16 +192,16 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 197.6 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 21, 2026 |
+| Size | 206.2 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Jan 22, 2026** - Checkpoint before Switch to Antigravity *(CCTEvalencia)*
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -211,14 +212,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 710 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -229,13 +228,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 729 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -246,13 +246,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 655 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -265,13 +266,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 223 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | deployment |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -282,15 +285,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.5 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | deployment |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -303,13 +303,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 483 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -320,15 +321,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 511 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Builder flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Builder flowchart fixed *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -339,13 +337,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 456 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -356,13 +353,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 256 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -373,14 +369,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 141 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Source scafolding + data updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -391,14 +385,68 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.17 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/CENTRALIZED_THEME.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 6.92 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/COLOR_AUDIT.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 6.85 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/LIBRARY_INTEGRATION.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 9.66 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/README.md`
+
+| Property | Value |
+|----------|-------|
+| Size | 5.46 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | documentation |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -411,13 +459,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.89 KB |
-| Created | Oct 28, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -428,13 +475,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.04 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Favicon fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -445,13 +491,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.9 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -462,13 +508,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.03 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -481,13 +528,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.31 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
 
 ---
 
@@ -497,15 +544,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 430 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Oct 28, 2025 |
+| Size | 376 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -516,14 +561,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.89 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -534,13 +577,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.26 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -551,13 +595,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.11 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -568,13 +611,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.84 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -585,14 +627,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 740 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -603,13 +643,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.19 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
 
 ---
 
@@ -622,13 +662,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 570 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | project-meta |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -638,16 +679,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.93 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 21, 2026 |
+| Size | 2.04 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | project-meta |
 **Recent History:**
 
-- **Jan 22, 2026** - Checkpoint before Switch to Antigravity *(CCTEvalencia)*
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- *...and 4 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -658,13 +696,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 126 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | project-meta |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -677,13 +716,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.73 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | security |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -696,7 +737,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 762 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -709,8 +750,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -720,16 +762,32 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 3.13 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 21, 2026 |
+| Size | 4.86 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `./contexts/AuthContext` → `src/contexts/AuthContext.tsx`
+- `./contexts/ThemeContext` → `src/contexts/ThemeContext.tsx`
 - `./components/controls/ProtectedRoute` → `src/components/controls/ProtectedRoute/index.tsx`
 - `./layouts/MainLayout` → `src/layouts/MainLayout.tsx`
+- `./theme` → `src/theme/index.ts`
+- `./pages/Home/Default` → `src/pages/Home/Default.tsx`
+- `./pages/Help/Default` → `src/pages/Help/Default.tsx`
+- `./pages/Help/Components/Default` → `src/pages/Help/Components/Default.tsx`
+- `./pages/Help/Codebase/Default` → `src/pages/Help/Codebase/Default.tsx`
+- `./pages/Help/Design/Default` → `src/pages/Help/Design/Default.tsx`
+- `./pages/Creatives/Default` → `src/pages/Creatives/Default.tsx`
+- `./pages/Creatives/Edit` → `src/pages/Creatives/Edit.tsx`
+- `./pages/Sources/Default` → `src/pages/Sources/Default.tsx`
+- `./pages/Sources/Edit` → `src/pages/Sources/Edit.tsx`
+- `./pages/Assets/Default` → `src/pages/Assets/Default.tsx`
+- `./pages/Assets/Edit` → `src/pages/Assets/Edit.tsx`
+- `./layouts/FullLayout` → `src/layouts/FullLayout.tsx`
+- `./pages/Community/Index` → `src/pages/Community/Index.tsx`
+- `./pages/Templates/Index` → `src/pages/Templates/Index.tsx`
 
 **External Dependencies:**
 
@@ -739,9 +797,7 @@
 
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -751,14 +807,15 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 4.78 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 5.8 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `../../contexts/AuthContext` → `src/contexts/AuthContext.tsx`
+- `../../contexts/ThemeContext` → `src/contexts/ThemeContext.tsx`
 - `../../services/auth` → `src/services/auth.ts`
 - `./Login.css` → `src/components/auth/Login.css`
 
@@ -769,8 +826,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -780,13 +837,14 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 2.43 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 3.46 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
+- `../../contexts/ThemeContext` → `src/contexts/ThemeContext.tsx`
 - `../../services/auth` → `src/services/auth.ts`
 - `./Login.css` → `src/components/auth/Login.css`
 
@@ -797,8 +855,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -809,7 +867,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 726 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -824,8 +882,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -836,7 +894,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 655 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -846,8 +904,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -858,13 +916,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -875,7 +933,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 842 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -885,8 +943,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -897,13 +956,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 63 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -914,7 +974,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 9.05 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -928,8 +988,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -940,13 +1001,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -957,7 +1018,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 720 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -967,8 +1028,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -979,13 +1040,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -995,9 +1056,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 13.17 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 14.39 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 28, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1007,6 +1068,7 @@
 - `../../editor/layouts` → `src/components/editor/layouts/index.ts`
 - `../../editor/widgets` → `src/components/editor/widgets/index.ts`
 - `../CreativeScene/Default` → `src/components/controls/CreativeScene/Default.tsx`
+- `./../CreativeScene/index.tsx` → `src/components/controls/CreativeScene/index.tsx`
 
 **External Dependencies:**
 
@@ -1014,8 +1076,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1026,13 +1089,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 85 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1043,7 +1105,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 621 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1057,8 +1119,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1069,13 +1130,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1086,7 +1147,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.95 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1104,8 +1165,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1116,7 +1178,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.13 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1132,8 +1194,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1144,7 +1207,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.74 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1161,8 +1224,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1173,7 +1237,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 802 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1189,8 +1253,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1201,7 +1266,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.06 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1217,8 +1282,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1229,7 +1295,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 948 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1248,8 +1314,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1260,7 +1327,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.26 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1276,8 +1343,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1288,7 +1356,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.18 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1303,8 +1371,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1315,7 +1384,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 554 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1326,8 +1395,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1338,13 +1408,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 493 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1355,7 +1426,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.71 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1364,8 +1435,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1376,7 +1448,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.79 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1392,8 +1464,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1404,13 +1475,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1421,7 +1492,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.75 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1439,8 +1510,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1451,13 +1521,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1468,7 +1538,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 709 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1483,8 +1553,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1495,13 +1564,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1512,7 +1581,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.11 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1528,8 +1597,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1540,13 +1608,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1557,7 +1625,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.75 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1571,8 +1639,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1583,13 +1650,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1600,7 +1667,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.24 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1615,8 +1682,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1627,13 +1693,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1644,7 +1710,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 14.71 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1661,8 +1727,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1673,13 +1738,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1690,7 +1755,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 12.72 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1705,8 +1770,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
 
 ---
 
@@ -1717,13 +1782,93 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/FolderBar/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 12.71 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../types/folder` → `src/types/folder.ts`
+- `../../../services/folder` → `src/services/folder.ts`
+- `../FolderModal/Default` → `src/components/controls/FolderModal/Default.tsx`
+- `../FolderMoveModal/Default` → `src/components/controls/FolderMoveModal/Default.tsx`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `dayjs`
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/FolderModal/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.24 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../types/folder` → `src/types/folder.ts`
+- `../../../services/folder` → `src/services/folder.ts`
+
+**External Dependencies:**
+
+- `antd`
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/FolderMoveModal/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.24 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../types/folder` → `src/types/folder.ts`
+- `../../../services/folder` → `src/services/folder.ts`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1734,13 +1879,38 @@
 | Property | Value |
 |----------|-------|
 | Size | 436 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/ItemMoveModal/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.77 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../types/folder` → `src/types/folder.ts`
+- `../../../services/folder` → `src/services/folder.ts`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1751,7 +1921,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 510 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1760,8 +1930,10 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -1772,13 +1944,100 @@
 | Property | Value |
 |----------|-------|
 | Size | 46 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/MediaPreview/FontPreview.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 1.54 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `antd`
+- `react`
+
+---
+
+### `src/components/controls/MediaPreview/ImagePreview.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 552 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `antd`
+- `react`
+
+---
+
+### `src/components/controls/MediaPreview/index.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 234 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `./ImagePreview` → `src/components/controls/MediaPreview/ImagePreview.tsx`
+- `./VideoPreview` → `src/components/controls/MediaPreview/VideoPreview.tsx`
+- `./FontPreview` → `src/components/controls/MediaPreview/FontPreview.tsx`
+- `./MediaPreview` → `src/components/controls/MediaPreview/MediaPreview.tsx`
+
+---
+
+### `src/components/controls/MediaPreview/MediaPreview.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 1.67 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `./ImagePreview` → `src/components/controls/MediaPreview/ImagePreview.tsx`
+- `./VideoPreview` → `src/components/controls/MediaPreview/VideoPreview.tsx`
+- `./FontPreview` → `src/components/controls/MediaPreview/FontPreview.tsx`
+- `../../../../config/env` → `config/env.ts`
+- `../../../types/assets` → `src/types/assets.ts`
+
+**External Dependencies:**
+
+- `antd`
+- `react`
+
+---
+
+### `src/components/controls/MediaPreview/VideoPreview.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 517 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `react`
 
 ---
 
@@ -1789,13 +2048,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 36 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1806,7 +2065,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 505 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1815,8 +2074,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1827,7 +2086,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.35 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1836,8 +2095,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1848,13 +2106,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1865,7 +2123,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 439 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1874,8 +2132,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1886,13 +2143,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1902,9 +2159,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 913 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 782 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 2, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1919,8 +2176,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1931,13 +2188,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1948,7 +2205,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 321 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -1957,8 +2214,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1969,13 +2226,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -1986,7 +2243,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.66 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2000,8 +2257,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2012,7 +2268,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.67 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2026,8 +2282,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2038,13 +2293,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2055,7 +2310,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.14 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -2065,8 +2320,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2077,13 +2332,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2094,7 +2349,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 11.93 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2109,8 +2364,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2121,7 +2375,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 11.93 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2136,8 +2390,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2148,13 +2401,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2165,13 +2418,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 74 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2182,7 +2435,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.41 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -2191,8 +2444,81 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/ThemeSwitch/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 842 Bytes |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../contexts/ThemeContext` → `src/contexts/ThemeContext.tsx`
+- `./Default.css` → `src/components/controls/ThemeSwitch/Default.css`
+
+**External Dependencies:**
+
+- `antd`
+- `react`
+
+---
+
+### `src/components/controls/ThemeSwitch/index.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 38 Bytes |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `./Default` → `src/components/controls/ThemeSwitch/Default.tsx`
+
+---
+
+### `src/components/controls/Toast/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 2.5 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `antd`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/Toast/index.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 77 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `./Default` → `src/components/controls/Toast/Default.tsx`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2203,7 +2529,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 591 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -2212,8 +2538,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2224,13 +2550,80 @@
 | Property | Value |
 |----------|-------|
 | Size | 38 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/VariableMapper/DataBrowser.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 8.93 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `antd/es/tree`
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/VariableMapper/index.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 45 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `./VariableMapper` → `src/components/controls/VariableMapper/VariableMapper.tsx`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/VariableMapper/VariableMapper.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 6.88 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 2, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../types/source` → `src/types/source.ts`
+- `./DataBrowser` → `src/components/controls/VariableMapper/DataBrowser.tsx`
+- `./VariableMapper.css` → `src/components/controls/VariableMapper/VariableMapper.css`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2241,7 +2634,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.69 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2256,8 +2649,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2268,7 +2662,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 851 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2283,8 +2677,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2295,7 +2690,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.01 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2310,8 +2705,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2322,7 +2718,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 214 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2332,8 +2728,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2344,7 +2741,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 566 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2359,8 +2756,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2371,13 +2769,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.6 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2388,14 +2787,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 0 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -2406,13 +2806,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.06 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2423,7 +2824,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.21 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2438,8 +2839,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2450,7 +2852,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.28 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2465,8 +2867,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2477,7 +2880,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.78 KB |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 
@@ -2492,8 +2895,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2504,7 +2906,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.63 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 8, 2026 |
 | Category | source |
 
@@ -2519,9 +2921,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2532,7 +2934,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.2 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Nov 11, 2025 |
 | Category | source |
 
@@ -2549,9 +2951,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Nov 11, 2025** - Missing port binding in ImageWidget *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2561,19 +2963,26 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 316 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 362 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Jan 28, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `./types` → `src/components/editor/widgets/types.ts`
+- `./CardWidget` → `src/components/editor/widgets/CardWidget.tsx`
+- `./TextWidget` → `src/components/editor/widgets/TextWidget.tsx`
+- `./VideoWidget` → `src/components/editor/widgets/VideoWidget.tsx`
+- `./ImageWidget` → `src/components/editor/widgets/ImageWidget.tsx`
+- `./CountdownWidget` → `src/components/editor/widgets/CountdownWidget.tsx`
+- `./ClockWidget` → `src/components/editor/widgets/ClockWidget.tsx`
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2584,7 +2993,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 574 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2599,8 +3008,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2611,14 +3021,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.61 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2629,7 +3039,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.85 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Nov 11, 2025 |
 | Category | source |
 
@@ -2646,10 +3056,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2660,13 +3069,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.62 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2676,14 +3084,15 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 2.17 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 2.09 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 2, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `../services/auth` → `src/services/auth.ts`
+- `./useAuth` → `src/contexts/useAuth.ts`
 
 **External Dependencies:**
 
@@ -2691,8 +3100,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2703,7 +3112,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 784 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2717,8 +3126,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2729,7 +3137,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 866 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2747,8 +3155,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2759,7 +3166,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.66 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -2768,8 +3175,31 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+
+---
+
+### `src/contexts/ThemeContext.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 1.5 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../theme` → `src/theme/index.ts`
+
+**External Dependencies:**
+
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2780,7 +3210,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 940 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2794,8 +3224,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2806,7 +3235,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 286 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2820,8 +3249,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2832,7 +3261,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.33 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2847,8 +3276,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2859,7 +3287,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.4 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2873,9 +3301,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2885,10 +3311,15 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 417 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 504 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
+
+**Internal Dependencies:**
+
+- `../components/controls/ThemeSwitch` → `src/components/controls/ThemeSwitch/index.ts`
+
 **External Dependencies:**
 
 - `antd`
@@ -2896,8 +3327,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -2907,10 +3339,16 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 7.37 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 21, 2026 |
+| Size | 6.22 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
+
+**Internal Dependencies:**
+
+- `../contexts/ThemeContext` → `src/contexts/ThemeContext.tsx`
+- `../components/controls/ThemeSwitch` → `src/components/controls/ThemeSwitch/index.ts`
+
 **External Dependencies:**
 
 - `@ant-design/icons`
@@ -2920,9 +3358,7 @@
 
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2933,7 +3369,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 298 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -2950,36 +3386,73 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
-### `src/pages/Assets/Upload.tsx`
-
-**Description:** Asset upload page for uploading and managing images, videos, and other creative assets.
+### `src/pages/Assets/Default.tsx`
 
 | Property | Value |
 |----------|-------|
-| Size | 2.55 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 14.79 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
-- `../../../config/env` → `config/env.ts`
+- `../../types/assets` → `src/types/assets.ts`
+- `../../services/asset` → `src/services/asset.ts`
+- `../../components/controls/FolderBar/Default` → `src/components/controls/FolderBar/Default.tsx`
+- `../../components/controls/ItemMoveModal/Default` → `src/components/controls/ItemMoveModal/Default.tsx`
+- `../../services/logger` → `src/services/logger.ts`
+- `./Default.css` → `src/pages/Assets/Default.css`
 
 **External Dependencies:**
 
+- `@ant-design/icons`
+- `antd`
+- `antd/es/table`
+- `dayjs`
 - `react`
+- `react-router-dom`
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/pages/Assets/Edit.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 58.47 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../services/asset` → `src/services/asset.ts`
+- `../../../config/env` → `config/env.ts`
+- `../../types/assets` → `src/types/assets.ts`
+- `../../services/logger` → `src/services/logger.ts`
+- `./Edit.css` → `src/pages/Assets/Edit.css`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `react`
+- `react-router-dom`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -2989,9 +3462,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.9 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 1.88 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 **External Dependencies:**
 
@@ -3000,44 +3473,8 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-
----
-
-### `src/pages/Creatives/Create.tsx`
-
-**Description:** Creative creation page with form for entering new creative metadata and initial configuration.
-
-| Property | Value |
-|----------|-------|
-| Size | 0 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
-| Category | source |
-**Recent History:**
-
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
-
----
-
-### `src/pages/Creatives/Data.tsx`
-
-**Description:** Creative data utilities and type definitions for creative list page.
-
-| Property | Value |
-|----------|-------|
-| Size | 0 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
-| Category | source |
-**Recent History:**
-
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3047,15 +3484,19 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 18.53 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 22.17 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `../../services/creative` → `src/services/creative.ts`
 - `../../types/creative` → `src/types/creative.ts`
+- `../../components/controls/FolderBar/Default` → `src/components/controls/FolderBar/Default.tsx`
+- `../../services/folder` → `src/services/folder.ts`
+- `../../components/controls/ItemMoveModal/Default` → `src/components/controls/ItemMoveModal/Default.tsx`
+- `../../services/logger` → `src/services/logger.ts`
 - `./Default.css` → `src/pages/Creatives/Default.css`
 - `../../../config/env` → `config/env.ts`
 
@@ -3064,33 +3505,14 @@
 - `@ant-design/icons`
 - `antd`
 - `antd/es/table`
+- `dayjs`
 - `react`
 - `react-router-dom`
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 1 more commits*
-
----
-
-### `src/pages/Creatives/Delete.tsx`
-
-**Description:** Creative deletion confirmation modal with API integration for permanent removal.
-
-| Property | Value |
-|----------|-------|
-| Size | 0 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
-| Category | source |
-**Recent History:**
-
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3101,7 +3523,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 7.33 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -3121,8 +3543,7 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3130,9 +3551,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 59.54 KB |
-| Created | Jan 21, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 61.17 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -3152,8 +3573,7 @@
 
 **Recent History:**
 
-- **Jan 22, 2026** - Checkpoint before Switch to Antigravity *(CCTEvalencia)*
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3162,7 +3582,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 356 Bytes |
-| Created | Jan 21, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 21, 2026 |
 | Category | source |
 **External Dependencies:**
@@ -3172,7 +3592,7 @@
 
 **Recent History:**
 
-- **Jan 22, 2026** - Checkpoint before Switch to Antigravity *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3183,14 +3603,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.02 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `../../../../config/env` → `config/env.ts`
 - `../../../components/controls/DataCard` → `src/components/controls/DataCard/index.ts`
+- `../../../components/controls/ComponentFilter` → `src/components/controls/ComponentFilter/index.ts`
 
 **External Dependencies:**
 
@@ -3200,10 +3621,9 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -3214,8 +3634,8 @@
 | Property | Value |
 |----------|-------|
 | Size | 278 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -3224,8 +3644,36 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+
+---
+
+### `src/pages/Help/Design/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 8.15 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../../components/controls/Toast` → `src/components/controls/Toast/index.ts`
+- `../../../contexts/ThemeContext` → `src/contexts/ThemeContext.tsx`
+- `./Default.css` → `src/pages/Help/Design/Default.css`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `react`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3235,9 +3683,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 7.2 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 7.96 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
 | Category | source |
 **External Dependencies:**
 
@@ -3248,8 +3696,70 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 3 more commits*
+
+---
+
+### `src/pages/Sources/Default.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 12.31 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../types/source` → `src/types/source.ts`
+- `../../services/source` → `src/services/source.ts`
+- `../../components/controls/FolderBar/Default` → `src/components/controls/FolderBar/Default.tsx`
+- `../../components/controls/ItemMoveModal/Default` → `src/components/controls/ItemMoveModal/Default.tsx`
+- `./Default.css` → `src/pages/Sources/Default.css`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `antd/es/table`
+- `dayjs`
+- `react`
+- `react-router-dom`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/pages/Sources/Edit.tsx`
+
+| Property | Value |
+|----------|-------|
+| Size | 64.45 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../../services/source` → `src/services/source.ts`
+- `../../components/controls/VariableMapper/DataBrowser` → `src/components/controls/VariableMapper/DataBrowser.tsx`
+- `./Edit.css` → `src/pages/Sources/Edit.css`
+
+**External Dependencies:**
+
+- `@ant-design/icons`
+- `antd`
+- `react`
+- `react-router-dom`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3259,9 +3769,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.9 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 1.88 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 **External Dependencies:**
 
@@ -3270,8 +3780,29 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+
+---
+
+### `src/services/asset.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 4.96 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../types/assets` → `src/types/assets.ts`
+- `../../config/env` → `config/env.ts`
+- `./logger` → `src/services/logger.ts`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3281,21 +3812,20 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 4.67 KB |
-| Created | Sep 30, 2025 |
-| Updated | Dec 11, 2025 |
+| Size | 4.36 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `../../config/env` → `config/env.ts`
+- `./logger` → `src/services/logger.ts`
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3303,19 +3833,20 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 3.4 KB |
-| Created | Jan 21, 2026 |
-| Updated | Jan 21, 2026 |
+| Size | 3.51 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `../config/env` → `src/config/env.ts`
 - `../types/codebase` → `src/types/codebase.ts`
+- `./logger` → `src/services/logger.ts`
 
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3325,40 +3856,40 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 8.14 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 7.65 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
 
 - `../types/creative` → `src/types/creative.ts`
 - `../../config/env` → `config/env.ts`
+- `./logger` → `src/services/logger.ts`
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
-### `src/services/deliverer.ts`
-
-**Description:** Delivery service managing creative deployment and distribution to external systems.
+### `src/services/folder.ts`
 
 | Property | Value |
 |----------|-------|
-| Size | 0 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 6.08 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | source |
+
+**Internal Dependencies:**
+
+- `../types/folder` → `src/types/folder.ts`
+
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3369,7 +3900,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.39 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -3379,9 +3910,93 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+
+---
+
+### `src/services/source.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 2.66 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | source |
+
+**Internal Dependencies:**
+
+- `../types/source` → `src/types/source.ts`
+- `../../config/env` → `config/env.ts`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/antd.config.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 8.09 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `antd`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/index.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 12.09 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | source |
+**External Dependencies:**
+
+- `antd`
+
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/reactflow.config.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 6.17 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | source |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/types/assets.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 678 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3390,12 +4005,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.45 KB |
-| Created | Jan 21, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 27, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3406,7 +4021,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 829 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -3416,8 +4031,37 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+
+---
+
+### `src/types/folder.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 756 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | source |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/types/source.ts`
+
+| Property | Value |
+|----------|-------|
+| Size | 1.05 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 2, 2026 |
+| Category | source |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3425,9 +4069,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 6.09 KB |
-| Created | Jan 21, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 6.18 KB |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
 | Category | source |
 **External Dependencies:**
 
@@ -3436,7 +4080,7 @@
 
 **Recent History:**
 
-- **Jan 22, 2026** - Checkpoint before Switch to Antigravity *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3447,13 +4091,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 39 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -3463,9 +4108,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.4 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 1.46 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | source |
 **External Dependencies:**
 
@@ -3474,9 +4119,10 @@
 
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 11, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 6 more commits*
 
 ---
 
@@ -3489,13 +4135,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 652 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -3505,14 +4153,14 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 3.71 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 4.54 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3523,13 +4171,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 228 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3540,13 +4188,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 8.11 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3557,13 +4206,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 119 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3574,13 +4223,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 55 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3591,13 +4239,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 77 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3608,13 +4256,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 102 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3625,13 +4273,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 81 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3642,13 +4290,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 81 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3659,14 +4307,24 @@
 | Property | Value |
 |----------|-------|
 | Size | 811 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
+---
+
+### `src/components/controls/ThemeSwitch/Default.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 2.17 KB |
+| Created | Feb 6, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | style |
 ---
 
 ### `src/components/controls/TopBar/styles/default.css`
@@ -3676,13 +4334,27 @@
 | Property | Value |
 |----------|-------|
 | Size | 79 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+
+---
+
+### `src/components/controls/VariableMapper/VariableMapper.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 599 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Jan 29, 2026 |
+| Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3692,14 +4364,41 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 2.03 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 3.51 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/pages/Assets/Default.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 494 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/pages/Assets/Edit.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 3.02 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3709,14 +4408,13 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 5.77 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 7.53 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -3726,14 +4424,15 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 15.82 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Size | 16.73 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 18, 2025** - Before editor rebuild *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
 
 ---
 
@@ -3741,45 +4440,107 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 1.11 KB |
-| Created | Jan 27, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 1.6 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
 ---
 
 ### `src/pages/Help/Codebase/styles.css`
 
 | Property | Value |
 |----------|-------|
-| Size | 447 Bytes |
-| Created | Jan 21, 2026 |
-| Updated | Jan 27, 2026 |
+| Size | 624 Bytes |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/pages/Help/Design/Default.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 2.02 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/pages/Sources/Default.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 1.12 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 4, 2026 |
+| Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/pages/Sources/Edit.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 3.03 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
+| Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
+---
+
+### `src/theme/colors.css`
+
+| Property | Value |
+|----------|-------|
+| Size | 8.17 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 3, 2026 |
+| Category | style |
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
 ## 📦 External Dependencies Summary
 
-Total unique external packages: **17**
+Total unique external packages: **19**
 
 | Package | Usage Count |
 |---------|-------------|
-| `react` | 69 |
-| `antd` | 23 |
-| `react-router-dom` | 9 |
-| `@ant-design/icons` | 8 |
+| `react` | 85 |
+| `antd` | 41 |
+| `@ant-design/icons` | 18 |
+| `react-router-dom` | 13 |
+| `dayjs` | 4 |
+| `antd/es/table` | 3 |
 | `@xyflow/react` | 2 |
 | `@eslint/js` | 1 |
 | `globals` | 1 |
 | `eslint-plugin-react-hooks` | 1 |
 | `eslint-plugin-react-refresh` | 1 |
 | `typescript-eslint` | 1 |
+| `antd/es/tree` | 1 |
 | `react-dom/client` | 1 |
 | `antd/dist/reset.css` | 1 |
-| `antd/es/table` | 1 |
 | `@xyflow/react/dist/style.css` | 1 |
 | `dagre` | 1 |
 | `vite` | 1 |

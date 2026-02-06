@@ -37,7 +37,7 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
 
     logger.info(
       `Using model: ${Model.modelName}, collection: ${Model.collection.name}`,
-      { filter }
+      { filter },
     );
 
     // Use lean() to return plain objects and let the view supply whatever fields it defines
@@ -52,11 +52,9 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
 // Get creative by ID
 router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
   const creativeId = req.params.id;
-  console.log("Fetching creative with ID:", creativeId);
   try {
-    const creative = await CreativeUnifiedViewElements.findById(
-      creativeId
-    ).exec();
+    const creative =
+      await CreativeUnifiedViewElements.findById(creativeId).exec();
     res.json(creative);
   } catch (error) {
     logger.error("Error fetching creative from MongoDB view:", error);

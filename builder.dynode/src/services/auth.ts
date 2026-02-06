@@ -14,6 +14,7 @@ interface VerifyResponse {
 }
 
 import env from "../../config/env";
+import logger from "./logger";
 
 class AuthService {
   // In production (Docker) the browser cannot resolve the internal Docker DNS name (source),
@@ -35,7 +36,7 @@ class AuthService {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.error("Email check error:", error);
+      logger.error("Email check error", { error, email });
       return {
         success: false,
         message: "Failed to verify email. Please try again.",
@@ -69,7 +70,7 @@ class AuthService {
 
       return data;
     } catch (error) {
-      console.error("Code verification error:", error);
+      logger.error("Code verification error", { error, email });
       return {
         success: false,
         message: "Failed to verify code. Please try again.",
@@ -85,7 +86,7 @@ class AuthService {
       }
       localStorage.setItem("dynode_user_domains", JSON.stringify(domains));
     } catch (e) {
-      console.warn("Failed to persist user domains", e);
+      logger.warn("Failed to persist user domains", { error: e });
     }
   }
 

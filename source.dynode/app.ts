@@ -6,6 +6,7 @@ import https from "https";
 import fs from "fs";
 import { RequestHandler } from "express";
 import { authenticateToken } from "./middleware/auth";
+import { sessionMiddleware } from "./middleware/session";
 import express from "express";
 import { Request, Response, NextFunction } from "express";
 import indexRouter from "./routes/index";
@@ -39,6 +40,7 @@ app.use(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(sessionMiddleware); // Add session tracking
 app.use("/", indexRouter);
 //app.use("/data", authenticateToken as RequestHandler, dataRouter);
 //app.use("/files", authenticateToken as RequestHandler, filesRouter);
@@ -66,7 +68,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // request logger middleware
 app.use(function (req: Request, res: Response, next: NextFunction) {
-  logger.info(`${req.method} ${req.originalUrl} - ${req.ip}`);
+  const logContext = req.logContext;
+  const message = `${req.method} ${req.originalUrl} - ${req.ip}`;
+
+  // Use context logger with session/user info if available
+  if (logContext?.sessionId || logContext?.userId) {
+    const contextLogger = logger.child({
+      sessionId: logContext.sessionId,
+      userId: logContext.userId,
+    });
+    contextLogger.info(message);
+  } else {
+    logger.info(message);
+  }
   next();
 });
 
@@ -100,20 +114,20 @@ async function sleep(ms: number) {
 }
 
 async function connectWithRetry(attempt = 1): Promise<void> {
-  console.log(
-    `🔌 Connecting to MongoDB (attempt ${attempt}/${MAX_MONGO_RETRIES}) -> ${mongoURI}`,
+  logger.info(
+    `Connecting to MongoDB (attempt ${attempt}/${MAX_MONGO_RETRIES}) -> ${mongoURI}`,
   );
   try {
     await mongoose.connect(mongoURI, { autoIndex: false });
-    console.log(`🤖 MongoDB connected (${environment})`);
+    logger.info(`MongoDB connected (${environment})`);
   } catch (err) {
-    console.error(
-      `☠️ MongoDB connection error (attempt ${attempt}):`,
+    logger.error(
+      `MongoDB connection error (attempt ${attempt}):`,
       err instanceof Error ? err.message : err,
     );
     if (attempt >= MAX_MONGO_RETRIES) {
-      console.error(
-        `💥 Failed to connect to Mongo after ${MAX_MONGO_RETRIES} attempts. Exiting.`,
+      logger.error(
+        `Failed to connect to Mongo after ${MAX_MONGO_RETRIES} attempts. Exiting.`,
       );
       process.exit(1);
     } else {
@@ -126,24 +140,24 @@ async function connectWithRetry(attempt = 1): Promise<void> {
 async function connectCacheWithRetry(
   attempt = 1,
 ): Promise<mongoose.Connection> {
-  console.log(
-    `🔌 Connecting to Cache MongoDB (attempt ${attempt}/${MAX_MONGO_RETRIES}) -> ${cacheMongoURI}`,
+  logger.info(
+    `Connecting to Cache MongoDB (attempt ${attempt}/${MAX_MONGO_RETRIES}) -> ${cacheMongoURI}`,
   );
   try {
     const connection = mongoose.createConnection(cacheMongoURI, {
       autoIndex: false,
     });
     await connection.asPromise();
-    console.log(`🗄️ Cache MongoDB connected (${environment})`);
+    logger.info(`Cache MongoDB connected (${environment})`);
     return connection;
   } catch (err) {
-    console.error(
-      `☠️ Cache MongoDB connection error (attempt ${attempt}):`,
+    logger.error(
+      `Cache MongoDB connection error (attempt ${attempt}):`,
       err instanceof Error ? err.message : err,
     );
     if (attempt >= MAX_MONGO_RETRIES) {
-      console.error(
-        `💥 Failed to connect to Cache Mongo after ${MAX_MONGO_RETRIES} attempts. Exiting.`,
+      logger.error(
+        `Failed to connect to Cache Mongo after ${MAX_MONGO_RETRIES} attempts. Exiting.`,
       );
       process.exit(1);
     } else {
@@ -164,34 +178,34 @@ function startHttpServers() {
       const pfx = fs.readFileSync("./cert/source.dynode.pfx");
       https.createServer({ pfx }, app).listen(PORT, () => {
         const base = config.externalOrigins.source || `https://0.0.0.0:${PORT}`;
-        console.log(
-          `🚀 HTTPS server listening (env=${environment}) base=${base} docs=/docs`,
+        logger.info(
+          `HTTPS server listening (env=${environment}) base=${base} docs=/docs`,
         );
-        console.log(`🔒 SSL/TLS: Enabled`);
-        console.log(`🗄️ Database: Connected`);
+        logger.info(`SSL/TLS: Enabled`);
+        logger.info(`Database: Connected`);
       });
     } catch (e) {
-      console.warn(
-        "⚠️ Failed to start HTTPS (falling back to HTTP):",
+      logger.warn(
+        "Failed to start HTTPS (falling back to HTTP):",
         (e as Error).message,
       );
       app.listen(PORT, () => {
         const base = config.externalOrigins.source || `http://0.0.0.0:${PORT}`;
-        console.log(
-          `🚀 HTTP server listening (env=${environment}) base=${base} docs=/docs`,
+        logger.info(
+          `HTTP server listening (env=${environment}) base=${base} docs=/docs`,
         );
-        console.log(`🔒 SSL/TLS: Disabled`);
-        console.log(`🗄️ Database: Connected`);
+        logger.info(`SSL/TLS: Disabled`);
+        logger.info(`Database: Connected`);
       });
     }
   } else {
     app.listen(PORT, () => {
       const base = config.externalOrigins.source || `http://0.0.0.0:${PORT}`;
-      console.log(
-        `🚀 HTTP server listening (env=${environment}) base=${base} docs=/docs`,
+      logger.info(
+        `HTTP server listening (env=${environment}) base=${base} docs=/docs`,
       );
-      console.log(`🔒 SSL/TLS: Disabled`);
-      console.log(`🗄️ Database: Connected`);
+      logger.info(`SSL/TLS: Disabled`);
+      logger.info(`Database: Connected`);
     });
   }
 }
@@ -209,8 +223,15 @@ async function bootstrap() {
     bufferCollectionSchema,
   );
 
+  // Initialize log models to create TTL indexes (if DB logging is enabled)
+  if (config.enableDbLogging) {
+    logger.info("Initializing Log model and TTL indexes...");
+    await import("./models/collections/LogCollection");
+    logger.info("Log model initialized with TTL indexes");
+  }
+
   startHttpServers();
-  console.log("🔧 Active config (summary):", {
+  logger.info("Active config (summary):", {
     env: config.env,
     port: config.port,
     origins: allowedOrigins,
@@ -219,6 +240,6 @@ async function bootstrap() {
 }
 
 bootstrap().catch((e) => {
-  console.error("Unexpected bootstrap failure:", e);
+  logger.error("Unexpected bootstrap failure:", e);
   process.exit(1);
 });

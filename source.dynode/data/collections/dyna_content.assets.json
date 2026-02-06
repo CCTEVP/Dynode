@@ -1,170 +1,153 @@
 [{
   "_id": {
-    "$oid": "67e531af7acf34a2c374769e"
+    "$oid": "698319c11e65610bc55202d1"
   },
-  "kind": "video",
-  "created": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "updated": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "status": "",
-  "changes": [
+  "bundle": [
     {
-      "timestamp": {
-        "$date": "2025-04-02T22:00:00.000Z"
+      "_id": {
+        "$oid": "67e531af7acf34a2c374769e"
       },
-      "user": {
-        "$oid": "682c6c124316fd10c3c2c8e1"
-      }
-    }
-  ],
-  "paths": [
-    {
-      "mime": "video/mp4",
-      "extension": "mp4",
-      "filename": "4lEUtgnxqFYcYNqP1RAA"
-    }
-  ],
-  "name": "Fireworks"
-},
-{
-  "_id": {
-    "$oid": "67e5322d7acf34a2c37476a3"
-  },
-  "kind": "image",
-  "created": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "updated": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "status": "",
-  "changes": [
-    {
-      "timestamp": {
-        "$date": "2025-04-02T22:00:00.000Z"
+      "name": "Fireworks",
+      "kind": "video",
+      "created": {
+        "$date": "2025-04-03T00:00:00.000Z"
       },
-      "user": {
-        "$oid": "682c6c124316fd10c3c2c8e1"
-      }
-    }
-  ],
-  "paths": [
-    {
-      "mime": "image/jpeg",
-      "extension": "jpg",
-      "filename": "llYL5vXDOJh6h24TpVTn"
-    }
-  ],
-  "name": "Background"
-},
-{
-  "_id": {
-    "$oid": "68663bd805087de3712cd69b"
-  },
-  "name": "Bauer SansSerif Bold",
-  "kind": "font",
-  "created": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "updated": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "status": "",
-  "changes": [
-    {
-      "timestamp": {
-        "$date": "2025-04-02T22:00:00.000Z"
+      "updated": {
+        "$date": "2026-02-06T09:09:03.720Z"
       },
-      "user": {
-        "$oid": "682c6c124316fd10c3c2c8e1"
-      }
-    }
-  ],
-  "paths": [
-    {
-      "mime": "font/woff",
-      "extension": "woff",
-      "filename": "bauermediasans-bold-webfont"
+      "status": "",
+      "paths": [
+        {
+          "mime": "video/mp4",
+          "filename": "4lEUtgnxqFYcYNqP1RAA",
+          "extension": "mp4"
+        }
+      ]
     },
     {
-      "mime": "font/woff2",
-      "extension": "woff2",
-      "filename": "bauermediasans-bold-webfont"
+      "_id": {
+        "$oid": "67e5322d7acf34a2c37476a3"
+      },
+      "name": "Background",
+      "kind": "image",
+      "created": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "updated": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "status": "",
+      "paths": [
+        {
+          "mime": "image/jpeg",
+          "filename": "llYL5vXDOJh6h24TpVTn",
+          "extension": "jpg"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "68663bd805087de3712cd69b"
+      },
+      "name": "Bauer SansSerif Bold",
+      "kind": "font",
+      "created": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "updated": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "status": "",
+      "paths": [
+        {
+          "mime": "font/woff",
+          "filename": "bauermediasans-bold-webfont",
+          "extension": "woff"
+        },
+        {
+          "mime": "font/woff2",
+          "filename": "bauermediasans-bold-webfont",
+          "extension": "woff2"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "6866596c05087de3712cd6a2"
+      },
+      "name": "Bauer SansSerif Regular",
+      "kind": "font",
+      "created": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "updated": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "status": "",
+      "paths": [
+        {
+          "mime": "font/woff",
+          "filename": "bauermediasans-regular-webfont",
+          "extension": "woff"
+        },
+        {
+          "mime": "font/woff2",
+          "filename": "bauermediasans-regular-webfont",
+          "extension": "woff2"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "686fb2b6b37b4484b5bbe39a"
+      },
+      "name": "Bauer SansSerif Light",
+      "kind": "font",
+      "created": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "updated": {
+        "$date": "2025-04-03T00:00:00.000Z"
+      },
+      "status": "",
+      "paths": [
+        {
+          "mime": "font/woff",
+          "filename": "bauermediasans-light-webfont",
+          "extension": "woff"
+        },
+        {
+          "mime": "font/woff2",
+          "filename": "bauermediasans-light-webfont",
+          "extension": "woff2"
+        }
+      ]
     }
-  ]
-},
-{
-  "_id": {
-    "$oid": "6866596c05087de3712cd6a2"
-  },
-  "name": "Bauer SansSerif Regular",
-  "kind": "font",
+  ],
   "created": {
     "$date": "2025-04-03T00:00:00.000Z"
   },
   "updated": {
-    "$date": "2025-04-03T00:00:00.000Z"
+    "$date": "2026-02-06T09:36:29.063Z"
   },
-  "status": "",
+  "name": "Campaign Asset Bundle",
+  "folder": {
+    "$oid": "68a6d1718c127df5e97b6a8f"
+  },
   "changes": [
     {
       "timestamp": {
-        "$date": "2025-04-02T22:00:00.000Z"
+        "$date": "2026-02-06T09:36:29.063Z"
       },
       "user": {
-        "$oid": "682c6c124316fd10c3c2c8e1"
-      }
-    }
-  ],
-  "paths": [
-    {
-      "mime": "font/woff",
-      "extension": "woff",
-      "filename": "bauermediasans-regular-webfont"
-    },
-    {
-      "mime": "font/woff2",
-      "extension": "woff2",
-      "filename": "bauermediasans-regular-webfont"
-    }
-  ]
-},
-{
-  "_id": {
-    "$oid": "686fb2b6b37b4484b5bbe39a"
-  },
-  "name": "Bauer SansSerif Light",
-  "kind": "font",
-  "created": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "updated": {
-    "$date": "2025-04-03T00:00:00.000Z"
-  },
-  "status": "",
-  "changes": [
-    {
-      "timestamp": {
-        "$date": "2025-04-02T22:00:00.000Z"
+        "$oid": "000000000000000000000000"
       },
-      "user": {
-        "$oid": "682c6c124316fd10c3c2c8e1"
+      "newValue": {
+        "name": "Campaign Asset Bundle"
+      },
+      "oldValue": {
+        "name": "Campaign Bundle"
       }
-    }
-  ],
-  "paths": [
-    {
-      "mime": "font/woff",
-      "extension": "woff",
-      "filename": "bauermediasans-light-webfont"
-    },
-    {
-      "mime": "font/woff2",
-      "extension": "woff2",
-      "filename": "bauermediasans-light-webfont"
     }
   ]
 }]

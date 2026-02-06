@@ -18,7 +18,7 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
     }
     res.json(creatives);
   } catch (error) {
-    console.error("Error fetching creatives:", error);
+    logger.error("Error fetching creatives", { error });
     res.status(500).json({ message: "Failed to retrieve creatives." });
   }
 });
@@ -53,8 +53,8 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     const creativeData = req.body;
     logger.info(
       `Updating dynamic creative with ID: ${creativeId}, Data: ${JSON.stringify(
-        creativeData
-      )}`
+        creativeData,
+      )}`,
     );
     if (!creativeId) {
       res.status(400).json({ message: "Creative ID is required." });
@@ -64,8 +64,6 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
       res.status(400).json({ message: "No Creative data to update." });
       return;
     }
-    console.log("creativeData");
-    console.log(creativeData);
 
     // Get existing creative data first
     const existingCreative = await CreativeDynamicView.findById(creativeId);
@@ -80,7 +78,7 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     // Scrape components, animations, assets from the merged data
     const { components, libraries, assets } = await scrapper.getComponents(
       creativeId,
-      mergedData
+      mergedData,
     );
 
     // Prepare resources object
@@ -100,7 +98,7 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     const creative = await CreativeDynamicCollection.findOneAndUpdate(
       { _id: creativeId },
       { $set: creativeData },
-      { upsert: true, new: true }
+      { upsert: true, new: true },
     );
     res.json(creative);
   } catch (error) {

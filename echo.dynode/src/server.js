@@ -31,13 +31,14 @@ import {
 } from "./auth/docs-auth.js";
 import { handleHealthRequest, isHealthRequest } from "./health/index.js";
 import { readFileSync } from "fs";
+import logger from "./services/logger.js";
 
 const PORT = process.env.PORT_ENV || process.env.PORT || 7777;
 // Heartbeat interval (ms). If 0 or negative, heartbeat disabled. 30s default keeps most proxies/NATs alive.
 // PowerShell example: $env:HEARTBEAT_INTERVAL_MS=30000; node src/server.js
 const HEARTBEAT_INTERVAL_MS = parseInt(
   process.env.HEARTBEAT_INTERVAL_MS || "30000",
-  10
+  10,
 );
 // Optional per-connection policies (disabled by default if 0)
 const IDLE_TIMEOUT_MS = parseInt(process.env.IDLE_TIMEOUT_MS || "0", 10);
@@ -57,7 +58,7 @@ try {
 } catch (error) {
   console.warn(
     "⚠️ Favicon logo.svg missing:",
-    error instanceof Error ? error.message : error
+    error instanceof Error ? error.message : error,
   );
 }
 
@@ -65,7 +66,7 @@ try {
 const server = http.createServer(async (req, res) => {
   const requestUrl = new URL(
     req.url || "/",
-    `http://${req.headers.host || "localhost"}`
+    `http://${req.headers.host || "localhost"}`,
   );
   const pathname = requestUrl.pathname;
 
@@ -115,7 +116,7 @@ const server = http.createServer(async (req, res) => {
     try {
       const loginHtml = readFileSync(
         join(__dirname, "auth", "login.html"),
-        "utf-8"
+        "utf-8",
       );
       res.writeHead(200, { "Content-Type": "text/html" });
       res.end(loginHtml);
@@ -158,7 +159,7 @@ const server = http.createServer(async (req, res) => {
               success: true,
               message: result.message,
               token: result.token,
-            })
+            }),
           );
         } else {
           res.writeHead(401, { "Content-Type": "application/json" });
@@ -166,7 +167,7 @@ const server = http.createServer(async (req, res) => {
             JSON.stringify({
               success: false,
               message: result.message,
-            })
+            }),
           );
         }
       } catch (error) {
@@ -176,7 +177,7 @@ const server = http.createServer(async (req, res) => {
           JSON.stringify({
             success: false,
             message: "Invalid request format",
-          })
+          }),
         );
       }
     });
@@ -198,7 +199,7 @@ const server = http.createServer(async (req, res) => {
         "docs_auth_token=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0",
     });
     res.end(
-      JSON.stringify({ success: true, message: "Logged out successfully" })
+      JSON.stringify({ success: true, message: "Logged out successfully" }),
     );
     return;
   }
@@ -297,7 +298,7 @@ const server = http.createServer(async (req, res) => {
                 clientId: "user123",
                 room: "radio",
               },
-            })
+            }),
           );
           return;
         }
@@ -321,7 +322,7 @@ const server = http.createServer(async (req, res) => {
             clientId: data.clientId,
             room: data.room,
             expiresAt: expiresAt.toISOString(),
-          })
+          }),
         );
       } catch (err) {
         res.writeHead(400, {
@@ -354,7 +355,7 @@ const server = http.createServer(async (req, res) => {
   // Delete the entire /src/postcontent/ folder when no longer needed
   if (req.method === "POST" && req.url === "/postcontent") {
     console.log(
-      "✅ /postcontent endpoint matched - bridging to /rooms/radio/post with advertiser token"
+      "✅ /postcontent endpoint matched - bridging to /rooms/radio/post with advertiser token",
     );
     handlePostContentRequest(req, res);
     return;
@@ -400,7 +401,7 @@ const server = http.createServer(async (req, res) => {
     if (routes && routes.length > 0) {
       // Find matching route
       const matchingRoute = routes.find(
-        (route) => route.method === req.method && route.path === roomPath
+        (route) => route.method === req.method && route.path === roomPath,
       );
 
       if (matchingRoute) {
@@ -416,7 +417,7 @@ const server = http.createServer(async (req, res) => {
               JSON.stringify({
                 error:
                   "Authentication required. Include Authorization: Bearer <token>",
-              })
+              }),
             );
             return;
           }
@@ -429,7 +430,7 @@ const server = http.createServer(async (req, res) => {
             handler,
             broadcastToRoom,
             broadcastToControlRoom,
-            enqueueRoomBroadcast
+            enqueueRoomBroadcast,
           );
         } else {
           // Call the route handler without auth
@@ -440,7 +441,7 @@ const server = http.createServer(async (req, res) => {
             handler,
             broadcastToRoom,
             broadcastToControlRoom,
-            enqueueRoomBroadcast
+            enqueueRoomBroadcast,
           );
         }
         return;
@@ -462,7 +463,7 @@ const ORIGIN_ALLOWLIST = (process.env.ORIGIN_ALLOWLIST || "")
 // Max payload (bytes) to guard against very large messages (default 1MB if unspecified)
 const MAX_PAYLOAD_BYTES = parseInt(
   process.env.MAX_PAYLOAD_BYTES || "1048576",
-  10
+  10,
 );
 
 // Comma-separated list of message .type values that should NOT be broadcast to
@@ -507,7 +508,7 @@ async function joinRoom(socket, roomName, req, clientAddress, authPayload) {
     socket,
     req,
     clientAddress,
-    authPayload
+    authPayload,
   );
 
   // If handler returns false, reject the connection
@@ -520,7 +521,7 @@ async function joinRoom(socket, roomName, req, clientAddress, authPayload) {
   socket.roomHandler = handler;
   const clientId = authPayload?.clientId || clientAddress;
   console.log(
-    `Client joined room: ${roomName} (${room.size} clients) - ID: ${clientId}`
+    `Client joined room: ${roomName} (${room.size} clients) - ID: ${clientId}`,
   );
   return true;
 }
@@ -538,7 +539,7 @@ async function leaveRoom(socket, code, reason, clientAddress) {
       }
 
       console.log(
-        `Client left room: ${socket.currentRoom} (${room.size} clients)`
+        `Client left room: ${socket.currentRoom} (${room.size} clients)`,
       );
       // Clean up empty rooms
       if (room.size === 0) {
@@ -563,7 +564,7 @@ async function joinControlRoom(socket, roomName, req, clientAddress, handler) {
   socket.controlHandler = handler;
   socket.isControlChannel = true;
   console.log(
-    `Remote control client joined: ${roomName} (${room.size} subscribers) - ${clientAddress}`
+    `Remote control client joined: ${roomName} (${room.size} subscribers) - ${clientAddress}`,
   );
   return true;
 }
@@ -579,12 +580,12 @@ async function leaveControlRoom(socket, code, reason, clientAddress) {
           socket,
           clientAddress,
           code,
-          reason
+          reason,
         );
       }
 
       console.log(
-        `Remote control client left: ${socket.currentRoom} (${room.size} subscribers)`
+        `Remote control client left: ${socket.currentRoom} (${room.size} subscribers)`,
       );
 
       if (room.size === 0) {
@@ -684,7 +685,7 @@ async function processRoomBroadcastQueue(roomName, state) {
       console.error(
         "Failed to process broadcast task",
         roomName,
-        err && err.stack ? err.stack : err
+        err && err.stack ? err.stack : err,
       );
       try {
         settle(undefined);
@@ -714,7 +715,7 @@ function isOriginAllowed(originHeader) {
     const url = new URL(originHeader);
     const originHost = url.origin.toLowerCase();
     return ORIGIN_ALLOWLIST.some(
-      (allowed) => allowed.toLowerCase() === originHost
+      (allowed) => allowed.toLowerCase() === originHost,
     );
   } catch (_) {
     return false;
@@ -834,18 +835,18 @@ wss.on("connection", async (socket, req) => {
         console.warn(
           "Control channel provided invalid token (ignored)",
           clientAddress,
-          roomName
+          roomName,
         );
       } else {
         console.warn(
           "Connection rejected: Invalid token",
           clientAddress,
-          roomName
+          roomName,
         );
         try {
           socket.close(
             AuthConfig.ERRORS.INVALID_TOKEN,
-            "Invalid or expired token"
+            "Invalid or expired token",
           );
         } catch (_) {}
         return;
@@ -859,7 +860,7 @@ wss.on("connection", async (socket, req) => {
     const authResult = await roomHandler.verifyAuth(
       authPayload,
       req,
-      clientAddress
+      clientAddress,
     );
 
     if (authResult && authResult.reject) {
@@ -867,12 +868,12 @@ wss.on("connection", async (socket, req) => {
         "Connection rejected by auth:",
         authResult.reason,
         clientAddress,
-        roomName
+        roomName,
       );
       try {
         socket.close(
           authResult.code || AuthConfig.ERRORS.INVALID_TOKEN,
-          authResult.reason
+          authResult.reason,
         );
       } catch (_) {}
       return;
@@ -890,7 +891,7 @@ wss.on("connection", async (socket, req) => {
       roomName,
       req,
       clientAddress,
-      roomHandler
+      roomHandler,
     );
   } else {
     joined = await joinRoom(socket, roomName, req, clientAddress, authPayload);
@@ -909,7 +910,7 @@ wss.on("connection", async (socket, req) => {
     clientAddress,
     `room=${roomName}`,
     isControlChannel ? "channel=remotecontrol" : "",
-    origin ? `origin=${origin}` : ""
+    origin ? `origin=${origin}` : "",
   );
 
   // Proof-of-life updates
@@ -920,7 +921,7 @@ wss.on("connection", async (socket, req) => {
 
   if (isControlChannel) {
     const controlRoomMatch = pathname.match(
-      /^\/rooms\/([^\/]+)\/remotecontrol\/?$/
+      /^\/rooms\/([^\/]+)\/remotecontrol\/?$/,
     );
     if (controlRoomMatch) {
       roomName = controlRoomMatch[1];
@@ -971,7 +972,7 @@ wss.on("connection", async (socket, req) => {
         console.warn(
           "Control channel message ignored (channel is read-only)",
           clientAddress,
-          socket.currentRoom
+          socket.currentRoom,
         );
         sendJson(socket, {
           type: "error",
@@ -1048,7 +1049,7 @@ wss.on("connection", async (socket, req) => {
     const handlerResult = await handler.onMessage(
       payload,
       socket,
-      clientAddress
+      clientAddress,
     );
 
     if (handlerResult === false) {
@@ -1104,7 +1105,7 @@ wss.on("connection", async (socket, req) => {
       "code=",
       code,
       "reason=",
-      reasonText
+      reasonText,
     );
   });
 
@@ -1122,8 +1123,16 @@ server.listen(PORT, () => {
   console.log(`Health endpoint: ${PUBLIC_BASE_URL}/health`);
   console.log(`WebSocket URL: ${PUBLIC_BASE_URL.replace(/^http/, "ws")}`);
   console.log(
-    `Room handlers ready: ${roomRegistry.getRegisteredRooms().join(", ")}`
+    `Room handlers ready: ${roomRegistry.getRegisteredRooms().join(", ")}`,
   );
+
+  // Log initialization to centralized logging service
+  logger.info("echo.dynode started", {
+    port: PORT,
+    publicBase: PUBLIC_BASE_URL,
+    rooms: roomRegistry.getRegisteredRooms(),
+    heartbeatInterval: HEARTBEAT_INTERVAL_MS,
+  });
 });
 
 // Graceful shutdown (Cloud Run sends SIGTERM before instance stops)

@@ -1,4 +1,4 @@
-import { Layout, Menu, Avatar, Button, Space, Tooltip } from "antd";
+import { Layout, Menu, Avatar, Button, Space } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import {
   TeamOutlined,
@@ -13,6 +13,7 @@ import {
   DatabaseOutlined,
 } from "@ant-design/icons";
 import { useTheme } from "../contexts/ThemeContext";
+import ThemeSwitch from "../components/controls/ThemeSwitch";
 
 const { Sider, Content } = Layout;
 
@@ -22,7 +23,7 @@ import type { PropsWithChildren } from "react";
 const MainLayout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const location = useLocation();
   const path = location.pathname;
-  const { themeMode, toggleTheme } = useTheme();
+  const { themeMode } = useTheme();
 
   // derive selected key from pathname so /creatives/123 still maps to 'creatives'
   const selectedKey =
@@ -203,25 +204,7 @@ const MainLayout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
       <Layout>
         {/* remove top padding so Header sits flush at the top of the content area */}
         <Content style={{ padding: "0 32px 32px 32px" }}>
-          <Tooltip
-            title={`Switch to ${themeMode === "dark" ? "Light" : "Dark"} Mode`}
-            placement="left"
-            color="rgba(0, 0, 0, 0.85)"
-          >
-            <button
-              onClick={toggleTheme}
-              className="theme-toggle-corner"
-              data-mode={themeMode}
-              aria-label="Toggle theme"
-            >
-              <span className="theme-toggle-track" />
-              <span className="theme-toggle-knob">
-                <span className="theme-toggle-icon">
-                  {themeMode === "dark" ? "🌙" : "☀️"}
-                </span>
-              </span>
-            </button>
-          </Tooltip>
+          <ThemeSwitch />
           {/* render the header differently depending on the active section
               - Home: show Folder title + New Folder + Search
               - Community and Templates: show Search only (aligned right)

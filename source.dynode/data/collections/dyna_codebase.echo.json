@@ -2,7 +2,7 @@
   {
     "filename": ".dockerignore",
     "path": ".dockerignore",
-    "created": "2025-10-23T10:33:21.739Z",
+    "created": "2026-02-05T08:19:30.995Z",
     "updated": "2025-10-16T14:45:36.907Z",
     "size": 685,
     "description": "Docker ignore file specifying which files and directories to exclude from Docker build context.",
@@ -12,44 +12,10 @@
     "_id": "05a721ebe3ba0754116825ed1359ff1785f4bbac",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "5",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "10",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": ".env.dev",
-    "path": ".env.dev",
-    "created": "2026-01-15T12:59:41.482Z",
-    "updated": "2026-01-15T13:04:56.725Z",
-    "size": 3783,
-    "description": "Development environment configuration file containing server ports, authentication secrets, API endpoints, and universal token settings.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "config",
-    "_id": "bf56cccda2cc742301e3bcfd8204c4e7506242fb",
-    "history": [
-      {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
-        "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -68,22 +34,226 @@
     "relParent": "0"
   },
   {
-    "filename": ".env.prod",
-    "path": ".env.prod",
-    "created": "2026-01-15T13:04:59.358Z",
-    "updated": "2026-01-15T13:05:13.668Z",
-    "size": 3782,
-    "description": "Production environment configuration file with deployment-specific settings for ports, URLs, authentication credentials, and database connections.",
+    "filename": "IMPLEMENTATION-GUIDE.md",
+    "path": ".docs/IMPLEMENTATION-GUIDE.md",
+    "created": "2026-02-05T08:19:31.055Z",
+    "updated": "2026-01-29T16:37:34.969Z",
+    "size": 13873,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "0efdd38ffe977798a8d76ac49ceca32831c0b85b",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "1",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "12",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "INTEGRATION-CHECKLIST.md",
+    "path": ".docs/INTEGRATION-CHECKLIST.md",
+    "created": "2026-02-05T08:19:31.068Z",
+    "updated": "2026-01-29T16:35:25.057Z",
+    "size": 7520,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "b90b132fa96b5434857bf0e006df1d76e909b4ad",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "1",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "13",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "LOGGING-INTEGRATION.md",
+    "path": ".docs/LOGGING-INTEGRATION.md",
+    "created": "2026-02-05T08:19:31.079Z",
+    "updated": "2026-01-29T16:38:42.952Z",
+    "size": 5837,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "3b695803539a022691f4a01f634892a6c8d75aeb",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "1",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "14",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "PRODUCTION-READINESS.md",
+    "path": ".docs/PRODUCTION-READINESS.md",
+    "created": "2026-02-05T08:19:31.080Z",
+    "updated": "2026-01-29T16:38:03.155Z",
+    "size": 13644,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "c4c11ff827493fedcadbaabe2a862fcf18ae87bc",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "1",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "15",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "README.md",
+    "path": ".docs/README.md",
+    "created": "2026-02-05T08:19:31.081Z",
+    "updated": "2025-11-12T15:30:59.894Z",
+    "size": 15075,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "e7bc017d7aad54da80e087e2836aad9571967002",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "1",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "16",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "SUMMARY.md",
+    "path": ".docs/SUMMARY.md",
+    "created": "2026-02-05T08:19:31.093Z",
+    "updated": "2026-01-29T16:34:45.303Z",
+    "size": 10018,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "88560038b7bce7fdb690cfb9e014a36c372b8618",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "1",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "17",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": ".env.dev",
+    "path": ".env.dev",
+    "created": "2026-02-05T08:19:30.998Z",
+    "updated": "2026-01-15T13:04:56.725Z",
+    "size": 3783,
+    "description": "Development environment configuration file containing server ports, authentication secrets, API endpoints, and universal token settings.",
     "internalDependencies": [],
     "externalDependencies": [],
     "category": "config",
-    "_id": "a0177f68c1620a84039b07575ad1a1e25efc0975",
+    "_id": "bf56cccda2cc742301e3bcfd8204c4e7506242fb",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -97,27 +267,27 @@
     "folKey": "7",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "12",
+    "relKey": "18",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": ".env.stag",
-    "path": ".env.stag",
-    "created": "2026-01-15T13:03:47.074Z",
-    "updated": "2026-01-15T13:04:48.665Z",
-    "size": 3779,
-    "description": "Staging environment configuration file with test environment settings mirroring production structure for pre-deployment validation.",
+    "filename": ".env.example",
+    "path": ".env.example",
+    "created": "2026-02-05T08:19:31.011Z",
+    "updated": "2026-01-29T16:37:17.836Z",
+    "size": 4713,
+    "description": "",
     "internalDependencies": [],
     "externalDependencies": [],
     "category": "config",
-    "_id": "1459b0ceb3686928ea7f89ce69d22af1088171b7",
+    "_id": "d4dae00d11854b35292c2b8a30515a9a0aa2d871",
     "history": [
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -131,27 +301,27 @@
     "folKey": "8",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "13",
+    "relKey": "19",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": ".eslintrc.json",
-    "path": ".eslintrc.json",
-    "created": "2025-10-23T10:33:21.748Z",
-    "updated": "2025-10-02T09:09:24.000Z",
-    "size": 338,
-    "description": "ESLint configuration file defining JavaScript code quality and style rules for the project.",
+    "filename": ".env.prod",
+    "path": ".env.prod",
+    "created": "2026-02-05T08:19:31.012Z",
+    "updated": "2026-01-15T13:05:13.668Z",
+    "size": 3782,
+    "description": "Production environment configuration file with deployment-specific settings for ports, URLs, authentication credentials, and database connections.",
     "internalDependencies": [],
     "externalDependencies": [],
-    "category": "data",
-    "_id": "71c20a341bfe32aa5cd5b4384e94f942bab6a7d3",
+    "category": "config",
+    "_id": "a0177f68c1620a84039b07575ad1a1e25efc0975",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -165,27 +335,27 @@
     "folKey": "9",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "14",
+    "relKey": "20",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": ".gitignore",
-    "path": ".gitignore",
-    "created": "2025-10-23T10:33:21.749Z",
-    "updated": "2025-10-17T09:33:12.921Z",
-    "size": 233,
-    "description": "Git ignore file specifying which files and directories should be excluded from version control.",
+    "filename": ".env.stag",
+    "path": ".env.stag",
+    "created": "2026-02-05T08:19:31.024Z",
+    "updated": "2026-01-15T13:04:48.665Z",
+    "size": 3779,
+    "description": "Staging environment configuration file with test environment settings mirroring production structure for pre-deployment validation.",
     "internalDependencies": [],
     "externalDependencies": [],
     "category": "config",
-    "_id": "a5cc2925ca8258af241be7e5b0381edf30266302",
+    "_id": "1459b0ceb3686928ea7f89ce69d22af1088171b7",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -199,1047 +369,27 @@
     "folKey": "10",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "15",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "agent.zip",
-    "path": "client/agent/agent.zip",
-    "created": "2025-12-11T13:36:57.404Z",
-    "updated": "2025-10-07T09:30:00.311Z",
-    "size": 5502,
-    "description": "Packaged distribution of the agent client application for deployment.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "a29f1e2e0775100699b1dedfab9448a9695aad98",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.1",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "16",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "app.js",
-    "path": "client/agent/app.js",
-    "created": "2025-12-11T13:36:57.416Z",
-    "updated": "2025-12-11T14:06:11.150Z",
-    "size": 12439,
-    "description": "Agent client that listens to remote WebSocket server and triggers actions on local WebSocket connections (BroadSign player relay).",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "source",
-    "_id": "f7dbbeff9e385f9a875f06959bcfa23fff0bd95c",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.1",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "17",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "index.html",
-    "path": "client/agent/index.html",
-    "created": "2025-12-11T13:36:57.425Z",
-    "updated": "2025-10-09T08:25:44.546Z",
-    "size": 2112,
-    "description": "HTML interface for the agent client providing connection controls and status monitoring.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "82c8d5c2a3dd851bd9283c04bff82530ee4171c1",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.1",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "18",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "styles.css",
-    "path": "client/agent/styles.css",
-    "created": "2025-12-11T13:36:57.426Z",
-    "updated": "2025-10-07T09:29:13.285Z",
-    "size": 6928,
-    "description": "Stylesheet defining the visual appearance and layout for the agent client interface.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "style",
-    "_id": "2770992e5529897c91584dd6f0218d5024b679ae",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.1",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "19",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "app.js",
-    "path": "client/CFC_RadioActivation_Storm/app.js",
-    "created": "2025-12-11T13:36:57.430Z",
-    "updated": "2025-12-11T14:09:04.629Z",
-    "size": 14009,
-    "description": "Radio activation client that switches between standby and active images based on WebSocket post messages with BroadSign integration.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "source",
-    "_id": "013adfe319580dc3d8bbdde5b01fc21b3a6d6200",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.2",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "28",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "image_01.jpg",
-    "path": "client/CFC_RadioActivation_Storm/img/image_01.jpg",
-    "created": "2025-12-11T13:36:57.440Z",
-    "updated": "2025-10-08T09:40:42.737Z",
-    "size": 56662,
-    "description": "Standby/default image displayed when no active radio content is being broadcast.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "image",
-    "_id": "38c633e4d9f8c8da1330eed45b86e65be3a3ed12",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.2.2",
-    "folDepth": 3,
-    "folParent": "1.2",
-    "relKey": "29",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "image_02.jpg",
-    "path": "client/CFC_RadioActivation_Storm/img/image_02.jpg",
-    "created": "2025-12-11T13:36:57.453Z",
-    "updated": "2025-10-08T09:58:05.703Z",
-    "size": 160781,
-    "description": "Active image displayed when radio post message is received during broadcast periods.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "image",
-    "_id": "12ab7d968a8c73987c776387c6bf39d03562fd92",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.2.2",
-    "folDepth": 3,
-    "folParent": "1.2",
-    "relKey": "30",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "index.html",
-    "path": "client/CFC_RadioActivation_Storm/index.html",
-    "created": "2025-12-11T13:36:57.435Z",
-    "updated": "2025-10-16T10:26:06.166Z",
-    "size": 695,
-    "description": "HTML interface for the CFC Radio Activation Storm visual display client.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "e9bc767a49c8ecf2cde23b856936af07436d2eef",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.2",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "31",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "styles.css",
-    "path": "client/CFC_RadioActivation_Storm/styles.css",
-    "created": "2025-12-11T13:36:57.436Z",
-    "updated": "2025-10-16T10:26:07.414Z",
-    "size": 1160,
-    "description": "Stylesheet defining image transitions and layout for the radio activation display.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "style",
-    "_id": "c3f79767c2968b7ca504ebb08f15acc6c9c36d1a",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.2",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "32",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "image.psd",
-    "path": "client/CFC_RadioActivation_Storm/_ref/image.psd",
-    "created": "2025-12-11T13:36:57.470Z",
-    "updated": "2025-10-08T09:59:20.792Z",
-    "size": 1193462,
-    "description": "Photoshop source file for the radio activation display images.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "b2ebfd3e233e37e6fe800e875a27893302e4f67a",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.2.1",
-    "folDepth": 3,
-    "folParent": "1.2",
-    "relKey": "27",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "app.js",
-    "path": "client/CFC_RadioActivation_Storm_Verbose/app.js",
-    "created": "2025-12-11T13:36:57.491Z",
-    "updated": "2025-12-11T14:09:03.874Z",
-    "size": 27316,
-    "description": "Verbose version of radio activation client with enhanced logging and detailed status information for debugging.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "source",
-    "_id": "83d58e4f247b2eef2825914c08215834150d6241",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.3",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "20",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "CFC_RadioActivation_Storm_Verbose.zip",
-    "path": "client/CFC_RadioActivation_Storm_Verbose/CFC_RadioActivation_Storm_Verbose.zip",
-    "created": "2025-12-11T13:36:57.498Z",
-    "updated": "2025-10-21T10:37:30.514Z",
-    "size": 218506,
-    "description": "Packaged distribution of the verbose radio activation client.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "4c7ac0c46a2334722e658036926c938b46fc2316",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.3",
-    "folDepth": 2,
-    "folParent": "1",
     "relKey": "21",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": "image_01.jpg",
-    "path": "client/CFC_RadioActivation_Storm_Verbose/img/image_01.jpg",
-    "created": "2025-12-11T13:36:57.531Z",
-    "updated": "2025-10-08T09:40:42.737Z",
-    "size": 56662,
-    "description": "Standby image for verbose radio activation client.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "image",
-    "_id": "10093d98d315d41e5a8e21dbe0aec16503724ace",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.3.1",
-    "folDepth": 3,
-    "folParent": "1.3",
-    "relKey": "22",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "image_02.jpg",
-    "path": "client/CFC_RadioActivation_Storm_Verbose/img/image_02.jpg",
-    "created": "2025-12-11T13:36:57.546Z",
-    "updated": "2025-10-08T09:58:05.703Z",
-    "size": 160781,
-    "description": "Active broadcast image for verbose radio activation client.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "image",
-    "_id": "41b36afac3ce7936001f32f9162f24f8c861f409",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.3.1",
-    "folDepth": 3,
-    "folParent": "1.3",
-    "relKey": "23",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "index.html",
-    "path": "client/CFC_RadioActivation_Storm_Verbose/index.html",
-    "created": "2025-12-11T13:36:57.512Z",
-    "updated": "2025-10-20T08:54:16.253Z",
-    "size": 3459,
-    "description": "HTML interface for verbose radio activation client with detailed status panels and control information.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "8c5585dd9bb07b5d12e419269d90eadca28ba5cd",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.3",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "24",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "README.md",
-    "path": "client/CFC_RadioActivation_Storm_Verbose/README.md",
-    "created": "2025-12-11T13:36:57.526Z",
-    "updated": "2025-10-16T10:05:38.457Z",
-    "size": 3556,
-    "description": "Documentation for the verbose radio activation client explaining features and configuration options.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "5d99aeff6bb4663829b6e0e34dc33ae561d17e4b",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.3",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "25",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "styles.css",
-    "path": "client/CFC_RadioActivation_Storm_Verbose/styles.css",
-    "created": "2025-12-11T13:36:57.527Z",
-    "updated": "2025-10-21T08:01:07.922Z",
-    "size": 4088,
-    "description": "Enhanced stylesheet with additional styling for verbose debug panels and status indicators.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "style",
-    "_id": "d2d10c8fa7cd3fe804fee88353486e13102067bf",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.3",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "26",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "app.js",
-    "path": "client/monitor/app.js",
-    "created": "2025-12-11T13:36:57.559Z",
-    "updated": "2025-12-11T14:08:58.329Z",
-    "size": 13395,
-    "description": "Monitor/control panel client for testing WebSocket connections and sending custom messages to the radio room.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "source",
-    "_id": "4a7970ef49417b1865b03468491574d79381013d",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.4",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "33",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "index.html",
-    "path": "client/monitor/index.html",
-    "created": "2025-12-11T13:36:57.571Z",
-    "updated": "2025-12-11T14:15:25.475Z",
-    "size": 1643,
-    "description": "HTML interface for the monitor client providing message sending and connection testing capabilities.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "165489ed50cf3281369b79fdf645d2060c505de8",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.4",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "34",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "monitor.zip",
-    "path": "client/monitor/monitor.zip",
-    "created": "2025-12-11T13:36:57.572Z",
-    "updated": "2025-10-21T11:23:02.801Z",
-    "size": 5770,
-    "description": "Packaged distribution of the monitor client application.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "7680447d2c6fc9ca14b62b0b2f791e6bad26de49",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.4",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "35",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "styles.css",
-    "path": "client/monitor/styles.css",
-    "created": "2025-12-11T13:36:57.580Z",
-    "updated": "2025-10-20T07:21:17.918Z",
-    "size": 2943,
-    "description": "Stylesheet for the monitor client control panel interface.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "style",
-    "_id": "f30aa9294be630f991a4c262a19fdc475b0acdbf",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.4",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "36",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "app.js",
-    "path": "client/player/app.js",
-    "created": "2025-12-11T13:36:57.587Z",
-    "updated": "2025-12-11T14:13:10.864Z",
-    "size": 27132,
-    "description": "Player client that synchronizes radio content via WebSocket and sends custom POP (Proof of Play) messages to BroadSign with slot duration tracking.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "source",
-    "_id": "dad3384f88d4687df19e848b7015620953fe3351",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.5",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "37",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "demo.txt",
-    "path": "client/player/demo.txt",
-    "created": "2025-12-11T13:36:57.589Z",
-    "updated": "2025-10-21T07:52:35.766Z",
-    "size": 490714,
-    "description": "Demo data or sample content file for player client testing and development.",
+    "filename": ".eslintrc.json",
+    "path": ".eslintrc.json",
+    "created": "2026-02-05T08:19:31.025Z",
+    "updated": "2025-10-02T09:09:24.000Z",
+    "size": 338,
+    "description": "ESLint configuration file defining JavaScript code quality and style rules for the project.",
     "internalDependencies": [],
     "externalDependencies": [],
     "category": "data",
-    "_id": "0f01a8a912663c4d420b961ed039adae453b9849",
+    "_id": "71c20a341bfe32aa5cd5b4384e94f942bab6a7d3",
     "history": [
       {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.5",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "38",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "background.jpg",
-    "path": "client/player/img/background.jpg",
-    "created": "2025-12-11T13:36:57.658Z",
-    "updated": "2025-10-02T10:43:54.782Z",
-    "size": 710784,
-    "description": "Background image displayed in the player client interface.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "image",
-    "_id": "8c305cebb5b8b1954b0752ee2d9133f86f0d2462",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.5.1",
-    "folDepth": 3,
-    "folParent": "1.5",
-    "relKey": "39",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "index.html",
-    "path": "client/player/index.html",
-    "created": "2025-12-11T13:36:57.634Z",
-    "updated": "2025-10-20T07:26:22.107Z",
-    "size": 3346,
-    "description": "HTML interface for the player client with content display and now-playing information.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "cb8d8e3d38421b0e3ce00a0250982b46855668e5",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.5",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "40",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "player.zip",
-    "path": "client/player/player.zip",
-    "created": "2025-12-11T13:36:57.636Z",
-    "updated": "2025-10-21T10:51:56.107Z",
-    "size": 765255,
-    "description": "Packaged distribution of the player client application.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "9e004e9cddb7087673571a57557c8c4821197b63",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.5",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "41",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "styles.css",
-    "path": "client/player/styles.css",
-    "created": "2025-12-11T13:36:57.652Z",
-    "updated": "2025-10-09T13:42:35.066Z",
-    "size": 3858,
-    "description": "Stylesheet defining layout and visual effects for the player client including fade transitions and logger display.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "style",
-    "_id": "b2d1b674776ed7d1de6b652fcf9409f93ca55a4f",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.5",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "42",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "BroadsignObject.html",
-    "path": "client/utils/BroadsignObject.html",
-    "created": "2025-12-11T13:36:57.680Z",
-    "updated": "2025-10-07T08:48:16.227Z",
-    "size": 2343,
-    "description": "Test utility demonstrating BroadSign object integration and metadata extraction from player context.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "aaa8e3bd44b88133a50f47ff6c5c2e42530ff3f6",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.6",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "43",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "BroadsignObject.zip",
-    "path": "client/utils/BroadsignObject.zip",
-    "created": "2025-12-11T13:36:57.687Z",
-    "updated": "2025-10-07T08:49:27.118Z",
-    "size": 1138,
-    "description": "Packaged BroadSign object test utility.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "8e44d970961735e7731ef114a5b433af0e10c367",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.6",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "44",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "connection-test.html",
-    "path": "client/utils/connection-test.html",
-    "created": "2025-12-11T13:36:57.689Z",
-    "updated": "2025-10-02T12:42:19.123Z",
-    "size": 6473,
-    "description": "WebSocket connection testing utility for debugging server connectivity and authentication.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "other",
-    "_id": "dad8b418c5ad64dd602562394e7ae0a719015fe5",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "1.6",
-    "folDepth": 2,
-    "folParent": "1",
-    "relKey": "45",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "Dockerfile",
-    "path": "Dockerfile",
-    "created": "2025-10-23T10:33:21.751Z",
-    "updated": "2025-10-23T10:49:07.895Z",
-    "size": 2290,
-    "description": "Multi-stage Docker container definition for building and deploying the Echo WebSocket server with production-optimized Node.js runtime.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "deployment",
-    "_id": "6651ddff6eb82c840ced7c1dddee15c6e1913dd4",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -1253,883 +403,27 @@
     "folKey": "11",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "46",
+    "relKey": "22",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": "ARCHITECTURE-DIAGRAM.md",
-    "path": "documents/ARCHITECTURE-DIAGRAM.md",
-    "created": "2025-10-23T10:33:13.166Z",
-    "updated": "2025-10-14T10:29:18.534Z",
-    "size": 17350,
-    "description": "System architecture documentation with diagrams explaining WebSocket rooms, authentication flow, and component interactions.",
+    "filename": ".gitignore",
+    "path": ".gitignore",
+    "created": "2026-02-05T08:19:31.026Z",
+    "updated": "2025-10-17T09:33:12.921Z",
+    "size": 233,
+    "description": "Git ignore file specifying which files and directories should be excluded from version control.",
     "internalDependencies": [],
     "externalDependencies": [],
-    "category": "documentation",
-    "_id": "a67ce0575f50e15d487b373c4b257490c792d643",
+    "category": "config",
+    "_id": "a5cc2925ca8258af241be7e5b0381edf30266302",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "47",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "AUTHENTICATION-FLOW.md",
-    "path": "documents/AUTHENTICATION-FLOW.md",
-    "created": "2025-10-23T10:33:13.171Z",
-    "updated": "2025-10-17T10:45:29.076Z",
-    "size": 7685,
-    "description": "Detailed explanation of the HMAC-SHA256 token-based authentication flow including token generation and verification steps.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "743ef8936bc0013c80798bcf33197e6a081b35c6",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "48",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "AUTHENTICATION-GUIDE.md",
-    "path": "documents/AUTHENTICATION-GUIDE.md",
-    "created": "2025-10-23T10:33:13.181Z",
-    "updated": "2025-10-14T10:16:37.077Z",
-    "size": 12979,
-    "description": "Comprehensive guide on implementing authentication for WebSocket connections including token management and security best practices.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "45d5ebde23311b5e79b274368cc579173dfe5fe1",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "49",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "AUTOMATION-GUIDE.md",
-    "path": "documents/AUTOMATION-GUIDE.md",
-    "created": "2025-10-23T10:33:13.182Z",
-    "updated": "2025-10-14T10:27:29.571Z",
-    "size": 8902,
-    "description": "Guide for automating token generation and deployment workflows using scripts and environment variables.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "f9819f621336bfb8637a504f9d05b3ff5ef50e7c",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "50",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "BROADSIGN-INTEGRATION.md",
-    "path": "documents/BROADSIGN-INTEGRATION.md",
-    "created": "2025-10-23T10:33:13.197Z",
-    "updated": "2025-10-21T10:00:50.653Z",
-    "size": 9699,
-    "description": "Documentation for integrating BroadSign digital signage metadata including frame IDs, player IDs, and slot duration tracking.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "5091b04699ea7b08a214e0907fa65380e1e981a3",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "51",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "CLOUD-RUN-DEPLOYMENT.md",
-    "path": "documents/CLOUD-RUN-DEPLOYMENT.md",
-    "created": "2025-10-23T10:33:13.203Z",
-    "updated": "2025-10-17T09:35:39.321Z",
-    "size": 16751,
-    "description": "Step-by-step guide for deploying the Echo server to Google Cloud Run including environment configuration and health checks.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "b1b5ab0cb0f51f2da701080743618dbd08b50ccd",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "52",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "DEPLOYMENT-CHECKLIST.md",
-    "path": "documents/DEPLOYMENT-CHECKLIST.md",
-    "created": "2025-10-23T10:33:13.207Z",
-    "updated": "2025-10-17T09:36:27.202Z",
-    "size": 4327,
-    "description": "Pre-deployment checklist covering environment variables, security settings, and production readiness verification.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "a23e7ce4b6d10c5efdcbf1db6ee70d5395bfc08f",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "53",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "DOCS-AUTHENTICATION.md",
-    "path": "documents/DOCS-AUTHENTICATION.md",
-    "created": "2025-10-23T10:33:13.208Z",
-    "updated": "2025-10-17T10:44:58.184Z",
-    "size": 6608,
-    "description": "Documentation on securing the /docs Swagger API endpoint with SHA-256 hashed credentials.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "c52706da8ac09666c49b47f005d0ae2d192a0bfe",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "54",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "ENDPOINT-RENAME-ROOMS.md",
-    "path": "documents/ENDPOINT-RENAME-ROOMS.md",
-    "created": "2025-10-23T10:33:13.209Z",
-    "updated": "2025-10-17T08:54:15.163Z",
-    "size": 4679,
-    "description": "Migration guide for the room endpoint restructuring from legacy routes to new room-based architecture.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "d7d90df5ff747846e6ede624c0945e1428e99e53",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "55",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "ENV-CONFIGURATION-GUIDE.md",
-    "path": "documents/ENV-CONFIGURATION-GUIDE.md",
-    "created": "2025-10-23T10:33:13.210Z",
-    "updated": "2025-10-14T13:28:28.037Z",
-    "size": 6079,
-    "description": "Complete reference for all environment variables including server ports, authentication secrets, and feature flags.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "14298c4f51b9de8188cd9232bdc7aae7c2d2dc7c",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "56",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "ENVIRONMENT-SWITCH-GUIDE.md",
-    "path": "documents/ENVIRONMENT-SWITCH-GUIDE.md",
-    "created": "2025-10-23T10:33:13.210Z",
-    "updated": "2025-10-14T13:32:37.358Z",
-    "size": 2539,
-    "description": "Guide for switching between development, staging, and production environments using environment-specific .env files.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "ef059952571ddae64e3935c66756f9b96a053393",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "57",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "MIGRATION-ROOM-RENAME.md",
-    "path": "documents/MIGRATION-ROOM-RENAME.md",
-    "created": "2025-10-23T10:33:13.216Z",
-    "updated": "2025-10-14T10:22:23.627Z",
-    "size": 4985,
-    "description": "Technical migration documentation for transitioning from old room naming conventions to current structure.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "ac521d546e9d6f77d08fc7408efcea1648d48a12",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "58",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "PERMANENT-TOKENS.md",
-    "path": "documents/PERMANENT-TOKENS.md",
-    "created": "2025-10-23T10:33:13.217Z",
-    "updated": "2025-10-17T08:52:28.417Z",
-    "size": 6632,
-    "description": "Documentation on creating and managing long-lived authentication tokens for automated clients and services.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "2cd2d208106ceb3fbb1504f72027385f16372ae6",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "59",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "PERSISTENT-TOKENS-GUIDE.md",
-    "path": "documents/PERSISTENT-TOKENS-GUIDE.md",
-    "created": "2025-10-23T10:33:13.218Z",
-    "updated": "2025-10-14T13:18:58.742Z",
-    "size": 5257,
-    "description": "Guide for implementing persistent authentication tokens that survive server restarts.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "4bbef2a421c53a44150570cb3e63f1fb9e241c9f",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "60",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "POSTMAN-TOKEN-GUIDE.md",
-    "path": "documents/POSTMAN-TOKEN-GUIDE.md",
-    "created": "2025-10-23T10:33:13.219Z",
-    "updated": "2025-10-17T08:52:53.137Z",
-    "size": 11657,
-    "description": "Step-by-step guide for generating and testing authentication tokens using Postman API client.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "350ea26886142b2dec407fefa563d143feb30567",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "61",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "PRODUCTION-DEPLOYMENT-GUIDE.md",
-    "path": "documents/PRODUCTION-DEPLOYMENT-GUIDE.md",
-    "created": "2025-10-23T10:33:13.232Z",
-    "updated": "2025-10-14T13:32:17.297Z",
-    "size": 10322,
-    "description": "Comprehensive production deployment guide covering Docker builds, environment configuration, and security hardening.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "f6fb77969498e560f8124308154114df2bd06d08",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "62",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "QUICK-REFERENCE.md",
-    "path": "documents/QUICK-REFERENCE.md",
-    "created": "2025-10-23T10:33:13.239Z",
-    "updated": "2025-10-14T09:42:44.907Z",
-    "size": 7058,
-    "description": "Quick reference card with common commands, endpoints, and configuration examples for developers.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "65b27d58cbc99ac4d9541992f1a786c1750a5e7a",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "63",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "QUICKSTART-ROOMS.md",
-    "path": "documents/QUICKSTART-ROOMS.md",
-    "created": "2025-10-23T10:33:13.240Z",
-    "updated": "2025-10-14T09:28:42.762Z",
-    "size": 4916,
-    "description": "Quick start guide for creating custom room handlers and implementing room-specific logic.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "eea2774a9e5fc6290001ab49d4d94bf9535684e8",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "64",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "REFACTORING-HEALTH.md",
-    "path": "documents/REFACTORING-HEALTH.md",
-    "created": "2025-10-23T10:33:13.242Z",
-    "updated": "2025-10-21T09:44:13.957Z",
-    "size": 3176,
-    "description": "Documentation of health endpoint refactoring explaining the detailed and summary response modes.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "8e4ac5ff35d0f71276570621b3543b414df54293",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "65",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "ROOM-ARCHITECTURE-SUMMARY.md",
-    "path": "documents/ROOM-ARCHITECTURE-SUMMARY.md",
-    "created": "2025-10-23T10:33:13.242Z",
-    "updated": "2025-10-14T09:42:44.094Z",
-    "size": 9279,
-    "description": "Technical overview of the room-based architecture including BaseRoomHandler inheritance and auto-discovery mechanisms.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "820a2b48e8cafeba55530ec2c5f559d6c0d27ba5",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "66",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "ROOM-HANDLER-GUIDE.md",
-    "path": "documents/ROOM-HANDLER-GUIDE.md",
-    "created": "2025-10-23T10:33:13.244Z",
-    "updated": "2025-10-14T09:34:10.257Z",
-    "size": 13421,
-    "description": "Developer guide for creating custom room handlers with examples of message processing and client management.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "01f70ff6f4f73ebed8232beff191497e919fe931",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "67",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "ROUTES-REFACTORING.md",
-    "path": "documents/ROUTES-REFACTORING.md",
-    "created": "2025-10-23T10:33:13.245Z",
-    "updated": "2025-10-17T08:53:01.486Z",
-    "size": 3873,
-    "description": "Documentation of routing system refactoring to support dynamic room-based endpoints.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "1abfcbdeb01384b701331b2f7b2c9e778ae77231",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "68",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "ROUTING-CHANGE-MIGRATION.md",
-    "path": "documents/ROUTING-CHANGE-MIGRATION.md",
-    "created": "2025-10-23T10:33:13.246Z",
-    "updated": "2025-10-17T08:52:38.603Z",
-    "size": 6960,
-    "description": "Migration guide for updating client code to use new room-based routing structure.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "b4fe5f5ee2f19ccf2179da58231ead7b1976fe9e",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "69",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "SECURITY-HASHED-CREDENTIALS.md",
-    "path": "documents/SECURITY-HASHED-CREDENTIALS.md",
-    "created": "2025-10-23T10:33:13.247Z",
-    "updated": "2025-10-17T09:59:01.668Z",
-    "size": 4824,
-    "description": "Security documentation explaining SHA-256 credential hashing for documentation authentication.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "f85b3350b5a7c941db8f01fae8a2c58ce8c186ee",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "70",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "TOKEN-STORAGE-EXPLAINED.md",
-    "path": "documents/TOKEN-STORAGE-EXPLAINED.md",
-    "created": "2025-10-23T10:33:13.248Z",
-    "updated": "2025-10-14T10:29:45.263Z",
-    "size": 10016,
-    "description": "Technical explanation of token storage, validation, and expiration mechanisms.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "c64956b63defb1a047dc490315b38bdfc31e36da",
-    "history": [
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "2",
-    "folDepth": 1,
-    "folParent": "0",
-    "relKey": "71",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "echo.dynode.esproj",
-    "path": "echo.dynode.esproj",
-    "created": "2025-11-12T09:45:17.082Z",
-    "updated": "2025-09-30T08:56:44.459Z",
-    "size": 311,
-    "description": "Visual Studio project file defining build configuration and project structure for the Echo server.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "project-meta",
-    "_id": "fee651e7f2ee8793ce8509577fa99df38802125d",
-    "history": [
-      {
-        "commitId": "9c84ecae4afcc30174d1f655a93642d5afc0189a",
-        "author": "CCTEvalencia",
-        "date": "2025-11-12T13:02:16+01:00",
-        "message": "Visual Studio 2026 Compliance"
-      },
-      {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2143,27 +437,1047 @@
     "folKey": "12",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "72",
+    "relKey": "23",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": "package-lock.json",
-    "path": "package-lock.json",
-    "created": "2025-10-23T10:33:21.754Z",
-    "updated": "2025-10-16T14:23:32.624Z",
-    "size": 95518,
-    "description": "NPM lock file ensuring consistent dependency versions across installations.",
+    "filename": "agent.zip",
+    "path": "client/agent/agent.zip",
+    "created": "2026-02-05T08:19:31.102Z",
+    "updated": "2025-10-07T09:30:00.311Z",
+    "size": 5502,
+    "description": "Packaged distribution of the agent client application for deployment.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "a29f1e2e0775100699b1dedfab9448a9695aad98",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.1",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "24",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "app.js",
+    "path": "client/agent/app.js",
+    "created": "2026-02-05T08:19:31.113Z",
+    "updated": "2025-12-11T14:06:11.150Z",
+    "size": 12439,
+    "description": "Agent client that listens to remote WebSocket server and triggers actions on local WebSocket connections (BroadSign player relay).",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "f7dbbeff9e385f9a875f06959bcfa23fff0bd95c",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.1",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "25",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "index.html",
+    "path": "client/agent/index.html",
+    "created": "2026-02-05T08:19:31.133Z",
+    "updated": "2025-10-09T08:25:44.546Z",
+    "size": 2112,
+    "description": "HTML interface for the agent client providing connection controls and status monitoring.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "82c8d5c2a3dd851bd9283c04bff82530ee4171c1",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.1",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "26",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "styles.css",
+    "path": "client/agent/styles.css",
+    "created": "2026-02-05T08:19:31.157Z",
+    "updated": "2025-10-07T09:29:13.285Z",
+    "size": 6928,
+    "description": "Stylesheet defining the visual appearance and layout for the agent client interface.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "2770992e5529897c91584dd6f0218d5024b679ae",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.1",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "27",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "app.js",
+    "path": "client/CFC_RadioActivation_Storm/app.js",
+    "created": "2026-02-05T08:19:31.161Z",
+    "updated": "2025-12-11T14:09:04.629Z",
+    "size": 14009,
+    "description": "Radio activation client that switches between standby and active images based on WebSocket post messages with BroadSign integration.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "013adfe319580dc3d8bbdde5b01fc21b3a6d6200",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.2",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "36",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "image_01.jpg",
+    "path": "client/CFC_RadioActivation_Storm/img/image_01.jpg",
+    "created": "2026-02-05T08:19:31.179Z",
+    "updated": "2025-10-08T09:40:42.737Z",
+    "size": 56662,
+    "description": "Standby/default image displayed when no active radio content is being broadcast.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "image",
+    "_id": "38c633e4d9f8c8da1330eed45b86e65be3a3ed12",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.2.2",
+    "folDepth": 3,
+    "folParent": "2.2",
+    "relKey": "37",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "image_02.jpg",
+    "path": "client/CFC_RadioActivation_Storm/img/image_02.jpg",
+    "created": "2026-02-05T08:19:31.187Z",
+    "updated": "2025-10-08T09:58:05.703Z",
+    "size": 160781,
+    "description": "Active image displayed when radio post message is received during broadcast periods.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "image",
+    "_id": "12ab7d968a8c73987c776387c6bf39d03562fd92",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.2.2",
+    "folDepth": 3,
+    "folParent": "2.2",
+    "relKey": "38",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "index.html",
+    "path": "client/CFC_RadioActivation_Storm/index.html",
+    "created": "2026-02-05T08:19:31.172Z",
+    "updated": "2025-10-16T10:26:06.166Z",
+    "size": 695,
+    "description": "HTML interface for the CFC Radio Activation Storm visual display client.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "e9bc767a49c8ecf2cde23b856936af07436d2eef",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.2",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "39",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "styles.css",
+    "path": "client/CFC_RadioActivation_Storm/styles.css",
+    "created": "2026-02-05T08:19:31.174Z",
+    "updated": "2025-10-16T10:26:07.414Z",
+    "size": 1160,
+    "description": "Stylesheet defining image transitions and layout for the radio activation display.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "c3f79767c2968b7ca504ebb08f15acc6c9c36d1a",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.2",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "40",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "image.psd",
+    "path": "client/CFC_RadioActivation_Storm/_ref/image.psd",
+    "created": "2026-02-05T08:19:31.206Z",
+    "updated": "2025-10-08T09:59:20.792Z",
+    "size": 1193462,
+    "description": "Photoshop source file for the radio activation display images.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "b2ebfd3e233e37e6fe800e875a27893302e4f67a",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.2.1",
+    "folDepth": 3,
+    "folParent": "2.2",
+    "relKey": "35",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "app.js",
+    "path": "client/CFC_RadioActivation_Storm_Verbose/app.js",
+    "created": "2026-02-05T08:19:31.227Z",
+    "updated": "2025-12-11T14:09:03.874Z",
+    "size": 27316,
+    "description": "Verbose version of radio activation client with enhanced logging and detailed status information for debugging.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "83d58e4f247b2eef2825914c08215834150d6241",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.3",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "28",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "CFC_RadioActivation_Storm_Verbose.zip",
+    "path": "client/CFC_RadioActivation_Storm_Verbose/CFC_RadioActivation_Storm_Verbose.zip",
+    "created": "2026-02-05T08:19:31.229Z",
+    "updated": "2025-10-21T10:37:30.514Z",
+    "size": 218506,
+    "description": "Packaged distribution of the verbose radio activation client.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "4c7ac0c46a2334722e658036926c938b46fc2316",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.3",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "29",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "image_01.jpg",
+    "path": "client/CFC_RadioActivation_Storm_Verbose/img/image_01.jpg",
+    "created": "2026-02-05T08:19:31.265Z",
+    "updated": "2025-10-08T09:40:42.737Z",
+    "size": 56662,
+    "description": "Standby image for verbose radio activation client.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "image",
+    "_id": "10093d98d315d41e5a8e21dbe0aec16503724ace",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.3.1",
+    "folDepth": 3,
+    "folParent": "2.3",
+    "relKey": "30",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "image_02.jpg",
+    "path": "client/CFC_RadioActivation_Storm_Verbose/img/image_02.jpg",
+    "created": "2026-02-05T08:19:31.278Z",
+    "updated": "2025-10-08T09:58:05.703Z",
+    "size": 160781,
+    "description": "Active broadcast image for verbose radio activation client.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "image",
+    "_id": "41b36afac3ce7936001f32f9162f24f8c861f409",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.3.1",
+    "folDepth": 3,
+    "folParent": "2.3",
+    "relKey": "31",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "index.html",
+    "path": "client/CFC_RadioActivation_Storm_Verbose/index.html",
+    "created": "2026-02-05T08:19:31.238Z",
+    "updated": "2025-10-20T08:54:16.253Z",
+    "size": 3459,
+    "description": "HTML interface for verbose radio activation client with detailed status panels and control information.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "8c5585dd9bb07b5d12e419269d90eadca28ba5cd",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.3",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "32",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "README.md",
+    "path": "client/CFC_RadioActivation_Storm_Verbose/README.md",
+    "created": "2026-02-05T08:19:31.251Z",
+    "updated": "2025-10-16T10:05:38.457Z",
+    "size": 3556,
+    "description": "Documentation for the verbose radio activation client explaining features and configuration options.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "5d99aeff6bb4663829b6e0e34dc33ae561d17e4b",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.3",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "33",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "styles.css",
+    "path": "client/CFC_RadioActivation_Storm_Verbose/styles.css",
+    "created": "2026-02-05T08:19:31.252Z",
+    "updated": "2025-10-21T08:01:07.922Z",
+    "size": 4088,
+    "description": "Enhanced stylesheet with additional styling for verbose debug panels and status indicators.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "d2d10c8fa7cd3fe804fee88353486e13102067bf",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.3",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "34",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "app.js",
+    "path": "client/monitor/app.js",
+    "created": "2026-02-05T08:19:31.304Z",
+    "updated": "2025-12-11T14:08:58.329Z",
+    "size": 13395,
+    "description": "Monitor/control panel client for testing WebSocket connections and sending custom messages to the radio room.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "4a7970ef49417b1865b03468491574d79381013d",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.4",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "41",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "index.html",
+    "path": "client/monitor/index.html",
+    "created": "2026-02-05T08:19:31.321Z",
+    "updated": "2025-12-11T14:15:25.475Z",
+    "size": 1643,
+    "description": "HTML interface for the monitor client providing message sending and connection testing capabilities.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "165489ed50cf3281369b79fdf645d2060c505de8",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.4",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "42",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "monitor.zip",
+    "path": "client/monitor/monitor.zip",
+    "created": "2026-02-05T08:19:31.335Z",
+    "updated": "2025-10-21T11:23:02.801Z",
+    "size": 5770,
+    "description": "Packaged distribution of the monitor client application.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "7680447d2c6fc9ca14b62b0b2f791e6bad26de49",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.4",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "43",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "styles.css",
+    "path": "client/monitor/styles.css",
+    "created": "2026-02-05T08:19:31.348Z",
+    "updated": "2025-10-20T07:21:17.918Z",
+    "size": 2943,
+    "description": "Stylesheet for the monitor client control panel interface.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "f30aa9294be630f991a4c262a19fdc475b0acdbf",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.4",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "44",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "app.js",
+    "path": "client/player/app.js",
+    "created": "2026-02-05T08:19:31.353Z",
+    "updated": "2025-12-11T14:13:10.864Z",
+    "size": 27132,
+    "description": "Player client that synchronizes radio content via WebSocket and sends custom POP (Proof of Play) messages to BroadSign with slot duration tracking.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "dad3384f88d4687df19e848b7015620953fe3351",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.5",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "45",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "demo.txt",
+    "path": "client/player/demo.txt",
+    "created": "2026-02-05T08:19:31.364Z",
+    "updated": "2025-10-21T07:52:35.766Z",
+    "size": 490714,
+    "description": "Demo data or sample content file for player client testing and development.",
     "internalDependencies": [],
     "externalDependencies": [],
     "category": "data",
-    "_id": "fa288d1472d29beccb489a676f68739ad365fc47",
+    "_id": "0f01a8a912663c4d420b961ed039adae453b9849",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.5",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "46",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "background.jpg",
+    "path": "client/player/img/background.jpg",
+    "created": "2026-02-05T08:19:31.443Z",
+    "updated": "2025-10-02T10:43:54.782Z",
+    "size": 710784,
+    "description": "Background image displayed in the player client interface.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "image",
+    "_id": "8c305cebb5b8b1954b0752ee2d9133f86f0d2462",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.5.1",
+    "folDepth": 3,
+    "folParent": "2.5",
+    "relKey": "47",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "index.html",
+    "path": "client/player/index.html",
+    "created": "2026-02-05T08:19:31.379Z",
+    "updated": "2025-10-20T07:26:22.107Z",
+    "size": 3346,
+    "description": "HTML interface for the player client with content display and now-playing information.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "cb8d8e3d38421b0e3ce00a0250982b46855668e5",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.5",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "48",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "player.zip",
+    "path": "client/player/player.zip",
+    "created": "2026-02-05T08:19:31.380Z",
+    "updated": "2025-10-21T10:51:56.107Z",
+    "size": 765255,
+    "description": "Packaged distribution of the player client application.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "9e004e9cddb7087673571a57557c8c4821197b63",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.5",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "49",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "styles.css",
+    "path": "client/player/styles.css",
+    "created": "2026-02-05T08:19:31.424Z",
+    "updated": "2025-10-09T13:42:35.066Z",
+    "size": 3858,
+    "description": "Stylesheet defining layout and visual effects for the player client including fade transitions and logger display.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "style",
+    "_id": "b2d1b674776ed7d1de6b652fcf9409f93ca55a4f",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.5",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "50",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "BroadsignObject.html",
+    "path": "client/utils/BroadsignObject.html",
+    "created": "2026-02-05T08:19:31.468Z",
+    "updated": "2025-10-07T08:48:16.227Z",
+    "size": 2343,
+    "description": "Test utility demonstrating BroadSign object integration and metadata extraction from player context.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "aaa8e3bd44b88133a50f47ff6c5c2e42530ff3f6",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.6",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "51",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "BroadsignObject.zip",
+    "path": "client/utils/BroadsignObject.zip",
+    "created": "2026-02-05T08:19:31.482Z",
+    "updated": "2025-10-07T08:49:27.118Z",
+    "size": 1138,
+    "description": "Packaged BroadSign object test utility.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "8e44d970961735e7731ef114a5b433af0e10c367",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.6",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "52",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "connection-test.html",
+    "path": "client/utils/connection-test.html",
+    "created": "2026-02-05T08:19:31.483Z",
+    "updated": "2025-10-02T12:42:19.123Z",
+    "size": 6473,
+    "description": "WebSocket connection testing utility for debugging server connectivity and authentication.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "other",
+    "_id": "dad8b418c5ad64dd602562394e7ae0a719015fe5",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "2.6",
+    "folDepth": 2,
+    "folParent": "2",
+    "relKey": "53",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "Dockerfile",
+    "path": "Dockerfile",
+    "created": "2026-02-05T08:19:31.027Z",
+    "updated": "2025-10-23T10:49:07.895Z",
+    "size": 2290,
+    "description": "Multi-stage Docker container definition for building and deploying the Echo WebSocket server with production-optimized Node.js runtime.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "deployment",
+    "_id": "6651ddff6eb82c840ced7c1dddee15c6e1913dd4",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2177,51 +1491,889 @@
     "folKey": "13",
     "folDepth": 1,
     "folParent": "0",
+    "relKey": "54",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "ARCHITECTURE-DIAGRAM.md",
+    "path": "documents/ARCHITECTURE-DIAGRAM.md",
+    "created": "2026-02-05T08:19:31.494Z",
+    "updated": "2025-10-14T10:29:18.534Z",
+    "size": 17350,
+    "description": "System architecture documentation with diagrams explaining WebSocket rooms, authentication flow, and component interactions.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "a67ce0575f50e15d487b373c4b257490c792d643",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "55",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "AUTHENTICATION-FLOW.md",
+    "path": "documents/AUTHENTICATION-FLOW.md",
+    "created": "2026-02-05T08:19:31.503Z",
+    "updated": "2025-10-17T10:45:29.076Z",
+    "size": 7685,
+    "description": "Detailed explanation of the HMAC-SHA256 token-based authentication flow including token generation and verification steps.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "743ef8936bc0013c80798bcf33197e6a081b35c6",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "56",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "AUTHENTICATION-GUIDE.md",
+    "path": "documents/AUTHENTICATION-GUIDE.md",
+    "created": "2026-02-05T08:19:31.516Z",
+    "updated": "2025-10-14T10:16:37.077Z",
+    "size": 12979,
+    "description": "Comprehensive guide on implementing authentication for WebSocket connections including token management and security best practices.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "45d5ebde23311b5e79b274368cc579173dfe5fe1",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "57",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "AUTOMATION-GUIDE.md",
+    "path": "documents/AUTOMATION-GUIDE.md",
+    "created": "2026-02-05T08:19:31.524Z",
+    "updated": "2025-10-14T10:27:29.571Z",
+    "size": 8902,
+    "description": "Guide for automating token generation and deployment workflows using scripts and environment variables.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "f9819f621336bfb8637a504f9d05b3ff5ef50e7c",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "58",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "BROADSIGN-INTEGRATION.md",
+    "path": "documents/BROADSIGN-INTEGRATION.md",
+    "created": "2026-02-05T08:19:31.554Z",
+    "updated": "2025-10-21T10:00:50.653Z",
+    "size": 9699,
+    "description": "Documentation for integrating BroadSign digital signage metadata including frame IDs, player IDs, and slot duration tracking.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "5091b04699ea7b08a214e0907fa65380e1e981a3",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "59",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "CLOUD-RUN-DEPLOYMENT.md",
+    "path": "documents/CLOUD-RUN-DEPLOYMENT.md",
+    "created": "2026-02-05T08:19:31.566Z",
+    "updated": "2025-10-17T09:35:39.321Z",
+    "size": 16751,
+    "description": "Step-by-step guide for deploying the Echo server to Google Cloud Run including environment configuration and health checks.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "b1b5ab0cb0f51f2da701080743618dbd08b50ccd",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "60",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "DEPLOYMENT-CHECKLIST.md",
+    "path": "documents/DEPLOYMENT-CHECKLIST.md",
+    "created": "2026-02-05T08:19:31.585Z",
+    "updated": "2025-10-17T09:36:27.202Z",
+    "size": 4327,
+    "description": "Pre-deployment checklist covering environment variables, security settings, and production readiness verification.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "a23e7ce4b6d10c5efdcbf1db6ee70d5395bfc08f",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "61",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "DOCS-AUTHENTICATION.md",
+    "path": "documents/DOCS-AUTHENTICATION.md",
+    "created": "2026-02-05T08:19:31.592Z",
+    "updated": "2025-10-17T10:44:58.184Z",
+    "size": 6608,
+    "description": "Documentation on securing the /docs Swagger API endpoint with SHA-256 hashed credentials.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "c52706da8ac09666c49b47f005d0ae2d192a0bfe",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "62",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "ENDPOINT-RENAME-ROOMS.md",
+    "path": "documents/ENDPOINT-RENAME-ROOMS.md",
+    "created": "2026-02-05T08:19:31.593Z",
+    "updated": "2025-10-17T08:54:15.163Z",
+    "size": 4679,
+    "description": "Migration guide for the room endpoint restructuring from legacy routes to new room-based architecture.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "d7d90df5ff747846e6ede624c0945e1428e99e53",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "63",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "ENV-CONFIGURATION-GUIDE.md",
+    "path": "documents/ENV-CONFIGURATION-GUIDE.md",
+    "created": "2026-02-05T08:19:31.616Z",
+    "updated": "2025-10-14T13:28:28.037Z",
+    "size": 6079,
+    "description": "Complete reference for all environment variables including server ports, authentication secrets, and feature flags.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "14298c4f51b9de8188cd9232bdc7aae7c2d2dc7c",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "64",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "ENVIRONMENT-SWITCH-GUIDE.md",
+    "path": "documents/ENVIRONMENT-SWITCH-GUIDE.md",
+    "created": "2026-02-05T08:19:31.618Z",
+    "updated": "2025-10-14T13:32:37.358Z",
+    "size": 2539,
+    "description": "Guide for switching between development, staging, and production environments using environment-specific .env files.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "ef059952571ddae64e3935c66756f9b96a053393",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "65",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "MIGRATION-ROOM-RENAME.md",
+    "path": "documents/MIGRATION-ROOM-RENAME.md",
+    "created": "2026-02-05T08:19:31.633Z",
+    "updated": "2025-10-14T10:22:23.627Z",
+    "size": 4985,
+    "description": "Technical migration documentation for transitioning from old room naming conventions to current structure.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "ac521d546e9d6f77d08fc7408efcea1648d48a12",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "66",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "PERMANENT-TOKENS.md",
+    "path": "documents/PERMANENT-TOKENS.md",
+    "created": "2026-02-05T08:19:31.634Z",
+    "updated": "2025-10-17T08:52:28.417Z",
+    "size": 6632,
+    "description": "Documentation on creating and managing long-lived authentication tokens for automated clients and services.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "2cd2d208106ceb3fbb1504f72027385f16372ae6",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "67",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "PERSISTENT-TOKENS-GUIDE.md",
+    "path": "documents/PERSISTENT-TOKENS-GUIDE.md",
+    "created": "2026-02-05T08:19:31.636Z",
+    "updated": "2025-10-14T13:18:58.742Z",
+    "size": 5257,
+    "description": "Guide for implementing persistent authentication tokens that survive server restarts.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "4bbef2a421c53a44150570cb3e63f1fb9e241c9f",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "68",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "POSTMAN-TOKEN-GUIDE.md",
+    "path": "documents/POSTMAN-TOKEN-GUIDE.md",
+    "created": "2026-02-05T08:19:31.637Z",
+    "updated": "2025-10-17T08:52:53.137Z",
+    "size": 11657,
+    "description": "Step-by-step guide for generating and testing authentication tokens using Postman API client.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "350ea26886142b2dec407fefa563d143feb30567",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "69",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "PRODUCTION-DEPLOYMENT-GUIDE.md",
+    "path": "documents/PRODUCTION-DEPLOYMENT-GUIDE.md",
+    "created": "2026-02-05T08:19:31.638Z",
+    "updated": "2025-10-14T13:32:17.297Z",
+    "size": 10322,
+    "description": "Comprehensive production deployment guide covering Docker builds, environment configuration, and security hardening.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "f6fb77969498e560f8124308154114df2bd06d08",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "70",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "QUICK-REFERENCE.md",
+    "path": "documents/QUICK-REFERENCE.md",
+    "created": "2026-02-05T08:19:31.638Z",
+    "updated": "2025-10-14T09:42:44.907Z",
+    "size": 7058,
+    "description": "Quick reference card with common commands, endpoints, and configuration examples for developers.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "65b27d58cbc99ac4d9541992f1a786c1750a5e7a",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "71",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "QUICKSTART-ROOMS.md",
+    "path": "documents/QUICKSTART-ROOMS.md",
+    "created": "2026-02-05T08:19:31.640Z",
+    "updated": "2025-10-14T09:28:42.762Z",
+    "size": 4916,
+    "description": "Quick start guide for creating custom room handlers and implementing room-specific logic.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "eea2774a9e5fc6290001ab49d4d94bf9535684e8",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "72",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "REFACTORING-HEALTH.md",
+    "path": "documents/REFACTORING-HEALTH.md",
+    "created": "2026-02-05T08:19:31.640Z",
+    "updated": "2025-10-21T09:44:13.957Z",
+    "size": 3176,
+    "description": "Documentation of health endpoint refactoring explaining the detailed and summary response modes.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "8e4ac5ff35d0f71276570621b3543b414df54293",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
     "relKey": "73",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": "package.json",
-    "path": "package.json",
-    "created": "2025-10-23T10:33:21.753Z",
-    "updated": "2026-01-20T14:00:06.381Z",
-    "size": 1152,
-    "description": "NPM package manifest defining project metadata, dependencies, and build/run scripts for the WebSocket server.",
+    "filename": "ROOM-ARCHITECTURE-SUMMARY.md",
+    "path": "documents/ROOM-ARCHITECTURE-SUMMARY.md",
+    "created": "2026-02-05T08:19:31.641Z",
+    "updated": "2025-10-14T09:42:44.094Z",
+    "size": 9279,
+    "description": "Technical overview of the room-based architecture including BaseRoomHandler inheritance and auto-discovery mechanisms.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "820a2b48e8cafeba55530ec2c5f559d6c0d27ba5",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "74",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "ROOM-HANDLER-GUIDE.md",
+    "path": "documents/ROOM-HANDLER-GUIDE.md",
+    "created": "2026-02-05T08:19:31.642Z",
+    "updated": "2025-10-14T09:34:10.257Z",
+    "size": 13421,
+    "description": "Developer guide for creating custom room handlers with examples of message processing and client management.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "01f70ff6f4f73ebed8232beff191497e919fe931",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "75",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "ROUTES-REFACTORING.md",
+    "path": "documents/ROUTES-REFACTORING.md",
+    "created": "2026-02-05T08:19:31.658Z",
+    "updated": "2025-10-17T08:53:01.486Z",
+    "size": 3873,
+    "description": "Documentation of routing system refactoring to support dynamic room-based endpoints.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "1abfcbdeb01384b701331b2f7b2c9e778ae77231",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "76",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "ROUTING-CHANGE-MIGRATION.md",
+    "path": "documents/ROUTING-CHANGE-MIGRATION.md",
+    "created": "2026-02-05T08:19:31.659Z",
+    "updated": "2025-10-17T08:52:38.603Z",
+    "size": 6960,
+    "description": "Migration guide for updating client code to use new room-based routing structure.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "b4fe5f5ee2f19ccf2179da58231ead7b1976fe9e",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "77",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "SECURITY-HASHED-CREDENTIALS.md",
+    "path": "documents/SECURITY-HASHED-CREDENTIALS.md",
+    "created": "2026-02-05T08:19:31.660Z",
+    "updated": "2025-10-17T09:59:01.668Z",
+    "size": 4824,
+    "description": "Security documentation explaining SHA-256 credential hashing for documentation authentication.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "f85b3350b5a7c941db8f01fae8a2c58ce8c186ee",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "78",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "TOKEN-STORAGE-EXPLAINED.md",
+    "path": "documents/TOKEN-STORAGE-EXPLAINED.md",
+    "created": "2026-02-05T08:19:31.661Z",
+    "updated": "2025-10-14T10:29:45.263Z",
+    "size": 10016,
+    "description": "Technical explanation of token storage, validation, and expiration mechanisms.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "documentation",
+    "_id": "c64956b63defb1a047dc490315b38bdfc31e36da",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "3",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "79",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "echo.dynode.esproj",
+    "path": "echo.dynode.esproj",
+    "created": "2026-02-05T08:19:31.042Z",
+    "updated": "2025-09-30T08:56:44.459Z",
+    "size": 311,
+    "description": "Visual Studio project file defining build configuration and project structure for the Echo server.",
     "internalDependencies": [],
     "externalDependencies": [],
     "category": "project-meta",
-    "_id": "7030d0b2f71b999ff89a343de08c414af32fc93a",
+    "_id": "fee651e7f2ee8793ce8509577fa99df38802125d",
     "history": [
       {
-        "commitId": "1ecb5b86bae202f3589e1dd5da717a3679ca4788",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2026-01-20T16:29:24+01:00",
-        "message": "Consolidation System Fixed"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "4c173f8ad935c4c14575e53a9368780022ab6475",
+        "commitId": "266d20ae1ff2757dcc1ee8c5e8d46c04e1c66232",
         "author": "CCTEvalencia",
-        "date": "2026-01-20T14:55:22+01:00",
-        "message": "Consolidation File System Implemented"
+        "date": "2025-07-07T09:12:20+02:00",
+        "message": "Source (API) with Media and Openapi.json scattered"
       },
       {
-        "commitId": "9035caeb9ec1b210e2c94117074e720b7e7e7faa",
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
         "author": "CCTEvalencia",
-        "date": "2026-01-16T13:18:33+01:00",
-        "message": "CardWidget Animations and Build Automation"
-      },
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      },
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2025-06-12T15:26:39+02:00",
+        "message": "First Commit"
       }
     ],
     "project": "echo",
@@ -2235,73 +2387,27 @@
     "folKey": "14",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "74",
+    "relKey": "80",
     "relDepth": 1,
     "relParent": "0"
   },
   {
-    "filename": "logo.svg",
-    "path": "public/images/logo.svg",
-    "created": "2025-10-28T14:15:51.035Z",
-    "updated": "2025-09-30T08:56:44.448Z",
-    "size": 2094,
-    "description": "SVG logo image used as favicon and branding for the server web interface.",
+    "filename": "package-lock.json",
+    "path": "package-lock.json",
+    "created": "2026-02-05T08:19:31.043Z",
+    "updated": "2026-01-29T16:33:57.107Z",
+    "size": 109921,
+    "description": "NPM lock file ensuring consistent dependency versions across installations.",
     "internalDependencies": [],
     "externalDependencies": [],
-    "category": "image",
-    "_id": "2ebef2c70ba50a2b53bcbf6964a738fa4b1cb5d7",
+    "category": "data",
+    "_id": "fa288d1472d29beccb489a676f68739ad365fc47",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
-      },
-      {
-        "commitId": "c21591feaccbb37c439a0d258dc0fca3f1eec03b",
-        "author": "CCTEvalencia",
-        "date": "2025-09-25T13:30:10+02:00",
-        "message": "Favicon fixed"
-      }
-    ],
-    "project": "echo",
-    "dependencyCount": 0,
-    "externalDependencyLabels": [],
-    "directDependencies": [],
-    "reverseDependencies": [],
-    "isInCircularDependency": false,
-    "dependencyDepth": -1,
-    "isEntryPoint": false,
-    "folKey": "3.1",
-    "folDepth": 2,
-    "folParent": "3",
-    "relKey": "75",
-    "relDepth": 1,
-    "relParent": "0"
-  },
-  {
-    "filename": "README.md",
-    "path": "README.md",
-    "created": "2025-10-23T10:33:21.775Z",
-    "updated": "2025-11-12T15:30:59.894Z",
-    "size": 15075,
-    "description": "Main project documentation covering architecture, features, authentication setup, and deployment instructions.",
-    "internalDependencies": [],
-    "externalDependencies": [],
-    "category": "documentation",
-    "_id": "8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d",
-    "history": [
-      {
-        "commitId": "f7cce4c9498dab0cae08ed3387a0729156bc7f25",
-        "author": "CCTEvalencia",
-        "date": "2025-12-11T15:19:41+01:00",
-        "message": "Echo Project Docker Integration"
-      },
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2315,18 +2421,92 @@
     "folKey": "15",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "76",
+    "relKey": "81",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "package.json",
+    "path": "package.json",
+    "created": "2026-02-05T08:19:31.051Z",
+    "updated": "2026-01-29T16:26:48.823Z",
+    "size": 1242,
+    "description": "NPM package manifest defining project metadata, dependencies, and build/run scripts for the WebSocket server.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "project-meta",
+    "_id": "7030d0b2f71b999ff89a343de08c414af32fc93a",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "16",
+    "folDepth": 1,
+    "folParent": "0",
+    "relKey": "82",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "logo.svg",
+    "path": "public/images/logo.svg",
+    "created": "2026-02-05T08:19:41.521Z",
+    "updated": "2025-09-30T08:56:44.448Z",
+    "size": 2094,
+    "description": "SVG logo image used as favicon and branding for the server web interface.",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "image",
+    "_id": "2ebef2c70ba50a2b53bcbf6964a738fa4b1cb5d7",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "4.1",
+    "folDepth": 2,
+    "folParent": "4",
+    "relKey": "83",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "docs-auth.js",
     "path": "src/auth/docs-auth.js",
-    "created": "2025-10-23T10:33:21.632Z",
-    "updated": "2025-10-17T09:54:09.500Z",
-    "size": 6809,
+    "created": "2026-02-05T08:19:41.551Z",
+    "updated": "2026-02-02T09:41:32.442Z",
+    "size": 6779,
     "description": "Authentication middleware for the /docs Swagger endpoint using SHA-256 hashed credentials and session management.",
-    "internalDependencies": [],
+    "internalDependencies": [
+      {
+        "path": "../services/logger.js",
+        "resolvedPath": "src/services/logger.js",
+        "id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0"
+      }
+    ],
     "externalDependencies": [
       "crypto"
     ],
@@ -2334,18 +2514,26 @@
     "_id": "59ace37e2a95665316520c0cfea296d0653d1609",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
-    "dependencyCount": 0,
+    "dependencyCount": 1,
     "externalDependencyLabels": [
       "crypto"
     ],
-    "directDependencies": [],
+    "directDependencies": [
+      {
+        "_id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0",
+        "filename": "logger.js",
+        "path": "src/services/logger.js",
+        "category": "source",
+        "project": "echo"
+      }
+    ],
     "reverseDependencies": [
       {
         "_id": "8590b37b3367bd82d3dc03f22e6482b1fea6e155",
@@ -2358,9 +2546,9 @@
     "isInCircularDependency": false,
     "dependencyDepth": 1,
     "isEntryPoint": false,
-    "folKey": "4.1",
+    "folKey": "5.1",
     "folDepth": 2,
-    "folParent": "4",
+    "folParent": "5",
     "relKey": "2",
     "relDepth": 1,
     "relParent": "0"
@@ -2368,11 +2556,17 @@
   {
     "filename": "index.js",
     "path": "src/auth/index.js",
-    "created": "2025-10-23T10:33:21.633Z",
-    "updated": "2025-10-21T11:08:02.225Z",
-    "size": 9327,
+    "created": "2026-02-05T08:19:41.553Z",
+    "updated": "2026-01-29T16:28:49.136Z",
+    "size": 9821,
     "description": "Core authentication module implementing HMAC-SHA256 token generation, verification, and validation for WebSocket connections.",
-    "internalDependencies": [],
+    "internalDependencies": [
+      {
+        "path": "../services/logger.js",
+        "resolvedPath": "src/services/logger.js",
+        "id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0"
+      }
+    ],
     "externalDependencies": [
       "crypto",
       "dotenv",
@@ -2383,21 +2577,29 @@
     "_id": "f1560c554deb1a7136efce6a241810f85d294087",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
-    "dependencyCount": 0,
+    "dependencyCount": 1,
     "externalDependencyLabels": [
       "crypto",
       "dotenv",
       "url",
       "path"
     ],
-    "directDependencies": [],
+    "directDependencies": [
+      {
+        "_id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0",
+        "filename": "logger.js",
+        "path": "src/services/logger.js",
+        "category": "source",
+        "project": "echo"
+      }
+    ],
     "reverseDependencies": [
       {
         "_id": "8590b37b3367bd82d3dc03f22e6482b1fea6e155",
@@ -2410,9 +2612,9 @@
     "isInCircularDependency": false,
     "dependencyDepth": 1,
     "isEntryPoint": false,
-    "folKey": "4.1",
+    "folKey": "5.1",
     "folDepth": 2,
-    "folParent": "4",
+    "folParent": "5",
     "relKey": "3",
     "relDepth": 1,
     "relParent": "0"
@@ -2420,7 +2622,7 @@
   {
     "filename": "login.html",
     "path": "src/auth/login.html",
-    "created": "2025-10-23T10:33:21.635Z",
+    "created": "2026-02-05T08:19:41.554Z",
     "updated": "2025-10-28T14:48:11.002Z",
     "size": 11837,
     "description": "HTML login form for documentation endpoint authentication with client-side SHA-256 credential hashing.",
@@ -2430,16 +2632,10 @@
     "_id": "63059f55ec13f4b2116ca5b5acdb57ae9336e990",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
-      },
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2450,17 +2646,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.1",
+    "folKey": "5.1",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "77",
+    "folParent": "5",
+    "relKey": "84",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "README.md",
     "path": "src/auth/README.md",
-    "created": "2025-10-23T10:33:21.636Z",
+    "created": "2026-02-05T08:19:41.555Z",
     "updated": "2025-10-14T10:27:29.438Z",
     "size": 7522,
     "description": "Authentication system documentation explaining token generation, verification, and security implementation details.",
@@ -2470,10 +2666,10 @@
     "_id": "9f14080325ec1213ba0386b41f6dee4610d25ad3",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2484,17 +2680,65 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.1",
+    "folKey": "5.1",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "78",
+    "folParent": "5",
+    "relKey": "85",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "validation.js",
+    "path": "src/config/validation.js",
+    "created": "2026-02-05T08:19:41.559Z",
+    "updated": "2026-01-29T16:28:24.643Z",
+    "size": 7302,
+    "description": "",
+    "internalDependencies": [
+      {
+        "path": "../services/logger.js",
+        "resolvedPath": "src/services/logger.js",
+        "id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0"
+      }
+    ],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "045ffe4ad5e4b00ef81cc0ffbc5642b9dafd5759",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [],
+    "directDependencies": [
+      {
+        "_id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0",
+        "filename": "logger.js",
+        "path": "src/services/logger.js",
+        "category": "source",
+        "project": "echo"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "5.2",
+    "folDepth": 2,
+    "folParent": "5",
+    "relKey": "86",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "index.js",
     "path": "src/health/index.js",
-    "created": "2025-10-23T10:33:21.647Z",
+    "created": "2026-02-05T08:19:41.563Z",
     "updated": "2025-10-21T10:29:05.850Z",
     "size": 3369,
     "description": "Health check endpoint handler providing server status, room statistics, and client connection information with detailed/summary modes.",
@@ -2510,10 +2754,10 @@
     "_id": "61b78f784d7f90e359dc0d56775957066476327f",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2540,9 +2784,9 @@
     "isInCircularDependency": false,
     "dependencyDepth": 1,
     "isEntryPoint": false,
-    "folKey": "4.2",
+    "folKey": "5.3",
     "folDepth": 2,
-    "folParent": "4",
+    "folParent": "5",
     "relKey": "4",
     "relDepth": 1,
     "relParent": "0"
@@ -2550,7 +2794,7 @@
   {
     "filename": "README.md",
     "path": "src/health/README.md",
-    "created": "2025-10-23T10:33:21.652Z",
+    "created": "2026-02-05T08:19:41.577Z",
     "updated": "2025-10-21T10:29:06.937Z",
     "size": 4495,
     "description": "Documentation for the health endpoint including query parameters, response formats, and monitoring integration examples.",
@@ -2560,10 +2804,10 @@
     "_id": "07f62e7de0d05d61c8b4fcbfea0325eca272d7b2",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2574,17 +2818,165 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.2",
+    "folKey": "5.3",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "79",
+    "folParent": "5",
+    "relKey": "87",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "cors.js",
+    "path": "src/middleware/cors.js",
+    "created": "2026-02-05T08:19:41.581Z",
+    "updated": "2026-01-29T16:29:47.555Z",
+    "size": 4392,
+    "description": "",
+    "internalDependencies": [
+      {
+        "path": "../services/logger.js",
+        "resolvedPath": "src/services/logger.js",
+        "id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0"
+      }
+    ],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "74b6010feaeb6259da03e36e75252db669209519",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [],
+    "directDependencies": [
+      {
+        "_id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0",
+        "filename": "logger.js",
+        "path": "src/services/logger.js",
+        "category": "source",
+        "project": "echo"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "5.4",
+    "folDepth": 2,
+    "folParent": "5",
+    "relKey": "88",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "error-handler.js",
+    "path": "src/middleware/error-handler.js",
+    "created": "2026-02-05T08:19:41.582Z",
+    "updated": "2026-01-29T16:29:00.695Z",
+    "size": 4960,
+    "description": "",
+    "internalDependencies": [
+      {
+        "path": "../services/logger.js",
+        "resolvedPath": "src/services/logger.js",
+        "id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0"
+      }
+    ],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "43902c9ab89f21f06a161a2e0a5cd5e966db873a",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [],
+    "directDependencies": [
+      {
+        "_id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0",
+        "filename": "logger.js",
+        "path": "src/services/logger.js",
+        "category": "source",
+        "project": "echo"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "5.4",
+    "folDepth": 2,
+    "folParent": "5",
+    "relKey": "89",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
+    "filename": "rate-limiter.js",
+    "path": "src/middleware/rate-limiter.js",
+    "created": "2026-02-05T08:19:41.583Z",
+    "updated": "2026-01-29T16:29:24.174Z",
+    "size": 4187,
+    "description": "",
+    "internalDependencies": [
+      {
+        "path": "../services/logger.js",
+        "resolvedPath": "src/services/logger.js",
+        "id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0"
+      }
+    ],
+    "externalDependencies": [
+      "express-rate-limit"
+    ],
+    "category": "source",
+    "_id": "672fd80488b7b388f33ef230b25ee84ce7e96814",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 1,
+    "externalDependencyLabels": [
+      "express-rate-limit"
+    ],
+    "directDependencies": [
+      {
+        "_id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0",
+        "filename": "logger.js",
+        "path": "src/services/logger.js",
+        "category": "source",
+        "project": "echo"
+      }
+    ],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "5.4",
+    "folDepth": 2,
+    "folParent": "5",
+    "relKey": "90",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "index.js",
     "path": "src/postcontent/index.js",
-    "created": "2025-10-23T10:33:21.665Z",
+    "created": "2026-02-05T08:19:41.587Z",
     "updated": "2025-10-17T08:50:34.325Z",
     "size": 3148,
     "description": "Legacy backward-compatibility endpoint bridging old /postcontent requests to new /rooms/radio/post endpoint with hardcoded token.",
@@ -2596,10 +2988,10 @@
     "_id": "17d0d985f56ac9295b97489e59e56b6f05e6e707",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2620,9 +3012,9 @@
     "isInCircularDependency": false,
     "dependencyDepth": 1,
     "isEntryPoint": false,
-    "folKey": "4.3",
+    "folKey": "5.5",
     "folDepth": 2,
-    "folParent": "4",
+    "folParent": "5",
     "relKey": "5",
     "relDepth": 1,
     "relParent": "0"
@@ -2630,7 +3022,7 @@
   {
     "filename": "README.md",
     "path": "src/postcontent/README.md",
-    "created": "2025-10-23T10:33:21.674Z",
+    "created": "2026-02-05T08:19:41.589Z",
     "updated": "2025-10-17T08:50:53.465Z",
     "size": 3378,
     "description": "Documentation explaining the postcontent backward-compatibility bridge and migration path to new room endpoints.",
@@ -2640,10 +3032,10 @@
     "_id": "d8e3c3cb64bacf2a5e25b71d9b3ca10b45318e05",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2654,17 +3046,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.3",
+    "folKey": "5.5",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "80",
+    "folParent": "5",
+    "relKey": "91",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "BaseRoomHandler.js",
     "path": "src/rooms/BaseRoomHandler.js",
-    "created": "2025-10-23T10:33:21.688Z",
+    "created": "2026-02-05T08:19:41.592Z",
     "updated": "2025-10-21T13:32:45.770Z",
     "size": 6607,
     "description": "Abstract base class defining the interface and default behavior for room-specific handlers with authentication and message processing hooks.",
@@ -2674,10 +3066,10 @@
     "_id": "f56d4bfb85cf8c542ad38c292451193bfbd5c8c2",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2718,9 +3110,9 @@
     "isInCircularDependency": false,
     "dependencyDepth": 2,
     "isEntryPoint": false,
-    "folKey": "4.4",
+    "folKey": "5.6",
     "folDepth": 2,
-    "folParent": "4",
+    "folParent": "5",
     "relKey": "8",
     "relDepth": 1,
     "relParent": "0"
@@ -2728,7 +3120,7 @@
   {
     "filename": "index.js",
     "path": "src/rooms/chat/index.js",
-    "created": "2025-10-23T10:33:21.693Z",
+    "created": "2026-02-05T08:19:41.616Z",
     "updated": "2025-10-17T08:10:51.115Z",
     "size": 7500,
     "description": "Chat room handler implementing basic message broadcasting with join/leave notifications extending BaseRoomHandler.",
@@ -2744,10 +3136,10 @@
     "_id": "65df5907c20171ac79a18e466cc2c2c2e36ef595",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2766,17 +3158,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.4.1",
+    "folKey": "5.6.1",
     "folDepth": 3,
-    "folParent": "4.4",
-    "relKey": "81",
+    "folParent": "5.6",
+    "relKey": "92",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "index.js",
     "path": "src/rooms/index.js",
-    "created": "2025-10-23T10:33:21.690Z",
+    "created": "2026-02-05T08:19:41.594Z",
     "updated": "2025-10-14T10:20:50.651Z",
     "size": 4250,
     "description": "Room registry manager that auto-discovers room handlers, manages room collections, and provides handler access interface.",
@@ -2801,10 +3193,10 @@
     "_id": "4996921dc99f51c85bc10e676696bc1d4323c9ca",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2849,9 +3241,9 @@
     "isInCircularDependency": false,
     "dependencyDepth": 1,
     "isEntryPoint": false,
-    "folKey": "4.4",
+    "folKey": "5.6",
     "folDepth": 2,
-    "folParent": "4",
+    "folParent": "5",
     "relKey": "6",
     "relDepth": 1,
     "relParent": "0"
@@ -2859,7 +3251,7 @@
   {
     "filename": "index.js",
     "path": "src/rooms/radio/index.js",
-    "created": "2025-10-23T10:33:21.697Z",
+    "created": "2026-02-05T08:19:41.620Z",
     "updated": "2025-10-23T11:30:34.859Z",
     "size": 17103,
     "description": "Radio room handler implementing content broadcasting with advertiser tracking, metadata processing, and configurable broadcast delays.",
@@ -2875,10 +3267,10 @@
     "_id": "2681e2108521f358a06dc0d9500583fca56669d0",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2905,9 +3297,9 @@
     "isInCircularDependency": false,
     "dependencyDepth": 2,
     "isEntryPoint": false,
-    "folKey": "4.4.2",
+    "folKey": "5.6.2",
     "folDepth": 3,
-    "folParent": "4.4",
+    "folParent": "5.6",
     "relKey": "8.1",
     "relDepth": 2,
     "relParent": "8"
@@ -2915,7 +3307,7 @@
   {
     "filename": "routes.js",
     "path": "src/rooms/routes.js",
-    "created": "2025-10-23T10:33:21.691Z",
+    "created": "2026-02-05T08:19:41.612Z",
     "updated": "2025-10-22T07:12:07.091Z",
     "size": 5589,
     "description": "Express-style route definitions for room-specific HTTP endpoints including POST content injection.",
@@ -2925,10 +3317,10 @@
     "_id": "5133db281fb0e687ca09b42e711fef66babd22ce",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -2947,17 +3339,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": 3,
     "isEntryPoint": false,
-    "folKey": "4.4",
+    "folKey": "5.6",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "9",
+    "folParent": "5",
+    "relKey": "10",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "server.js",
     "path": "src/server.js",
-    "created": "2025-10-23T10:33:21.608Z",
+    "created": "2026-02-05T08:19:41.537Z",
     "updated": "2025-10-28T14:42:29.419Z",
     "size": 34529,
     "description": "Main WebSocket server implementation with HTTP server, room management, authentication enforcement, and health/documentation endpoints.",
@@ -3006,16 +3398,10 @@
     "_id": "8590b37b3367bd82d3dc03f22e6482b1fea6e155",
     "history": [
       {
-        "commitId": "42b370d657cbeff1f4320e4cc29202d3984e55dd",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-28T16:46:09+01:00",
-        "message": "General Standardization"
-      },
-      {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
-        "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3077,7 +3463,7 @@
     "isInCircularDependency": false,
     "dependencyDepth": 0,
     "isEntryPoint": true,
-    "folKey": "4",
+    "folKey": "5",
     "folDepth": 1,
     "folParent": "0",
     "relKey": "1",
@@ -3085,9 +3471,96 @@
     "relParent": "0"
   },
   {
+    "filename": "logger.js",
+    "path": "src/services/logger.js",
+    "created": "2026-02-05T08:19:41.628Z",
+    "updated": "2026-01-29T16:37:17.961Z",
+    "size": 6487,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [
+      "winston",
+      "dotenv",
+      "http",
+      "https"
+    ],
+    "category": "source",
+    "_id": "f9e1a29576e9c3bb5e68e43d6d60d2dc25bcd2a0",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [
+      "winston",
+      "dotenv",
+      "http",
+      "https"
+    ],
+    "directDependencies": [],
+    "reverseDependencies": [
+      {
+        "_id": "59ace37e2a95665316520c0cfea296d0653d1609",
+        "filename": "docs-auth.js",
+        "path": "src/auth/docs-auth.js",
+        "category": "source",
+        "project": "echo"
+      },
+      {
+        "_id": "f1560c554deb1a7136efce6a241810f85d294087",
+        "filename": "index.js",
+        "path": "src/auth/index.js",
+        "category": "source",
+        "project": "echo"
+      },
+      {
+        "_id": "045ffe4ad5e4b00ef81cc0ffbc5642b9dafd5759",
+        "filename": "validation.js",
+        "path": "src/config/validation.js",
+        "category": "source",
+        "project": "echo"
+      },
+      {
+        "_id": "74b6010feaeb6259da03e36e75252db669209519",
+        "filename": "cors.js",
+        "path": "src/middleware/cors.js",
+        "category": "source",
+        "project": "echo"
+      },
+      {
+        "_id": "43902c9ab89f21f06a161a2e0a5cd5e966db873a",
+        "filename": "error-handler.js",
+        "path": "src/middleware/error-handler.js",
+        "category": "source",
+        "project": "echo"
+      },
+      {
+        "_id": "672fd80488b7b388f33ef230b25ee84ce7e96814",
+        "filename": "rate-limiter.js",
+        "path": "src/middleware/rate-limiter.js",
+        "category": "source",
+        "project": "echo"
+      }
+    ],
+    "isInCircularDependency": false,
+    "dependencyDepth": 2,
+    "isEntryPoint": false,
+    "folKey": "5.7",
+    "folDepth": 2,
+    "folParent": "5",
+    "relKey": "9",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
     "filename": "swagger.js",
     "path": "src/swagger.js",
-    "created": "2025-10-23T10:33:21.620Z",
+    "created": "2026-02-05T08:19:41.549Z",
     "updated": "2025-10-21T10:39:25.545Z",
     "size": 21403,
     "description": "Swagger/OpenAPI specification generator defining API documentation for all endpoints, schemas, and WebSocket connections.",
@@ -3099,10 +3572,10 @@
     "_id": "a85883687ee92723435fafa29c9964fb8fbeb246",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3123,7 +3596,7 @@
     "isInCircularDependency": false,
     "dependencyDepth": 1,
     "isEntryPoint": false,
-    "folKey": "4",
+    "folKey": "5",
     "folDepth": 1,
     "folParent": "0",
     "relKey": "7",
@@ -3131,9 +3604,43 @@
     "relParent": "0"
   },
   {
+    "filename": "duration.js",
+    "path": "src/utils/duration.js",
+    "created": "2026-02-05T08:19:41.641Z",
+    "updated": "2026-01-29T16:31:45.441Z",
+    "size": 7511,
+    "description": "",
+    "internalDependencies": [],
+    "externalDependencies": [],
+    "category": "source",
+    "_id": "28bec061721f22d1a52059c7dc14471ca849b96e",
+    "history": [
+      {
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
+        "author": "CCTEvalencia",
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
+      }
+    ],
+    "project": "echo",
+    "dependencyCount": 0,
+    "externalDependencyLabels": [],
+    "directDependencies": [],
+    "reverseDependencies": [],
+    "isInCircularDependency": false,
+    "dependencyDepth": -1,
+    "isEntryPoint": false,
+    "folKey": "5.8",
+    "folDepth": 2,
+    "folParent": "5",
+    "relKey": "93",
+    "relDepth": 1,
+    "relParent": "0"
+  },
+  {
     "filename": "generate-docs-hash.js",
     "path": "src/utils/generate-docs-hash.js",
-    "created": "2025-10-23T10:33:21.701Z",
+    "created": "2026-02-05T08:19:41.643Z",
     "updated": "2025-10-17T09:55:43.071Z",
     "size": 1249,
     "description": "Utility script for generating SHA-256 hashes of email and password for documentation authentication setup.",
@@ -3145,10 +3652,10 @@
     "_id": "1f8dccbca638d4b59836a12975982584d6163e99",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3161,17 +3668,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "82",
+    "folParent": "5",
+    "relKey": "94",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "generate-test-token.js",
     "path": "src/utils/generate-test-token.js",
-    "created": "2025-10-23T10:33:21.706Z",
+    "created": "2026-02-05T08:19:41.644Z",
     "updated": "2025-10-14T13:27:01.845Z",
     "size": 2779,
     "description": "Utility script for generating long-lived test tokens (100-year expiration) for development and testing.",
@@ -3183,10 +3690,10 @@
     "_id": "35653169b93b72d32b5f0faf309d9f10844d8980",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3199,17 +3706,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "83",
+    "folParent": "5",
+    "relKey": "95",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "generate-universal-tokens.ps1",
     "path": "src/utils/generate-universal-tokens.ps1",
-    "created": "2025-10-23T10:33:21.707Z",
+    "created": "2026-02-05T08:19:41.645Z",
     "updated": "2025-10-14T13:18:58.582Z",
     "size": 3503,
     "description": "PowerShell script for batch generating universal tokens for multiple client roles (monitor, screen, advertiser).",
@@ -3219,10 +3726,10 @@
     "_id": "36d63051cec1e4fe093855c3d686d4cddaa5b679",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3233,17 +3740,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "84",
+    "folParent": "5",
+    "relKey": "96",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "setup-auth-secret.ps1",
     "path": "src/utils/setup-auth-secret.ps1",
-    "created": "2025-10-23T10:33:21.708Z",
+    "created": "2026-02-05T08:19:41.646Z",
     "updated": "2025-10-14T13:18:58.521Z",
     "size": 3148,
     "description": "PowerShell script for generating a secure random AUTH_SECRET and updating environment configuration files.",
@@ -3253,10 +3760,10 @@
     "_id": "c7a3bc8ff3f1b095b801b157f34548c69146cfea",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3267,17 +3774,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "85",
+    "folParent": "5",
+    "relKey": "97",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "test-broadsign-dynamic.html",
     "path": "src/utils/test-broadsign-dynamic.html",
-    "created": "2025-10-23T10:33:21.710Z",
+    "created": "2026-02-05T08:19:41.647Z",
     "updated": "2025-10-21T10:01:45.181Z",
     "size": 16702,
     "description": "Test client demonstrating dynamic BroadSign metadata integration with token generation and WebSocket connection.",
@@ -3287,10 +3794,10 @@
     "_id": "1caa6df128f23b7a46edb7cfbd41f43a1b40aa82",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3301,17 +3808,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "86",
+    "folParent": "5",
+    "relKey": "98",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "test-client.html",
     "path": "src/utils/test-client.html",
-    "created": "2025-10-23T10:33:21.711Z",
+    "created": "2026-02-05T08:19:41.648Z",
     "updated": "2025-10-14T10:01:34.750Z",
     "size": 13201,
     "description": "Generic WebSocket test client for debugging connections, authentication, and message broadcasting.",
@@ -3321,10 +3828,10 @@
     "_id": "410daa3480919fb1905073c092999e5069ad0b2c",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3335,17 +3842,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "87",
+    "folParent": "5",
+    "relKey": "99",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "test-generic-routes.js",
     "path": "src/utils/test-generic-routes.js",
-    "created": "2025-10-23T10:33:21.723Z",
+    "created": "2026-02-05T08:19:41.677Z",
     "updated": "2025-10-17T08:54:14.961Z",
     "size": 3789,
     "description": "Node.js test script for validating generic room HTTP POST endpoints with authentication.",
@@ -3355,10 +3862,10 @@
     "_id": "a1a635f3a0dedf93fa6dbb773bddf88da09ac678",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3369,17 +3876,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "88",
+    "folParent": "5",
+    "relKey": "100",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "test-hashed-auth.html",
     "path": "src/utils/test-hashed-auth.html",
-    "created": "2025-10-23T10:33:21.727Z",
+    "created": "2026-02-05T08:19:41.678Z",
     "updated": "2025-10-17T09:57:55.137Z",
     "size": 5344,
     "description": "Test utility for validating SHA-256 hashed authentication for documentation access.",
@@ -3389,10 +3896,10 @@
     "_id": "a8e022d6e45b955093e929a359cd1ea6a38569b3",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3403,17 +3910,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "89",
+    "folParent": "5",
+    "relKey": "101",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "test-postcontent-bridge.js",
     "path": "src/utils/test-postcontent-bridge.js",
-    "created": "2025-10-23T10:33:21.729Z",
+    "created": "2026-02-05T08:19:41.679Z",
     "updated": "2025-10-17T08:33:44.156Z",
     "size": 2993,
     "description": "Node.js test script verifying the postcontent backward-compatibility bridge functionality.",
@@ -3423,10 +3930,10 @@
     "_id": "fbb4e0049666393de0760da2b8d804f755699d30",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3437,17 +3944,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "90",
+    "folParent": "5",
+    "relKey": "102",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "test-radio_post-endpoint.js",
     "path": "src/utils/test-radio_post-endpoint.js",
-    "created": "2025-10-23T10:33:21.735Z",
+    "created": "2026-02-05T08:19:41.680Z",
     "updated": "2025-10-14T15:28:20.664Z",
     "size": 5280,
     "description": "Node.js test script for validating radio room HTTP POST endpoint with authentication and payload processing.",
@@ -3459,10 +3966,10 @@
     "_id": "06bb54ad3fed188f12a5d66ba6dfc9c2d060bd94",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3475,17 +3982,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "91",
+    "folParent": "5",
+    "relKey": "103",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "test-radio_postcontent-endpoint.js",
     "path": "src/utils/test-radio_postcontent-endpoint.js",
-    "created": "2025-10-23T10:33:21.736Z",
+    "created": "2026-02-05T08:19:41.682Z",
     "updated": "2025-10-14T15:28:20.810Z",
     "size": 4823,
     "description": "Node.js test script for testing the radio postcontent injection endpoint with content validation.",
@@ -3497,10 +4004,10 @@
     "_id": "5bfa6806d5489d40095d4af7337612efb0742ce0",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       }
     ],
     "project": "echo",
@@ -3513,17 +4020,17 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "4.5",
+    "folKey": "5.8",
     "folDepth": 2,
-    "folParent": "4",
-    "relKey": "92",
+    "folParent": "5",
+    "relKey": "104",
     "relDepth": 1,
     "relParent": "0"
   },
   {
     "filename": "token.txt",
     "path": "token.txt",
-    "created": "2025-10-23T10:33:21.777Z",
+    "created": "2026-02-05T08:19:31.052Z",
     "updated": "2025-10-14T10:08:41.419Z",
     "size": 0,
     "description": "Empty token storage file used during development for persisting generated authentication tokens.",
@@ -3533,21 +4040,21 @@
     "_id": "1a6742f4a6291d551c60a000fd210ab52f46a977",
     "history": [
       {
-        "commitId": "47677325db3711497a161571bdf3b2eeaf618fca",
+        "commitId": "cb7e830d2184fecb3af568abb1abad52ff1254da",
         "author": "CCTEvalencia",
-        "date": "2025-10-23T13:32:48+02:00",
-        "message": "Echo Project included"
+        "date": "2026-02-05T09:21:54+01:00",
+        "message": "Personal Domain Migration"
       },
       {
-        "commitId": "2a5f768c544764c6108ebf47b4afd61c551c17cd",
+        "commitId": "686adfafef4f77c79fcd5fbad13b4d480431e53a",
         "author": "CCTEvalencia",
-        "date": "2025-09-25T10:24:30+02:00",
-        "message": "Switch to Node.js"
+        "date": "2025-06-24T14:40:09+02:00",
+        "message": "Render Application"
       },
       {
-        "commitId": "caad8b2551388132789bb1d4ee06ccb8b5536368",
-        "author": "CCTEVP",
-        "date": "2025-05-13T10:35:41+02:00",
+        "commitId": "4c6f8fa991f0c4c0c12ec8122868db802ec82f65",
+        "author": "CCTEvalencia",
+        "date": "2025-06-12T15:26:39+02:00",
         "message": "First Commit"
       }
     ],
@@ -3559,10 +4066,10 @@
     "isInCircularDependency": false,
     "dependencyDepth": -1,
     "isEntryPoint": false,
-    "folKey": "16",
+    "folKey": "17",
     "folDepth": 1,
     "folParent": "0",
-    "relKey": "93",
+    "relKey": "105",
     "relDepth": 1,
     "relParent": "0"
   }

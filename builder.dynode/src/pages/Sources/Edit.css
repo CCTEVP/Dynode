@@ -78,45 +78,69 @@
   min-height: 100vh;
 }
 
-/* Theme toggle button - fixed corner */
-.theme-toggle-corner {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  border: 2px solid rgba(128, 128, 128, 0.4);
-  background: transparent;
-  cursor: pointer;
-  z-index: 2000;
-  transition: all 0.3s ease;
-  padding: 0;
-  display: flex;
+/* Ensure tabs navigation arrows are visible */
+.ant-tabs-nav {
+  margin-bottom: 0 !important;
+}
+
+.ant-tabs-nav-wrap {
+  overflow: visible !important;
+}
+
+.ant-tabs-nav-operations {
+  display: flex !important;
   align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
 }
 
-.theme-toggle-corner .theme-indicator {
-  font-size: 14px;
-  transition: all 0.3s ease;
-  filter: grayscale(100%) brightness(0.5);
-  color: var(--colorText);
-  opacity: 0.4;
+/* Style the tab bar to allow scrolling */
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap {
+  overflow: hidden !important;
 }
 
-.theme-toggle-corner:hover {
-  background: var(--colorBgContainer);
-  border-color: var(--colorBorder);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.ant-tabs-tab {
+  flex-shrink: 0;
 }
 
-[data-theme="dark"] .theme-toggle-corner:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+/* Hide position numbers everywhere by default */
+.tab-position-number {
+  display: none;
 }
 
-.theme-toggle-corner:hover .theme-indicator {
-  filter: grayscale(0%) brightness(1);
-  opacity: 1;
+/* Show position numbers ONLY in the overflow dropdown menu (when ... is clicked) */
+.ant-tabs-dropdown
+  .ant-tabs-dropdown-menu
+  .ant-tabs-dropdown-menu-item
+  .tab-position-number {
+  display: inline;
+  font-weight: 500;
+  margin-right: 4px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"]
+  .ant-tabs-dropdown
+  .ant-tabs-dropdown-menu
+  .ant-tabs-dropdown-menu-item
+  .tab-position-number {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Prevent dropdown from showing on hover - only on click */
+.ant-tabs-nav-more:not(.ant-dropdown-open):hover + .ant-tabs-dropdown {
+  display: none !important;
+}
+
+/* Override Ant Design's hover trigger to click-only */
+.ant-tabs-dropdown-trigger {
+  pointer-events: auto;
+}
+
+/* Force dropdown to only show when ant-dropdown-open class is present (click behavior) */
+.ant-dropdown:not(.ant-dropdown-open) .ant-dropdown-menu {
+  display: none !important;
+}
+
+/* Disable hover state for the ellipsis button's dropdown */
+.ant-tabs-nav-more:hover ~ .ant-dropdown:not(.ant-dropdown-open) {
+  display: none !important;
 }

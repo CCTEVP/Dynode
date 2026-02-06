@@ -1,124 +1,396 @@
-# build.dynode — Documentation & Flowcharts
+# Builder.dynode - Creative Management UI
 
-A React + Vite builder UI for dynamic creatives. It authenticates via source.dynode, lists creatives, edits them, and uploads assets. This doc mirrors the structure used in source.dynode and render.dynode.
+> **React-based web interface for creative authoring and asset management**
 
-> Generated on 2025-09-25. If files or routes change, update labels accordingly.
+## Overview
 
-## High-level
+Builder.dynode is a modern React application that provides a comprehensive web-based interface for creating, editing, and managing dynamic advertising creatives. It features a drag-and-drop editor, asset management, and integrates with source.dynode for data persistence and echo.dynode for real-time updates.
 
-```mermaid
-flowchart LR
-  APP[App.tsx]
-  L_MAIN[MainLayout]
-  R_ROOT[/]
-  R_HELP[/help]
-  R_HELP_COMP[/help/components]
-  R_CREATIVES[/creatives]
-  R_EDIT[/creatives/edit/:id]
-  R_ASSETS[/assets/upload]
-  R_TEMPLATES[/templates]
-  R_COMMUNITY[/community]
+## Technology Stack
 
-  APP --> L_MAIN --> R_ROOT
-  L_MAIN --> R_HELP
-  L_MAIN --> R_HELP_COMP
-  L_MAIN --> R_CREATIVES
-  L_MAIN --> R_TEMPLATES
-  L_MAIN --> R_COMMUNITY
-  R_EDIT -. full layout .-> APP
-  L_MAIN --> R_ASSETS
+- **Frontend**: React 19.1
+- **Build Tool**: Vite 6.3
+- **Language**: TypeScript 5.8
+- **UI Library**: Ant Design 5.26
+- **Routing**: React Router 7.6
+- **State Management**: Zustand 5.0
+- **Drag & Drop**: @dnd-kit 6.3/10.0, react-grid-layout 1.5
+- **Flow Diagrams**: @xyflow/react 12.10
+- **Logging**: Winston 3.17
+
+## Key Features
+
+### Creative Editor
+
+- **Drag-and-Drop Interface**: Intuitive visual composition
+- **Grid Layout**: Responsive grid-based positioning
+- **Element Library**: Pre-built components and widgets
+- **Real-time Preview**: Live creative preview
+- **Version Control**: Creative history and rollback
+
+### Asset Management
+
+- **Multi-file Upload**: Drag-and-drop file upload
+- **Asset Library**: Centralized asset repository
+- **Metadata Management**: Asset cataloging and search
+- **Preview Support**: Image, video, and font preview
+
+### Authentication
+
+- **Email Verification**: 6-digit code authentication
+- **JWT Tokens**: Secure token-based sessions
+- **Protected Routes**: Automatic redirect for unauthenticated users
+- **Domain Access**: Multi-domain user support
+
+### User Experience
+
+- **Lazy Loading**: Route-based code splitting
+- **Theme Support**: Light and dark modes
+- **Responsive Design**: Mobile-friendly layouts
+- **Ant Design Components**: Consistent, polished UI
+
+## Architecture
+
+### Project Structure
+
+```
+builder.dynode/
+├── src/
+│   ├── App.tsx                 # Application root
+│   ├── main.tsx                # Entry point
+│   ├── pages/
+│   │   ├── Home/               # Dashboard
+│   │   ├── Creatives/          # Creative management
+│   │   │   ├── Default.tsx     # List view
+│   │   │   └── Edit.tsx        # Editor (FullLayout)
+│   │   ├── Sources/            # Data sources
+│   │   ├── Assets/             # Asset management
+│   │   ├── Templates/          # Template library
+│   │   ├── Community/          # Community features
+│   │   └── Help/               # Documentation
+│   ├── components/
+│   │   ├── controls/           # Reusable controls
+│   │   └── ...                 # Other components
+│   ├── services/
+│   │   ├── auth.ts             # Authentication API
+│   │   ├── creative.ts         # Creative CRUD
+│   │   ├── asset.ts            # Asset management
+│   │   ├── source.ts           # Data sources
+│   │   └── logger.ts           # Client logging
+│   ├── contexts/
+│   │   ├── AuthContext.tsx     # Auth state
+│   │   └── ThemeContext.tsx    # Theme state
+│   ├── layouts/
+│   │   ├── MainLayout.tsx      # Standard layout
+│   │   └── FullLayout.tsx      # Immersive layout
+│   └── theme.ts                # Ant Design theme
+├── vite.config.ts              # Vite configuration
+└── package.json
 ```
 
-## Authentication flow
+### Routing Strategy
 
-```mermaid
-sequenceDiagram
-  participant UI as build.dynode UI
-  participant AUTH as AuthService
-  participant SRC as source.dynode
+**MainLayout Routes** (with sidebar):
 
-  UI->>AUTH: checkEmail(email)
-  AUTH->>SRC: POST /auth/check-email
-  SRC-->>AUTH: { success, requiresVerification }
-  UI->>AUTH: verifyCode(email, code)
-  AUTH->>SRC: POST /auth/verify-code
-  SRC-->>AUTH: { success, token, domains }
-  AUTH-->>UI: persist token + domains (localStorage)
-  UI-->>UI: ProtectedRoute allows navigation
+- `/` - Home dashboard
+- `/creatives` - Creative list
+- `/sources` - Data sources
+- `/assets` - Asset library
+- `/templates` - Templates
+- `/community` - Community
+- `/help/*` - Documentation
+
+**FullLayout Routes** (immersive):
+
+- `/creatives/edit/:id` - Creative editor
+- `/sources/:id` - Source editor
+- `/assets/:id` - Asset editor
+
+### Service Layer
+
+**Service Pattern:**
+
+```typescript
+// services/creative.ts
+export const creativeService = {
+  async getAll(): Promise<Creative[]> {
+    const response = await axios.get(`${API_URL}/data/creatives`);
+    return response.data;
+  },
+
+  async getById(id: string): Promise<Creative> {
+    const response = await axios.get(`${API_URL}/data/creatives/${id}`);
+    return response.data;
+  },
+
+  async update(id: string, data: Partial<Creative>): Promise<Creative> {
+    const response = await axios.put(
+      `${API_URL}/data/creatives/dynamics/${id}`,
+      data,
+    );
+    return response.data;
+  },
+};
 ```
 
-## Data flow: creatives list and edit
+### State Management
 
-```mermaid
-flowchart TD
-  UI[/Creatives page/]
-  SRV[CreativeService]
-  SRC[/source.dynode/]
+**AuthContext:**
 
-  UI -->|list| SRV -->|GET /data/creatives| SRC
-  UI -->|open edit| SRV -->|GET /data/creatives/:id| SRC
-  UI -->|save| SRV -->|PUT /data/creatives/:id| SRC
+```typescript
+interface AuthContextType {
+  isAuthenticated: boolean;
+  user: User | null;
+  token: string | null;
+  login: (token: string) => void;
+  logout: () => void;
+}
 ```
 
-## Logging pipeline
+**ThemeContext:**
 
-```mermaid
-flowchart LR
-  UI[build.dynode]
-  LOG[logger.ts]
-  SRC[/files/logs/]
-
-  UI --> LOG --> SRC
+```typescript
+interface ThemeContextType {
+  themeMode: "light" | "dark";
+  toggleTheme: () => void;
+}
 ```
 
-## Bundling/build
+## Setup & Installation
 
-- Vite dev server on port 4000 (proxy /api -> http://localhost:3333)
-- Manual chunks configured in vite.config.ts for vendor and app modules
-- Dockerfile builds and serves via Nginx (HTTPS on 4444 using provided PFX)
+### Prerequisites
 
-## Key files
+- Node.js 18 or higher
+- npm or yarn
+- Access to source.dynode API
 
-- src/App.tsx: Router + lazy pages; wraps in ProtectedRoute under AuthProvider
-- src/contexts/AuthContext.tsx: token/domains persistence and guards
-- src/services/auth.ts: /auth/check-email + /auth/verify-code
-- src/services/creative.ts: list/get/put/delete creatives; flatten elements helpers
-- src/services/logger.ts: posts logs to source.dynode /files/logs
-- src/layouts/MainLayout.tsx and src/layouts/FullLayout.tsx
-- src/pages/\*\*: Home, Creatives (list/edit), Help, Assets upload, Templates, Community
-- vite.config.ts: dev server, proxy, manualChunks
+### Installation
 
-## Setup
+```bash
+# Install dependencies
+npm install
 
-### Environment
+# Copy environment file
+cp .env.dev .env
 
-Set Vite env vars (Docker build args or .env):
-
-```ini
-VITE_SOURCE_API_URL=http://localhost:3000
-VITE_RENDER_BASE_URL=http://localhost:5000
-VITE_BUILDER_BASE_URL=http://localhost:4000
+# Configure API endpoint
+# Edit .env and set SOURCE_API_URL
 ```
 
-### Run locally
+### Environment Variables
 
-```powershell
-npm ci
+```env
+# API Configuration
+VITE_SOURCE_API_URL=http://localhost:3333
+VITE_ECHO_WS_URL=ws://localhost:7777
+
+# Application
+VITE_APP_ENV=development
+```
+
+### Running Locally
+
+```bash
+# Development mode (with HMR)
 npm run dev
-```
 
-### Build & Preview
-
-```powershell
+# Build for production
 npm run build
+
+# Preview production build
 npm run preview
 ```
 
-### Docker
+### Access Points
 
-```powershell
-# build (requires cert/build.dynode.pfx and PFX_PASSWORD)
-docker build --build-arg PFX_PASSWORD=YourVeryStrongAndSecretPasswordHere -t build-dynode:latest .
-# run
-docker run -p 4444:4444 build-dynode:latest
+- **Application**: http://localhost:4000
+- **Vite Dev Server**: http://localhost:5173 (during development)
+
+## Development
+
+### Adding a New Page
+
+1. Create page component in `src/pages/`:
+
+```typescript
+// src/pages/MyPage/Default.tsx
+export default function MyPage() {
+  return <div>My Page Content</div>;
+}
 ```
+
+2. Add lazy import in `App.tsx`:
+
+```typescript
+const MyPage = lazy(() => import("./pages/MyPage/Default"));
+```
+
+3. Add route:
+
+```typescript
+<Route path="/mypage" element={<MyPage />} />
+```
+
+### Creating a Service
+
+```typescript
+// src/services/myservice.ts
+import axios from "axios";
+
+const API_URL = import.meta.env.VITE_SOURCE_API_URL;
+
+export const myService = {
+  async getData() {
+    const response = await axios.get(`${API_URL}/data/mydata`);
+    return response.data;
+  },
+};
+```
+
+### Using Ant Design Components
+
+```typescript
+import { Button, Card, Form, Input } from 'antd';
+
+export default function MyComponent() {
+  return (
+    <Card title="My Card">
+      <Form>
+        <Form.Item label="Name">
+          <Input />
+        </Form.Item>
+        <Button type="primary">Submit</Button>
+      </Form>
+    </Card>
+  );
+}
+```
+
+## Docker Deployment
+
+### Build Image
+
+```bash
+docker build \
+  --build-arg APP_ENV=production \
+  --build-arg PFX_PASSWORD=YourPassword \
+  -t builder-dynode:latest .
+```
+
+### Run Container
+
+```bash
+docker run -d \
+  -p 4444:443 \
+  -e APP_ENV=docker \
+  builder-dynode:latest
+```
+
+### Docker Compose
+
+```yaml
+services:
+  builder:
+    build:
+      context: .
+      args:
+        - APP_ENV=production
+        - PFX_PASSWORD=${PFX_PASSWORD}
+    ports:
+      - "4444:443"
+    environment:
+      - APP_ENV=docker
+    depends_on:
+      - source
+```
+
+## Build Optimization
+
+### Code Splitting
+
+Routes are automatically code-split using React lazy loading:
+
+```typescript
+const Edit = lazy(() => import("./pages/Creatives/Edit"));
+```
+
+### Bundle Analysis
+
+```bash
+npm run build
+# Check dist/stats.html for bundle visualization
+```
+
+### Performance Tips
+
+- Use `React.memo` for expensive components
+- Implement virtualization for long lists
+- Lazy load heavy dependencies
+- Use Ant Design tree-shaking
+
+## Security Considerations
+
+### Authentication
+
+- JWT tokens stored in localStorage
+- Automatic token refresh
+- Protected routes with redirect
+- Logout clears all auth state
+
+### API Security
+
+- All API calls include JWT token
+- CORS configured on source.dynode
+- No sensitive data in localStorage
+- HTTPS in production
+
+### Production Checklist
+
+- [ ] Configure production API URLs
+- [ ] Enable HTTPS
+- [ ] Set up error tracking (Sentry, etc.)
+- [ ] Configure CSP headers
+- [ ] Enable source maps for debugging
+- [ ] Set up monitoring and analytics
+
+## Troubleshooting
+
+### API Connection Failed
+
+- Verify source.dynode is running
+- Check `VITE_SOURCE_API_URL` in `.env`
+- Verify CORS configuration on source.dynode
+- Check browser console for errors
+
+### Authentication Issues
+
+- Clear localStorage and try again
+- Verify JWT token is valid
+- Check token expiration (24h default)
+- Ensure source.dynode `/auth` endpoints are accessible
+
+### Build Errors
+
+- Delete `node_modules` and reinstall: `npm ci`
+- Clear Vite cache: `rm -rf node_modules/.vite`
+- Check TypeScript errors: `npx tsc --noEmit`
+- Verify all dependencies are installed
+
+### Hot Module Replacement Not Working
+
+- Restart dev server
+- Check Vite configuration
+- Verify file watchers aren't exhausted (Linux)
+
+## Contributing
+
+See the main [Dynode README](file:///E:/Development/Web/NODE/Dynode/.docs/README.md) for contribution guidelines.
+
+## License
+
+[Specify license]
+
+---
+
+**Version**: 3.0  
+**Last Updated**: February 6, 2026

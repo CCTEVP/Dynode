@@ -59,6 +59,206 @@
         "security": []
       }
     },
+    "/files/log": {
+      "get": {
+        "summary": "Query log entries with filters",
+        "tags": ["Logs"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": { "type": "string" },
+            "description": "Filter logs by user ID"
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "schema": { "type": "string" },
+            "description": "Filter logs by session ID"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": { "type": "string", "format": "date-time" },
+            "description": "Filter logs from this date (uses timestamp field)"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": { "type": "string", "format": "date-time" },
+            "description": "Filter logs to this date (uses timestamp field)"
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["info", "error", "warn", "debug", "http", "verbose"]
+            },
+            "description": "Filter by a single log level"
+          },
+          {
+            "name": "levels",
+            "in": "query",
+            "schema": { "type": "string" },
+            "description": "Filter by multiple log levels (comma-separated)"
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "schema": { "type": "string" },
+            "description": "Text search in log message (case-insensitive)"
+          },
+          {
+            "name": "meta",
+            "in": "query",
+            "schema": { "type": "string" },
+            "description": "Text search in metadata (case-insensitive)"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": { "type": "integer", "default": 100 },
+            "description": "Maximum number of results to return"
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": { "type": "integer", "default": 0 },
+            "description": "Number of results to skip (for pagination)"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": { "type": "string", "default": "timestamp" },
+            "description": "Field to sort by"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"],
+              "default": "desc"
+            },
+            "description": "Sort order"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Log entries retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "level": {
+                            "type": "string",
+                            "enum": [
+                              "error",
+                              "warn",
+                              "info",
+                              "http",
+                              "verbose",
+                              "debug"
+                            ]
+                          },
+                          "message": { "type": "string" },
+                          "timestamp": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Log timestamp"
+                          },
+                          "hostname": {
+                            "type": "string",
+                            "description": "Server hostname"
+                          },
+                          "origin": { "type": "string" },
+                          "userId": { "type": "string" },
+                          "sessionId": { "type": "string" },
+                          "metadata": {
+                            "type": "object",
+                            "additionalProperties": true,
+                            "description": "Optional metadata for context-specific data like events, interactions, or custom fields"
+                          }
+                        }
+                      }
+                    },
+                    "pagination": {
+                      "type": "object",
+                      "properties": {
+                        "total": { "type": "integer" },
+                        "limit": { "type": "integer" },
+                        "skip": { "type": "integer" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to query logs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Write a log entry",
+        "tags": ["Logs"],
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": "string",
+                    "enum": [
+                      "info",
+                      "error",
+                      "warn",
+                      "debug",
+                      "http",
+                      "verbose"
+                    ]
+                  },
+                  "message": { "type": "string" },
+                  "meta": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                },
+                "required": ["level", "message"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Log entry written successfully"
+          }
+        }
+      }
+    },
     "external": "all"
   }
 }

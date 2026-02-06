@@ -174,6 +174,10 @@ export const lightTheme: ThemeConfig = {
       itemActiveColor: "#1890ff",
       itemSelectedColor: "#1890ff",
     },
+    Tooltip: {
+      colorBgSpotlight: "rgba(0, 0, 0, 0.85)",
+      colorTextLightSolid: "#ffffff",
+    },
   },
 };
 
@@ -250,6 +254,10 @@ export const darkTheme: ThemeConfig = {
     Tabs: {
       itemActiveColor: "#177ddc",
       itemSelectedColor: "#177ddc",
+    },
+    Tooltip: {
+      colorBgSpotlight: "rgba(0, 0, 0, 0.85)",
+      colorTextLightSolid: "#ffffff",
     },
   },
 };

@@ -1,5 +1,6 @@
 import type { AssetBundle } from "../types/assets";
 import env from "../../config/env";
+import logger from "./logger";
 
 class AssetService {
   private baseUrl = env.env === "docker" ? "/api" : env.externalOrigins.source;
@@ -34,7 +35,7 @@ class AssetService {
       const data = await response.json();
       return Array.isArray(data) ? data : [];
     } catch (error) {
-      console.error("Error fetching assets:", error);
+      logger.error("Error fetching assets", { error });
       throw error;
     }
   }
@@ -59,7 +60,7 @@ class AssetService {
 
       return await response.json();
     } catch (error) {
-      console.error("Error fetching asset:", error);
+      logger.error("Error fetching asset", { error, id });
       throw error;
     }
   }
@@ -82,7 +83,7 @@ class AssetService {
 
       return await response.json();
     } catch (error) {
-      console.error("Error creating asset:", error);
+      logger.error("Error creating asset", { error, data });
       throw error;
     }
   }
@@ -108,7 +109,7 @@ class AssetService {
 
       return await response.json();
     } catch (error) {
-      console.error("Error updating asset:", error);
+      logger.error("Error updating asset", { error, id, data });
       throw error;
     }
   }
@@ -128,7 +129,7 @@ class AssetService {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
-      console.error("Error deleting asset:", error);
+      logger.error("Error deleting asset", { error, id });
       throw error;
     }
   }
@@ -174,7 +175,7 @@ class AssetService {
       const result = await response.json();
       return result.asset;
     } catch (error) {
-      console.error("Error uploading files:", error);
+      logger.error("Error uploading files", { error, bundleId, assetId });
       throw error;
     }
   }

@@ -2,14 +2,14 @@
 
 > Auto-generated documentation from project analysis
 
-**Generated:** 28/01/2026, 09:16:23
+**Generated:** 06/02/2026, 10:40:32
 
 ## 📊 Overview
 
 | Metric | Value |
 |--------|-------|
 | Total Files | 111 |
-| Total Size | 345.99 KB |
+| Total Size | 345.77 KB |
 | Files with Descriptions | 110 (99%) |
 | Internal Dependencies | 26 |
 | External Dependencies | 17 |
@@ -40,13 +40,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 0 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | build-cache |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -57,12 +57,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.65 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | build-cache |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -73,13 +75,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 0 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | build-cache |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -92,7 +94,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 615 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Nov 3, 2025 |
 | Category | config |
 ---
@@ -104,12 +106,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 615 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Nov 3, 2025 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -120,12 +122,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 614 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -136,12 +138,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 614 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | config |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -152,12 +154,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 277 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | config |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -170,7 +173,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 341 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | data |
 ---
@@ -182,12 +185,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 95 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -198,12 +202,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 101 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
 
 ---
 
@@ -214,13 +218,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 192.77 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 23, 2026 |
 | Category | data |
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 25, 2025** - Render view completed *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -231,12 +237,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 484 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | data |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -249,12 +256,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 133 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | deployment |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -265,13 +272,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.57 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | deployment |
 **Recent History:**
 
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -284,12 +293,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 475 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -300,13 +310,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 79 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -317,14 +326,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 532 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -335,15 +342,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 771 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -354,15 +358,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 114 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- *...and 2 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -373,15 +374,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 158 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Builder flowchart updated *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -392,13 +390,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.7 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Sep 25, 2025** - Render flowchart fixed *(CCTEvalencia)*
-- **Sep 25, 2025** - Render flowchart updated *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -409,12 +406,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 7.68 KB |
-| Created | Oct 28, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | documentation |
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -427,12 +424,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.04 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | image |
 **Recent History:**
 
-- **Sep 25, 2025** - Favicon fixed *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -445,13 +442,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.63 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -462,13 +460,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 839 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | other |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -479,13 +479,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 822 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | other |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -496,12 +498,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 500 Bytes |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | other |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -512,12 +514,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 540 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -528,13 +533,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 440 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | other |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -545,12 +552,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 522 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -561,13 +571,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 987 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | other |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -578,12 +590,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 297 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- **Jun 25, 2025** - Render view completed *(CCTEvalencia)*
 
 ---
 
@@ -594,12 +608,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 617 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -610,12 +627,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 90 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -626,12 +644,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 137 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- **Jun 25, 2025** - Render view completed *(CCTEvalencia)*
+- *...and 2 more commits*
 
 ---
 
@@ -642,13 +663,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 240 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
+- *...and 5 more commits*
 
 ---
 
@@ -659,12 +682,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 535 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | other |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jul 7, 2025** - Source (API) with Media and Openapi.json scattered *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
+- *...and 3 more commits*
 
 ---
 
@@ -675,15 +701,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.67 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | other |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Nov 11, 2025** - Missing port binding in ImageWidget *(CCTEvalencia)*
-- **Sep 25, 2025** - Favicon fixed *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- *...and 6 more commits*
 
 ---
 
@@ -696,15 +722,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.62 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 27, 2026 |
 | Category | project-meta |
 **Recent History:**
 
-- **Jan 20, 2026** - Consolidation System Fixed *(CCTEvalencia)*
-- **Jan 20, 2026** - Consolidation File System Implemented *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 6 more commits*
 
 ---
 
@@ -715,12 +741,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 313 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | project-meta |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -731,13 +758,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 508 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | project-meta |
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -750,12 +779,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.73 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | security |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 8, 2025** - Dynhamics -> Assets endpoint *(CCTEvalencia)*
 
 ---
 
@@ -767,9 +796,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 3.17 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 23, 2026 |
+| Size | 3.08 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -793,10 +822,10 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
+- *...and 4 more commits*
 
 ---
 
@@ -807,13 +836,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.25 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -824,7 +852,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 720 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -839,8 +867,9 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -851,7 +880,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 499 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -865,7 +894,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 13, 2025** - Endpoints for Creatives by Type *(CCTEvalencia)*
 
 ---
 
@@ -876,7 +907,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 578 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -890,7 +921,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 13, 2025** - Endpoints for Creatives by Type *(CCTEvalencia)*
 
 ---
 
@@ -901,7 +934,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 527 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -915,7 +948,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 13, 2025** - Endpoints for Creatives by Type *(CCTEvalencia)*
 
 ---
 
@@ -926,7 +961,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 490 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -940,7 +975,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 13, 2025** - Endpoints for Creatives by Type *(CCTEvalencia)*
 
 ---
 
@@ -951,7 +988,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 296 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -960,7 +997,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 13, 2025** - Endpoints for Creatives by Type *(CCTEvalencia)*
 
 ---
 
@@ -971,7 +1010,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 520 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **External Dependencies:**
@@ -980,7 +1019,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -991,7 +1032,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.45 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1006,7 +1047,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 13, 2025** - Endpoints for Creatives by Type *(CCTEvalencia)*
 
 ---
 
@@ -1017,7 +1060,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 621 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1031,7 +1074,9 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1040,7 +1085,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 632 Bytes |
-| Created | Jan 23, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 23, 2026 |
 | Category | source |
 
@@ -1052,6 +1097,10 @@
 
 - `express`
 
+**Recent History:**
+
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+
 ---
 
 ### `routes/dynamics/default.ts`
@@ -1060,9 +1109,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 5.16 KB |
-| Created | Sep 30, 2025 |
-| Updated | Oct 28, 2025 |
+| Size | 5.02 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1083,10 +1132,10 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- *...and 1 more commits*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Sep 15, 2025** - MVP for Cloud *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 10 more commits*
 
 ---
 
@@ -1097,7 +1146,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 435 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 
@@ -1112,7 +1161,10 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -1123,7 +1175,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 9.27 KB |
-| Created | Oct 28, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Oct 28, 2025 |
 | Category | source |
 
@@ -1133,7 +1185,7 @@
 
 **Recent History:**
 
-- **Oct 28, 2025** - General Standardization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1143,9 +1195,9 @@
 
 | Property | Value |
 |----------|-------|
-| Size | 10.02 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 23, 2026 |
+| Size | 10.03 KB |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1163,8 +1215,10 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 4 more commits*
 
 ---
 
@@ -1175,7 +1229,7 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.49 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 23, 2026 |
 | Category | source |
 
@@ -1189,7 +1243,8 @@
 
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jun 27, 2025** - Identifying components, animations and assets *(CCTEvalencia)*
 
 ---
 
@@ -1200,8 +1255,8 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.37 KB |
-| Created | Sep 30, 2025 |
-| Updated | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 5, 2026 |
 | Category | source |
 
 **Internal Dependencies:**
@@ -1214,9 +1269,10 @@
 
 **Recent History:**
 
-- **Sep 30, 2025** - Development + Docker environments *(CCTEvalencia)*
-- **Sep 30, 2025** - Configuration centralized per project *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 31, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 4 more commits*
 
 ---
 
@@ -1227,13 +1283,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.32 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1244,12 +1301,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.91 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1260,12 +1319,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.27 KB |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1276,14 +1335,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.02 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 20, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -1294,12 +1354,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 853 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1310,12 +1370,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.58 KB |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1326,12 +1386,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1013 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1342,13 +1402,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.92 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1359,12 +1420,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.73 KB |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1375,13 +1436,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.67 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -1392,12 +1455,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 374 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1408,12 +1473,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 374 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1424,12 +1491,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 374 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1440,12 +1509,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 368 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1456,12 +1527,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 374 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1472,14 +1545,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.71 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1490,12 +1563,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.61 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1506,12 +1579,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.94 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1522,12 +1597,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.31 KB |
-| Created | Jan 16, 2026 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1538,14 +1613,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.89 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 21, 2026** - Builder -> Help -> Codebase UI *(CCTEvalencia)*
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -1556,12 +1632,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 864 Bytes |
-| Created | Jan 16, 2026 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1572,12 +1648,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 2.82 KB |
-| Created | Jan 16, 2026 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1588,12 +1664,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1 KB |
-| Created | Jan 16, 2026 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1604,13 +1680,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 4.9 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1621,12 +1698,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 3.75 KB |
-| Created | Jan 15, 2026 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1637,14 +1714,15 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.9 KB |
-| Created | Jan 15, 2026 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- *...and 1 more commits*
 
 ---
 
@@ -1655,12 +1733,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 384 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1671,12 +1751,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 384 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1687,12 +1769,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 384 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1703,12 +1787,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 376 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1719,12 +1805,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 384 Bytes |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1735,12 +1823,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.91 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | source |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1751,14 +1839,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 5.1 KB |
-| Created | Sep 30, 2025 |
-| Updated | Jan 27, 2026 |
+| Created | Feb 5, 2026 |
+| Updated | Feb 6, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Aug 5, 2025** - Containerization Completed *(CCTEvalencia)*
 
 ---
 
@@ -1769,12 +1857,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 337 Bytes |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1785,12 +1873,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 235 Bytes |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | source |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1803,12 +1891,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 579 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jun 25, 2025** - Render view completed *(CCTEvalencia)*
+- **Jun 24, 2025** - Render Application *(CCTEvalencia)*
+- **Jun 12, 2025** - First Commit *(CCTEvalencia)*
 
 ---
 
@@ -1819,13 +1909,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 155 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1836,12 +1925,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 130 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1852,13 +1941,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 189 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1869,12 +1957,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 131 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1885,12 +1973,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 219 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 16, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1901,12 +1989,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 137 Bytes |
-| Created | Jan 15, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
 
 ---
 
@@ -1917,13 +2005,14 @@
 | Property | Value |
 |----------|-------|
 | Size | 1.67 KB |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 15, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 16, 2026** - CardWidget Animations and Build Automation *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Aug 6, 2025** - Containerization Completed *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1934,13 +2023,13 @@
 | Property | Value |
 |----------|-------|
 | Size | 73 Bytes |
-| Created | Jan 13, 2026 |
+| Created | Feb 5, 2026 |
 | Updated | Jan 13, 2026 |
 | Category | style |
 **Recent History:**
 
-- **Jan 13, 2026** - Added Clock Widget and General Optimization *(CCTEvalencia)*
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Feb 5, 2026** - Personal Domain Migration *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1951,13 +2040,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 84 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1968,12 +2056,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 76 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -1984,13 +2072,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 117 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -2001,13 +2088,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 540 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -2018,13 +2104,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 204 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 
@@ -2035,13 +2120,12 @@
 | Property | Value |
 |----------|-------|
 | Size | 58 Bytes |
-| Created | Sep 30, 2025 |
+| Created | Feb 5, 2026 |
 | Updated | Sep 30, 2025 |
 | Category | style |
 **Recent History:**
 
-- **Sep 25, 2025** - Switch to Node.js *(CCTEvalencia)*
-- **May 13, 2025** - First Commit *(CCTEVP)*
+- **Jul 22, 2025** - Named Assets for Styles and Caching *(CCTEvalencia)*
 
 ---
 

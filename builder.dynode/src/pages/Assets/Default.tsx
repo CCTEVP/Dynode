@@ -30,6 +30,7 @@ import type { AssetBundle, AssetItem } from "../../types/assets";
 import assetService from "../../services/asset";
 import FolderBar from "../../components/controls/FolderBar/Default";
 import ItemMoveModal from "../../components/controls/ItemMoveModal/Default";
+import logger from "../../services/logger";
 import "./Default.css";
 import dayjs from "dayjs";
 
@@ -59,7 +60,7 @@ const AssetsPage: React.FC = () => {
       setAssets(data);
     } catch (error) {
       message.error("Failed to load assets");
-      console.error(error);
+      logger.error("Failed to load assets", { error });
     } finally {
       setLoading(false);
     }
@@ -82,7 +83,7 @@ const AssetsPage: React.FC = () => {
           fetchAssets();
         } catch (error) {
           message.error("Failed to delete asset bundle");
-          console.error(error);
+          logger.error("Failed to delete asset bundle", { error, id });
         }
       },
     });
@@ -98,7 +99,7 @@ const AssetsPage: React.FC = () => {
       navigate(`/assets/${newAsset._id}`);
     } catch (error) {
       message.error("Failed to create asset bundle");
-      console.error(error);
+      logger.error("Failed to create asset bundle", { error });
     }
   };
 

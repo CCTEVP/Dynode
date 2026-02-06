@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -12,6 +12,7 @@ import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 import ProtectedRoute from "./components/controls/ProtectedRoute";
 import MainLayout from "./layouts/MainLayout";
 import { getAntdTheme } from "./theme";
+import logger from "./services/logger";
 
 // Lazy load your pages
 const Home = lazy(() => import("./pages/Home/Default"));
@@ -40,6 +41,15 @@ function LayoutWrapper() {
 
 function AppContent() {
   const { themeMode } = useTheme();
+
+  // Log app initialization
+  useEffect(() => {
+    logger.info("builder.dynode initialized", {
+      userAgent: navigator.userAgent,
+      screenSize: `${window.screen.width}x${window.screen.height}`,
+      theme: themeMode,
+    });
+  }, []);
 
   return (
     <ConfigProvider theme={getAntdTheme(themeMode)}>

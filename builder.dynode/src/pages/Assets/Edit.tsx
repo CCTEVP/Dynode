@@ -8,7 +8,6 @@ import {
   Space,
   Spin,
   Select,
-  Upload,
   Modal,
   App,
   theme,
@@ -30,11 +29,14 @@ import {
   FontSizeOutlined,
   FileOutlined,
   CloseOutlined,
+  DeleteOutlined,
+  SwapOutlined,
+  LoadingOutlined,
 } from "@ant-design/icons";
 import assetService from "../../services/asset";
 import env from "../../../config/env";
 import type { AssetBundle } from "../../types/assets";
-import { useTheme } from "../../contexts/ThemeContext";
+import logger from "../../services/logger";
 import "./Edit.css";
 const { Text } = Typography;
 
@@ -46,17 +48,16 @@ const KIND_OPTIONS = [
 ];
 
 const AssetEdit: React.FC = () => {
-  const { message } = App.useApp();
+  const { message, modal } = App.useApp();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [form] = Form.useForm();
   const { token } = theme.useToken();
-  const { themeMode, toggleTheme } = useTheme();
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [uploadModalVisible, setUploadModalVisible] = useState(false);
-  const [uploadAssetIndex, setUploadAssetIndex] = useState<number | null>(null);
-  const [uploadFiles, setUploadFiles] = useState<File[]>([]);
+  const [pendingFiles, setPendingFiles] = useState<Map<string, File[]>>(
+    new Map(),
+  );
   const [assetMetadata, setAssetMetadata] = useState<{
     created?: string;
     updated?: string;
@@ -69,11 +70,21 @@ const AssetEdit: React.FC = () => {
     kind: string;
     name: string;
     mime?: string;
+    paths?: any[];
+    currentIndex?: number;
+    assetIndex?: number;
   } | null>(null);
+  const [modalPreviewIndex, setModalPreviewIndex] = useState(0);
+  const [hoveredModalPreview, setHoveredModalPreview] = useState(false);
   const [previewHeight, setPreviewHeight] = useState<number | null>(null);
   const [previewHeights, setPreviewHeights] = useState<Record<string, number>>(
     {},
   );
+  const [previewIndices, setPreviewIndices] = useState<Record<string, number>>(
+    {},
+  );
+  const [hoveredPreview, setHoveredPreview] = useState<string | null>(null);
+  const [deletingFiles, setDeletingFiles] = useState<Set<string>>(new Set());
   const formColumnRef = React.useRef<HTMLDivElement>(null);
   const headerRef = React.useRef<HTMLDivElement>(null);
 
@@ -143,7 +154,7 @@ const AssetEdit: React.FC = () => {
       }
     } catch (error) {
       message.error("Failed to load asset");
-      console.error(error);
+      logger.error("Failed to load asset", { error, assetId });
     } finally {
       setLoading(false);
     }
@@ -158,70 +169,182 @@ const AssetEdit: React.FC = () => {
       const values = await form.validateFields();
       setSaving(true);
 
-      const payload: Partial<AssetBundle> = {
+      // Prepare bundle with only non-pending files (these are the files we want to keep)
+      const bundleWithKeptFiles = (values.bundle || []).map((asset: any) => ({
+        ...asset,
+        paths: (asset.paths || []).filter((p: any) => !p._pending),
+      }));
+
+      let payload: Partial<AssetBundle> = {
         name: values.name || "",
-        bundle: values.bundle || [],
+        bundle: bundleWithKeptFiles,
       };
 
       if (isNew) {
+        // Create new bundle first (without pending files)
         const newAsset = await assetService.createAsset(payload);
+        const newBundleId = newAsset._id;
+
+        // Then upload any pending files
+        if (pendingFiles.size > 0) {
+          for (const [assetKey, files] of pendingFiles.entries()) {
+            if (files.length > 0) {
+              const assetIndex = parseInt(assetKey);
+              const assetId = newAsset.bundle?.[assetIndex]?._id;
+
+              await assetService.uploadFiles(
+                files,
+                newBundleId,
+                undefined,
+                assetId,
+              );
+            }
+          }
+        }
+
+        setPendingFiles(new Map());
         message.success("Asset bundle created successfully");
-        navigate(`/assets/${newAsset._id}`);
+        navigate(`/assets/${newBundleId}`);
       } else if (id) {
+        // First, save the bundle with deletions (kept files only)
+        // This ensures deleted files are removed from the server before uploading new ones
         await assetService.updateAsset(id, payload);
+
+        // Then upload any pending files
+        if (pendingFiles.size > 0) {
+          for (const [assetKey, files] of pendingFiles.entries()) {
+            if (files.length > 0) {
+              const assetIndex = parseInt(assetKey);
+              const assetId = payload.bundle?.[assetIndex]?._id;
+
+              // Upload files to server (they will be added to the now-clean asset)
+              await assetService.uploadFiles(files, id, undefined, assetId);
+            }
+          }
+          setPendingFiles(new Map());
+        }
+
         message.success("Asset bundle updated successfully");
         fetchAsset(id);
       }
     } catch (error) {
       message.error("Failed to save asset");
-      console.error(error);
+      logger.error("Failed to save asset", { error, isNew, id });
     } finally {
       setSaving(false);
     }
   };
 
-  const handleAddFilesToAsset = (index: number) => {
-    setUploadModalVisible(true);
-    setUploadAssetIndex(index);
-  };
+  const handleFilesSelected = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    assetIndex: number,
+    assetName: number,
+  ) => {
+    const files = Array.from(event.target.files || []);
+    if (files.length === 0) return;
 
-  const handleUploadSubmit = async () => {
-    if (uploadFiles.length === 0) {
-      message.warning("Please select files to upload");
-      return;
-    }
+    const maxSize = 50 * 1024 * 1024; // 50MB
+    const validFiles = files.filter((file) => {
+      if (file.size > maxSize) {
+        message.error(`${file.name} exceeds 50MB limit`);
+        return false;
+      }
+      return true;
+    });
 
-    if (!id || isNew) {
-      message.warning("Please save the bundle first before uploading files");
-      return;
-    }
+    if (validFiles.length === 0) return;
 
     try {
-      const assetName =
-        uploadAssetIndex === null ? uploadFiles[0].name : undefined;
+      const existingBundle = form.getFieldValue("bundle") || [];
+      const asset = existingBundle[assetIndex];
 
-      const existingBundle = form.getFieldValue("bundle");
-      const assetId =
-        uploadAssetIndex !== null && existingBundle[uploadAssetIndex]
-          ? existingBundle[uploadAssetIndex]._id
-          : undefined;
+      if (asset) {
+        const newPaths = validFiles.map((f) => ({
+          filename: f.name.split(".").slice(0, -1).join("."),
+          extension: f.name.split(".").pop() || "",
+          mime: f.type,
+          _pending: true,
+        }));
 
-      const updatedAsset = await assetService.uploadFiles(
-        uploadFiles,
-        id,
-        assetName,
-        assetId,
-      );
+        asset.paths = [...(asset.paths || []), ...newPaths];
+        form.setFieldsValue({ bundle: existingBundle });
 
-      message.success("Files uploaded successfully");
-      form.setFieldsValue({ bundle: updatedAsset.bundle });
-      setUploadModalVisible(false);
-      setUploadFiles([]);
-      setUploadAssetIndex(null);
+        const existingPending = pendingFiles.get(String(assetName)) || [];
+        setPendingFiles(
+          new Map(
+            pendingFiles.set(String(assetName), [
+              ...existingPending,
+              ...validFiles,
+            ]),
+          ),
+        );
+      }
+
+      message.success("Files added (will be uploaded when you save)");
+      event.target.value = ""; // Reset input
     } catch (error) {
-      message.error("Failed to upload files");
-      console.error(error);
+      message.error("Failed to add files");
+      logger.error("Failed to add files", { error });
     }
+  };
+
+  const handleReplaceFile = (
+    assetIndex: number,
+    assetName: number,
+    pathIndex: number,
+    file: File,
+  ) => {
+    try {
+      const existingBundle = form.getFieldValue("bundle") || [];
+      const asset = existingBundle[assetIndex];
+
+      if (asset && asset.paths[pathIndex]) {
+        // Replace the path data
+        asset.paths[pathIndex] = {
+          filename: file.name.split(".").slice(0, -1).join("."),
+          extension: file.name.split(".").pop() || "",
+          mime: file.type,
+          _pending: true,
+        };
+
+        form.setFieldsValue({ bundle: existingBundle });
+
+        // Update pending files
+        const existingPending = pendingFiles.get(String(assetName)) || [];
+        const newPending = [...existingPending];
+        newPending[pathIndex] = file;
+        setPendingFiles(
+          new Map(pendingFiles.set(String(assetName), newPending)),
+        );
+
+        message.success("File replaced (will be uploaded when you save)");
+      }
+    } catch (error) {
+      message.error("Failed to replace file");
+      logger.error("Failed to replace file", { error });
+    }
+  };
+
+  const getAssetFileUrl = (
+    path: { filename: string; extension: string; _pending?: boolean },
+    assetIndex?: number,
+  ) => {
+    // If file is pending, create blob URL from stored file
+    if (path._pending && assetIndex !== undefined) {
+      const files = pendingFiles.get(String(assetIndex));
+      if (files) {
+        const matchingFile = files.find((f) => {
+          const fname = f.name.split(".").slice(0, -1).join(".");
+          const ext = f.name.split(".").pop() || "";
+          return fname === path.filename && ext === path.extension;
+        });
+        if (matchingFile) {
+          return URL.createObjectURL(matchingFile);
+        }
+      }
+    }
+    // Otherwise return server URL
+    return `${fileBaseUrl}/files/assets/${path.filename}.${path.extension}`;
   };
 
   const getKindIcon = (kind: string) => {
@@ -237,15 +360,14 @@ const AssetEdit: React.FC = () => {
     }
   };
 
-  const getAssetFileUrl = (path: { filename: string; extension: string }) =>
-    `${fileBaseUrl}/files/assets/${path.filename}.${path.extension}`;
-
   const renderPreviewContent = (
     kind: string,
     url: string,
     label: string,
     isModal = false,
     previewMaxHeight?: number | null,
+    filename?: string,
+    showOverlay = false,
   ) => {
     const wrapperHeight = isModal
       ? "80vh"
@@ -273,6 +395,7 @@ const AssetEdit: React.FC = () => {
               background: token.colorBgContainer,
               margin: "0 auto",
               overflow: "hidden",
+              position: "relative",
             }}
           >
             <img
@@ -286,6 +409,26 @@ const AssetEdit: React.FC = () => {
                 objectFit: "contain",
               }}
             />
+            {showOverlay && filename && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  background: "rgba(0, 0, 0, 0.7)",
+                  color: "white",
+                  padding: "8px 16px",
+                  borderRadius: 8,
+                  fontSize: 14,
+                  fontWeight: 500,
+                  whiteSpace: "nowrap",
+                  pointerEvents: "none",
+                }}
+              >
+                {filename}
+              </div>
+            )}
           </div>
         </div>
       );
@@ -311,6 +454,7 @@ const AssetEdit: React.FC = () => {
               background: token.colorBgContainer,
               margin: "0 auto",
               overflow: "hidden",
+              position: "relative",
             }}
           >
             <video
@@ -327,6 +471,26 @@ const AssetEdit: React.FC = () => {
                 objectFit: "contain",
               }}
             />
+            {showOverlay && filename && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  background: "rgba(0, 0, 0, 0.7)",
+                  color: "white",
+                  padding: "8px 16px",
+                  borderRadius: 8,
+                  fontSize: 14,
+                  fontWeight: 500,
+                  whiteSpace: "nowrap",
+                  pointerEvents: "none",
+                }}
+              >
+                {filename}
+              </div>
+            )}
           </div>
         </div>
       );
@@ -389,27 +553,6 @@ const AssetEdit: React.FC = () => {
 
   return (
     <div className="asset-edit-page">
-      {/* Theme toggle button - fixed top-right corner */}
-      <Tooltip
-        title={`Switch to ${themeMode === "dark" ? "Light" : "Dark"} Mode`}
-        placement="left"
-        color="rgba(0, 0, 0, 0.85)"
-      >
-        <button
-          onClick={toggleTheme}
-          className="theme-toggle-corner"
-          data-mode={themeMode}
-          aria-label="Toggle theme"
-        >
-          <span className="theme-toggle-track" />
-          <span className="theme-toggle-knob">
-            <span className="theme-toggle-icon">
-              {themeMode === "dark" ? "🌙" : "☀️"}
-            </span>
-          </span>
-        </button>
-      </Tooltip>
-
       <div
         ref={headerRef}
         className={`asset-edit-header ${headerSticky ? "sticky" : ""}`}
@@ -488,6 +631,8 @@ const AssetEdit: React.FC = () => {
                     type="editable-card"
                     activeKey={activeTabKey}
                     onChange={setActiveTabKey}
+                    tabBarGutter={8}
+                    tabBarStyle={{ marginBottom: 16 }}
                     onEdit={(targetKey, action) => {
                       if (action === "add") {
                         const currentKeys = fields.map((f) => f.key);
@@ -495,19 +640,72 @@ const AssetEdit: React.FC = () => {
                           currentKeys.length > 0
                             ? Math.max(...currentKeys)
                             : -1;
-                        add({ name: "", kind: "image", status: "", paths: [] });
+                        const now = new Date().toISOString();
+                        add({
+                          name: "",
+                          kind: "image",
+                          status: "",
+                          paths: [],
+                          created: now,
+                          updated: now,
+                        });
                         requestAnimationFrame(() => {
-                          setActiveTabKey(String(maxKey + 1));
+                          const newTabKey = String(maxKey + 1);
+                          setActiveTabKey(newTabKey);
+                          // Scroll the tab bar to the end to show the new tab
+                          setTimeout(() => {
+                            const tabNav = document.querySelector(
+                              ".ant-tabs-nav-list",
+                            ) as HTMLElement;
+                            if (tabNav) {
+                              tabNav.scrollLeft = tabNav.scrollWidth;
+                            }
+                          }, 100);
                         });
                       } else if (action === "remove") {
                         const index = fields.findIndex(
                           (f) => String(f.key) === targetKey,
                         );
                         if (index !== -1) {
-                          remove(index);
-                          if (activeTabKey === targetKey && fields.length > 1) {
-                            setActiveTabKey(String(fields[0].key));
-                          }
+                          const asset = form.getFieldValue(["bundle", index]);
+                          const assetName = asset?.name || `Asset ${index + 1}`;
+                          const fileCount = asset?.paths?.length || 0;
+
+                          modal.confirm({
+                            title: "Remove Asset?",
+                            content: (
+                              <div>
+                                <p>
+                                  Are you sure you want to remove{" "}
+                                  <strong>{assetName}</strong>?
+                                </p>
+                                {fileCount > 0 && (
+                                  <p
+                                    style={{
+                                      color: token.colorWarning,
+                                      marginTop: 8,
+                                    }}
+                                  >
+                                    ⚠️ This asset contains {fileCount} file
+                                    {fileCount !== 1 ? "s" : ""}. The files will
+                                    be deleted when you save the bundle.
+                                  </p>
+                                )}
+                              </div>
+                            ),
+                            okText: "Remove",
+                            okType: "danger",
+                            cancelText: "Cancel",
+                            onOk: () => {
+                              remove(index);
+                              if (
+                                activeTabKey === targetKey &&
+                                fields.length > 1
+                              ) {
+                                setActiveTabKey(String(fields[0].key));
+                              }
+                            },
+                          });
                         }
                       }
                     }}
@@ -521,10 +719,15 @@ const AssetEdit: React.FC = () => {
                       return {
                         key: String(key),
                         label: (
-                          <Space>
-                            {getKindIcon(assetKind)}
-                            {fieldData?.name || `Asset ${index + 1}`}
-                          </Space>
+                          <span>
+                            <span className="tab-position-number">
+                              {index + 1}.{" "}
+                            </span>
+                            <Space>
+                              {getKindIcon(assetKind)}
+                              {fieldData?.name || `Asset ${index + 1}`}
+                            </Space>
+                          </span>
                         ),
                         closable: true,
                         children: (
@@ -541,6 +744,15 @@ const AssetEdit: React.FC = () => {
                                 style={{ flex: "1 1 50%", minWidth: 0 }}
                               >
                                 <Form.Item name={[name, "_id"]} hidden>
+                                  <Input type="hidden" />
+                                </Form.Item>
+                                <Form.Item name={[name, "created"]} hidden>
+                                  <Input type="hidden" />
+                                </Form.Item>
+                                <Form.Item name={[name, "updated"]} hidden>
+                                  <Input type="hidden" />
+                                </Form.Item>
+                                <Form.Item name={[name, "paths"]} hidden>
                                   <Input type="hidden" />
                                 </Form.Item>
 
@@ -602,15 +814,37 @@ const AssetEdit: React.FC = () => {
                                       ])?.length || 0}
                                       )
                                     </Text>
-                                    <Button
-                                      icon={<UploadOutlined />}
-                                      onClick={() =>
-                                        handleAddFilesToAsset(index)
-                                      }
-                                      disabled={isNew}
-                                    >
-                                      Add Files
-                                    </Button>
+                                    <>
+                                      <input
+                                        type="file"
+                                        multiple
+                                        ref={(el) => {
+                                          if (el && !el.dataset.indexed) {
+                                            el.dataset.indexed = "true";
+                                            el.addEventListener("change", (e) =>
+                                              handleFilesSelected(
+                                                e as any,
+                                                index,
+                                                name,
+                                              ),
+                                            );
+                                          }
+                                        }}
+                                        style={{ display: "none" }}
+                                        id={`file-input-${index}`}
+                                      />
+                                      <Button
+                                        icon={<UploadOutlined />}
+                                        onClick={() => {
+                                          const input = document.getElementById(
+                                            `file-input-${index}`,
+                                          ) as HTMLInputElement;
+                                          input?.click();
+                                        }}
+                                      >
+                                        Add Files
+                                      </Button>
+                                    </>
                                   </div>
                                   <List
                                     size="small"
@@ -622,9 +856,147 @@ const AssetEdit: React.FC = () => {
                                         "paths",
                                       ]) || []
                                     }
-                                    renderItem={(path: any) => (
-                                      <List.Item>
+                                    renderItem={(
+                                      path: any,
+                                      pathIndex: number,
+                                    ) => (
+                                      <List.Item
+                                        actions={[
+                                          <Tooltip title="Replace file">
+                                            <Button
+                                              type="text"
+                                              size="small"
+                                              icon={<SwapOutlined />}
+                                              onClick={() => {
+                                                const input =
+                                                  document.createElement(
+                                                    "input",
+                                                  );
+                                                input.type = "file";
+                                                input.accept = "*";
+                                                input.onchange = (e: Event) => {
+                                                  const file = (
+                                                    e.target as HTMLInputElement
+                                                  ).files?.[0];
+                                                  if (file) {
+                                                    const maxSize =
+                                                      50 * 1024 * 1024;
+                                                    if (file.size > maxSize) {
+                                                      message.error(
+                                                        `${file.name} exceeds 50MB limit`,
+                                                      );
+                                                      return;
+                                                    }
+                                                    handleReplaceFile(
+                                                      index,
+                                                      name,
+                                                      pathIndex,
+                                                      file,
+                                                    );
+                                                  }
+                                                };
+                                                input.click();
+                                              }}
+                                            />
+                                          </Tooltip>,
+                                          <Tooltip title="Remove file">
+                                            <Button
+                                              type="text"
+                                              size="small"
+                                              danger
+                                              icon={
+                                                deletingFiles.has(
+                                                  `${index}-${pathIndex}`,
+                                                ) ? (
+                                                  <LoadingOutlined />
+                                                ) : (
+                                                  <DeleteOutlined />
+                                                )
+                                              }
+                                              disabled={deletingFiles.has(
+                                                `${index}-${pathIndex}`,
+                                              )}
+                                              onClick={async () => {
+                                                const fileKey = `${index}-${pathIndex}`;
+                                                setDeletingFiles((prev) =>
+                                                  new Set(prev).add(fileKey),
+                                                );
+
+                                                // Use setTimeout to ensure UI updates
+                                                setTimeout(() => {
+                                                  try {
+                                                    const currentPaths =
+                                                      form.getFieldValue([
+                                                        "bundle",
+                                                        name,
+                                                        "paths",
+                                                      ]);
+                                                    const newPaths =
+                                                      currentPaths.filter(
+                                                        (_: any, idx: number) =>
+                                                          idx !== pathIndex,
+                                                      );
+                                                    form.setFieldValue(
+                                                      ["bundle", name, "paths"],
+                                                      newPaths,
+                                                    );
+                                                    // Reset preview index if needed
+                                                    const currentPreviewIndex =
+                                                      previewIndices[tabKey] ||
+                                                      0;
+                                                    if (
+                                                      currentPreviewIndex >=
+                                                        newPaths.length &&
+                                                      newPaths.length > 0
+                                                    ) {
+                                                      setPreviewIndices(
+                                                        (prev) => ({
+                                                          ...prev,
+                                                          [tabKey]:
+                                                            newPaths.length - 1,
+                                                        }),
+                                                      );
+                                                    } else if (
+                                                      newPaths.length === 0
+                                                    ) {
+                                                      setPreviewIndices(
+                                                        (prev) => ({
+                                                          ...prev,
+                                                          [tabKey]: 0,
+                                                        }),
+                                                      );
+                                                    }
+                                                    // Remove pending file from map if it exists
+                                                    if (path._pending) {
+                                                      setPendingFiles(
+                                                        (prev) => {
+                                                          const key = `${name}-${pathIndex}`;
+                                                          const newMap =
+                                                            new Map(prev);
+                                                          newMap.delete(key);
+                                                          return newMap;
+                                                        },
+                                                      );
+                                                    }
+                                                  } finally {
+                                                    setDeletingFiles((prev) => {
+                                                      const newSet = new Set(
+                                                        prev,
+                                                      );
+                                                      newSet.delete(fileKey);
+                                                      return newSet;
+                                                    });
+                                                  }
+                                                }, 0);
+                                              }}
+                                            />
+                                          </Tooltip>,
+                                        ]}
+                                      >
                                         <Space>
+                                          {path._pending && (
+                                            <Tag color="orange">PENDING</Tag>
+                                          )}
                                           <Tag color={token.colorPrimary}>
                                             {path.extension}
                                           </Tag>
@@ -663,16 +1035,18 @@ const AssetEdit: React.FC = () => {
                                     maxHeight: lockedPreviewHeight,
                                     overflow: "hidden",
                                   }}
-                                  bodyStyle={{
-                                    height: lockedPreviewHeight
-                                      ? `${Math.max(lockedPreviewHeight - 56, 180)}px`
-                                      : undefined,
-                                    maxHeight: lockedPreviewHeight
-                                      ? `${Math.max(lockedPreviewHeight - 56, 180)}px`
-                                      : undefined,
-                                    overflow: "hidden",
-                                    padding: 0,
-                                    boxSizing: "border-box",
+                                  styles={{
+                                    body: {
+                                      height: lockedPreviewHeight
+                                        ? `${Math.max(lockedPreviewHeight - 56, 180)}px`
+                                        : undefined,
+                                      maxHeight: lockedPreviewHeight
+                                        ? `${Math.max(lockedPreviewHeight - 56, 180)}px`
+                                        : undefined,
+                                      overflow: "hidden",
+                                      padding: 0,
+                                      boxSizing: "border-box",
+                                    },
                                   }}
                                   extra={(() => {
                                     const paths =
@@ -681,11 +1055,17 @@ const AssetEdit: React.FC = () => {
                                         name,
                                         "paths",
                                       ]) || [];
-                                    const previewPath = paths[0];
+                                    const currentPreviewIndex =
+                                      previewIndices[tabKey] || 0;
+                                    const currentFile =
+                                      paths[currentPreviewIndex] || paths[0];
                                     const label =
                                       fieldData?.name || `Asset ${index + 1}`;
-                                    if (!previewPath) return null;
-                                    const url = getAssetFileUrl(previewPath);
+                                    if (!currentFile) return null;
+                                    const url = getAssetFileUrl(
+                                      currentFile,
+                                      name,
+                                    );
                                     return (
                                       <Space size="small">
                                         <Button
@@ -704,11 +1084,23 @@ const AssetEdit: React.FC = () => {
                                           size="small"
                                           type="primary"
                                           onClick={() => {
+                                            const paths =
+                                              form.getFieldValue([
+                                                "bundle",
+                                                name,
+                                                "paths",
+                                              ]) || [];
+                                            setModalPreviewIndex(
+                                              currentPreviewIndex,
+                                            );
                                             setPreviewData({
                                               url,
                                               kind: assetKind,
                                               name: label,
-                                              mime: previewPath.mime,
+                                              mime: currentFile.mime,
+                                              paths,
+                                              currentIndex: currentPreviewIndex,
+                                              assetIndex: index,
                                             });
                                             setPreviewModalVisible(true);
                                           }}
@@ -729,25 +1121,141 @@ const AssetEdit: React.FC = () => {
                                     const previewPath = paths[0];
                                     const label =
                                       fieldData?.name || `Asset ${index + 1}`;
+                                    const currentPreviewIndex =
+                                      previewIndices[tabKey] || 0;
+
                                     if (!previewPath) {
                                       return (
-                                        <Text type="secondary">
-                                          Upload a file to see a preview.
-                                        </Text>
+                                        <div
+                                          style={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            height: "100%",
+                                            width: "100%",
+                                          }}
+                                        >
+                                          <Text type="secondary">
+                                            Upload a file to see a preview.
+                                          </Text>
+                                        </div>
                                       );
                                     }
-                                    const url = getAssetFileUrl(previewPath);
-                                    return renderPreviewContent(
-                                      assetKind,
-                                      url,
-                                      label,
-                                      false,
-                                      lockedPreviewHeight
-                                        ? Math.max(
-                                            lockedPreviewHeight - 56,
-                                            180,
-                                          )
-                                        : null,
+
+                                    const currentFile =
+                                      paths[currentPreviewIndex] || paths[0];
+                                    const url = getAssetFileUrl(
+                                      currentFile,
+                                      name,
+                                    );
+                                    const filename = `${currentFile.filename}.${currentFile.extension}`;
+
+                                    return (
+                                      <div
+                                        style={{
+                                          position: "relative",
+                                          height: "100%",
+                                        }}
+                                        onMouseEnter={() =>
+                                          setHoveredPreview(tabKey)
+                                        }
+                                        onMouseLeave={() =>
+                                          setHoveredPreview(null)
+                                        }
+                                      >
+                                        {renderPreviewContent(
+                                          assetKind,
+                                          url,
+                                          label,
+                                          false,
+                                          lockedPreviewHeight
+                                            ? Math.max(
+                                                lockedPreviewHeight - 56,
+                                                180,
+                                              )
+                                            : null,
+                                          filename,
+                                          hoveredPreview === tabKey,
+                                        )}
+                                        {paths.length > 1 &&
+                                          hoveredPreview === tabKey && (
+                                            <>
+                                              <Button
+                                                type="text"
+                                                icon={<ArrowLeftOutlined />}
+                                                onClick={() => {
+                                                  setPreviewIndices((prev) => ({
+                                                    ...prev,
+                                                    [tabKey]:
+                                                      currentPreviewIndex > 0
+                                                        ? currentPreviewIndex -
+                                                          1
+                                                        : paths.length - 1,
+                                                  }));
+                                                }}
+                                                style={{
+                                                  position: "absolute",
+                                                  left: 8,
+                                                  top: "50%",
+                                                  transform: "translateY(-50%)",
+                                                  background:
+                                                    "rgba(0, 0, 0, 0.5)",
+                                                  color: "white",
+                                                  border: "none",
+                                                }}
+                                              />
+                                              <Button
+                                                type="text"
+                                                icon={
+                                                  <ArrowLeftOutlined
+                                                    style={{
+                                                      transform:
+                                                        "rotate(180deg)",
+                                                    }}
+                                                  />
+                                                }
+                                                onClick={() => {
+                                                  setPreviewIndices((prev) => ({
+                                                    ...prev,
+                                                    [tabKey]:
+                                                      currentPreviewIndex <
+                                                      paths.length - 1
+                                                        ? currentPreviewIndex +
+                                                          1
+                                                        : 0,
+                                                  }));
+                                                }}
+                                                style={{
+                                                  position: "absolute",
+                                                  right: 8,
+                                                  top: "50%",
+                                                  transform: "translateY(-50%)",
+                                                  background:
+                                                    "rgba(0, 0, 0, 0.5)",
+                                                  color: "white",
+                                                  border: "none",
+                                                }}
+                                              />
+                                              <div
+                                                style={{
+                                                  position: "absolute",
+                                                  bottom: 8,
+                                                  left: "50%",
+                                                  transform: "translateX(-50%)",
+                                                  background:
+                                                    "rgba(0, 0, 0, 0.7)",
+                                                  color: "white",
+                                                  padding: "4px 12px",
+                                                  borderRadius: 12,
+                                                  fontSize: 12,
+                                                }}
+                                              >
+                                                {currentPreviewIndex + 1} /{" "}
+                                                {paths.length}
+                                              </div>
+                                            </>
+                                          )}
+                                      </div>
                                     );
                                   })()}
                                 </Card>
@@ -762,7 +1270,15 @@ const AssetEdit: React.FC = () => {
                   <Button
                     type="dashed"
                     onClick={() => {
-                      add({ name: "", kind: "image", status: "", paths: [] });
+                      const now = new Date().toISOString();
+                      add({
+                        name: "",
+                        kind: "image",
+                        status: "",
+                        paths: [],
+                        created: now,
+                        updated: now,
+                      });
                       requestAnimationFrame(() => {
                         setActiveTabKey("0");
                       });
@@ -780,59 +1296,18 @@ const AssetEdit: React.FC = () => {
       </Form>
 
       <Modal
-        title={
-          uploadAssetIndex === null ? "Add New Asset" : "Add Files to Asset"
-        }
-        open={uploadModalVisible}
-        onOk={handleUploadSubmit}
-        onCancel={() => {
-          setUploadModalVisible(false);
-          setUploadFiles([]);
-          setUploadAssetIndex(null);
-        }}
-        okText="Upload"
-      >
-        <Space direction="vertical" style={{ width: "100%" }}>
-          <Text>Select files to upload (max 50MB per file)</Text>
-          <Upload
-            multiple
-            beforeUpload={(file) => {
-              const maxSize = 50 * 1024 * 1024; // 50MB
-              if (file.size > maxSize) {
-                message.error(`${file.name} exceeds 50MB limit`);
-                return false;
-              }
-              setUploadFiles((prev) => [...prev, file]);
-              return false;
-            }}
-            onRemove={(file) => {
-              setUploadFiles((prev) =>
-                prev.filter((f) => f.name !== file.name),
-              );
-            }}
-            fileList={uploadFiles.map((f, idx) => ({
-              uid: `${idx}-${f.name}`,
-              name: f.name,
-              status: "done" as const,
-            }))}
-          >
-            <Button icon={<UploadOutlined />}>Select Files</Button>
-          </Upload>
-        </Space>
-      </Modal>
-
-      <Modal
         title={previewData?.name || "Preview"}
         open={previewModalVisible}
         onCancel={() => {
           setPreviewModalVisible(false);
           setPreviewData(null);
+          setHoveredModalPreview(false);
         }}
         footer={null}
         centered
         width="auto"
         style={{ maxWidth: "90vw" }}
-        bodyStyle={{ maxHeight: "85vh", overflow: "hidden" }}
+        styles={{ body: { maxHeight: "85vh", overflow: "hidden" } }}
       >
         <div
           style={{
@@ -840,15 +1315,98 @@ const AssetEdit: React.FC = () => {
             overflow: "auto",
             display: "flex",
             justifyContent: "center",
+            position: "relative",
           }}
+          onMouseEnter={() => setHoveredModalPreview(true)}
+          onMouseLeave={() => setHoveredModalPreview(false)}
         >
           {previewData ? (
-            renderPreviewContent(
-              previewData.kind,
-              previewData.url,
-              previewData.name,
-              true,
-            )
+            <>
+              {renderPreviewContent(
+                previewData.kind,
+                previewData.paths && previewData.assetIndex !== undefined
+                  ? getAssetFileUrl(
+                      previewData.paths[modalPreviewIndex],
+                      previewData.assetIndex,
+                    )
+                  : previewData.url,
+                previewData.name,
+                true,
+                null,
+                previewData.paths
+                  ? `${previewData.paths[modalPreviewIndex]?.filename}.${previewData.paths[modalPreviewIndex]?.extension}`
+                  : undefined,
+                hoveredModalPreview,
+              )}
+              {previewData.paths && previewData.paths.length > 1 && (
+                <>
+                  <Button
+                    type="text"
+                    icon={<ArrowLeftOutlined />}
+                    onClick={() => {
+                      setModalPreviewIndex((prev) =>
+                        prev > 0 ? prev - 1 : previewData.paths!.length - 1,
+                      );
+                    }}
+                    style={{
+                      position: "absolute",
+                      left: 8,
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      background: "rgba(0, 0, 0, 0.5)",
+                      color: "white",
+                      border: "none",
+                      opacity: hoveredModalPreview ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                      pointerEvents: hoveredModalPreview ? "auto" : "none",
+                    }}
+                  />
+                  <Button
+                    type="text"
+                    icon={
+                      <ArrowLeftOutlined
+                        style={{ transform: "rotate(180deg)" }}
+                      />
+                    }
+                    onClick={() => {
+                      setModalPreviewIndex((prev) =>
+                        prev < previewData.paths!.length - 1 ? prev + 1 : 0,
+                      );
+                    }}
+                    style={{
+                      position: "absolute",
+                      right: 8,
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      background: "rgba(0, 0, 0, 0.5)",
+                      color: "white",
+                      border: "none",
+                      opacity: hoveredModalPreview ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                      pointerEvents: hoveredModalPreview ? "auto" : "none",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 8,
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      background: "rgba(0, 0, 0, 0.7)",
+                      color: "white",
+                      padding: "4px 12px",
+                      borderRadius: 12,
+                      fontSize: 12,
+                      opacity: hoveredModalPreview ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                      pointerEvents: "none",
+                    }}
+                  >
+                    {modalPreviewIndex + 1} / {previewData.paths.length}
+                  </div>
+                </>
+              )}
+            </>
           ) : (
             <Text type="secondary">No preview available.</Text>
           )}

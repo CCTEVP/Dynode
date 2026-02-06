@@ -38,7 +38,7 @@ type CreativeLike = {
 
 type ComparisonEvaluator = (
   comparison: string | undefined,
-  values: unknown[]
+  values: unknown[],
 ) => boolean;
 
 const COMPARISON_EVALUATORS: Record<string, ComparisonEvaluator> = {
@@ -114,7 +114,7 @@ function applyBehaviours(node: ElementNode) {
 }
 
 function normalizeBehaviourBlocks(
-  behaviours: ElementNode["behaviours"]
+  behaviours: ElementNode["behaviours"],
 ): BehaviourBlock[] {
   // API stores behaviours as an array of single-key blocks; keep supporting lone objects for safety.
   if (!behaviours) {
@@ -124,7 +124,7 @@ function normalizeBehaviourBlocks(
   if (Array.isArray(behaviours)) {
     return behaviours.filter(
       (block): block is BehaviourBlock =>
-        !!block && typeof block === "object" && !Array.isArray(block)
+        !!block && typeof block === "object" && !Array.isArray(block),
     );
   }
 
@@ -137,7 +137,7 @@ function normalizeBehaviourBlocks(
 
 function applyVisibilityBehaviour(
   node: ElementNode,
-  definition: BehaviourDefinition
+  definition: BehaviourDefinition,
 ) {
   const rules = definition.rules;
   if (!Array.isArray(rules) || rules.length === 0) {
@@ -147,6 +147,11 @@ function applyVisibilityBehaviour(
   const isVisible = rules.every(evaluateRule);
 
   if (!isVisible) {
+    logger.warn("[behaviours] hiding element due to visibility rules", {
+      nodeId: (node as any)._id || "unknown",
+      identifier: (node as any).identifier || "unknown",
+      rules: JSON.stringify(rules),
+    });
     if (!node.styles) {
       node.styles = {};
     }
@@ -208,12 +213,23 @@ function evaluateComparison(comparison: BehaviourComparison): boolean {
     return true;
   }
 
-  return evaluator(comparison.comparison_type?.toLowerCase(), values);
+  const result = evaluator(comparison.comparison_type?.toLowerCase(), values);
+
+  if (!result) {
+    logger.warn("[behaviours] comparison evaluated to false", {
+      comparisonType: comparison.comparison_type,
+      valueType: comparison.value_type,
+      values: values,
+      result,
+    });
+  }
+
+  return result;
 }
 
 function evaluateDateComparison(
   comparison: string | undefined,
-  values: unknown[]
+  values: unknown[],
 ): boolean {
   if (values.length < 2) {
     logger.warn("[behaviours] date comparison missing values", {
@@ -239,7 +255,7 @@ function evaluateDateComparison(
 
 function evaluateNumberComparison(
   comparison: string | undefined,
-  values: unknown[]
+  values: unknown[],
 ): boolean {
   if (values.length < 2) {
     logger.warn("[behaviours] number comparison missing values", {
@@ -265,7 +281,7 @@ function evaluateNumberComparison(
 
 function evaluateStringComparison(
   comparison: string | undefined,
-  values: unknown[]
+  values: unknown[],
 ): boolean {
   if (values.length < 2) {
     logger.warn("[behaviours] string comparison missing values", {
@@ -286,7 +302,7 @@ function evaluateStringComparison(
 
 function evaluateBooleanComparison(
   comparison: string | undefined,
-  values: unknown[]
+  values: unknown[],
 ): boolean {
   if (values.length < 2) {
     logger.warn("[behaviours] boolean comparison missing values", {
@@ -314,7 +330,7 @@ function executeComparator(
   comparison: string | undefined,
   left: number,
   right: number,
-  extras?: Record<string, unknown>
+  extras?: Record<string, unknown>,
 ): boolean {
   switch (comparison) {
     case "lt":

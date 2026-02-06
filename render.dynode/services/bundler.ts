@@ -54,7 +54,7 @@ const bundler = {
                   "scripts",
                   "components",
                   item,
-                  "default.js"
+                  "default.js",
                 )
               : path.join(
                   __dirname,
@@ -62,12 +62,12 @@ const bundler = {
                   "views",
                   "components",
                   item,
-                  "default.css"
+                  "default.css",
                 );
           if (fs.existsSync(filePath)) {
             return fs.readFileSync(filePath, "utf-8");
           } else {
-            console.warn(`File not found: ${filePath}`);
+            logger.warn("File not found", { filePath });
             return "";
           }
         });
@@ -89,19 +89,19 @@ const bundler = {
                   "views",
                   "scripts",
                   "components",
-                  item + ".js"
+                  item + ".js",
                 )
               : path.join(
                   __dirname,
                   "..",
                   "views",
                   "components",
-                  item + ".css"
+                  item + ".css",
                 );
           if (fs.existsSync(filePath)) {
             return fs.readFileSync(filePath, "utf-8");
           } else {
-            console.warn(`File not found: ${filePath}`);
+            logger.warn("File not found", { filePath });
             return "";
           }
         });
@@ -115,7 +115,7 @@ const bundler = {
           "scripts",
           "pages",
           routePath,
-          "default.js"
+          "default.js",
         );
         logger.info(`Bundling manager script from: ${filePath}`);
 
@@ -132,7 +132,7 @@ const bundler = {
         if (fs.existsSync(filePath)) {
           defaultJsContent = fs.readFileSync(filePath, "utf-8");
         } else {
-          console.warn(`File not found: ${filePath}`);
+          logger.warn("File not found", { filePath });
         }
 
         // Combine template + default.js content
@@ -225,7 +225,7 @@ const bundler = {
               { name: string; paths: string[] }
             >;
             assetUrls = Object.values(assetGroups).flatMap(
-              (assetData) => assetData.paths
+              (assetData) => assetData.paths,
             );
           }
 
@@ -263,14 +263,14 @@ const bundler = {
   },
   async retrieveFileContent(
     name: string,
-    replace: { look: string; replace: string }[]
+    replace: { look: string; replace: string }[],
   ): Promise<string> {
     const templatePath = path.join(
       __dirname,
       "..",
       "views",
       "scripts",
-      name + "_template.js"
+      name + "_template.js",
     );
     let template = fs.readFileSync(templatePath, "utf-8");
     if (replace.length > 0) {

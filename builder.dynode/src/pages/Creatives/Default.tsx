@@ -30,6 +30,7 @@ import type { Creative } from "../../types/creative";
 import FolderBar from "../../components/controls/FolderBar/Default";
 import FolderService from "../../services/folder";
 import ItemMoveModal from "../../components/controls/ItemMoveModal/Default";
+import logger from "../../services/logger";
 import "./Default.css";
 import env from "../../../config/env";
 import dayjs from "dayjs";
@@ -91,7 +92,10 @@ const Creatives: React.FC = () => {
         );
         setFolderItemIds(itemIds);
       } catch (error) {
-        console.error("Failed to load folder items:", error);
+        logger.error("Failed to load folder items", {
+          error,
+          folderId: currentFolder,
+        });
         setFolderItemIds([]);
       }
     };
@@ -110,14 +114,8 @@ const Creatives: React.FC = () => {
     try {
       const data = await creativeService.getAllCreatives(false); // No children as requested
       setCreatives(data);
-      // Debug: log the first few records so we can see which fields exist on the API objects
-      // and why some table columns render as "-" (empty/missing values).
-      console.debug(
-        "[Creatives] fetched:",
-        data && data.length ? data.slice(0, 5) : data,
-      );
     } catch (err) {
-      console.error("Failed to load creatives:", err);
+      logger.error("Failed to load creatives", { error: err });
       setError("Failed to load creatives. Please try again.");
     } finally {
       setLoading(false);
@@ -145,7 +143,7 @@ const Creatives: React.FC = () => {
           message.success("Creative removed");
           loadCreatives();
         } catch (err) {
-          console.error("Failed to delete creative:", err);
+          logger.error("Failed to delete creative", { error: err, creativeId });
           message.error("Failed to remove creative");
         }
       },

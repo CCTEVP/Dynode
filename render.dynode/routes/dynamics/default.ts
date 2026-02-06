@@ -44,7 +44,7 @@ const CREATIVES_URL = sourceBase + "/data/creatives";
 if (config.env === "docker") {
   console.log(
     "[render.dynode] dynamics route using internal source base:",
-    sourceBase
+    sourceBase,
   );
 }
 
@@ -55,7 +55,6 @@ router.get(
     const resource = req.params.resource;
     const debug = req.params.debug === "min";
     const extension = req.params.extension;
-    //console.log(`Fetching resource: ${resource}, debug: ${debug}, extension: ${extension} for creative ID: ${creativeId}`);
     //check if extension is in CONTENT_TYPES or MIME_TYPES
     const isMedia = extension.toLowerCase() in MIME_TYPES;
     const isFile = extension.toLowerCase() in CONTENT_TYPES;
@@ -109,7 +108,7 @@ router.get(
           "Assets route failed to retrieve creative with ID: " + creativeId,
       });
     }
-  }
+  },
 );
 router.get(
   "/:id",
@@ -135,21 +134,29 @@ router.get(
       const baseURL =
         config.externalOrigins.render || `${req.protocol}://${req.get("host")}`;
 
+      logger.info(`Rendering creative`, {
+        creativeId,
+        name: content?.name,
+        hasElements: !!content?.elements,
+        elementCount: content?.elements?.length || 0,
+        hasStyles: !!content?.styles,
+        styles: JSON.stringify(content?.styles || {}),
+        elementsDetail: JSON.stringify(content?.elements || []),
+      });
+
       res.render("pages/dynamics/content", {
         content,
         baseURL,
       });
     } catch (err) {
-      console.error(
-        "[render.dynode] Creative fetch failed (docker?",
-        config.env === "docker",
-        ") target=",
-        CREATIVES_URL,
-        err instanceof Error ? err.message : err
-      );
+      logger.error("Creative fetch failed", {
+        docker: config.env === "docker",
+        target: CREATIVES_URL,
+        error: err instanceof Error ? err.message : err,
+      });
       next(err);
     }
-  }
+  },
 );
 
 export default router;

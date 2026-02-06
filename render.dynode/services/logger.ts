@@ -21,17 +21,29 @@ const axiosInstance = axios.create({
 });
 
 async function logToServer(level: LogLevel, message: string, meta?: any) {
+  const logData = {
+    level,
+    message,
+    meta,
+    origin: ORIGIN,
+  };
+
+  // Console output for local debugging
+  const consoleMethod =
+    level === "error" ? "error" : level === "warn" ? "warn" : "log";
+  if (meta) {
+    console[consoleMethod](`[${ORIGIN}] ${message}`, meta);
+  } else {
+    console[consoleMethod](`[${ORIGIN}] ${message}`);
+  }
+
   try {
-    await axiosInstance.post(API_URL, {
-      level,
-      message,
-      meta,
-      origin: ORIGIN,
-    });
+    await axiosInstance.post(API_URL, logData);
   } catch (err) {
-    // Suppressed verbose Axios error object to keep console clean.
-    // Uncomment for debugging remote log failures:
-    console.warn(`Remote log send failed: ${(err as any)?.message}`);
+    // Log to console when remote logging fails
+    console.warn(
+      `[${ORIGIN}] Remote log send failed to ${API_URL}: ${(err as any)?.message}`,
+    );
   }
 }
 

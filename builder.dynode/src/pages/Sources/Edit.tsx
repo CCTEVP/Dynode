@@ -22,7 +22,7 @@ import {
   ThunderboltOutlined,
   ReloadOutlined,
   PlusOutlined,
-  MinusCircleOutlined,
+  DeleteOutlined,
   ApiOutlined,
   ApiFilled,
 } from "@ant-design/icons";
@@ -33,7 +33,6 @@ import {
   getEndpointData,
 } from "../../services/source";
 import DataBrowser from "../../components/controls/VariableMapper/DataBrowser";
-import { useTheme } from "../../contexts/ThemeContext";
 import "./Edit.css";
 
 const { TextArea } = Input;
@@ -57,12 +56,11 @@ const SOURCE_TYPES = [
 ];
 
 const SourceEdit: React.FC = () => {
-  const { modal } = App.useApp();
+  const { message, modal } = App.useApp();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [form] = Form.useForm();
   const { token } = theme.useToken();
-  const { themeMode, toggleTheme } = useTheme();
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [activeTabKey, setActiveTabKey] = useState<string>();
@@ -87,7 +85,6 @@ const SourceEdit: React.FC = () => {
   const [headerSticky, setHeaderSticky] = useState(false);
   const headerRef = React.useRef<HTMLDivElement>(null);
   const isNew = id === "new";
-  const { message } = App.useApp();
 
   useEffect(() => {
     if (!isNew && id) {
@@ -369,27 +366,6 @@ const SourceEdit: React.FC = () => {
 
   return (
     <div className="source-edit-page">
-      {/* Theme toggle button - fixed top-right corner */}
-      <Tooltip
-        title={`Switch to ${themeMode === "dark" ? "Light" : "Dark"} Mode`}
-        placement="left"
-        color="rgba(0, 0, 0, 0.85)"
-      >
-        <button
-          onClick={toggleTheme}
-          className="theme-toggle-corner"
-          data-mode={themeMode}
-          aria-label="Toggle theme"
-        >
-          <span className="theme-toggle-track" />
-          <span className="theme-toggle-knob">
-            <span className="theme-toggle-icon">
-              {themeMode === "dark" ? "🌙" : "☀️"}
-            </span>
-          </span>
-        </button>
-      </Tooltip>
-
       <div
         ref={headerRef}
         className={`source-edit-header ${headerSticky ? "sticky" : ""}`}
@@ -482,6 +458,8 @@ const SourceEdit: React.FC = () => {
                     type="editable-card"
                     activeKey={activeTabKey}
                     onChange={setActiveTabKey}
+                    tabBarGutter={8}
+                    tabBarStyle={{ marginBottom: 16 }}
                     onEdit={(targetKey, action) => {
                       if (action === "add") {
                         const currentKeys = fields.map((f) => f.key);
@@ -491,17 +469,43 @@ const SourceEdit: React.FC = () => {
                             : -1;
                         add({ sourceType: "internal" });
                         requestAnimationFrame(() => {
-                          setActiveTabKey(String(maxKey + 1));
+                          const newTabKey = String(maxKey + 1);
+                          setActiveTabKey(newTabKey);
+                          // Scroll the tab bar to the end to show the new tab
+                          setTimeout(() => {
+                            const tabNav = document.querySelector(
+                              ".ant-tabs-nav-list",
+                            ) as HTMLElement;
+                            if (tabNav) {
+                              tabNav.scrollLeft = tabNav.scrollWidth;
+                            }
+                          }, 100);
                         });
                       } else if (action === "remove") {
                         const index = fields.findIndex(
                           (f) => String(f.key) === targetKey,
                         );
                         if (index !== -1) {
-                          remove(index);
-                          if (activeTabKey === targetKey && fields.length > 1) {
-                            setActiveTabKey(String(fields[0].key));
-                          }
+                          const source = form.getFieldValue(["sources", index]);
+                          const sourceName =
+                            source?.name || `Source ${index + 1}`;
+
+                          modal.confirm({
+                            title: "Remove Source?",
+                            content: `Are you sure you want to remove "${sourceName}"? This action cannot be undone.`,
+                            okText: "Remove",
+                            okType: "danger",
+                            cancelText: "Cancel",
+                            onOk: () => {
+                              remove(index);
+                              if (
+                                activeTabKey === targetKey &&
+                                fields.length > 1
+                              ) {
+                                setActiveTabKey(String(fields[0].key));
+                              }
+                            },
+                          });
                         }
                       }
                     }}
@@ -517,21 +521,26 @@ const SourceEdit: React.FC = () => {
                       return {
                         key: String(key),
                         label: (
-                          <span
-                            style={{
-                              color: isExternal ? "#29B6F6" : "#52C41A",
-                            }}
-                          >
-                            {isExternal ? (
-                              <ApiFilled
-                                style={{ color: "#29B6F6", marginRight: 6 }}
-                              />
-                            ) : (
-                              <ApiOutlined
-                                style={{ color: "#52C41A", marginRight: 6 }}
-                              />
-                            )}
-                            {fieldData?.name || `Source ${index + 1}`}
+                          <span>
+                            <span className="tab-position-number">
+                              {index + 1}.{" "}
+                            </span>
+                            <span
+                              style={{
+                                color: isExternal ? "#29B6F6" : "#52C41A",
+                              }}
+                            >
+                              {isExternal ? (
+                                <ApiFilled
+                                  style={{ color: "#29B6F6", marginRight: 6 }}
+                                />
+                              ) : (
+                                <ApiOutlined
+                                  style={{ color: "#52C41A", marginRight: 6 }}
+                                />
+                              )}
+                              {fieldData?.name || `Source ${index + 1}`}
+                            </span>
                           </span>
                         ),
                         closable: true,
@@ -1028,16 +1037,20 @@ const SourceEdit: React.FC = () => {
                                               <Input placeholder="Description" />
                                             </Form.Item>
 
-                                            <MinusCircleOutlined
-                                              style={{
-                                                flex: 0.3,
-                                                minWidth: 0,
-                                                marginTop: 8,
-                                              }}
-                                              onClick={() =>
-                                                removeVar(varField.name)
-                                              }
-                                            />
+                                            <Tooltip title="Remove Variable">
+                                              <Button
+                                                type="text"
+                                                size="small"
+                                                danger
+                                                icon={<DeleteOutlined />}
+                                                onClick={() =>
+                                                  removeVar(varField.name)
+                                                }
+                                                style={{
+                                                  marginTop: 4,
+                                                }}
+                                              />
+                                            </Tooltip>
                                           </div>
                                         ))}
                                         <Button
@@ -1330,16 +1343,20 @@ const SourceEdit: React.FC = () => {
                                               <Input placeholder="Description" />
                                             </Form.Item>
 
-                                            <MinusCircleOutlined
-                                              style={{
-                                                flex: 0.3,
-                                                minWidth: 0,
-                                                marginTop: 8,
-                                              }}
-                                              onClick={() =>
-                                                removeVar(varField.name)
-                                              }
-                                            />
+                                            <Tooltip title="Remove Variable">
+                                              <Button
+                                                type="text"
+                                                size="small"
+                                                danger
+                                                icon={<DeleteOutlined />}
+                                                onClick={() =>
+                                                  removeVar(varField.name)
+                                                }
+                                                style={{
+                                                  marginTop: 4,
+                                                }}
+                                              />
+                                            </Tooltip>
                                           </div>
                                         ))}
                                         <Button

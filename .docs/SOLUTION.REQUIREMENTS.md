@@ -22,9 +22,9 @@
 
 #### 1.3.1 Source Service (source.dynode)
 
-- **Port**: 3000 (HTTP), 3333 (HTTPS)
+- **Port**: 3333 (HTTPS), 3000 (HTTP in Docker)
 - **Purpose**: Core backend API — data management, authentication, asset storage, and system of record
-- **Technology Stack**: Node.js 18+, Express 5.x, TypeScript 5.x, MongoDB 5.0+/Mongoose 8.x, JWT, bcrypt, Winston logging
+- **Technology Stack**: Node.js 18+, Express 5.1, TypeScript 5.8, MongoDB 5.0+/Mongoose 8.0, JWT, bcrypt 6.0, Winston 3.17, Ajv 8.17
 - **Key Responsibilities**:
   - User authentication (JWT-based, email verification flow)
   - CRUD operations for creatives (assemblies, dynamics, interactives)
@@ -52,7 +52,7 @@
 
 - **Port**: 4000 (HTTP), 4444 (HTTPS)
 - **Purpose**: React-based web UI for creative authoring, managers and operators
-- **Technology Stack**: React 19, Vite 6.x, TypeScript 5.x, Ant Design 5.x, React Router 7.x, Zustand, @dnd-kit, react-grid-layout
+- **Technology Stack**: React 19.1, Vite 6.3, TypeScript 5.8, Ant Design 5.26, React Router 7.6, Zustand 5.0, @dnd-kit 6.3/10.0, @xyflow/react 12.10, react-grid-layout 1.5
 - **Key Responsibilities**:
   - User authentication via source.dynode (email + code verification)
   - Creative listing, editing, and visual composition
@@ -66,15 +66,18 @@
 
 - **Port**: 7777 (HTTP/WebSocket), 8080 (Cloud Run default)
 - **Purpose**: Real-time WebSocket broadcast server with room-based routing
-- **Technology Stack**: Node.js 18+, ws (WebSocket), Swagger UI, HMAC-SHA256 authentication
+- **Technology Stack**: Node.js 18+, ws 8.18, Swagger UI, HMAC-SHA256 authentication, Winston 3.11, ioredis 5.3, express-rate-limit 7.1
 - **Key Responsibilities**:
   - Room-based WebSocket broadcasting (radio, chat, custom rooms)
   - HTTP POST injection for server-to-client push
   - Token-based authentication (HMAC-SHA256 signed tokens)
-  - Modular room handlers with inheritance model
+  - Modular room handlers with inheritance model (BaseRoomHandler)
   - Health monitoring and connection lifecycle management
   - Cloud Run-friendly deployment with heartbeat keepalive
   - Integration with digital signage players and live content updates
+  - Documentation authentication for Swagger UI
+  - Control channel support for management clients
+  - Rate limiting and Redis integration
 
 ### 1.4 Service Synergy & Communication Patterns
 
@@ -385,13 +388,22 @@ Each creative contains the following core properties:
 
 #### 2.8.2 Room Handler System
 
-- **BaseRoomHandler**: Abstract class with lifecycle hooks
-  - `verifyAuth()`: Custom authentication logic per room
-  - `onJoin()` / `onLeave()`: Connection lifecycle events
-  - `onMessage()`: Message processing and transformation
-  - `onHttpPost()`: HTTP-triggered broadcast handling
-  - `validateMessage()` / `validateHttpPost()`: Payload validation
-  - `getWelcomeMessage()`: Custom welcome for new clients
+- **BaseRoomHandler**: Abstract base class with lifecycle hooks
+  - `verifyAuth(authPayload, req, clientAddress)`: Custom authentication logic per room
+  - `onJoin(socket, req, clientAddress, authPayload)`: Connection lifecycle events (join)
+  - `onLeave(socket, clientAddress, code, reason)`: Connection lifecycle events (leave)
+  - `onControlJoin(socket, req, clientAddress)`: Control channel join handler
+  - `onControlLeave(socket, clientAddress, code, reason)`: Control channel leave handler
+  - `onMessage(payload, socket, clientAddress)`: Message processing and transformation
+  - `onHttpPost(payload)`: HTTP-triggered broadcast handling
+  - `validateMessage(payload, socket)`: Payload validation for WebSocket messages
+  - `validateHttpPost(payload)`: Payload validation for HTTP POST
+  - `getWelcomeMessage(socket)`: Custom welcome for new clients
+  - `getRoomStats(clients)`: Room statistics for health endpoint
+  - `onHeartbeat()`: Periodic maintenance hook
+  - `getRoutes()`: Custom HTTP routes for room
+  - `getControlPayload(context)`: Control channel payload generation
+  - `getBroadcastDelay(context)`: Dynamic broadcast delay calculation
 - **Auto-Discovery**: Room handlers automatically registered from `src/rooms/` directory
 - **Inheritance Model**: Custom rooms override only needed methods
 
@@ -471,7 +483,9 @@ Each creative contains the following core properties:
     "cookie-parser@~1.4.4",
     "debug@~2.6.9",
     "morgan@~1.9.1",
-    "pug@2.0.0-beta11"
+    "pug@2.0.0-beta11",
+    "ajv@^8.17.1",
+    "http-errors@~1.6.3"
   ],
   "development": [
     "typescript@^5.8.3",
@@ -506,7 +520,9 @@ Each creative contains the following core properties:
     "cookie-parser@~1.4.4",
     "debug@~2.6.9",
     "jsonwebtoken@^9.0.2",
-    "morgan@~1.9.1"
+    "morgan@~1.9.1",
+    "lru-cache@^11.2.4",
+    "http-errors@~1.6.3"
   ],
   "development": [
     "typescript@^5.8.3",
@@ -547,6 +563,7 @@ Each creative contains the following core properties:
     "typescript@~5.8.3",
     "@vitejs/plugin-react@^4.4.1",
     "rollup-plugin-visualizer@^6.0.3",
+    "lightningcss@^1.31.1",
     "@eslint/js@^9.25.0",
     "@types/mongoose@^5.11.96",
     "@types/node@^24.0.8",
@@ -571,7 +588,10 @@ Each creative contains the following core properties:
     "ws@^8.18.0",
     "dotenv@^17.2.3",
     "swagger-ui-express@^5.0.1",
-    "swagger-jsdoc@^6.2.8"
+    "swagger-jsdoc@^6.2.8",
+    "winston@^3.11.0",
+    "ioredis@^5.3.2",
+    "express-rate-limit@^7.1.5"
   ],
   "development": ["nodemon@^3.1.4", "eslint@^8.57.0"]
 }
@@ -659,13 +679,23 @@ services:
 ```
 /                    → Home dashboard
 /creatives           → Creative management listing
-/creatives/edit/:id  → Creative editor (full layout)
-/assets/upload       → Asset upload interface
+/creatives/edit/:id  → Creative editor (FullLayout)
+/sources             → Data sources listing
+/sources/:id         → Source editor (FullLayout)
+/assets              → Asset management listing
+/assets/:id          → Asset editor (FullLayout)
 /templates           → Template library
 /community           → Community features
 /help                → Documentation and help
 /help/components     → Component documentation
+/help/design         → Design guide
+/help/codebase       → Codebase documentation
 ```
+
+**Layout Strategy:**
+
+- **MainLayout**: Used for list views and documentation (includes sidebar navigation)
+- **FullLayout**: Used for editor views (immersive, minimal chrome)
 
 #### 4.1.3 User Experience Features
 

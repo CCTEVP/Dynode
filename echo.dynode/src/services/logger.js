@@ -22,7 +22,7 @@ const SOURCE_BASE_URL =
   process.env.SOURCE_BASE_URL ||
   (NODE_ENV === "docker"
     ? "http://source.dynode:8080"
-    : process.env.PUBLIC_SOURCE_URL || "http://localhost:3000");
+    : process.env.PUBLIC_SOURCE_URL || "http://localhost:3333");
 const LOG_API_URL = `${SOURCE_BASE_URL}/files/log`;
 
 // Custom format for development - colorized and easy to read
@@ -104,12 +104,8 @@ async function logToServer(level, message, meta = {}) {
     const payload = JSON.stringify({
       level,
       message,
-      meta: {
-        ...meta,
-        origin: ORIGIN,
-        service: "echo-dynode",
-        environment: NODE_ENV,
-      },
+      meta,
+      origin: ORIGIN,
     });
 
     const url = new URL(LOG_API_URL);

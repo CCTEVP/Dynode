@@ -46,9 +46,9 @@ router.get("/:id", async (req: Request, res: Response, next: NextFunction) => {
 });
 
 router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
+  const creativeId = req.params.id;
   try {
     const editorUserId = req.user?.userId || "000000000000000000000000"; // The logged-in user making the change
-    const creativeId = req.params.id;
     const creativeData = req.body;
     if (!creativeData.id) {
       res.status(400).json({ message: "Creative ID is required." });
@@ -61,7 +61,7 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     // Scrape components, animations, assets
     const { components, libraries, assets } = await scrapper.getComponents(
       creativeId,
-      creativeData
+      creativeData,
     );
 
     // Prepare resources object
@@ -81,11 +81,14 @@ router.put("/:id", async (req: Request, res: Response, next: NextFunction) => {
     const creative = await CreativeAssemblyView.findOneAndUpdate(
       { _id: creativeId },
       { $set: { creativeData } },
-      { upsert: true, new: true }
+      { upsert: true, new: true },
     );
     res.json(creative);
   } catch (error) {
-    console.error("Error saving assembly creative MongoDB collection:", error);
+    logger.error("Error saving assembly creative MongoDB collection", {
+      error: error,
+      creativeId: creativeId,
+    });
     res.status(500).json({ message: "Failed to save assembly creative." });
   }
 });
@@ -101,7 +104,7 @@ router.post(
       logger.error("Error packing creative:", error);
       res.status(500).json({ message: "Failed to retrieve creatives." });
     }
-  }
+  },
 );
 
 export default router;
